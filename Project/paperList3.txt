@@ -1,0 +1,6 @@
+conf/aaa/a001||AAA&&BBB&&CCC||2001
+conf/aaa/a002||AAA&&BBB||2002
+conf/aaa/a003||AAA&&CCC||2003
+conf/aaa/a004||AAA&&CCC||2004
+conf/aaa/b001||AAA&&DDD&&CCC||2001
+conf/aaa/b002||DDD&&BBB||2001
