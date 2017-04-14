@@ -13,7 +13,7 @@ import javafx.scene.layout.BorderPane;
 
 public class Main extends Application {
 
-    int nodeNum = 60;
+    int nodeNum = 500;
     Graph graph;
 
     @Override
