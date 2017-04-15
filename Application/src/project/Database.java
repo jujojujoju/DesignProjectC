@@ -134,7 +134,7 @@ public class Database {
 				int size =  getCoauthorSet(sourceAuthor, tempAuthor).size();
 				DefaultWeightedEdge e1 = graph.addEdge(sourceAuthor, tempAuthor);
 				if(e1 != null)
-					graph.setEdgeWeight(e1, size);
+					graph.setEdgeWeight(e1, size+1);
 			}
 		}
 
