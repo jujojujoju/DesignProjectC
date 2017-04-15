@@ -33,7 +33,7 @@ public class Main extends Application {
 
     	Database db = new Database();
     	db.readFile();
-    	System.out.println(db.getAuthorMapByCont().toString());
+    	System.out.println(db.getAuthorMapByCont(3).toString());
 
         root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 //        BorderPane root = new BorderPane();
