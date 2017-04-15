@@ -1,17 +1,18 @@
 package project;
 
-import java.util.List;
 
 public class Paper extends Node{
-	private List<Author> authorList;
 	private int year;
 	private String paperKey;
 
-	public List<Author> getAuthorList() {
-		return authorList;
+	public Paper(){
+		year = -1;
+		paperKey = "";
 	}
-	public void setAuthorList(List<Author> authorList) {
-		this.authorList = authorList;
+
+	public Paper(String paper) {
+		// TODO Auto-generated constructor stub
+		this.setName(paper);
 	}
 	public int getYear() {
 		return year;
@@ -25,4 +26,10 @@ public class Paper extends Node{
 	public void setPaperKey(String paperKey) {
 		this.paperKey = paperKey;
 	}
+
+	@Override
+	public String toString() {
+		return "Paper {year=" + year + ", paperKey=" + paperKey + ", getName()=" + getName() + "}";
+	}
+
 }
