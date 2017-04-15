@@ -22,6 +22,9 @@ public class Main extends Application {
     private int nodeNum = 100;
     private Graph graph;
 
+    ////fuckyou
+
+
     BorderPane root;
     @Override
     public void start(Stage primaryStage) throws Exception {
