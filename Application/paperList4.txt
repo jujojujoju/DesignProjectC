@@ -1,0 +1,1710 @@
+conf/iastedCSN/Mojumdar06||Ranjan K. Mojumdar||2006
+conf/iastedCSN/KeimS06||Werner Keim&&Arpad L. Scholtz||2006
+conf/iastedCSN/PourKKI06||Alireza Nemaney Pour&&Kazuya Kumekawa&&Toshihiko Kato&&Shuichi Itoh||2006
+conf/iastedCSN/Rivero-Angeles06||Mario E. Rivero-Angeles||2006
+conf/iastedCSN/OsterbergZ06||Patrik Österberg&&Tingting Zhang||2006
+conf/iastedCSN/GambiRCS06||Ennio Gambi&&Giorgia Righi&&Franco Chiaraluce&&Susanna Spinsante||2006
+conf/iastedCSN/BakosFKS06||Balázs Bakos&&Lóránt Farkas&&Attila Kiss 0002&&Péter Spányi||2006
+conf/iastedCSN/Nunez06||Arturo Núñez||2006
+conf/iastedCSN/MajkowskiP06||Jakub Majkowski&&Fernando Casadevall Palacio||2006
+conf/iastedCSN/KimKLK06||Pyung Soo Kim&&Jung Gon Kim&&Jae-Kuk Lee&&Yong-Jin Kim||2006
+conf/iastedCSN/SzekelyK06||Sándor Székely&&Szabolcs Máté Kis||2006
+conf/iastedCSN/ArcoCGM06||Juan M. Arco&&Juan A. Carral&&A. García&&M. Moreno||2006
+conf/iastedCSN/Turcza06||Pawel Turcza||2006
+conf/iastedCSN/PakkalaKL06||Daniel Pakkala&&Aki Koivukoski&&Juhani Latvakoski||2006
+conf/iastedCSN/Al-khairB06||Ala'a D. Abu Al-khair&&Mohammad M. Banat||2006
+conf/iastedCSN/ViessmannSHBWBJ06||Alexander Vießmann&&Tobias Scholand&&Arjang Hessamian-Alinejad&&Admir Burnic&&Andreas Waadt&&Guido Horst Bruck&&Peter Jung||2006
+conf/iastedCSN/KooijKB06||Robert E. Kooij&&Ahmed Kamal&&Kjell Brunnström||2006
+conf/iastedCSN/WooPLYI06||Dae Sic Woo&&Seongsoo Park&&DongHahk Lee&&Jaehwang Yu&&JongTae Ihm||2006
+conf/iastedCSN/2006||||2006
+conf/iastedCSN/McDonaghAA06||Deana McDonagh&&K. I. Arshak&&O. Abubaker||2006
+conf/iastedCSN/DominguezEPO06||Miguel Angel Domínguez&&Perfecto Mariño Espiñeira&&Francisco Poza&&Santiago Otero||2006
+conf/iastedCSN/KangHPLNL06||B. K. Kang&&Daryoush Habibi&&Quoc V. Phung&&Kungmeng Lo&&Hoang Nam Nguyen&&M. M. Lee||2006
+conf/iastedCSN/ChoKK06||Seong Chul Cho&&Hyung Jin Kim&&Jin Up Kim||2006
+conf/iastedCSN/LangwieserFSRH06||Robert Langwieser&&Michael Fischer&&Arpad L. Scholtz&&Markus Rupp&&Gerhard Humer||2006
+conf/iastedCSN/IdoueKI06||Akira Idoue&&Toshihiko Kato&&Shuichi Itoh||2006
+conf/iastedCSN/Benavente-PecesOP06||César Benavente-Peces&&Francisco Javier Ortega-González&&José Manuel Pardo-Martín||2006
+conf/iastedCSN/FayoumiJ06||Ayman G. Fayoumi&&Anura P. Jayasumana||2006
+conf/iastedCSN/KozakaKIU06||Tsutomu Kozaka&&Toshihiko Kato&&Shuichi Itoh&&Yoshiyori Urano||2006
+conf/iastedCSN/DoustiG06||M. Dousti&&J. L. Gautier||2006
+conf/iastedCSN/NavarroLL06||Karla Felix Navarro&&Elaine Lawrence&&Einstein Lubrin||2006
+conf/iastedCSN/KurosakiKKI06||Kayo Kurosaki&&Kazuya Kumekawa&&Toshihiko Kato&&Shuichi Itoh||2006
+conf/iastedCSN/ShukriMAK06||Haydar Al Shukri&&Basil Miller&&Hussain M. Al-Rizzo&&Okba Al Kadi||2006
+conf/iastedCSN/ZimuWW06||Zimu Li&&Jilong Wang&&Jianping Wu||2006
+conf/iastedCSN/AntoniouK06||Zoe Antoniou&&Dimitris N. Kalofonos||2006
+conf/iastedCSN/HaaseM06||Oliver Haase&&Kazutaka Murakami||2006
+conf/iastedCSN/DimousiosPC06||Themistoklis D. Dimousios&&Stylianos C. Panagiotou&&Christos N. Capsalis||2006
+conf/iastedCSN/KenterisGE06||Michael Kenteris&&Damianos Gavalas&&Daphne Economou||2006
+conf/iastedCSN/AdlerESS06||Christian Adler&&Robert Eigner&&Christoph Schroth&&Markus Strassberger||2006
+conf/iastedCSN/Rozanski06||Bartlomiej Rózanski||2006
+conf/iastedCSN/KhanCW06||M. K. Khan&&Rolando A. Carrasco&&Ian J. Wassell||2006
+conf/iastedCSN/FukuyamaTAN06||Yuki Fukuyama&&Osamu Takyu&&Koichi Adachi&&Masao Nakagawa||2006
+conf/iastedCSN/GonzalezC06||Rubén González&&Llorenç Cerdà||2006
+conf/iastedCSN/TamakiEN06||Ichiro Tamaki&&Riaz Esmailzadeh&&Masao Nakagawa||2006
+conf/iastedCSN/PanagiotouDC06||Stylianos C. Panagiotou&&Themistoklis D. Dimousios&&Christos N. Capsalis||2006
+conf/iastedCSN/MellahA06||H. Mellah&&Fouad Mohammed Abbou||2006
+conf/iastedCSN/ChararaSF06||Hussein Charara&&Jean-Luc Scharbarg&&Christian Fraboul||2006
+conf/iastedCSN/Hefnawi06||Mostafa Hefnawi||2006
+conf/iastedCSN/Karakehayov06||Zdravko Karakehayov||2006
+conf/iastedCSN/KimH06||Pyung Soo Kim&&Jin-Soo Han||2006
+conf/iastedCSN/GavalasEK06||Damianos Gavalas&&Daphne Economou&&Michael Kenteris||2006
+conf/iastedCSN/SaitoHN06||Tsubasa Saito&&Shinichiro Haruyama&&Masao Nakagawa||2006
+conf/iastedCSN/BurnicFSWJ06||Admir Burnic&&Thomas Faber&&Tobias Scholand&&Andreas Waadt&&Peter Jung||2006
+conf/sbrn/TeixeiraZ02||Marcelo Andrade Teixeira&&Gerson Zaverucha||2002
+conf/sbrn/OliveiraVA06||Humberto Cesar Brandao de Oliveira&&Germano C. Vasconcelos&&Guilherme Bastos Alvarenga||2006
+conf/sbrn/SalviniC00||Rogério Lopes Salvini&&Luís Alfredo V. de Carvalho||2000
+conf/sbrn/AraujoZ12||Bilzã Araújo&&Liang Zhao||2012
+conf/sbrn/RossiCS12||André Luis Debiaso Rossi&&André C. P. L. F. Carvalho&&Carlos Soares||2012
+conf/sbrn/Ribeiro98||Carlos H. C. Ribeiro||1998
+conf/sbrn/SilvaLFG12||Rodrigo César Pedrosa Silva&&Rodolfo Ayala Lopes&&Alan R. R. de Freitas&&Frederico G. Guimarães||2012
+conf/sbrn/SoaresBGO10||Gabriela E. Soares&&Henrique E. Borges&&Rogério M. Gomes&&Geraldo Magela Couto Oliveira||2010
+conf/sbrn/AbreuTR00||Gustavo Luiz C. M. de Abreu&&Rafael Luís Teixeira&&José F. Ribeiro||2000
+conf/sbrn/JeronymoBC10||Daniel Cavalcanti Jeronymo&&Yuri Cássio Campbell Borges&&Leandro dos Santos Coelho||2010
+conf/sbrn/AraujoRSZ10||Bilzã Araújo&&Francisco Aparecido Rodrigues&&Thiago C. Silva&&Liang Zhao||2010
+conf/sbrn/Soares00||Alexandre Pinhel Soares||2000
+conf/sbrn/GomesPSRC10||Taciana A. F. Gomes&&Ricardo Bastos Cavalcante Prudêncio&&Carlos Soares&&André L. D. Rossi&&André Carlos Ponce Leon Ferreira de Carvalho||2010
+conf/sbrn/WedemannCD06||Roseli S. Wedemann&&Luís Alfredo Vidal de Carvalho&&Raul Donangelo||2006
+conf/sbrn/BurattiniGF02||Ernesto Burattini&&Massimo De Gregorio&&Antonio de Francesco||2002
+conf/sbrn/RegoBAN06||Renata L. M. E. do Rego&&Hansenclever de F. Bassani&&Aluizio F. R. Araújo&&Fernando Buarque de Lima Neto||2006
+conf/sbrn/AlmeidaBBB98||Marcelo Barros de Almeida&&J. C. Belchior&&João Pedro Braga&&Anelise P. Braga||1998
+conf/sbrn/LemeP00||C. Zacharias M. Leme&&A. Dal Pino Jr.||2000
+conf/sbrn/HellGC08||Michel Hell&&Fernando A. C. Gomide&&Pyramo Costa Jr.||2008
+conf/sbrn/FilhoC98||Elson Felix Mendes Filho&&André Carlos Ponce Leon Ferreira de Carvalho||1998
+conf/sbrn/AntoneloSS08||Eric A. Antonelo&&Benjamin Schrauwen&&Dirk Stroobandt||2008
+conf/sbrn/ValencaLV10||Ivna Valença&&Teresa Bernarda Ludermir&&Mêuser Jorge Silva Valença||2010
+conf/sbrn/SousaR02||Humberto Costa de Sousa&&Antonio Riul Jr.||2002
+conf/sbrn/DevogelaereRLL02||Dirk Devogelaere&&Marcel Rijckaert&&Osvaldo Goza Leon&&Gil Cruz Lemus||2002
+conf/sbrn/FranceschiBR00||Analuchia S. M. de Franceschi&&Jorge Muniz Barreto&&Mauro Roisenberg||2000
+conf/sbrn/Soares-FilhoSC00||William Soares-Filho&&José Manoel de Seixas&&Luiz Pereira Calôba||2000
+conf/sbrn/OliveiraSL02||Wilson Rosa de Oliveira&&Marcílio Carlos Pereira de Souto&&Teresa Bernarda Ludermir||2002
+conf/sbrn/SilvaFN02||Paulo H. da F. Silva&&Everton N. R. Q. Fernandes&&Adrião Duarte Dória Neto||2002
+conf/sbrn/FilhoC97||Elson Felix Mendes Filho&&André Carlos Ponce Leon Ferreira de Carvalho||1997
+conf/sbrn/Bia00||Alejandro Bia||2000
+conf/sbrn/1998||||1998
+conf/sbrn/BurattiniRG08||Ernesto Burattini&&Silvia Rossi&&Massimo De Gregorio||2008
+conf/sbrn/GranittoVNC02||Pablo M. Granitto&&Pablo F. Verdes&&Hugo D. Navone&&H. Alejandro Ceccatto||2002
+conf/sbrn/BalliniG02||Rosangela Ballini&&Fernando A. C. Gomide||2002
+conf/sbrn/SestaroCH12||Davidson M. Sestaro&&Thiago F. Covoes&&Eduardo R. Hruschka||2012
+conf/sbrn/FilhoCOC12||Valmir Macário Filho&&Ivan G. Costa&&João F. L. Oliveira&&Francisco de A. T. de Carvalho||2012
+conf/sbrn/FigueiredoV98||Fabrício Figueiredo&&Fábio Violaro||1998
+conf/sbrn/FigueiredoL12||Elliackin M. N. Figueiredo&&Teresa Bernarda Ludermir||2012
+conf/sbrn/PereiraC02||Fabio de Albuquerque Pereira&&Jés Jesus Fiais Cerqueira||2002
+conf/sbrn/HeinenE10||Milton Roberto Heinen&&Paulo Martins Engel||2010
+conf/sbrn/NevesC97||José Neves&&Paulo Cortez||1997
+conf/sbrn/AndradeS10||Luciano Carli Moreira de Andrade&&Ivan Nunes da Silva||2010
+conf/sbrn/BeiuDM97||Valeriu Beiu&&Sorin Draghici&&Hanna E. Makaruk||1997
+conf/sbrn/SouzaGGC12||Givanaldo R. de Souza&&Elizabeth Ferreira Gouvea Goldbarg&&Marco César Goldbarg&&Anne M. P. Canuto||2012
+conf/sbrn/OliveiraAO02||Gina M. B. Oliveira&&Oscar K. N. Asakura&&Pedro Paulo Balbi Oliveira||2002
+conf/sbrn/ThomazFV98||Carlos E. Thomaz&&Raul Queiroz Feitosa&&Alvaro Veiga||1998
+conf/sbrn/VargasCML02||Fabian Vargas&&Maria Cristina Felippetto de Castro&&Marcello Macarthy&&Djones Lettnin||2002
+conf/sbrn/JuniorH00||Celso de Sousa Júnior&&Elder Moreira Hemerly||2000
+conf/sbrn/KokshenevB08||Illya Kokshenev&&Antônio de Pádua Braga||2008
+conf/sbrn/BarbosaRLLM00||Helio J. C. Barbosa&&Fernanda M. P. Raupp&&Carlile Lavor&&H. Lima&&Nelson Maculan||2000
+conf/sbrn/MotaFP00||Guilherme Lúcio Abelha Mota&&Raul Queiroz Feitosa&&Sidnei Paciornik||2000
+conf/sbrn/SeixasSC98||José Manoel de Seixas&&P. V. M. da Silva&&Luiz Pereira Calôba||1998
+conf/sbrn/Carvalho06||Francisco de A. T. de Carvalho||2006
+conf/sbrn/VidicaO06||Paulo Moises Vidica&&Gina Maira Barbosa de Oliveira||2006
+conf/sbrn/OliveiraM00||Rogério de Oliveira&&Luiz Henrique Alves Monteiro||2000
+conf/sbrn/CerriC10||Ricardo Cerri&&André Carlos Ponce Leon Ferreira de Carvalho||2010
+conf/sbrn/BarrosC98||Allan Kardec Barros&&Andrzej Cichocki||1998
+conf/sbrn/SantosLP08||Patrícia M. Santos&&Teresa Bernarda Ludermir&&Ricardo Bastos Cavalcante Prudêncio||2008
+conf/sbrn/SilvaSB00||Ivan Nunes da Silva&&André Nunes De Souza&&Mário Eduardo Bordon||2000
+conf/sbrn/AlekseevS02||K. P. G. Alekseev&&José Manoel de Seixas||2002
+conf/sbrn/SantanaSCS06||Alixandre Santana&&Rodrigo G. F. Soares&&Anne M. P. Canuto&&Marcílio Carlos Pereira de Souto||2006
+conf/sbrn/Brouwer00||Roelof K. Brouwer||2000
+conf/sbrn/CiarelliSO10||Patrick Marques Ciarelli&&Evandro O. T. Salles&&Elias Oliveira||2010
+conf/sbrn/NaldiC12||Murilo Coelho Naldi&&Ricardo José Gabrielli Barreto Campello||2012
+conf/sbrn/OleskoviczCC98||Mário Oleskovicz&&Denis V. Coury&&André Carlos Ponce Leon Ferreira de Carvalho||1998
+conf/sbrn/CardosoPMK08||Claudomir Cardoso&&Yomara Pires&&Jefferson Morais&&Aldebaro Klautau||2008
+conf/sbrn/MineuSL12||Nicole L. Mineu&&Adenilton J. da Silva&&Teresa Bernarda Ludermir||2012
+conf/sbrn/AguayoB08||Leonardo Aguayo&&Guilherme De A. Barreto||2008
+conf/sbrn/Castro02||Leandro Nunes de Castro||2002
+conf/sbrn/MendozaWB12||Mariana Recamonde Mendoza&&Adriano Velasque Werhli&&Ana L. C. Bazzan||2012
+conf/sbrn/RibeiroH98||Carlos H. C. Ribeiro&&Elder Moreira Hemerly||1998
+conf/sbrn/KandaCHS10||Jorge Kanda&&André Carlos Ponce Leon Ferreira de Carvalho&&Eduardo R. Hruschka&&Carlos Soares||2010
+conf/sbrn/BritoMRC10||Leonardo da C. Brito&&Ciro Jasé A. Macedo&&Adson Silva Rocha&&Paulo Henrique Portela de Carvalho||2010
+conf/sbrn/OliveiraSS08||Sabrina Moreira de Oliveira&&Sérgio Ricardo de Souza&&Maria Amélia Lopes Silva||2008
+conf/sbrn/SouzaAC08||Milena R. P. Souza&&Leandro R. Almeida&&George D. C. Cavalcanti||2008
+conf/sbrn/LopesLSL02||C. R. S. Lopes&&Teresa Bernarda Ludermir&&Marcílio Carlos Pereira de Souto&&A. B. Ludermir||2002
+conf/sbrn/CechinSG00||Adelmo Luis Cechin&&Antonio Souto&&Marco Aurélio González||2000
+conf/sbrn/Calvo98||Rafael A. Calvo||1998
+conf/sbrn/CarabettiSFG10||Eduardo Goecking Carabetti&&Sérgio Ricardo de Souza&&Marcelo Caramuru Pimentel Fraga&&Pedro Henrique Antonacci Gama||2010
+conf/sbrn/SzuH98||H. Szu&&C. Hsu||1998
+conf/sbrn/CastroZ00||Leandro Nunes de Castro&&Fernando J. Von Zuben||2000
+conf/sbrn/MeloD08||Vinicius Veloso de Melo&&Alexandre C. B. Delbem||2008
+conf/sbrn/BreveZ12||Fabricio A. Breve&&Liang Zhao||2012
+conf/sbrn/BotelhoCL06||Silvia Botelho&&Ulisses Brisolara Correa&&William Israel Lautenschlager||2006
+conf/sbrn/BragaC98||Antônio de Pádua Braga&&Marcelo Azevedo Costa||1998
+conf/sbrn/TinosY10||Renato Tinós&&Shengxiang Yang||2010
+conf/sbrn/PrudencioGL08||Ricardo Bastos Cavalcante Prudêncio&&Silvio B. Guerra&&Teresa Bernarda Ludermir||2008
+conf/sbrn/MartinsBLPD08||Nardênio A. Martins&&Douglas Bertol&&Warody C. Lombardi&&Edson R. de Pieri&&Maria M. Dias||2008
+conf/sbrn/FigueiredoG98||Marco A. Figueiredo&&Clay Gloster||1998
+conf/sbrn/GomesBB06||Rogério M. Gomes&&Antônio de Pádua Braga&&Henrique E. Borges||2006
+conf/sbrn/BragaAPCB97||Anelise P. Braga&&Marcelo Barros de Almeida&&G. Pereita&&Marcelo Azevedo Costa&&C. Barbose||1997
+conf/sbrn/MadeiroVN98||Francisco Madeiro&&R. M. Vilar&&Benedito G. Aguiar Neto||1998
+conf/sbrn/SalazarM00||Fabio A. Salazar&&Antonio Carneiro de Mesquita Filho||2000
+conf/sbrn/DalleMoleA08||Vilson L. DalleMole&&Aluizio F. R. Araújo||2008
+conf/sbrn/Castro00||Joel de L. Pereira Castro Jr.||2000
+conf/sbrn/SassiSH08||Renato José Sassi&&Leandro Augusto da Silva&&Emílio Del Moral Hernandez||2008
+conf/sbrn/GarciaLC12||Luís Paulo F. Garcia&&Ana Carolina Lorena&&André C. P. L. F. Carvalho||2012
+conf/sbrn/MendozaW10||M. R. Mendoza&&Adriano Velasque Werhli||2010
+conf/sbrn/VigneronB98||Vincent Vigneron&&Claude Barret||1998
+conf/sbrn/ValencaL00||Mêuser Jorge Silva Valença&&Teresa Bernarda Ludermir||2000
+conf/sbrn/HeinenO06||Milton Roberto Heinen&&Fernando Santos Osório||2006
+conf/sbrn/OliveiraRNM00||Patricia R. Oliveira&&Roseli A. F. Romero&&Luis Gustavo Nonato&&Josmar Mazucheli||2000
+conf/sbrn/2006||||2006
+conf/sbrn/LeiteCC06||Patricia Texeira Leite&&Adriano A. F. M. Carneiro&&André C. P. L. F. Carvalho||2006
+conf/sbrn/ShimoRTTM10||Helder K. Shimo&&Antônio C. Roque-da-Silva&&Renato Tinós&&Julian Tejada&&Silvio Morato||2010
+conf/sbrn/BenicasaQZR12||Alcides X. Benicasa&&Marcos G. Quiles&&Liang Zhao&&Roseli A. F. Romero||2012
+conf/sbrn/BarrosCO00||Allan Kardec Barros&&Andrzej Cichocki&&Noboru Ohnishi||2000
+conf/sbrn/SpolaorLL10||Newton Spolaôr&&Ana Carolina Lorena&&Huei Diana Lee||2010
+conf/sbrn/Carpinteiro98||Otávio Augusto S. Carpinteiro||1998
+conf/sbrn/SchnitmanY00a||Leizer Schnitman&&Takashi Yoneyama||2000
+conf/sbrn/MiguelSN08||Cesar Gomes Miguel&&Carolina Feher da Silva&&Márcio Lobo Netto||2008
+conf/sbrn/RosaPC98||Marcelo de Oliveira Rosa&&Jose Carlos Pereira&&André Carlos Ponce Leon Ferreira de Carvalho||1998
+conf/sbrn/HeinenO08||Milton Roberto Heinen&&Fernando Santos Osório||2008
+conf/sbrn/RodriguesAM10||Marconi Câmara Rodrigues&&Fábio Meneghetti Ugulino de Araújo&&André Laurindo Maitelli||2010
+conf/sbrn/VenskeGD12||Sandra M. Venske&&Richard A. Gonçalves&&Myriam Regattieri Delgado||2012
+conf/sbrn/ReisAGB06||Alcir G. Reis&&J. L. Acebal&&Rogério M. Gomes&&Henrique E. Borges||2006
+conf/sbrn/DinizPMNFK10||Anthony A. R. Diniz&&Paulo R. M. Pires&&Jorge Dantas de Melo&&Adrião Duarte Dória Neto&&Armando J. J. L. Filho&&Sérgio M. Kanazava||2010
+conf/sbrn/QuilesRZ06||Marcos G. Quiles&&Roseli A. Francelin Romero&&Liang Zhao||2006
+conf/sbrn/NavoneVGC00||Hugo D. Navone&&Pablo F. Verdes&&Pablo M. Granitto&&H. Alejandro Ceccatto||2000
+conf/sbrn/CarvalhoSB06||Francisco de A. T. de Carvalho&&Renata M. C. R. de Souza&&Lucas X. T. Bezerra||2006
+conf/sbrn/BarrosC02||Allan Kardec Barros&&Andrzej Cichocki||2002
+conf/sbrn/CanutoFH02||Anne M. P. Canuto&&Michael C. Fairhurst&&Gareth Howells||2002
+conf/sbrn/JacobHF02||Alexsandro M. Jacob&&Elder Moreira Hemerly&&David Fernandes||2002
+conf/sbrn/Beiu98||Valeriu Beiu||1998
+conf/sbrn/FukudaNJACPPV00||Fernando Hideo Fukuda&&Luiz Biondi Neto&&Vincenzo de Roberto Junior&&Elias Restum Antonio&&Luiz Chiganer&&Emmanuel L. P. Passos&&Marco Aurélio Cavalcanti Pacheco&&Jorge Valério||2000
+conf/sbrn/AraujoO02||Paulo Teixeira de Araújo&&Gina Maira Barbosa de Oliveira||2002
+conf/sbrn/TimoszczukC98||Antonio Pedro Timoszczuk&&Euvaldo F. Cabral Jr.||1998
+conf/sbrn/VargasSC98||Ernesto Cuadros-Vargas&&Humberto Costa de Sousa&&André Carlos Ponce Leon Ferreira de Carvalho||1998
+conf/sbrn/BarbosaMVPV02||Carlos R. Hall Barbosa&&B. Melo&&Marley B. R. Vellasco&&Marco Aurélio Cavalcanti Pacheco&&L. P. Vasconcellos||2002
+conf/sbrn/Puma-VillanuevaZ10||Wilfredo J. Puma-Villanueva&&Fernando J. Von Zuben||2010
+conf/sbrn/Kristoferson98||Jan Kristoferson||1998
+conf/sbrn/FriskeR02||Letícia Maria Friske&&Carlos H. C. Ribeiro||2002
+conf/sbrn/CastroIZG98||Leandro Nunes de Castro&&Eduardo Masato Iyoda&&Fernando J. Von Zuben&&Ricardo R. Gudwin||1998
+conf/sbrn/CupertinoZ12||Thiago Henrique Cupertino&&Liang Zhao||2012
+conf/sbrn/MenezesB06||Jose M. P. Menezes Jr.&&Guilherme De A. Barreto||2006
+conf/sbrn/CarvalhoL06||Marcio Carvalho&&Teresa Bernarda Ludermir||2006
+conf/sbrn/PavelskiAG12||Lucas M. Pavelski&&Carolina P. de Almeida&&Richard A. Gonçalves||2012
+conf/sbrn/FariaRS06||Gedson Faria&&Roseli A. Francelin Romero&&Edson Prestes e Silva Jr.||2006
+conf/sbrn/FilhoSLV02||Domingos Vanderlei Filho&&Marcos A. dos Santos&&Teresa Bernarda Ludermir&&Mêuser Jorge Silva Valença||2002
+conf/sbrn/MorenoSFF98||Juan Moreno García&&Gabriel Sebastián&&Miguel Angel Fernández&&Antonio Fernández-Caballero||1998
+conf/sbrn/SantosSOH00||Carmen L. R. Santos&&Celso R. Souza&&Pedro Paulo Balbi de Oliveira&&Phil Husbands||2000
+conf/sbrn/BarretoB00||André da Motta Salles Barreto&&Helio J. C. Barbosa||2000
+conf/sbrn/CostaCS02||Ivan G. Costa&&Francisco de A. T. de Carvalho&&Marcílio Carlos Pereira de Souto||2002
+conf/sbrn/HenriquesA98||André S. Henriques&&Aluizio F. R. Araújo||1998
+conf/sbrn/BaduePS08||Claudine Badue&&Felipe Pedroni&&Alberto Ferreira de Souza||2008
+conf/sbrn/MadeiroVN00||Francisco Madeiro&&M. S. Vajapeyam&&Benedito G. Aguiar Neto||2000
+conf/sbrn/MesquitaR02||Antonio Carneiro de Mesquita Filho&&Marco Antonio Alvares dos Prazeres Rafael||2002
+conf/sbrn/KitaniHTS10||Edson C. Kitani&&Emílio Del Moral Hernandez&&Carlos E. Thomaz&&Leandro A. da Silva||2010
+conf/sbrn/ValencaL98||Mêuser Jorge Silva Valença&&Teresa Bernarda Ludermir||1998
+conf/sbrn/FerreiraA12||Paulo Henrique Muniz Ferreira&&Aluizio Fausto Ribeiro Araújo||2012
+conf/sbrn/MiraG00||José Mira&&Ana E. Delgado García||2000
+conf/sbrn/BedregalP06||Benjamín René Callejas Bedregal&&Ivan Pan||2006
+conf/sbrn/FagundesMCC02||Rubem Dutra Ribeiro Fagundes&&Alexandre A. Cheuiche Martins&&Fernando Comparsi de Castro&&Maria Cristina Felippetto de Castro||2002
+conf/sbrn/TelesS02||C. C. B. Teles&&José Manoel de Seixas||2002
+conf/sbrn/FaceliSC08||Katti Faceli&&Marcílio Carlos Pereira de Souto&&André Carlos Ponce Leon Ferreira de Carvalho||2008
+conf/sbrn/OliveiraCSB08||Elias Oliveira&&Patrick Marques Ciarelli&&Alberto Ferreira de Souza&&Claudine Badue||2008
+conf/sbrn/VallimFCG12||Rosane Maria Maffei Vallim&&Jose Augusto Andrade Filho&&André C. P. L. F. Carvalho&&João Gama||2012
+conf/sbrn/OliveiraSL02a||José Carlos Martins Oliveira&&Marcílio Carlos Pereira de Souto&&Teresa Bernarda Ludermir||2002
+conf/sbrn/GalvaoY98||Roberto Kawakami Harrop Galvão&&Takashi Yoneyama||1998
+conf/sbrn/NettoDE00||Salvador M. C. Netto&&Max Suell Dutra&&Alexandre Evsukof||2000
+conf/sbrn/SilvaLO10||Adenilton J. da Silva&&Teresa Bernarda Ludermir&&Wilson Rosa de Oliveira||2010
+conf/sbrn/HungASMH97||Donald L. Hung&&Antonio Arsgao&&Jorge L. Silva&&Eduardo Marques&&Karl Hillesland||1997
+conf/sbrn/MaiaCL06||André Luis Santiago Maia&&Francisco de A. T. de Carvalho&&Teresa Bernarda Ludermir||2006
+conf/sbrn/WaldherrTR98||Stefan Waldherr&&Sebastian Thrun&&Roseli Romero||1998
+conf/sbrn/NetoB97||Hugo Vieira Neto&&Díbio Leandro Borges||1997
+conf/sbrn/PimentaC10||Adinovam H. M. Pimenta&&Heloisa de Arruda Camargo||2010
+conf/sbrn/CarvalhoP10||Andre B. de Carvalho&&Aurora Pozo||2010
+conf/sbrn/ZanchettinL06||Cleber Zanchettin&&Teresa Bernarda Ludermir||2006
+conf/sbrn/BarretoBE02||André da Motta Salles Barreto&&Helio J. C. Barbosa&&Nelson F. F. Ebecken||2002
+conf/sbrn/GascaB00||Eduardo Gasca&&Ricardo Barandela||2000
+conf/sbrn/KuglerL02||Mauricio Kugler&&Heitor Silvério Lopes||2002
+conf/sbrn/BurattiniGT00||Ernesto Burattini&&Massimo De Gregorio&&Guglielmo Tamburrini||2000
+conf/sbrn/PadoanAB02||Antonio C. Padoan Jr.&&Aluizio F. R. Araújo&&Guilherme De A. Barreto||2002
+conf/sbrn/BarretoA98||Guilherme De A. Barreto&&Aluizio F. R. Araújo||1998
+conf/sbrn/RibeiroVQ97||Juliana N. G. Ribeiro&&Germano C. Vasconcelos&&Carlos R. O. Queiroz||1997
+conf/sbrn/SantosALNF12||Henrique C. T. Santos&&Gabriela I. L. Alves&&Neilson F. de Lima&&Paulo S. G. de Mattos Neto&&Tiago A. E. Ferreira||2012
+conf/sbrn/FagundesC06||Diogo Fagundes&&Anne M. P. Canuto||2006
+conf/sbrn/Pestov10||Vladimir Pestov||2010
+conf/sbrn/BordonSS00||Mário Eduardo Bordon&&Ivan Nunes da Silva&&André Nunes De Souza||2000
+conf/sbrn/CostaBM02a||Marcelo Azevedo Costa&&Antônio de Pádua Braga&&Benjamin Rodrigues de Menezes||2002
+conf/sbrn/LorenaSCS10||Ana Carolina Lorena&&Newton Spolaôr&&Ivan G. Costa&&Marcilio C. P. Souto||2010
+conf/sbrn/SilvaOL10||Adenilton J. da Silva&&Wilson Rosa de Oliveira&&Teresa Bernarda Ludermir||2010
+conf/sbrn/PalmerRM02||Alex S. Palmer&&Moe Razaz&&Danilo P. Mandic||2002
+conf/sbrn/SalgadoBBM00||Paulo Salgado&&João Barroso&&José Bulas-Cruz&&Pedro Melo-Pinto||2000
+conf/sbrn/DiasOW12||Maurício A. Dias&&Fernando Santos Osório&&Denis F. Wolf||2012
+conf/sbrn/LorenaC06||Ana Carolina Lorena&&André Carlos Ponce Leon Ferreira de Carvalho||2006
+conf/sbrn/RossiDC08||André L. D. Rossi&&Luis Debiaso&&André Carlos Ponce Leon Ferreira de Carvalho||2008
+conf/sbrn/BarbosaLSSSM02||Maria Silva Santos Barbosa&&Teresa Bernarda Ludermir&&Marizete Silva Santos&&Francisco Luiz dos Santos&&José Edison Gomes de Souza&&Celso Pinto de Melo||2002
+conf/sbrn/YamazakiLS02||Akio Yamazaki&&Teresa Bernarda Ludermir&&Marcílio Carlos Pereira de Souto||2002
+conf/sbrn/FilhoL02||Jairo Diniz Filho&&Teresa Bernarda Ludermir||2002
+conf/sbrn/MazzaR98||Marcelo B. Mazza&&Antônio C. Roque-da-Silva||1998
+conf/sbrn/OsorioHF02||Fernando Santos Osório&&Farlei J. Heinen&&Luciane Fortes||2002
+conf/sbrn/Rosa02||João Luís Garcia Rosa||2002
+conf/sbrn/RibeiroP10||Marcelo Nunes Ribeiro&&Ricardo Bastos Cavalcante Prudêncio||2010
+conf/sbrn/AlmeidaBB00||Marcelo Barros de Almeida&&Antônio de Pádua Braga&&João Pedro Braga||2000
+conf/sbrn/NunezAC02||Haydemar Núñez&&Cecilio Angulo&&Andreu Català||2002
+conf/sbrn/Zarate00||Luis E. Zárate||2000
+conf/sbrn/LopesSCG12||Rodolfo Ayala Lopes&&Rodrigo César Pedrosa Silva&&Felipe Campelo&&Frederico G. Guimarães||2012
+conf/sbrn/2000||||2000
+conf/sbrn/FilhoMC98||Thomas E. Filgueiras Filho&&Ronaldo O. Messina&&Euvaldo F. Cabral Jr.||1998
+conf/sbrn/GuerreiroA06||Ana M. G. Guerreiro&&Carlos A. Paz de Araujo||2006
+conf/sbrn/SilvaC10||Marsil de Athayde Costa e. Silva&&Leandro dos Santos Coelho||2010
+conf/sbrn/EngelJ98||Paulo Martins Engel&&Edson Prestes e Silva Jr.||1998
+conf/sbrn/CorreaL06||Renato Fernandes Corrêa&&Teresa Bernarda Ludermir||2006
+conf/sbrn/2008||||2008
+conf/sbrn/NorthfleetEH12||Christian Northfleet&&Paulo Martins Engel&&Milton Roberto Heinen||2012
+conf/sbrn/BeigyM00||Hamid Beigy&&Mohammad Reza Meybodi||2000
+conf/sbrn/LorenaC08||Ana Carolina Lorena&&André Carlos Ponce Leon Ferreira de Carvalho||2008
+conf/sbrn/JonesMDT00||Antonia J. Jones&&Steve Margetts&&Peter Durrant&&Alban P. M. Tsui||2000
+conf/sbrn/AugustoB00||Douglas Adriano Augusto&&Helio J. C. Barbosa||2000
+conf/sbrn/ParreiraYDS06||Fabio J. Parreira&&Keiji Yamanaka&&João-Batista Destro-Filho&&Angela A. de Sa||2006
+conf/sbrn/GomideM10||Paulo Gomide&&Ruy Luiz Milidiú||2010
+conf/sbrn/2010||||2010
+conf/sbrn/GesualdiSAA02||Aline da Rocha Gesualdi&&José Manoel de Seixas&&Marcelo Portes de Albuquerque&&Márcio Portes de Albuquerque||2002
+conf/sbrn/SouzaVP00||Flávio Joaquim de Souza&&Marley B. R. Vellasco&&Marco Aurélio Cavalcanti Pacheco||2000
+conf/sbrn/CorreaL02||Renato Fernandes Corrêa&&Teresa Bernarda Ludermir||2002
+conf/sbrn/CarvalhoBF12||Francisco de A. T. de Carvalho&&Gibson B. N. Barbosa&&Marcelo R. P. Ferreira||2012
+conf/sbrn/PereiraEP12||Renato de Pontes Pereira&&Paulo Martins Engel&&Rafael C. Pinto||2012
+conf/sbrn/CastroB08||Cristiano Leite Castro&&Antônio de Pádua Braga||2008
+conf/sbrn/CostaBMPT02||Marcelo Azevedo Costa&&Antônio de Pádua Braga&&Benjamin Rodrigues de Menezes&&Gustavo Guimarães Parma&&Roselito de Albuquerque Teixeira||2002
+conf/sbrn/LandimMSC00||Régis P. Landim&&Benjamin Rodrigues de Menezes&&Selênio R. Silva&&Walmir M. Caminhas||2000
+conf/sbrn/CondeRV00||Guilherme A. Conde&&Patrícia G. Ramos&&Germano C. Vasconcelos||2000
+conf/sbrn/CorchadoF02||Emilio Corchado&&Colin Fyfe||2002
+conf/sbrn/Bologna00||Guido Bologna||2000
+conf/sbrn/MeleiroCFZ02||Luiz Augusto da Cruz Meleiro&&Ricardo J. G. B. Campello&&Rubens Maciel Filho&&Fernando J. Von Zuben||2002
+conf/sbrn/2002||||2002
+conf/sbrn/SantoACM08||P. H. Espírito Santo&&R. C. Albuquerque&&D. C. Cunha&&F. Madeiro||2008
+conf/sbrn/FilhoPCTRL08||Valmir Macário Filho&&Ricardo Bastos Cavalcante Prudêncio&&Francisco de A. T. de Carvalho&&Leandro R. Torres&&Laerte Rodrigues Jr.&&Marcos G. Lima||2008
+conf/sbrn/DevogelaereR00||Dirk Devogelaere&&Marcel Rijckaert||2000
+conf/sbrn/SilvaB98||José Demisio Simões da Silva&&Kamal Kant Bharadwaj||1998
+conf/sbrn/Assis00||Francisco M. de Assis||2000
+conf/sbrn/PeresFVO06||Sarajane Marques Peres&&Franklin César Flores&&Denise Veronez&&Carlos José M. Olguin||2006
+conf/sbrn/JuniorBP12||Olacir Rodrigues Castro Junior&&Andre B. de Britto&&Aurora Pozo||2012
+conf/sbrn/SantanaPBF06||Ewaldo Eder Santana&&Jose C. Principe&&Allan Kardec Barros&&R. C. S. Freire||2006
+conf/sbrn/FilhoSC08||Eduardo F. Simas Filho&&José Manoel de Seixas&&Luiz Pereira Calôba||2008
+conf/sbrn/LorenaBCM02||Ana Carolina Lorena&&Gustavo E. A. P. A. Batista&&André Carlos Ponce Leon Ferreira de Carvalho&&Maria Carolina Monard||2002
+conf/sbrn/ScottCR00||Luis P. B. Scott&&Jorge Chahine&&José R. Ruggiero||2000
+conf/sbrn/LudermirSO08||Teresa Bernarda Ludermir&&Marcílio Carlos Pereira de Souto&&Wilson Rosa de Oliveira||2008
+conf/sbrn/ZhaoFC02||Liang Zhao&&Rogerio A. Furukawa&&André Carlos Ponce Leon Ferreira de Carvalho||2002
+conf/sbrn/SilvaLO12||Adenilton J. da Silva&&Teresa Bernarda Ludermir&&Wilson Rosa de Oliveira||2012
+conf/sbrn/BuenoO10||Marcos L. P. Bueno&&Gina M. B. Oliveira||2010
+conf/sbrn/CajueiroH00||Daniel Oliveira Cajueiro&&Elder Moreira Hemerly||2000
+conf/sbrn/BenicasaR10||Alcides X. Benicasa&&Roseli A. F. Romero||2010
+conf/sbrn/AdeodatoT97||Paulo J. L. Adeodato&&John G. Taylor||1997
+conf/sbrn/Orr98||Mark J. L. Orr||1998
+conf/sbrn/CintraMC10||Marcos Evandro Cintra&&Maria Carolina Monard&&Heloisa de Arruda Camargo||2010
+conf/sbrn/MachadoVSG06||Marcos Machado&&Marley B. R. Vellasco&&Pedro Mario Silva&&Marcelo Gattass||2006
+conf/sbrn/Herrero00||Juan Carlos Herrero||2000
+conf/sbrn/RosendoP10||Matheus Rosendo&&Aurora Pozo||2010
+conf/sbrn/NetoCB06||Eufrasio de A. Lima Neto&&Francisco de A. T. de Carvalho&&Lucas X. T. Bezerra||2006
+conf/sbrn/LeiteCC02||Patricia Texeira Leite&&Alber de Franca Mendes Carneiro&&André Carlos Ponce Leon Ferreira de Carvalho||2002
+conf/sbrn/OliveiraMSA06||Adriano L. I. Oliveira&&Carlos A. B. Mello&&E. R. Silva Jr.&&V. M. O. Alves||2006
+conf/sbrn/SzeligaVGC02||María I. Széliga&&Pablo F. Verdes&&Pablo M. Granitto&&H. Alejandro Ceccatto||2002
+conf/sbrn/MacedoSCC02||Renata A. Macêdo&&Donato da Silva-Filho&&Denis V. Coury&&André Carlos Ponce Leon Ferreira de Carvalho||2002
+conf/sbrn/MartinsSSP06||Leonardo de Oliveira Martins&&Alcione M. dos Santos&&Aristófanes C. Silva&&Anselmo Cardoso de Paiva||2006
+conf/sbrn/EngelM98||Paulo Martins Engel&&Rolf Fredi Molz||1998
+conf/sbrn/CamposPVS10||Arion de Campos Jr.&&Aurora T. R. Pozo&&Silvia Regina Vergilio&&Taylor Savegnago||2010
+conf/sbrn/MendozaB12||Mariana Recamonde Mendoza&&Ana L. C. Bazzan||2012
+conf/sbrn/Lima00||Priscila Machado Vieira Lima||2000
+conf/sbrn/CaldasON08||Bernardo J. B. Caldas&&Flávio R. S. Oliveira&&Fernando Buarque de Lima Neto||2008
+conf/sbrn/Ludermir98||Teresa Bernarda Ludermir||1998
+conf/sbrn/JuniorPFANC00||Vincenzo de Roberto Junior&&Emmanuel L. P. Passos&&Fernando Hideo Fukuda&&Elias Restum Antonio&&Luiz Biondi Neto&&Luiz Chiganer||2000
+conf/sbrn/TeixeiraOOF08||Lamartine Almeida Teixeira&&Felipe T. G. Oliveira&&Adriano L. I. Oliveira&&Carmelo J. A. Bastos Filho||2008
+conf/sbrn/SilvaSMS06||Lília de Sá Silva&&Adriana C. Ferrari dos Santos&&Antonio Montes&&Jose Demisio da Silva Simoes||2006
+conf/sbrn/OliveiraEON10||Marilia M. F. de Oliveira&&Nelson F. F. Ebecken&&Jorge L. F. de Oliveira&&Luis Manoel Paiva Nunes||2010
+conf/sbrn/LacerdaCL02||Estefane G. M. de Lacerda&&André Carlos Ponce Leon Ferreira de Carvalho&&Teresa Bernarda Ludermir||2002
+conf/sbrn/BezerraZA12||Byron Leite Dantas Bezerra&&Cleber Zanchettin&&Vinícius Braga de Andrade||2012
+conf/sbrn/SantosBM10||José Daniel A. Santos&&Guilherme De A. Barreto&&Cláudio M. S. Medeiros||2010
+conf/sbrn/MedeirosAC06||Anderson V. Medeiros&&Wagner Caradori do Amaral&&Ricardo J. G. B. Campello||2006
+conf/sbrn/CarneiroO12||Murillo Guimarães Carneiro&&Gina M. B. Oliveira||2012
+conf/sbrn/SoutoCFSBC12||Marcilio C. P. de Souto&&André L. V. Coelho&&Katti Faceli&&Tiemi C. Sakata&&Viviane Bonadia&&Ivan G. Costa||2012
+conf/sbrn/ZanussoA98||Maria Bernadete Zanusso&&Aldrovando L. A. Araújo||1998
+conf/sbrn/PintroC12||Fernando Pintro&&Anne M. P. Canuto||2012
+conf/sbrn/CardenasC12||Edward Hinojosa Cárdenas&&Heloisa A. Carmago||2012
+conf/sbrn/CostaBM02||Marcelo Azevedo Costa&&Antônio de Pádua Braga&&Benjamin Rodrigues de Menezes||2002
+conf/sbrn/TeixeiraBTS02||Roselito de Albuquerque Teixeira&&Antônio de Pádua Braga&&Ricardo H. C. Takahashi&&Rodney R. Saldanha||2002
+conf/sbrn/ValeNCD10||Karliane O. Vale&&Antonino Feitosa Neto&&Anne M. P. Canuto&&Filipe G. Dias||2010
+conf/sbrn/Valle10||Marcos Eduardo Valle||2010
+conf/sbrn/AndreF02||Tulio Cesar Soares dos Santos Andre&&Antônio Carlos Roque da Silva Filho||2002
+conf/sbrn/OliveiraL02||Eleonora Ma. Jesus Oliveira&&Teresa Bernarda Ludermir||2002
+conf/sbrn/SchneiderR02||Marvin Oliver Schneider&&João Luís Garcia Rosa||2002
+conf/sbrn/ParmaMB98||Gustavo Guimarães Parma&&Benjamin Rodrigues de Menezes&&Antônio de Pádua Braga||1998
+conf/sbrn/PrudencioL06||Ricardo Bastos Cavalcante Prudêncio&&Teresa Bernarda Ludermir||2006
+conf/sbrn/ParadedaXC08||Raul B. Paradeda&&João Carlos Xavier Jr.&&Anne M. P. Canuto||2008
+conf/sbrn/LacerdaLC00||Estefane G. M. de Lacerda&&Teresa Bernarda Ludermir&&André Carlos Ponce Leon Ferreira de Carvalho||2000
+conf/sbrn/PisaniL12||Paulo Henrique Pisani&&Ana Carolina Lorena||2012
+conf/sbrn/Sjodin98||Gunnar Sjödin||1998
+conf/sbrn/NetoNGN00||Areolino de Almeida Neto&&Wilson Rios Neto&&Luiz Carlos S. Góes&&Cairo L. Nascimento Jr.||2000
+conf/sbrn/FilhoCMC08||Carmelo J. A. Bastos Filho&&Marcel P. Caraciolo&&Péricles B. C. de Miranda&&Danilo F. Carvalho||2008
+conf/sbrn/ValencaL02||Mêuser Jorge Silva Valença&&Teresa Bernarda Ludermir||2002
+conf/sbrn/GueleriZ12||Roberto Alves Gueleri&&Liang Zhao||2012
+conf/sbrn/FigueiredoBDR12||Mônica da Silva Figueiredo&&Silvia Silva da Costa Botelho&&Paulo Drews Jr.&&Celina Haffele Da Rocha||2012
+conf/sbrn/MirandaPCS12||Péricles B. C. de Miranda&&Ricardo B. C. Prudêncio&&André C. P. L. F. Carvalho&&Carlos Soares||2012
+conf/sbrn/SiqueiraDN00||Mozart Lemos de Siqueira&&Guilherme Drehmer&&Philippe Olivier Alexandre Navaux||2000
+conf/sbrn/BrizzottiC00||M. M. Brizzotti&&André Carlos Ponce Leon Ferreira de Carvalho||2000
+conf/sbrn/BonfimY02||Tatiane R. Bonfim&&Akebo Yamakami||2002
+conf/sbrn/LopesMAN00||Waslon Terllizzie A. Lopes&&Francisco Madeiro&&Marcelo Sampaio de Alencar&&Benedito G. Aguiar Neto||2000
+conf/sbrn/RalhaSWB10||Célia Ghedini Ralha&&Hugo W. Schneider&&Maria Emilia M. T. Walter&&A. L. Cetertich Bazzan||2010
+conf/sbrn/SakataFSC10||Tiemi C. Sakata&&Katti Faceli&&Marcílio Carlos Pereira de Souto&&André Carlos Ponce Leon Ferreira de Carvalho||2010
+conf/sbrn/CarpinteiroS00||Otávio Augusto S. Carpinteiro&&Alexandre P. Alves da Silva||2000
+conf/sbrn/OliveiraSLLGP08||Wilson Rosa de Oliveira&&Adenilton J. da Silva&&Teresa Bernarda Ludermir&&Amanda Leonel&&Wilson R. Galindo&&Jefferson C. C. Pereira||2008
+conf/sbrn/Zhao06||Liang Zhao||2006
+conf/sbrn/BrittoP12||Andre B. de Britto&&Aurora Pozo||2012
+conf/sbrn/TinosT98||Renato Tinós&&Marco H. Terra||1998
+conf/sbrn/GomesZ02||Lalinka de C. T. Gomes&&Fernando J. Von Zuben||2002
+conf/sbrn/BorgesCOIK08||José Borges&&Igor Couto&&Fabíola Oliveira&&Tales Imbiriba&&Aldebaro Klautau||2008
+conf/sbrn/SchnitmanY00||Leizer Schnitman&&Takashi Yoneyama||2000
+conf/sbrn/SoaresCOM08||Rosana Paula de Oliveira Soares&&Adriana Rosa Garcez Castro&&Roberto Célio Limão de Oliveira&&Vladimiro Miranda||2008
+conf/sbrn/Almeida97||Fernando C. Almeida||1997
+conf/sbrn/Zhao00||Liang Zhao||2000
+conf/sbrn/Vilela00||Iara Moema Oberg Vilela||2000
+conf/sbrn/SantanaCA06||Laura Emmanuella A. Santana&&Anne M. P. Canuto&&Marjory C. C. Abreu||2006
+conf/sbrn/GouveaBC02||Marlon R. de Gouvêa&&Lane Maria Rabelo Baccarini&&Walmir M. Caminhas||2002
+conf/sbrn/BurattiniGT00a||Ernesto Burattini&&Massimo De Gregorio&&Guglielmo Tamburrini||2000
+conf/sbrn/PierobomDK12||Jean L. Pierobom&&Myriam Regattieri Delgado&&Celso A. A. Kaestner||2012
+conf/sbrn/1997||||1997
+conf/sbrn/AraujoA00||A. Araújo&&Francisco M. de Assis||2000
+conf/sbrn/BalliniSA98||Rosangela Ballini&&Secundino Soares&&Marinho Gomes Andrade||1998
+conf/sbrn/TeixeiraBTS00||Roselito de Albuquerque Teixeira&&Antônio de Pádua Braga&&Ricardo H. C. Takahashi&&Rodney R. Saldanha||2000
+conf/sbrn/CanutoPNF10||Anne M. P. Canuto&&Fernando Pintro&&Antonino Feitosa Neto&&Michael C. Fairhurst||2010
+conf/sbrn/TinosM08||Renato Tinós&&Luiz Otávio Murta Jr.||2008
+conf/sbrn/AraujoSF06||Ricardo de A. Araújo&&Robson P. de Sousa&&Tiago A. E. Ferreira||2006
+conf/sbrn/CarneiroLC98||Adriano A. F. M. Carneiro&&Patricia Texeira Leite&&André Carlos Ponce Leon Ferreira de Carvalho||1998
+conf/sbrn/BeckenkampPF98||Fábio Ghignatti Beckenkamp&&Wolfgang Pree&&Miguel Artur Feldens||1998
+conf/sbrn/JaskowiakCCH10||Pablo A. Jaskowiak&&Ricardo J. G. B. Campello&&Thiago F. Covoes&&Eduardo R. Hruschka||2010
+conf/sbrn/MinkuL06||Fernanda L. Minku&&Teresa Bernarda Ludermir||2006
+conf/sbrn/GuimaraesRFCGMZC98||J. G. Guimarães&&Alexandre R. S. Romariz&&P. U. A. Ferreira&&J. V. Campêlo Jr.&&M. L. Graciano Jr.&&O. R. Maia Jr.&&J. Zancanaro&&J. C. da Costa||1998
+conf/sbrn/DuarteBB02||Eber M. Duarte&&Antônio de Pádua Braga&&José L. Braga||2002
+conf/sbrn/VieiraNC02||Frederico Carvalho Vieira&&Adrião Duarte Dória Neto&&José Alfredo F. Costa||2002
+conf/sbrn/CorreaP10||Renato Fernandes Corrêa&&Bruno Florencio Pinheiro||2010
+conf/sbrn/LimaCZ02||Clodoaldo Ap. M. Lima&&André Luís Vasconcelos Coelho&&Fernando J. Von Zuben||2002
+conf/sbrn/BordignonG12||Fernando Bordignon 0002&&Fernando Gomide||2012
+conf/sbrn/FerreiraRGMC98||Alexandre R. S. Romariz&&P. U. A. Ferreira&&J. V. Campêlo Jr.&&M. L. Graciano Jr.&&O. R. Maia Jr.&&J. C. da Costa||1998
+conf/sbrn/LandimMSC98||Régis P. Landim&&Benjamin Rodrigues de Menezes&&Selênio R. Silva&&Walmir M. Caminhas||1998
+conf/sbrn/MacedoLO08||Heverton B. Macêdo&&Marcelo J. L. Lima&&Gina M. B. Oliveira||2008
+conf/sbrn/LiangZ12||Xiaoming Liang&&Liang Zhao||2012
+conf/sbrn/CupertinoZ12a||Thiago Henrique Cupertino&&Liang Zhao||2012
+conf/sbrn/SoutoA98||Marcílio Carlos Pereira de Souto&&Paulo J. L. Adeodato||1998
+conf/sbrn/AyalaCGC12||Helon Vicente Hultmann Ayala&&Leandro dos Santos Coelho&&Fabio Alessandro Guerra&&Mariana Cristina Coelho||2012
+conf/sbrn/CortesS10||Omar Andres Carmona Cortes&&Josenildo Costa da Silva||2010
+conf/sbrn/2012||||2012
+conf/deis/LeungK11||Timothy L. Y. Leung&&William J. Knottenbelt||2011
+conf/deis/MahdiJ11||Abdulhussain E. Mahdi&&Arash Joorabchi||2011
+conf/deis/TorkamanNKAT11||Mohammad Reza Najaf Torkaman&&Pourya Nikfard&&Nazanin Sadat Kazazi&&Mohammad Reza Abbasy&&S. Farzaneh Tabatabaiee||2011
+conf/deis/BarrosoAGV11||John Manuel Delgado Barroso&&Luis Joyanes Aguilar&&Pablo García Gundín&&Jayguer Vasquezr||2011
+conf/deis/DunkelK11||Jürgen Dunkel&&Carsten Kleiner||2011
+conf/deis/RamlyAH11||Saliza Ramly&&Syed Ahmad Aljunid&&Hanizan Shaker Hussain||2011
+conf/deis/YasinIHU11||Waheed Yasin&&Hamidah Ibrahim&&Nor Asilah Wati Abdul Hamid&&Nur Izura Udzir||2011
+conf/deis/2011||||2011
+conf/deis/KiHNLL11||JuHee Ki&&Jung Yeon Hwang&&DaeHun Nyang&&Dong Hoon Lee&&Jongin Lim||2011
+conf/deis/HuangC11||Echo Huang&&Fachang Chen||2011
+conf/deis/NoraziahOZSWR11||Ahmad Noraziah&&M. Affendy Omardin&&Noriyani Mohd Zin&&Roslina Mohd Sidek&&Mohd Helmy Abd Wahab&&Jiwat Ram||2011
+conf/deis/Akbulut-Bailey11||Asli Akbulut-Bailey||2011
+conf/deis/ZinNF11||Noriyani Mohd Zin&&Ahmad Noraziah&&Ainul Azila Che Fauzi||2011
+conf/deis/Taher11||Murad Ahmed Ali Taher||2011
+conf/deis/Lutz11||David J. Lutz||2011
+conf/deis/KhanNDI11||Nawsher Khan&&Ahmad Noraziah&&Mustafa Mat Deris&&Elrasheed I. Ismail||2011
+conf/deis/NoraziahSHSEA11||Ahmad Noraziah&&A. S. Ahmad Solihin&&Tutut Herawan&&Roslina Mohd Sidek&&Eyas El-Qawasmeh&&Ezendu Ariwa||2011
+conf/deis/HusainMOS11||A. Husain&&S. Kami Makki&&Lawrence Osborne&&Bo Sun||2011
+conf/deis/YooPB11||HyunKyung Yoo&&Yoo-mi Park&&Hyunjoo Bae||2011
+conf/deis/KhaledI11||Abdelilah Khaled&&Mohammed Abdou Janati Idrissi||2011
+conf/deis/El-LatifNW11||Ahmed A. Abd El-Latif&&Xiamu Niu&&Ning Wang||2011
+conf/deis/NadaliPMN11||Ahmad Nadali&&Sanaz Pourdarab&&Aliakbar Mazloumi&&Hamid Eslami Nosratabadi||2011
+conf/deis/EbadiSM11||Sahar Ebadi&&Md. Nassir Sulaiman&&Masrah Azrifah Azmi Morad||2011
+conf/deis/IacobP11||Andreea Iluzia Iacob&&Costin-Ciprian Popescu||2011
+conf/deis/KhatibiMK11||Vahid Khatibi&&Shima Mohebbi&&Abbas Keramati||2011
+conf/deis/CasanovaAVSB11||Javier Guerra Casanova&&Carmen Sánchez Ávila&&Vicente Jara Vera&&Alberto de Santos Sierra&&Gonzalo Bailador||2011
+conf/deis/KeramatiAAN11||Abbas Keramati&&Masoud Afshari-Mofrad&&Delnia Amir-Ashayeri&&Alireza Nili||2011
+conf/deis/DagherK11||Joseph Dagher&&Joze Kuzic||2011
+conf/deis/KraljicDK11||Adnan Kraljic&&Denis Delismajlovic&&Tarik Kraljic||2011
+conf/deis/NiliK11||Alireza Nili&&Abbas Keramati||2011
+conf/deis/NwuluOI11||Nnamdi I. Nwulu&&Shola Oroja&&Mustafa Ilkan||2011
+conf/deis/OsmanTSYA11||Mohd Azam Osman&&Abdullah Zawawi Talib&&Zainal Abidin Sanusi&&Tan Shieng Yen&&Abdullah Sani Alwi||2011
+conf/deis/LiuEBV11||Hongyan Liu&&Tomas Eklund&&Barbro Back&&Hannu Vanharanta||2011
+conf/deis/DaoudAA11||Amjad M. Daoud&&Hussein Abdel-jaber&&Jafar Ababneh||2011
+conf/deis/TamisierDF11||Thomas Tamisier&&Yoanne Didry&&Fernand Feltz||2011
+conf/deis/LimTT11||Chen Kim Lim&&Kian Lam Tan&&Abdullah Zawawi Talib||2011
+conf/deis/MirabiIUM11||Meghdad Mirabi&&Hamidah Ibrahim&&Nur Izura Udzir&&Ali Mamat||2011
+conf/deis/Abdel-jaberATDB11||Hussein Abdel-jaber&&Jafar Ababneh&&Fadi A. Thabtah&&Amjad M. Daoud&&Mahmoud Baklizi||2011
+conf/deis/EbadatKM11||A. Ebadat&&P. Karimaghaee&&H. Mahdiyar||2011
+conf/deis/SoeiniTBM11||Reza Allahyari Soeini&&Laleh Tashakori&&Javad Tashakori Bafghi&&Mohammad Mokhtari||2011
+conf/deis/OlajideS11||Funminiyi Olajide&&Nick Savage||2011
+conf/deis/Bhukya11||Sreedhar Bhukya||2011
+conf/deis/MushtaqSDR11||Arif Mushtaq&&Suziah Bt. Sulaiman&&P. D. D. Dominic&&Sadia Riaz||2011
+conf/deis/KhalidNART11||Noor Elaiza Abdul Khalid&&Noorhayati Mohamed Noor&&Siti Arpah Ahmad&&Mohd Helmi Rosli&&Mohd Nasir Taib||2011
+conf/deis/AlwahaishiMS11||Saleh Alwahaishi&&Jan Martinovic&&Václav Snásel||2011
+conf/deis/Juiz11||Carlos Juiz||2011
+conf/deis/Shin11||Ilhoon Shin||2011
+conf/deis/AzizI11||Azwa Abdul Aziz&&Wan Mohd Rizhan Wan Idris||2011
+conf/deis/JahaniMSS11||Alireza Jahani&&Masrah Azrifah Azmi Murad&&Md Nasir Sulaiman&&Mohd Hasan Selamat||2011
+conf/deis/Jiang11||Zhonghong Jiang||2011
+conf/deis/HassanISY11||Ghada Hassan&&Hamidah Ibrahim&&Md Nasir Sulaiman&&Rasali Yakob||2011
+conf/deis/JawdatOA11||Ahmad Jawdat&&Qasem Obeidat&&Alaa Aljanaby||2011
+conf/deis/DuziMCD11||Marie Duzí&&Marek Mensík&&Martina Cíhalová&&Ludmila Dostálová||2011
+conf/deis/EgbokhareUC11||Francisca Egbokhare&&Kingsley Ukaoha&&Stella C. Chiemeke||2011
+conf/deis/FauziNZ11||Ainul Azila Che Fauzi&&Ahmad Noraziah&&Noriyani Mohd Zin||2011
+conf/deis/PushkarM11||Shashank Pushkar&&Akhileshwar Mishra||2011
+conf/deis/Al-JanabiA11||Sufyan T. Faraj Al-Janabi&&Hussein Khalid Abd-alrazzaq||2011
+conf/deis/LykourentzouDPDL11||Ioanna Lykourentzou&&Younes Djaghloul&&Katerina Papadaki 0002&&Foteini Dagka&&Thibaud Latour||2011
+conf/deis/AngerK11||Isabel Anger&&Christian Kittl||2011
+conf/deis/Mircea11||Marinela Mircea||2011
+conf/deis/AbbasyMA11||Mohammad Reza Abbasy&&Azizah Abdul Manaf&&Shahidan M. A.||2011
+conf/deis/IsmailBI11||Anis Ismail&&Aziz Barbar&&Ziad Ismail||2011
+conf/deis/RafsanjaniM11||Amir Jahangard Rafsanjani&&Seyed-Hassan Mirian-Hosseinabadi||2011
+conf/deis/TanLT11||Kian Lam Tan&&Chen Kim Lim&&Abdullah Zawawi Talib||2011
+conf/deis/AyedSK11||Ghazi Ben Ayed&&Sami Sifi&&Mohamed Bécha Kaânich||2011
+conf/ccgidis/2011||||2012
+conf/ccgidis/GuerraG11||Victor Socas Guerra&&Carina S. González-González||2011
+conf/ccgidis/HuangC11||Chih-Fang Huang&&Chi-Fang Chu||2011
+conf/ccgidis/AbajoGFSCd11||Beatriz Sainz de Abajo&&Javier Sánchez González&&Francisco Javier Burón Fernández&&Enrique García Salcines&&Miguel López Coronado&&Carlos de-Castro-Lozano||2011
+conf/ccgidis/Kammueller11||Florian Kammueller||2011
+conf/ccgidis/HuangK11||Chih-Fang Huang&&Shu-Fang Ko||2011
+conf/ccgidis/GiulianelliPGVRF11||Daniel Alberto Giulianelli&&Claudia Pons&&Carina González&&Pablo Martín Vera&&Rocío Andrea Rodríguez&&Victor Manuel Fernandez||2011
+conf/ccgidis/FicarraFK11||Francisco V. Cipolla Ficarra&&Valeria M. Ficarra&&Andreas Kratky||2011
+conf/ccgidis/UcedaGSFAd11||José Miguel Ramírez Uceda&&Remedios María Robles González&&Enrique García Salcines&&Francisco Javier Burón Fernández&&Beatriz Sainz de Abajo&&Carlos de-Castro-Lozano||2011
+conf/ccgidis/CastroA11||John W. Castro&&Silvia Teresita Acuña||2011
+conf/ccgidis/Ficarra11||Francisco V. Cipolla Ficarra||2011
+conf/ccgidis/FicarraAC11||Francisco V. Cipolla Ficarra&&Jacqueline Alma&&Miguel Cipolla-Ficarra||2011
+conf/ccgidis/Ficarra11a||Francisco V. Cipolla Ficarra||2011
+conf/ccgidis/FernandezMASd11||Francisco Javier Burón Fernández&&Rafael Mena&&Beatriz Sainz de Abajo&&Enrique García Salcines&&Carlos de-Castro-Lozano||2011
+conf/hcied/Leblanc07||Tatjana Leblanc||2007
+conf/hcied/Wesson07||Janet Wesson||2007
+conf/hcied/ChambelADCG07||Teresa Chambel&&Pedro Antunes&&Carlos Duarte&&Luís Carriço&&Nuno Guimarães||2007
+conf/hcied/KoukouletsosKDO07||Kostas Koukouletsos&&Babak Khazaei&&Andy Dearden&&Mehmet B. Özcan||2007
+conf/hcied/KotzeP07||Paula Kotzé&&Peter Purgathofer||2007
+conf/hcied/SasD07||Corina Sas&&Alan J. Dix||2007
+conf/hcied/WongKRBH07||William Wong&&Paula Kotzé&&Janet Read&&Liam Bannon&&Ebba Þóra Hvannberg||2007
+conf/hcied/FonsecaJG0V07||Manuel J. Fonseca&&Joaquim A. Jorge&&Mário Rui Gomes&&Daniel Gonçalves 0002&&Marco Vala||2007
+conf/hcied/Larusdottir07||Marta Kristín Lárusdóttir||2007
+conf/hcied/Greenberg07||Saul Greenberg||2007
+conf/hcied/BongersV07||Bert Bongers&&Gerrit C. van der Veer||2007
+conf/hcied/2007||||2009
+conf/hcied/Veer07||Gerrit C. van der Veer||2007
+conf/hcied/Oestreicher07||Lars Oestreicher||2007
+conf/hcied/ReadHSM07||Janet C. Read&&Matthew Horton&&Gavin Sim&&Emanuela Mazzone||2007
+conf/hcied/KotzeWJDA07||Paula Kotzé&&William Wong&&Joaquim A. Jorge&&Alan J. Dix&&Paula Silva Alexandra||2007
+conf/aaim/ChenZ05||Jianer Chen&&Fenghui Zhang||2005
+conf/aaim/AshleyBCDKS09||Mary V. Ashley&&Tanya Y. Berger-Wolf&&Wanpracha Art Chaovalitwongse&&Bhaskar DasGupta&&Ashfaq A. Khokhar&&Saad I. Sheikh||2009
+conf/aaim/CaiYLL05||Zhiping Cai&&Jianping Yin&&Xianghui Liu&&Shaohe Lv||2005
+conf/aaim/BampisLLMM12||Evripidis Bampis&&Dimitrios Letsios&&Giorgio Lucarelli&&Evangelos Markakis&&Ioannis Milis||2012
+conf/aaim/DengLZ13||Xiaojie Deng&&Bingkai Lin&&Chihao Zhang||2013
+conf/aaim/HuGL05||Shuhua Hu&&Qin Guo&&Hongyi Li||2005
+conf/aaim/KloksPTW12||Ton Kloks&&Sheung-Hung Poon&&Feng-Ren Tsai&&Yue-Li Wang||2012
+conf/aaim/BrassNS14||Peter Brass&&Hyeon-Suk Na&&Chan-Su Shin||2014
+conf/aaim/Huang0P14||Shenwei Huang&&Matthew Johnson 0002&&Daniël Paulusma||2014
+conf/aaim/Koutsoupias11||Elias Koutsoupias||2011
+conf/aaim/ZhangGI10||Hui Zhang 0004&&Qing Guo&&Costas S. Iliopoulos||2010
+conf/aaim/WangYL10||Lusheng Wang&&Yong Yang&&Guohui Lin||2010
+conf/aaim/XiaZ10||Ge Xia&&Yong Zhang||2010
+conf/aaim/Fellows11||Michael R. Fellows||2011
+conf/aaim/MeinersT07||Chad R. Meiners&&Eric Torng||2007
+conf/aaim/ChenLZ11||Lin Chen&&Wenchang Luo&&Guochuan Zhang||2011
+conf/aaim/ChanLW07||Ho-Leung Chan&&Tak Wah Lam&&Prudence W. H. Wong||2007
+conf/aaim/YeM12||Deshi Ye&&Lili Mei||2012
+conf/aaim/ChenFFJLWZ10||Zhi-Zhong Chen&&Michael R. Fellows&&Bin Fu&&Haitao Jiang&&Yang Liu 0002&&Lusheng Wang&&Binhai Zhu||2010
+conf/aaim/LanCDDH12||Yan Lan&&Xin Chen&&Ning Ding&&György Dósa&&Xin Han||2012
+conf/aaim/AbrahamCFFZ09||John Abraham&&Zhixiang Chen&&Richard H. Fowler&&Bin Fu&&Binhai Zhu||2009
+conf/aaim/WangZ13||Tao-Ming Wang&&Guang-Hui Zhang||2013
+conf/aaim/Lefmann08||Hanno Lefmann||2008
+conf/aaim/Xiao14||Mingyu Xiao||2014
+conf/aaim/ChinZZ07||Francis Y. L. Chin&&Yong Zhang&&Hong Zhu||2007
+conf/aaim/BrandenburgGH11||Franz-Josef Brandenburg&&Andreas Gleißner&&Andreas Hofmeier||2011
+conf/aaim/Harutyunyan14||Hovhannes A. Harutyunyan||2014
+conf/aaim/ChinCY09||Francis Y. L. Chin&&Marek Chrobak&&Li Yan||2009
+conf/aaim/TanJ12||Xuehou Tan&&Bo Jiang||2012
+conf/aaim/ZhangH05a||Huaxiang Zhang&&Shangteng Huang||2005
+conf/aaim/AkiyamaS13||Jin Akiyama&&Hyunwoo Seong||2013
+conf/aaim/XiaoN13||Mingyu Xiao&&Hiroshi Nagamochi||2013
+conf/aaim/Lefmann07||Hanno Lefmann||2007
+conf/aaim/Kao06||Ming-Yang Kao||2006
+conf/aaim/HochstattlerJN06||Winfried Hochstättler&&Hui Jin 0002&&Robert Nickel||2006
+conf/aaim/DinhMD05||Hoang Trung Dinh&&Abdullah Al Mamun&&Hieu T. Dinh||2005
+conf/aaim/MeinertW11||Sascha Meinert&&Dorothea Wagner||2011
+conf/aaim/MiyamotoM06||Yuichiro Miyamoto&&Tomomi Matsui||2006
+conf/aaim/KamiyamaKT06||Naoyuki Kamiyama&&Naoki Katoh&&Atsushi Takizawa||2006
+conf/aaim/KorenblitL13||Mark Korenblit&&Vadim E. Levit||2013
+conf/aaim/GaertlerGW07||Marco Gaertler&&Robert Görke&&Dorothea Wagner||2007
+conf/aaim/LuLX13||Min Lu&&Tian Liu&&Ke Xu||2013
+conf/aaim/BanikBDD13||Aritra Banik&&Bhaswar B. Bhattacharya&&Sandip Das&&Sreeja Das||2013
+conf/aaim/FurerK07||Martin Fürer&&Shiva Prasad Kasiviswanathan||2007
+conf/aaim/BansalCP08||Nikhil Bansal&&Ho-Leung Chan&&Kirk Pruhs||2008
+conf/aaim/FuHZ10||Bin Fu&&Yumei Huo&&Hairong Zhao||2010
+conf/aaim/Koehler06||Henning Köhler||2006
+conf/aaim/Zhang12||Peng Zhang||2012
+conf/aaim/WangDX10||Zhen Wang&&Donglei Du&&Dachuan Xu||2010
+conf/aaim/Liu13||Longcheng Liu||2013
+conf/aaim/HigashikawaGK14||Yuya Higashikawa&&Mordecai J. Golin&&Naoki Katoh||2014
+conf/aaim/BaiX10||Qing-Guo Bai&&Jian-Teng Xu||2010
+conf/aaim/Taillon06||Peter J. Taillon||2006
+conf/aaim/ArkinGH10||Esther M. Arkin&&Nili Guttmann-Beck&&Refael Hassin||2010
+conf/aaim/Broder09||Andrei Z. Broder||2009
+conf/aaim/Ganguly09||Sumit Ganguly||2009
+conf/aaim/DingXC05||Lili Ding&&Chunlin Xin&&Jian Chen||2005
+conf/aaim/Sanvicente-SanchezSI05||Héctor Sanvicente Sánchez&&Juan Frausto Solís&&Froilán Imperial-Valenzuela||2005
+conf/aaim/UnoO11||Yushi Uno&&Fumiya Oguri||2011
+conf/aaim/XueXH05||Honggang Xue&&Chengxian Xu&&Chunping Hu||2005
+conf/aaim/BauerKMW10||Reinhard Bauer&&Marcus Krug&&Sascha Meinert&&Dorothea Wagner||2010
+conf/aaim/2011||||2011
+conf/aaim/ZhouWSP08||Yunhong Zhou&&Dennis M. Wilkinson&&Robert Schreiber&&Rong Pan||2008
+conf/aaim/ChandlerCKLP06||David B. Chandler&&Maw-Shang Chang&&Ton Kloks&&Jiping Liu&&Sheng-Lung Peng||2006
+conf/aaim/ErnstDJRM10||Christian Ernst&&Changxing Dong&&Gerold Jäger&&Dirk Richter&&Paul Molitor||2010
+conf/aaim/ZhouY12||Junping Zhou&&Minghao Yin||2012
+conf/aaim/LiMM06||Erran L. Li&&Mohammad Mahdian&&Vahab S. Mirrokni||2006
+conf/aaim/FaliszewskiH08||Piotr Faliszewski&&Lane A. Hemaspaandra||2008
+conf/aaim/ChenFZ06||Zhixiang Chen&&Bin Fu&&Binhai Zhu||2006
+conf/aaim/KloksLP13||Ton Kloks&&Ching-Hao Liu&&Sheung-Hung Poon||2013
+conf/aaim/ChenZT11||Yong Chen&&An Zhang&&Zhiyi Tan||2011
+conf/aaim/WuY10||Yong Wu&&Qifan Yang||2010
+conf/aaim/LeeOW09||Jon Lee&&Shmuel Onn&&Robert Weismantel||2009
+conf/aaim/ZhangCB05||Yuzhong Zhang&&Zhigang Cao&&Qingguo Bai||2005
+conf/aaim/DingZ06||Jihuan Ding&&Guochuan Zhang||2006
+conf/aaim/LuoX14||Taibo Luo&&Yinfeng Xu||2014
+conf/aaim/DoJSS12||Huy Hoang Do&&Jesper Jansson&&Kunihiko Sadakane&&Wing-Kin Sung||2012
+conf/aaim/DaiXJ05||Wenqiang Dai&&Peng Xiao&&Ke Jiang||2005
+conf/aaim/WangLX13||Chaoyi Wang&&Tian Liu&&Ke Xu||2013
+conf/aaim/LiW05||Kang Li&&Lusheng Wang||2005
+conf/aaim/HoshikaM14||Daiki Hoshika&&Eiji Miyano||2014
+conf/aaim/AleksandrowiczB11||Gadi Aleksandrowicz&&Gill Barequet||2011
+conf/aaim/2006||||2006
+conf/aaim/WangH12||Jiun-Jie Wang&&Xin He||2012
+conf/aaim/ShiouraT05||Akiyoshi Shioura&&Takeshi Tokuyama||2005
+conf/aaim/ChenT08||Zhi-Zhong Chen&&Ruka Tanahashi||2008
+conf/aaim/QiaoXJ05||Jian Qiao&&Huiyu Xuan&&Jinhu Jiang||2005
+conf/aaim/JiangWH12||Yiwei Jiang&&Zewei Weng&&Jueliang Hu||2012
+conf/aaim/CheungD08||Yam Ki Cheung&&Ovidiu Daescu||2008
+conf/aaim/AlipourZ11||Sharareh Alipour&&Alireza Zarei||2011
+conf/aaim/Zheng10||Yujun Zheng||2010
+conf/aaim/LiuZZ12||Hong Liu&&Peng Zhang&&Daming Zhu||2012
+conf/aaim/GrigoryanH14||Hayk Grigoryan&&Hovhannes A. Harutyunyan||2014
+conf/aaim/LiuTXX13||Xianrong Liu&&Wenhong Tian&&Minxian Xu&&Qin Xiong||2013
+conf/aaim/WangWK13||Yue-Li Wang&&Kuo-Hua Wu&&Ton Kloks||2013
+conf/aaim/HanIYZ07||Xin Han&&Kazuo Iwama&&Deshi Ye&&Guochuan Zhang||2007
+conf/aaim/DasN06||Gautam K. Das&&Subhas C. Nandy||2006
+conf/aaim/YangLXX07||Yang Yang&&Mingen Lin&&Jinhui Xu&&Yulai Xie||2007
+conf/aaim/ChenD06||Xi Chen&&Xiaotie Deng||2006
+conf/aaim/BarrettBHKVMW08||Christopher L. Barrett&&Keith R. Bisset&&Martin Holzer&&Goran Konjevod&&Madhav V. Marathe&&Dorothea Wagner||2008
+conf/aaim/GutinRY08||Gregory Gutin&&Arash Rafiey&&Anders Yeo||2008
+conf/aaim/EdmondsPS08||Jeff Edmonds&&Kirk Pruhs&&Jaisingh Solanki||2008
+conf/aaim/Li09||Fei Li||2009
+conf/aaim/AzizLPS09||Haris Aziz&&Oded Lachish&&Mike Paterson&&Rahul Savani||2009
+conf/aaim/KawabataN13||Masaki Kawabata&&Takao Nishizeki||2013
+conf/aaim/XuCSZ12||Yanyan Xu&&Wei Chen 0018&&Kaile Su&&Wenhui Zhang||2012
+conf/aaim/SadasivamZ08||Sadish Sadasivam&&Huaming Zhang||2008
+conf/aaim/ChenLSL11||Shikun Chen&&Zhoujun Li&&Xiaoyu Song&&Mengjun Li||2011
+conf/aaim/CaragiannisKK11||Ioannis Caragiannis&&Christos Kaklamanis&&Maria Kyropoulou||2011
+conf/aaim/GutinRYT05||Gregory Gutin&&Arash Rafiey&&Anders Yeo&&Michael Tso||2005
+conf/aaim/LinDZ14||Shian-Hua Lin&&Shao-Hong Ding&&Wei-Sheng Zeng||2014
+conf/aaim/FanJLZ11||Chenglin Fan&&Wenqi Ju&&Jun Luo&&Binhai Zhu||2011
+conf/aaim/BirksF11||Martin Birks&&Stanley P. Y. Fung||2011
+conf/aaim/Kominers09||Scott Duke Kominers||2009
+conf/aaim/DellingGGW08||Daniel Delling&&Marco Gaertler&&Robert Görke&&Dorothea Wagner||2008
+conf/aaim/ChrobakS09||Marek Chrobak&&Jiri Sgall||2009
+conf/aaim/LiCCT05||Yongjian Li&&Jian Chen&&Xiaoqiang Cai&&Fengsheng Tu||2005
+conf/aaim/XiaCY05||Yu Xia 0004&&Bintong Chen&&Jinfeng Yue||2005
+conf/aaim/NobibonHLS10||Fabrice Talla Nobibon&&Cor A. J. Hurkens&&Roel Leus&&Frits C. R. Spieksma||2010
+conf/aaim/ChanC07||Ka Ho Chan&&Xiaowen Chu||2007
+conf/aaim/SuzukaMYM05||Ayami Suzuka&&Ryuhei Miyashiro&&Akiko Yoshise&&Tomomi Matsui||2005
+conf/aaim/DaiNWC10||Jun Dai&&Liyun Ni&&Xiangrong Wang&&Weizhong Chen||2010
+conf/aaim/Snoeyink11||Jack Snoeyink||2011
+conf/aaim/DereniowskiDTY13||Dariusz Dereniowski&&Danny Dyer&&Ryan M. Tifenbach&&Boting Yang||2013
+conf/aaim/Jiang06a||Minghui Jiang||2006
+conf/aaim/Roshanbin14||Elham Roshanbin||2014
+conf/aaim/LeZL11||Trong Dao Le&&Melvin Zhang&&Hon Wai Leong||2011
+conf/aaim/HauglandH10||Dag Haugland&&Sin C. Ho||2010
+conf/aaim/SaberiW09||Amin Saberi&&Ying Wang||2009
+conf/aaim/ApreaFSL09||Mauro Aprea&&Esteban Feuerstein&&Gustavo Sadovoy&&Alejandro Strejilevich de Loma||2009
+conf/aaim/Marx13||Dániel Marx||2013
+conf/aaim/MacajovaM11||Edita Mácajová&&Ján Mazák||2011
+conf/aaim/TanW11||Xuehou Tan&&Gangshan Wu||2011
+conf/aaim/HeL11||Jing He&&Hongyu Liang||2011
+conf/aaim/GoldengorinKKT07||Boris Goldengorin&&John A. Keane&&Viktor Kuzmenko&&Michael Tso||2007
+conf/aaim/HeL11a||Jing He&&Hongyu Liang||2011
+conf/aaim/FleischerGLZ07||Rudolf Fleischer&&Qi Ge&&Jian Li&&Hong Zhu||2007
+conf/aaim/DaiWW07||Tian-Shyr Dai&&Jr-Yan Wang&&Hui-Shan Wei||2007
+conf/aaim/WangLS05||Weizhao Wang&&Xiang-Yang Li&&Zheng Sun||2005
+conf/aaim/ChenKM10||Zhi-Zhong Chen&&Sayuri Konno&&Yuki Matsushita||2010
+conf/aaim/HanP10||Qiaoming Han&&Abraham P. Punnen||2010
+conf/aaim/MiaoZW10||Cuixia Miao&&Yuzhong Zhang&&Chengfei Wang||2010
+conf/aaim/DaiF11||Wenqiang Dai&&Yi Feng||2011
+conf/aaim/BetzlerFGNR08||Nadja Betzler&&Michael R. Fellows&&Jiong Guo&&Rolf Niedermeier&&Frances A. Rosamond||2008
+conf/aaim/ShuaiH06||Tianping Shuai&&Xiao-Dong Hu||2006
+conf/aaim/MiyamotoM05||Yuichiro Miyamoto&&Tomomi Matsui||2005
+conf/aaim/SunMT13||Jinghao Sun&&Yakun Meng&&Guozhen Tan||2013
+conf/aaim/WangH11||Tao-Ming Wang&&Shi-Wei Hu||2011
+conf/aaim/BenkocziBS08||Robert Benkoczi&&Binay K. Bhattacharya&&Qiaosheng Shi||2008
+conf/aaim/SunX05||Lihui Sun&&Xiaowen Xu||2005
+conf/aaim/Han06||Junghee Han||2006
+conf/aaim/HuoLF05||Hua Huo&&Junqiang Liu&&Boqin Feng||2005
+conf/aaim/ZhangW05||Wei-Guo Zhang&&Ying-Luo Wang||2005
+conf/aaim/ZhangCL06||Wei-Guo Zhang&&Qianqin Chen&&Hai-Lin Lan||2006
+conf/aaim/PensoPRS14||Lucia Draque Penso&&Fábio Protti&&Dieter Rautenbach&&Uéverton S. Souza||2014
+conf/aaim/SarinSW07||Subhash C. Sarin&&Vinod D. Shenai&&Lixin Wang||2007
+conf/aaim/GiesenMS07||Joachim Giesen&&Dieter Mitsche&&Eva Schuberth||2007
+conf/aaim/LiGWL11||Zhong Li&&Randy Goebel&&Lusheng Wang&&Guohui Lin||2011
+conf/aaim/2007||||2007
+conf/aaim/XiaoN11||Mingyu Xiao&&Hiroshi Nagamochi||2011
+conf/aaim/HonKLW14||Wing-Kai Hon&&Ton Kloks&&Hsiang Hsuan Liu&&Yue-Li Wang||2014
+conf/aaim/GeissmannS14||Barbara Geissmann&&Rastislav Srámek||2014
+conf/aaim/HanIKL07||Xin Han&&Kazuo Iwama&&Rolf Klein&&Andrzej Lingas||2007
+conf/aaim/JiangSXXZZ14||Haitao Jiang&&Bing Su&&Mingyu Xiao&&Yinfeng Xu&&Farong Zhong&&Binhai Zhu||2014
+conf/aaim/Liu14||Tian Liu||2014
+conf/aaim/Tang12||Bangsheng Tang||2012
+conf/aaim/Goldberg09||Andrew V. Goldberg||2009
+conf/aaim/BredereckNN13||Robert Bredereck&&André Nichterlein&&Rolf Niedermeier||2013
+conf/aaim/GuanZ10||Xiucui Guan&&Binwu Zhang||2010
+conf/aaim/CramptonCGJR13||Jason Crampton&&Robert Crowston&&Gregory Gutin&&Mark Jones&&M. S. Ramanujan||2013
+conf/aaim/BeigelF12||Richard Beigel&&Bin Fu||2012
+conf/aaim/BumbO05||Adriana Felicia Bumb&&Jan-Kees C. W. van Ommeren||2005
+conf/aaim/TongGDL12||Weitian Tong&&Randy Goebel&&Wei Ding&&Guohui Lin||2012
+conf/aaim/ZhangH07||Huaming Zhang&&Xin He||2007
+conf/aaim/HuS05||Xiao-Dong Hu&&Tianping Shuai||2005
+conf/aaim/AsahiroJMOZ07||Yuichi Asahiro&&Jesper Jansson&&Eiji Miyano&&Hirotaka Ono&&Kouhei Zenmyo||2007
+conf/aaim/CookW09||Atlas F. Cook&&Carola Wenk||2009
+conf/aaim/ChenFSWY12||Jianer Chen&&Henning Fernau&&Peter Shaw&&Jianxin Wang&&Zhibiao Yang||2012
+conf/aaim/TanigawaK06||Shin-ichi Tanigawa&&Naoki Katoh||2006
+conf/aaim/Du08||Ding-Zhu Du||2008
+conf/aaim/Shin07||Hyun Joon Shin||2007
+conf/aaim/GuoZI06||Qing Guo&&Hui Zhang 0004&&Costas S. Iliopoulos||2006
+conf/aaim/ChenHJ05||Xujin Chen&&Xiao-Dong Hu&&Xiaohua Jia||2005
+conf/aaim/HeHL05||Yulan He&&Siu Cheung Hui&&Edmund Ming-Kit Lai||2005
+conf/aaim/ChenW13||Zhi-Zhong Chen&&Lusheng Wang||2013
+conf/aaim/HanS13||Yijie Han&&Sanjeev Saxena||2013
+conf/aaim/BachmatBSS05||Eitan Bachmat&&Daniel Berend&&Luba Sapir&&Steven Skiena||2005
+conf/aaim/Lin08||Shieu-Hong Lin||2008
+conf/aaim/DaiL07||Tian-Shyr Dai&&Yuh-Dauh Lyuu||2007
+conf/aaim/MasriKG14||Hela Masri&&Saoussen Krichen&&Adel Guitouni||2014
+conf/aaim/2008||||2008
+conf/aaim/ShuaiDJ08||Tianping Shuai&&Donglei Du&&Xiaoyue Jiang||2008
+conf/aaim/Cai11||Jin-yi Cai||2011
+conf/aaim/DyerYY08||Danny Dyer&&Boting Yang&&Öznur Yasar||2008
+conf/aaim/LuoCZ10||Wenchang Luo&&Lin Chen&&Guochuan Zhang||2010
+conf/aaim/GuanZ06||Xiucui Guan&&Jianzhong Zhang 0001||2006
+conf/aaim/JagerSW07||Gerold Jäger&&Anand Srivastav&&Katja Wolf||2007
+conf/aaim/AnderssonGH09||Daniel Andersson&&Vladimir Gurvich&&Thomas Dueholm Hansen||2009
+conf/aaim/2010||||2010
+conf/aaim/BydeKZT09||Andrew Byde&&Terence Kelly&&Yunhong Zhou&&Robert Endre Tarjan||2009
+conf/aaim/YamanakaN07||Katsuhisa Yamanaka&&Shin-Ichi Nakano||2007
+conf/aaim/BonifaciKMS08||Vincenzo Bonifaci&&Peter Korteweg&&Alberto Marchetti-Spaccamela&&Leen Stougie||2008
+conf/aaim/BergerKNSY08||Florian Berger&&Rolf Klein&&Doron Nussbaum&&Jörg-Rüdiger Sack&&Jiehua Yi||2008
+conf/aaim/DingL14||Wei Ding&&Guohui Lin||2014
+conf/aaim/Fu13||Bin Fu||2013
+conf/aaim/KameshwaranB06||Sampath Kameshwaran&&Lyès Benyoucef||2006
+conf/aaim/ChenLW12||Danny Z. Chen&&Xiaomin Liu&&Haitao Wang||2012
+conf/aaim/ZhangZ12||Chihao Zhang&&Hongyang Zhang||2012
+conf/aaim/WuLS13||Wei Wu&&Chuan Luo&&Kaile Su||2013
+conf/aaim/BredereckFHNNT14||Robert Bredereck&&Vincent Froese&&Sepp Hartung&&André Nichterlein&&Rolf Niedermeier&&Nimrod Talmon||2014
+conf/aaim/ZouQ13||Xiangfu Zou&&Daowen Qiu||2013
+conf/aaim/DingWK14||Lili Ding&&Xiaoling Wang&&Wanglin Kang||2014
+conf/aaim/MbarekTH14||Rabeb Mbarek&&Mohamed Tmar&&Hawete Hattab||2014
+conf/aaim/YangLM06||Qiaofeng Yang&&Stefano Lonardi&&Avraham Melkman||2006
+conf/aaim/FellowsF08||Michael R. Fellows&&Henning Fernau||2008
+conf/aaim/LiuCWY12||Longcheng Liu&&Yong Chen&&Biao Wu&&Enyu Yao||2012
+conf/aaim/Bilo07||Vittorio Bilò||2007
+conf/aaim/HeZG05||Yong He&&Weiya Zhong&&Huikun Gu||2005
+conf/aaim/Roux08||Stéphane Le Roux||2008
+conf/aaim/WangH12a||Tao-Ming Wang&&Shi-Wei Hu||2012
+conf/aaim/ZhengWF13||Ying Zheng&&Jianxin Wang&&Qilong Feng||2013
+conf/aaim/ChandlerGKN07||David B. Chandler&&Jiong Guo&&Ton Kloks&&Rolf Niedermeier||2007
+conf/aaim/ChenDHZB11||Min Chen&&György Dósa&&Xin Han&&Chenyang Zhou&&Attila Benko||2011
+conf/aaim/LiuM10||Yuting Liu&&Zhiming Ma||2010
+conf/aaim/Zhu10||Binhai Zhu||2010
+conf/aaim/ZhangCT12||Yong Zhang&&Francis Y. L. Chin&&Hing-Fung Ting||2012
+conf/aaim/WuX05||Jianzu Wu&&Huiyu Xuan||2005
+conf/aaim/BirksCFX11||Martin Birks&&Daniel Cole&&Stanley P. Y. Fung&&Huichao Xue||2011
+conf/aaim/ChenM11||Danny Z. Chen&&Ewa Misiolek||2011
+conf/aaim/HuangLSTY10||Songbo Huang&&Tak Wah Lam&&Wing-Kin Sung&&Siu-Lung Tam&&Siu-Ming Yiu||2010
+conf/aaim/YiXX06||Fanglei Yi&&Yinfeng Xu&&Chunlin Xin||2006
+conf/aaim/RyooJ07||Hong Seo Ryoo&&In-Yong Jang||2007
+conf/aaim/Krzywkowski13||Marcin Krzywkowski||2013
+conf/aaim/Cornejo05||Oscar Cornejo||2005
+conf/aaim/BiswasR14||Tamal Biswas&&Kenneth W. Regan||2014
+conf/aaim/ChlebikovaYZ05||Janka Chlebíková&&Deshi Ye&&Hu Zhang||2005
+conf/aaim/CheungD09||Yam Ki Cheung&&Ovidiu Daescu||2009
+conf/aaim/BiloF10||Vittorio Bilò&&Angelo Fanelli||2010
+conf/aaim/Jiang12||Minghui Jiang||2012
+conf/aaim/SunLWC05||Zheng Sun&&Xiang-Yang Li&&Weizhao Wang&&Xiaowen Chu||2005
+conf/aaim/Ye05||Yinyu Ye||2005
+conf/aaim/Kim06||Jae-Hoon Kim||2006
+conf/aaim/ZhangH05||Qimin Zhang&&Chongzhao Han||2005
+conf/aaim/Hua12||Xia Hua||2012
+conf/aaim/YuCS05||Hui Yu&&Jian Chen&&Caihong Sun||2005
+conf/aaim/Jiang06||Yiwei Jiang||2006
+conf/aaim/NonnerS09||Tim Nonner&&Alexander Souza||2009
+conf/aaim/LiNC11||Hao Li&&Wantao Ning&&Junqing Cai||2011
+conf/aaim/DaiW05||H. K. Dai&&G. Wang||2005
+conf/aaim/Karlin07||Anna R. Karlin||2007
+conf/aaim/Chang09||Edward Y. Chang||2009
+conf/aaim/ChengJHW05||Siu-Wing Cheng&&Xiaohua Jia&&Frankie Hung&&Yajun Wang||2005
+conf/aaim/DellingGSW09||Daniel Delling&&Robert Görke&&Christian Schulz 0003&&Dorothea Wagner||2009
+conf/aaim/MukherjeeMKD11||Joydeep Mukherjee&&Priya Ranjan Sinha Mahapatra&&Arindam Karmakar&&Sandip Das||2011
+conf/aaim/JoungSFJ06||Jinoo Joung&&Dongha Shin&&Feifei Feng&&Hongkyu Jeong||2006
+conf/aaim/GuoKNU09||Jiong Guo&&Christian Komusiewicz&&Rolf Niedermeier&&Johannes Uhlmann||2009
+conf/aaim/Huang05||Siming Huang||2005
+conf/aaim/HuangWLSH07||Pei-Chi Huang&&Hsin-Wen Wei&&Wan-Chen Lu&&Wei-Kuan Shih&&Tsan-sheng Hsu||2007
+conf/aaim/Dula05||José H. Dulá||2005
+conf/aaim/SvenssonV06||Ola Svensson&&Sergei G. Vorobyov||2006
+conf/aaim/YangC07||Boting Yang&&Yi Cao||2007
+conf/aaim/ChenZK06||Qianqin Chen&&Wei-Guo Zhang&&Guoliang Kuang||2006
+conf/aaim/WangBSCC09||Yi Wang&&Hongjie Bai&&Matt Stanton&&Wen-Yen Chen&&Edward Y. Chang||2009
+conf/aaim/ZhengDXZ05||Feifeng Zheng&&Wenqiang Dai&&Peng Xiao&&Yun Zhao||2005
+conf/aaim/NiXD14||Guanqun Ni&&Yinfeng Xu&&Yucheng Dong||2014
+conf/aaim/Alvarez-MirandaCCHL10||Eduardo Álvarez-Miranda&&Alfredo Candia-Véjar&&Xujin Chen&&Xiaodong Hu&&Bi Li 0004||2010
+conf/aaim/Teng07||Shang-Hua Teng||2007
+conf/aaim/GoldengorinJM06||Boris Goldengorin&&Gerold Jäger&&Paul Molitor||2006
+conf/aaim/BoucherieEG07||Richard J. Boucherie&&Aloysius Irwan Endrayanto&&Adriana Felicia Gabor||2007
+conf/aaim/2009||||2009
+conf/aaim/Johnson05||Ellis L. Johnson||2005
+conf/aaim/LuoC11||Wenchang Luo&&Lin Chen||2011
+conf/aaim/ChiuSWX14||Well Y. Chiu&&Mario Szegedy&&Chengu Wang&&Yixin Xu||2014
+conf/aaim/DongJRM09||Changxing Dong&&Gerold Jäger&&Dirk Richter&&Paul Molitor||2009
+conf/aaim/MaG13||Ding Ma&&Yunshu Gao||2013
+conf/aaim/BuschM06||Costas Busch&&Malik Magdon-Ismail||2006
+conf/aaim/LibertiR08||Leo Liberti&&Franco Raimondi||2008
+conf/aaim/HuangTG05||Hai-Jun Huang&&Qiong Tian&&Ziyou Gao||2005
+conf/aaim/NishikawaNZ12||Kazuhide Nishikawa&&Takao Nishizeki&&Xiao Zhou||2012
+conf/aaim/ZhangG11||Huaming Zhang&&Swetha Govindaiah||2011
+conf/aaim/ZhengXP09||Feifeng Zheng&&Yinfeng Xu&&Chung Keung Poon||2009
+conf/aaim/GuoS11||Longkun Guo&&Hong Shen||2011
+conf/aaim/XuX05||Fengmin Xu&&Chengxian Xu||2005
+conf/aaim/DaiS14||H. K. Dai&&H. C. Su||2014
+conf/aaim/He12||Bryan He||2012
+conf/aaim/HuoZ13||Yumei Huo&&Hairong Zhao||2013
+conf/aaim/RahmanI07||M. Sohel Rahman&&Costas S. Iliopoulos||2007
+conf/aaim/BachooreB06||Emgad H. Bachoore&&Hans L. Bodlaender||2006
+conf/aaim/HanKM13||Xin Han&&Yasushi Kawase&&Kazuhisa Makino||2013
+conf/aaim/JiangLRX11||Wei Jiang&&Tian Liu&&Tienan Ren&&Ke Xu||2011
+conf/aaim/MartinhonF13||Carlos A. J. Martinhon&&Luérbio Faria||2013
+conf/aaim/GuoSZ08||Zeyu Guo&&He Sun 0001&&Hong Zhu||2008
+conf/aaim/GuoMS08||Hua Guo&&Anil Maheshwari&&Jörg-Rüdiger Sack||2008
+conf/aaim/Sandholm07||Tuomas Sandholm||2007
+conf/aaim/LvYWF14||Fengmao Lv&&Guowu Yang&&Shuangbao Wang&&Fuyou Fan||2014
+conf/aaim/DeNR12||Minati De&&Subhas C. Nandy&&Sasanka Roy||2012
+conf/aaim/Borodin06||Allan Borodin||2006
+conf/aaim/HigashikawaK12||Yuya Higashikawa&&Naoki Katoh||2012
+conf/aaim/ZhangCTHC11||Yong Zhang&&Francis Y. L. Chin&&Hing-Fung Ting&&Xin Han&&Zhuo Chang||2011
+conf/aaim/2005||||2005
+conf/aaim/ButlerMG07||Steve Butler&&Jia Mao&&Ronald L. Graham||2007
+conf/aaim/FleischerLTZ06||Rudolf Fleischer&&Jian Li&&Shijun Tian&&Hong Zhu||2006
+conf/aaim/Chen13||Shenshi Chen||2013
+conf/aaim/ChrobakDHR08||Marek Chrobak&&Christoph Dürr&&Mathilde Hurand&&Julien Robert||2008
+conf/aaim/FuCA07||Bin Fu&&Zhixiang Chen&&Mahdi Abdelguerfi||2007
+conf/aaim/He07||Dan He||2007
+conf/aaim/ZhangCCTT10||Yong Zhang&&Zhuo Chang&&Francis Y. L. Chin&&Hing-Fung Ting&&Yung H. Tsin||2010
+conf/aaim/FanGT07||Baoqiang Fan&&Jianzhong Gu&&Guochun Tang||2007
+conf/aaim/AuroraSM13||Pawan Aurora&&Sumit Singh&&Shashank K. Mehta||2013
+conf/aaim/ChaiL10||Yajun Chai&&Bo Liu||2010
+conf/aaim/WuD07||Xiaodong Wu&&Xin Dou||2007
+conf/aaim/LinLX05||Zhiyong Lin&&Mingen Lin&&Jinhui Xu||2005
+conf/aaim/FuC06||Bin Fu&&Zhixiang Chen||2006
+conf/aaim/CharlesHK09||Philip J. Charles&&Jacob M. Howe&&Andy King||2009
+conf/aaim/Lefmann06||Hanno Lefmann||2006
+conf/aaim/ZhengZXW08||Feifeng Zheng&&E. Zhang&&Yinfeng Xu&&Xiaoping Wu||2008
+conf/aaim/GutinRK08||Gregory Gutin&&Igor Razgon&&Eun Jung Kim 0002||2008
+conf/aaim/CheongEKLS06||Otfried Cheong&&Hazel Everett&&Hyo-Sil Kim&&Sylvain Lazard&&René Schott||2006
+conf/aaim/RalphS10||Daniel Ralph&&Yves Smeers||2010
+conf/aaim/ChinFJTZ14||Francis Y. L. Chin&&Bin Fu&&Minghui Jiang&&Hing-Fung Ting&&Yong Zhang||2014
+conf/aaim/DengZ09||Xiaotie Deng&&Jie Zhang 0008||2009
+conf/aaim/HanH12||Yijie Han&&Xin He||2012
+conf/aaim/LiuCXW10||Ming Liu&&Chengbin Chu&&Yinfeng Xu&&Lu Wang||2010
+conf/aaim/Jiang07||Minghui Jiang||2007
+conf/aaim/2013||||2013
+conf/aaim/AngelBG08||Eric Angel&&Evripidis Bampis&&Laurent Gourvès||2008
+conf/aaim/ChenTW08||Zhi-Zhong Chen&&Ruka Tanahashi&&Lusheng Wang||2008
+conf/aaim/SarinWC05||Subhash C. Sarin&&Yuqiang Wang&&Dae B. Chang||2005
+conf/aaim/KamiyamaKT07||Naoyuki Kamiyama&&Naoki Katoh&&Atsushi Takizawa||2007
+conf/aaim/LiuL10||Lixia Liu&&Sanyang Liu||2010
+conf/aaim/ZhaoYZXLL11||Zhiheng Zhao&&Jianping Yin&&Yubin Zhan&&Wei Xiong&&Yong Li&&Fayao Liu||2011
+conf/aaim/CaiDL05||Mao-cheng Cai&&Xiaotie Deng&&Zhongfei Li||2005
+conf/aaim/MiyoshiSUW08||Naoto Miyoshi&&Takeya Shigezumi&&Ryuhei Uehara&&Osamu Watanabe||2008
+conf/aaim/Huo14||Yumei Huo||2014
+conf/aaim/ZhangX13||Huili Zhang&&Yinfeng Xu||2013
+conf/aaim/FanL10||Chenglin Fan&&Jun Luo||2010
+conf/aaim/Moczurad11||Wlodzimierz Moczurad||2011
+conf/aaim/FaliszewskiHHR08||Piotr Faliszewski&&Edith Hemaspaandra&&Lane A. Hemaspaandra&&Jörg Rothe||2008
+conf/aaim/HadadDP05||Amir Hossein Hadad&&Mehdi Dehghan&&Hossein Pedram||2005
+conf/aaim/FanLZZ13||Chenglin Fan&&Jun Luo&&Farong Zhong&&Binhai Zhu||2013
+conf/aaim/TanH05||Zhiyi Tan&&Yong He||2005
+conf/aaim/2014||||2014
+conf/aaim/XuQ13||Yinfeng Xu&&Lan Qin||2013
+conf/aaim/FanLWZ12||Chenglin Fan&&Jun Luo&&Wencheng Wang&&Binhai Zhu||2012
+conf/aaim/MuthuNS07||Rahul Muthu&&N. Narayanan&&C. R. Subramanian||2007
+conf/aaim/ZhengLXZ10||Feifeng Zheng&&Bo Liu&&Yinfeng Xu&&E. Zhang||2010
+conf/aaim/GuoC14||Chengwei Guo&&Leizhen Cai||2014
+conf/aaim/YiT05||Fanglei Yi&&Lei Tian||2005
+conf/aaim/JeongBJ07||Hongkyu Jeong&&Kyoung Y. Bae&&Jinoo Joung||2007
+conf/aaim/DasMNS14||Sandip Das&&Anil Maheshwari&&Ayan Nandy&&Michiel H. M. Smid||2014
+conf/aaim/SongLX12||Yu Song&&Tian Liu&&Ke Xu||2012
+conf/aaim/Dai10||Wenqiang Dai||2010
+conf/aaim/Weng11||Kerui Weng||2011
+conf/aaim/ChenFZ12||Zhixiang Chen&&Bin Fu&&Binhai Zhu||2012
+conf/aaim/FeuersteinHLM09||Esteban Feuerstein&&Pablo Ariel Heiber&&Matías Lopez-Rosenfeld&&Marcelo Mydlarz||2009
+conf/aaim/ZhangX11||Huili Zhang&&Yinfeng Xu||2011
+conf/aaim/GaborO06||Adriana Felicia Gabor&&Jan-Kees C. W. van Ommeren||2006
+conf/aaim/Fu12||Bin Fu||2012
+conf/aaim/CoutoFKPN13||Fernanda Couto&&Luerbio Faria&&Sulamita Klein&&Fábio Protti&&Loana Tito Nogueira||2013
+conf/aaim/CaiY14||Leizhen Cai&&Junjie Ye||2014
+conf/aaim/Vazirani08||Vijay V. Vazirani||2008
+conf/aaim/MaYZ12||Feifei Ma&&Jun Yan&&Jian Zhang 0001||2012
+conf/aaim/LiuT07||ChenGuang Liu&&Kazuyuki Tanaka||2007
+conf/aaim/LuoWFG11||Weizhong Luo&&Jianxin Wang&&Qilong Feng&&Jiong Guo||2011
+conf/aaim/LiLLJ05||Qiang Li&&Yan Lin&&Kun Liu&&Jiubin Ju||2005
+conf/aaim/2012||||2012
+conf/aaim/BoyarLM12||Joan Boyar&&Kim S. Larsen&&Abyayananda Maiti||2012
+conf/aaim/ChenT07||Zhi-Zhong Chen&&Ruka Tanahashi||2007
+conf/um/Bull10||Susan Bull||2010
+conf/um/ZukermanG05||Ingrid Zukerman&&Christian Guttmann||2005
+conf/um/MatuszykS14||Pawel Matuszyk&&Myra Spiliopoulou||2014
+conf/um/CapurucoC12||Renato A. C. Capuruço&&Luiz Fernando Capretz||2012
+conf/um/SotiropoulosLT07||Dionisios N. Sotiropoulos&&Aristomenis S. Lampropoulos&&George A. Tsihrintzis||2007
+conf/um/Berger12||Florian Berger||2012
+conf/um/RigasKGF07||Georgios Rigas&&Christos D. Katsis&&George Ganiatsas&&Dimitrios I. Fotiadis||2007
+conf/um/ConejoTCG11||Ricardo Conejo&&Mónica Trella&&Ivan Cruces&&Rafael Garcia||2011
+conf/um/NotP14||Elena Not&&Daniela Petrelli||2014
+conf/um/AmaralM07||Luiz Amaral&&Detmar Meurers||2007
+conf/um/KunaverDPK14||Matevz Kunaver&&Stefan Dobravec&&Tomaz Pozrl&&Andrej Kosir||2014
+conf/um/Kardan12||Samad Kardan||2012
+conf/um/NepalSP11||Surya Nepal&&Wanita Sherchan&&Cécile Paris||2011
+conf/um/KrummCC13||John Krumm&&Rich Caruana&&Scott Counts||2013
+conf/um/ParamythisLDTK11||Alexandros Paramythis&&Lydia Lau&&Stavros N. Demetriadis&&Manolis Tzagarakis&&Styliani Kleanthous||2011
+conf/um/VodlanTK13||Tomaz Vodlan&&Marko Tkalcic&&Andrej Kosir||2013
+conf/um/IglesiasLS09||José Antonio Iglesias&&Agapito Ledezma&&Araceli Sanchis||2009
+conf/um/JonesPC09||Nicolas Jones&&Pearl Pu&&Li Chen||2009
+conf/um/2012w||||2012
+conf/um/PopescuKC13||Ana-Maria Popescu&&Krishna Yeswanth Kamath&&James Caverlee||2013
+conf/um/CavalluzziCCG03||Addolorata Cavalluzzi&&Berardina De Carolis&&Valeria Carofiglio&&Giuseppe Grassano||2003
+conf/um/NavalpakkamKLS12||Vidhya Navalpakkam&&Ravi Kumar&&Lihong Li&&D. Sivakumar||2012
+conf/um/EgglestoneWLGWBSRMKTIR11||Stefan Rennick Egglestone&&Amanda M. Whitbrook&&Caroline Leygue&&Julie Greensmith&&Brendan Walker&&Steve Benford&&Holger Schnädelbach&&Stuart Reeves&&Joe Marshall&&David S. Kirk&&Paul Tennent&&Ainojie Alexander Irune&&Duncan Rowland||2011
+conf/um/Zhu01||Jianhan Zhu||2001
+conf/um/Zapata-Rivera01||Juan-Diego Zapata-Rivera||2001
+conf/um/TakBTE13||Susanne Tak&&Anne-Marie Brouwer&&Alexander Toet&&Jan B. F. van Erp||2013
+conf/um/Gena01||Cristina Gena||2001
+conf/um/LamchePWG14||Béatrice Lamche&&Enrico Pollok&&Wolfgang Wörndl&&Georg Groh||2014
+conf/um/XuBKAY12||Mengxi Xu&&Shlomo Berkovsky&&Irena Koprinska&&Sebastien Ardon&&Kalina Yacef||2012
+conf/um/ElzerGCM03||Stephanie Elzer&&Nancy Green&&Sandra Carberry&&Kathleen F. McCoy||2003
+conf/um/Carmien03||Stefan Carmien||2003
+conf/um/TamayoP12||Silvia Tamayo&&Diana Pérez-Marín||2012
+conf/um/Lavie05||Talia Lavie||2005
+conf/um/Porayska-PomstaRDBASJAC14||Kaska Porayska-Pomsta&&Paola Rizzo&&Ionut Damian&&Tobias Baur&&Elisabeth André&&Nicolas Sabouret&&Hazaël Jones&&Keith Anderson&&Evi Chryssafidou||2014
+conf/um/DesarkarS12||Maunendra Sankar Desarkar&&Sudeshna Sarkar||2012
+conf/um/BakalovKNW10||Fedor Bakalov&&Birgitta König-Ries&&Andreas Nauerz&&Martin Welsch||2010
+conf/um/KardanC12||Samad Kardan&&Cristina Conati||2012
+conf/um/NarducciMSLG13||Fedelucio Narducci&&Cataldo Musto&&Giovanni Semeraro&&Pasquale Lops&&Marco de Gemmis||2013
+conf/um/SantosNWYLKJO09||Eugene Santos Jr.&&Hien Nguyen&&John Thomas Wilkinson&&Fei Yu&&Deqing Li&&Keum Joo Kim&&Russell Jacob&&Adam Olson||2009
+conf/um/HuP10||Rong Hu&&Pearl Pu||2010
+conf/um/DimK12a||Eyal Dim&&Tsvi Kuflik||2012
+conf/um/NartTD14||Dario De Nart&&Carlo Tasso&&Dante Degl'Innocenti||2014
+conf/um/Tintarev07||Nava Tintarev||2007
+conf/um/HannonMOS12||John Hannon&&Kevin McCarthy&&Michael P. O'Mahony&&Barry Smyth||2012
+conf/um/JacksonMLOG03||G. Tanner Jackson&&Eric Mathews&&King-Ip (David) Lin&&Andrew Olney&&Arthur C. Graesser||2003
+conf/um/YudelsonGB05||Michael Yudelson&&Tatiana Gavrilova&&Peter Brusilovsky||2005
+conf/um/Tarantowicz-Gasiewicz01||Monika Tarantowicz-Gasiewicz||2001
+conf/um/TiroshiKB13||Amit Tiroshi&&Tsvi Kuflik&&Shlomo Berkovsky||2013
+conf/um/ReineckeB09||Katharina Reinecke&&Abraham Bernstein||2009
+conf/um/SaayaSCB11||Zurina Saaya&&Barry Smyth&&Maurice Coyle&&Peter Briggs||2011
+conf/um/Despotakis11||Dimoklis Despotakis||2011
+conf/um/VirvouM01||Maria Virvou&&Maria Moundridou||2001
+conf/um/KuflikSEM03||Tsvi Kuflik&&Bracha Shapira&&Yuval Elovici&&Adlai Maschiach||2003
+conf/um/ArdonBCWB12||Sebastien Ardon&&Salim Bensiali&&Hilary Cinis&&Jeff Wang&&Shlomo Berkovsky||2012
+conf/um/Kruppa05||Michael Kruppa||2005
+conf/um/FeinmanA03||Alexander Feinman&&Richard Alterman||2003
+conf/um/Chang10||Edward Y. Chang||2010
+conf/um/Li13||Alberto Quattrini Li||2013
+conf/um/TkalcicOKT11||Marko Tkalcic&&Ante Odic&&Andrej Kosir&&Jurij F. Tasic||2011
+conf/um/BohnertZ09||Fabian Bohnert&&Ingrid Zukerman||2009
+conf/um/KhodeirWDH12||Nabila Khodeir&&Nayer M. Wanas&&Nevin Mahmoud Darwish&&Nadia Hegazy||2012
+conf/um/LintonGGZR03||Frank Linton&&Bradley A. Goodman&&Robert Gaimari&&Jeffrey Zarrella&&Helen Ross||2003
+conf/um/BoghaniC12||Amar Boghani&&Federico Casalegno||2012
+conf/um/LuganoS07||Giuseppe Lugano&&Pertti Saariluoma||2007
+conf/um/OnoTMA09||Chihiro Ono&&Yasuhiro Takishima&&Yoichi Motomura&&Hideki Asoh||2009
+conf/um/LefevreJG12||Marie Lefevre&&Stéphanie Jean-Daubias&&Nathalie Guin||2012
+conf/um/RizzoLSJWM05||Paola Rizzo&&Hyokyeong Lee&&Erin Shaw&&W. Lewis Johnson&&Ning Wang&&Richard E. Mayer||2005
+conf/um/UruchrutuMR05||Elizabeth Uruchrutu&&Lachlan M. MacKinnon&&Roger Rist||2005
+conf/um/KatsimerouRH14||Christina Katsimerou&&Judith A. Redi&&Ingrid Heynderickx||2014
+conf/um/RiescoSB13||Angeles Manjarrés Riesco&&Olga C. Santos&&Jesus Boticario||2013
+conf/um/Zukerman01||Ingrid Zukerman||2001
+conf/um/GongB11||Yue Gong&&Joseph E. Beck||2011
+conf/um/Wang07||Yiwen Wang||2007
+conf/um/HammerWA14||Stephan Hammer&&Michael Wißner&&Elisabeth André||2014
+conf/um/Athukorala14||Kumaripaba Athukorala||2014
+conf/um/IqbalH07||Shamsi T. Iqbal&&Eric Horvitz||2007
+conf/um/LeitePCMMP11||Iolanda Leite&&André Pereira&&Ginevra Castellano&&Samuel Mascarenhas&&Carlos Martinho&&Ana Paiva||2011
+conf/um/DespotakisDLT13||Dimoklis Despotakis&&Vania Dimitrova&&Lydia Lau&&Dhavalkumar Thakker||2013
+conf/um/TsatsouNMVKLKKKLM12||Dorothea Tsatsou&&Lyndon J. B. Nixon&&Matei Mancas&&Miroslav Vacura&&Rüdiger Klein&&Julien Leroy&&Jaroslav Kuchar&&Tomás Kliegr&&Manuel Kober&&Maria Loli&&Vasileios Mezaris||2012
+conf/um/Bellogin11||Alejandro Bellogín||2011
+conf/um/SantoshJGV14||K. Santosh&&Aditya Joshi&&Manish Gupta&&Vasudeva Varma||2014
+conf/um/GuzmanC05||Eduardo Guzmán&&Ricardo Conejo||2005
+conf/um/MitrovicMOHMOBD14||Antonija Mitrovic&&Moffat Mathews&&Stellan Ohlsson&&Jay Holland&&Audrey McKinley&&Scott Ogden&&Anthony Bracegirdle&&Sam Dopping-Hepenstal||2014
+conf/um/DunnWHA09||Greg Dunn&&Jurgen Wiersema&&Jaap Ham&&Lora Aroyo||2009
+conf/um/PrendingerMI05||Helmut Prendinger&&Junichiro Mori&&Mitsuru Ishizuka||2005
+conf/um/Marsella10||Stacy Marsella||2010
+conf/um/KhajahHGMB14||Mohammad Khajah&&Yun Huang&&José P. González-Brenes&&Michael Mozer&&Peter Brusilovsky||2014
+conf/um/Porayska-PomstaADBABR13||Kaska Porayska-Pomsta&&Keith Anderson&&Ionut Damian&&Tobias Baur&&Elisabeth André&&Sara Bernardini&&Paola Rizzo||2013
+conf/um/Hernando11||Manuel Hernando||2011
+conf/um/BohnstedtSRS09||Doreen Böhnstedt&&Philipp Scholl&&Christoph Rensing&&Ralf Steinmetz||2009
+conf/um/FlemingC01||Michael W. Fleming&&Robin Cohen||2001
+conf/um/MaWL14||Min-Yuan Ma&&Chun-Chun Wei&&Yang-Cheng Lin||2014
+conf/um/SmitsB12||David Smits&&Paul De Bra||2012
+conf/um/ZhengBM13||Yong Zheng&&Robin D. Burke&&Bamshad Mobasher||2013
+conf/um/ConatiMMT05||Cristina Conati&&Christina Merten&&Kasia Muldner&&David Ternes||2005
+conf/um/ZimmermannLS03||Andreas Zimmermann&&Andreas Lorenz&&Marcus Specht||2003
+conf/um/KuflikWCG12||Tsvi Kuflik&&Alan J. Wecker&&Federica Cena&&Cristina Gena||2012
+conf/um/HochmeisterD11||Martin Hochmeister&&Johannes Daxböck||2011
+conf/um/BullGMKB01||Susan Bull&&Jim E. Greer&&Gordon I. McCalla&&Lori Kettel&&Jeff Bowes||2001
+conf/um/Streitz07||Norbert Streitz||2007
+conf/um/WixonA14||Michael Wixon&&Ivon Arroyo||2014
+conf/um/ParaskevopoulosM14||Fotis Paraskevopoulos&&Gregoris Mentzas||2014
+conf/um/PinheiroH09||Carlos André Reis Pinheiro&&Markus Helfert||2009
+conf/um/BistaNP13a||Sanat Kumar Bista&&Surya Nepal&&Cécile Paris||2013
+conf/um/JacobsB01||Nico Jacobs&&Hendrik Blockeel||2001
+conf/um/Sumi07||Yasuyuki Sumi||2007
+conf/um/NartFT13a||Dario De Nart&&Felice Ferrara&&Carlo Tasso||2013
+conf/um/ChampaignC12a||John Champaign&&Robin Cohen||2012
+conf/um/Leite11||Iolanda Leite||2011
+conf/um/LiangGB12||MinEr Liang&&Julio Guerra&&Peter Brusilovsky||2012
+conf/um/ConatiM09||Cristina Conati&&Heather Maclaren||2009
+conf/um/Kleanthous07||Styliani Kleanthous||2007
+conf/um/DingZ07||Chen (Cherie) Ding&&Jin Zhou||2007
+conf/um/IkeharaCC03||Curtis S. Ikehara&&David N. Chin&&Martha E. Crosby||2003
+conf/um/ArroyoW01||Ivon Arroyo&&Beverly Park Woolf||2001
+conf/um/BohnertZ10||Fabian Bohnert&&Ingrid Zukerman||2010
+conf/um/VoigtFM13||Martin Voigt&&Martin Franke&&Klaus Meißner||2013
+conf/um/HarriganKSW09||Martin Harrigan&&Milos Kravcik&&Christina Steiner&&Vincent Wade||2009
+conf/um/BixlerD14||Robert Bixler&&Sidney K. D'Mello||2014
+conf/um/ChenP07||Li Chen&&Pearl Pu||2007
+conf/um/SemeraroFFA01||Giovanni Semeraro&&Stefano Ferilli&&Nicola Fanizzi&&Fabio Abbattista||2001
+conf/um/AdewoyinV12||Oluwabunmi Adewoyin&&Julita Vassileva||2012
+conf/um/CarmagnolaVG09||Francesca Carmagnola&&Fabiana Vernero&&Pierluigi Grillo||2009
+conf/um/ZhangTLFRCLNZ11||Lizi Zhang&&Cheun Pin Tan&&Siyi Li&&Hui Fang&&Pramodh Rai&&Yao Chen&&Rohit Luthra&&Wee Keong Ng&&Jie Zhang 0002||2011
+conf/um/Redondo-HernandezP11||Alberto Redondo-Hernández&&Diana Pérez-Marín||2011
+conf/um/StashVBR13||Natalia Stash&&Loes Veldpaus&&Paul De Bra&&Ana Pereira Rodeirs||2013
+conf/um/ShiQQC13||Lei Shi&&Dana Al Qudah&&Alaa A. Qaffas&&Alexandra I. Cristea||2013
+conf/um/AlarconGP05||Rosa Alarcón&&Luis A. Guerrero&&José A. Pino||2005
+conf/um/ColineauP07||Nathalie Colineau&&Cécile Paris||2007
+conf/um/TsianosGLMSB09||Nikos Tsianos&&Panagiotis Germanakos&&Zacharias Lekkas&&Costas Mourlas&&George Samaras&&Marios Belk||2009
+conf/um/Vinciarelli09||Alessandro Vinciarelli||2009
+conf/um/Dijkshoorn13||Chris Dijkshoorn||2013
+conf/um/BeckW01||Joseph E. Beck&&Beverly Park Woolf||2001
+conf/um/MatsudaCSLK07||Noboru Matsuda&&William W. Cohen&&Jonathan Sewall&&Gustavo Lacerda&&Kenneth R. Koedinger||2007
+conf/um/SaidLTCKHTG14||Alan Said&&Martha Larson&&Domonkos Tikk&&Paolo Cremonesi&&Alexandros Karatzoglou&&Frank Hopfgartner&&Roberto Turrin&&Joost Geurts||2014
+conf/um/TsianosGLMS10||Nikos Tsianos&&Panagiotis Germanakos&&Zacharias Lekkas&&Costas Mourlas&&George Samaras||2010
+conf/um/Lorenz05||Andreas Lorenz||2005
+conf/um/Alexander05||Samuel Alexander||2005
+conf/um/2011||||2011
+conf/um/ShakerSAAS13||Noor Shaker&&Mohammad Shaker&&Ismaeel Abu-Abdallah&&Mehdi Al-Zengi&&Mohammad Hasan Sarhan||2013
+conf/um/NartFT13||Dario De Nart&&Felice Ferrara&&Carlo Tasso||2013
+conf/um/Carolis05||Berardina De Carolis||2005
+conf/um/NurmiFF09||Petteri Nurmi&&Andreas Forsblom&&Patrik Floréen||2009
+conf/um/Kljun11||Matjaz Kljun||2011
+conf/um/SantosSRBCCQSRM13||Olga C. Santos&&Mar Saneiro&&Emmanuelle Gutiérrez y Restrepo&&Jesus Boticario&&Elena del Campo&&Raúl Cabestrero&&Pilar Quirós&&Sergio Salmeron-Majadas&&Emmanuelle Raffenne&&Emanuela Mazzone||2013
+conf/um/KamathPC13||Krishna Yeswanth Kamath&&Ana-Maria Popescu&&James Caverlee||2013
+conf/um/BakerOGKM14||Ryan Shaun Baker&&Jaclyn Ocumpaugh&&Sujith M. Gowda&&Amy M. Kamarainen&&Shari J. Metcalf||2014
+conf/um/LeeML07||Sunyoung Lee&&Scott W. McQuiggan&&James C. Lester||2007
+conf/um/CapurucoC12a||Renato A. C. Capuruço&&Luiz Fernando Capretz||2012
+conf/um/KimRE11||Heung-Nam Kim&&Majdi Rawashdeh&&Abdulmotaleb El-Saddik||2011
+conf/um/KleanthousD10||Styliani Kleanthous&&Vania Dimitrova||2010
+conf/um/GhorabLOW14||M. Rami Ghorab&&Séamus Lawless&&Alexander O'Connor&&Vincent Wade||2014
+conf/um/MuldnerC05||Kasia Muldner&&Cristina Conati||2005
+conf/um/WangK09||Yang Wang 0005&&Alfred Kobsa||2009
+conf/um/BaekHK07||Sunkyoung Baek&&Myunggwon Hwang&&PanKoo Kim||2007
+conf/um/GoffartSKPK14||Klaus Goffart&&Michael Schermann&&Christopher Kohl&&Jörg Preißinger&&Helmut Krcmar||2014
+conf/um/BohnertZ10a||Fabian Bohnert&&Ingrid Zukerman||2010
+conf/um/RazmeritaAM03||Liana Razmerita&&Albert A. Angehrn&&Alexander Maedche||2003
+conf/um/Pollack07||Martha E. Pollack||2007
+conf/um/AhnB10||Jae-wook Ahn&&Peter Brusilovsky||2010
+conf/um/Elahi11||Mehdi Elahi||2011
+conf/um/SawadogoCE14||Daouda Sawadogo&&Ronan Champagnat&&Pascal Estraillier||2014
+conf/um/KudenkoBD03||Daniel Kudenko&&Mathias Bauer&&Dietmar Dengler||2003
+conf/um/VayanouKKKRI14||Maria Vayanou&&Manos Karvounis&&Akrivi Katifori&&Marialena Kyriakidi&&Maria Roussou&&Yannis E. Ioannidis||2014
+conf/um/MinonA11||Raúl Miñón&&Julio Abascal||2011
+conf/um/BrusilovskySS05||Peter Brusilovsky&&Sergey A. Sosnovsky&&Olena Shcherbinina||2005
+conf/um/GoodmanHLR03||Bradley A. Goodman&&Janet Hitzeman&&Frank Linton&&Helen Ross||2003
+conf/um/GlowackaH14||Dorota Glowacka&&Sayantan Hore||2014
+conf/um/CozzolongoCP07||Giovanni Cozzolongo&&Berardina De Carolis&&Sebastiano Pizzutilo||2007
+conf/um/Wecker14||Alan J. Wecker||2014
+conf/um/Teo01||Gloria Teo||2001
+conf/um/DeventerWVG13||M. Oskar van Deventer&&Joost de Wit&&Jeroen Vanattenhoven&&Mark Guelbahar||2013
+conf/um/DucheneautPHPRCBB09||Nicolas Ducheneaut&&Kurt Partridge&&Qingfeng Huang&&Bob Price&&Michael Roberts&&Ed H. Chi&&Victoria Bellotti&&Bo Begole||2009
+conf/um/DiazGG05||Alberto Díaz&&Pablo Gervás&&Antonio García||2005
+conf/um/CoceaM09||Mihaela Cocea&&George D. Magoulas||2009
+conf/um/VildjiounaiteKKK07||Elena Vildjiounaite&&Otilia Kocsis&&Vesa Kyllönen&&Basilis Kladis||2007
+conf/um/ShakerS14||Noor Shaker&&Mohammad Shaker||2014
+conf/um/Guttmann05||Christian Guttmann||2005
+conf/um/KayalBZNR14||Alex Kayal&&Willem-Paul Brinkman&&Hanna Zoon&&Mark A. Neerincx&&M. Birna van Riemsdijk||2014
+conf/um/ArdissonoLSV14a||Liliana Ardissono&&Maurizio Lucenteforte&&Adriano Savoca&&Angioletta Voghera||2014
+conf/um/IyiladeV13a||Johnson Iyilade&&Julita Vassileva||2013
+conf/um/VassilevaZ11||Julita Vassileva&&Jie Zhang 0002||2011
+conf/um/Habieb-MammarTP03||Halima Habieb-Mammar&&Franck Tarpin-Bernard&&Patrick Prévôt||2003
+conf/um/CordickM09||Alana Cordick&&Judi McCuaig||2009
+conf/um/RomeroVBC03||Cristóbal Romero&&Sebastián Ventura&&Paul De Bra&&Carlos de Castro||2003
+conf/um/AbelaSH10||Charlie Abela&&Chris Staff&&Siegfried Handschuh||2010
+conf/um/LiCAASTKMW14||Hua Li&&Ralph Costantini&&David Anhalt&&Rafael Alonso&&Mark-Oliver Stehr&&Carolyn L. Talcott&&Minyoung Kim&&Timothy McCarthy&&Samuel Wood||2014
+conf/um/Longo12||Luca Longo||2012
+conf/um/AiharaT01||Kenro Aihara&&Atsuhiro Takasu||2001
+conf/um/DerczynskiB14||Leon Derczynski&&Kalina Bontcheva||2014
+conf/um/TerziRFW14||Maria Terzi&&Matthew Rowe&&Maria Angela Ferrario&&Jon Whittle||2014
+conf/um/Arevalillo-HerraezMAMBSCQSRS13||Miguel Arevalillo-Herráez&&Salvador Moreno-Picot&&David Arnau&&Paloma Moreno-Clari&&Jesus Boticario&&Olga C. Santos&&Raúl Cabestrero&&Pilar Quirós&&Sergio Salmeron-Majadas&&Angeles Manjarrés Riesco&&Mar Saneiro||2013
+conf/um/AssadCKK07||Mark Assad&&David J. Carmichael&&Judy Kay&&Bob Kummerfeld||2007
+conf/um/FerwerdaS14||Bruce Ferwerda&&Markus Schedl||2014
+conf/um/Bezold09||Matthias Bezold||2009
+conf/um/GarzonP11||Sandro Rodriguez Garzon&&Mark Poguntke||2011
+conf/um/Bernsen03||Niels Ole Bernsen||2003
+conf/um/AbergS01||Johan Aberg&&Nahid Shahmehri||2001
+conf/um/WilliamsD14||Chad A. Williams&&Sean T. Doherty||2014
+conf/um/LeshRS01||Neal Lesh&&Charles Rich&&Candace L. Sidner||2001
+conf/um/HuberS03||Marcus J. Huber&&Richard Simpson||2003
+conf/um/MorenoCR14||Andrés Moreno&&Harold Castro&&Michel Riveill||2014
+conf/um/ChinW14||David N. Chin&&William R. Wright||2014
+conf/um/Vicente-LopezCFH14||Eduardo Vicente-López&&Luis M. de Campos&&Juan M. Fernández-Luna&&Juan F. Huete||2014
+conf/um/LabajB13||Martin Labaj&&Mária Bieliková||2013
+conf/um/BistaNP13||Sanat Kumar Bista&&Surya Nepal&&Cécile Paris||2013
+conf/um/FarzanB09||Rosta Farzan&&Peter Brusilovsky||2009
+conf/um/JungS05||Eui-Chul Jung&&Keiichi Sato||2005
+conf/um/Nguyen07||Hien Nguyen||2007
+conf/um/Torre01||Ilaria Torre||2001
+conf/um/AktolgaJV13||Elif Aktolga&&Alpa Jain&&Emre Velipasaoglu||2013
+conf/um/FelfernigZNGMPWR11||Alexander Felfernig&&Christoph Zehentner&&Gerald Ninaus&&Harald Grabner&&Walid Maalej&&Dennis Pagano&&Leopold Weninger&&Florian Reinfrank||2011
+conf/um/LarizzaZBRBAR12||Melanie Frances Larizza&&Ingrid Zukerman&&Fabian Bohnert&&R. Andrew Russell&&Lucy Busija&&David W. Albrecht&&Gwyn Rees||2012
+conf/um/BiancoCFIT13||Alessandro Bianco&&Paolo Campegiani&&John Forrester&&Leo Iaquinta&&Maria Alessandra Torsello||2013
+conf/um/GarlattiI03||Serge Garlatti&&Sébastien Iksal||2003
+conf/um/SteichenSCC13||Ben Steichen&&Oliver Schmid&&Cristina Conati&&Giuseppe Carenini||2013
+conf/um/Odic12||Ante Odic||2012
+conf/um/LehmannLYD12||Janette Lehmann&&Mounia Lalmas&&Elad Yom-Tov&&Georges Dupret||2012
+conf/um/MoulahiTY14||Bilel Moulahi&&Lynda Tamine&&Sadok Ben Yahia||2014
+conf/um/LopsDS07||Pasquale Lops&&Marco Degemmis&&Giovanni Semeraro||2007
+conf/um/YangTBH14||Jie Yang&&Ke Tao&&Alessandro Bozzon&&Geert-Jan Houben||2014
+conf/um/ArmentanoA09||Marcelo Armentano&&Analía Amandi||2009
+conf/um/SawadogoCE14a||Daouda Sawadogo&&Ronan Champagnat&&Pascal Estraillier||2014
+conf/um/GerberFKKPW10||Simon Gerber&&Michael Fry&&Judy Kay&&Bob Kummerfeld&&Glen Pink&&Rainer Wasinger||2010
+conf/um/MuldnerCAB09||Kasia Muldner&&Robert Christopherson&&Robert K. Atkinson&&Winslow Burleson||2009
+conf/um/HineJAASBG05||Nick A. Hine&&Andrew Judson&&Saqib Ashraf&&John L. Arnott&&Andrew Sixsmith&&Steve Brown&&Paul Garner||2005
+conf/um/KamaharaNTKI10||Junzo Kamahara&&Takashi Nagamatsu&&Masashi Tada&&Yohei Kaieda&&Yutaka Ishii||2010
+conf/um/GuriniGMS14||Davide Feltoni Gurini&&Fabio Gasparetti&&Alessandro Micarelli&&Giuseppe Sansonetti||2014
+conf/um/CalvoLEL14||Iñaki Calvo&&Ana Arruarte Lasa&&Jon A. Elorriaga&&Mikel Larrañaga||2014
+conf/um/HeckmannSBSW05||Dominik Heckmann&&Tim Schwartz&&Boris Brandherm&&Michael Schmitz&&Margeritta von Wilamowitz-Moellendorff||2005
+conf/um/GemmellSMB11||Jonathan Gemmell&&Thomas Schimoler&&Bamshad Mobasher&&Robin D. Burke||2011
+conf/um/OctaviaCR10||Johanna Renny Octavia&&Karin Coninx&&Chris Raymaekers||2010
+conf/um/ShiC14||Lei Shi&&Alexandra I. Cristea||2014
+conf/um/KosbaDB05||Essam M. Kosba&&Vania Dimitrova&&Roger D. Boyle||2005
+conf/um/DijkshoornLNOTABFHHJOSW13||Chris Dijkshoorn&&Mieke H. R. Leyssen&&Archana Nottamkandath&&Jasper Oosterman&&Myriam C. Traub&&Lora Aroyo&&Alessandro Bozzon&&Wan Fokkink&&Geert-Jan Houben&&Henrike Hovelmann&&Lizzy Jongma&&Jacco van Ossenbruggen&&Guus Schreiber&&Jan Wielemaker||2013
+conf/um/2011w||||2012
+conf/um/NiuMV03||Xiaolin Niu&&Gordon I. McCalla&&Julita Vassileva||2003
+conf/um/FangSZM11||Hui Fang&&Murat Sensoy&&Jie Zhang 0002&&Nadia Magnenat-Thalmann||2011
+conf/um/IyiladeV13||Johnson Iyilade&&Julita Vassileva||2013
+conf/um/Kramar11||Tomás Kramár||2011
+conf/um/HeckmannK03||Dominik Heckmann&&Antonio Krüger||2003
+conf/um/FinnsonZTMC12||John Finnson&&Jie Zhang 0002&&Thomas T. Tran&&Umar Farooq Minhas&&Robin Cohen||2012
+conf/um/WeibelzahlW03||Stephan Weibelzahl&&Gerhard Weber||2003
+conf/um/Gebhard01||Patrick Gebhard||2001
+conf/um/CareniniCHS13||Giuseppe Carenini&&Cristina Conati&&Enamul Hoque&&Ben Steichen||2013
+conf/um/BertholdLNPKA11||Marcel Berthold&&Pablo Lachmann&&Alexander Nussbaumer&&Sergei Pachtchenko&&Andreas Kiefel&&Dietrich Albert||2011
+conf/um/KordumovaKBPK10||Suzana Kordumova&&Ivana Kostadinovska&&Mauro Barbieri&&Verus Pronk&&Jan H. M. Korst||2010
+conf/um/CastilloGB03||Gladys Castillo&&João Gama&&Ana M. Breda||2003
+conf/um/Mitrovic01||Antonija Mitrovic||2001
+conf/um/SantosKP11||Olga C. Santos&&Milos Kravcik&&Diana Pérez-Marín||2011
+conf/um/Givone01||Jessica Givone||2001
+conf/um/ParraJBLS12||Denis Parra&&Wei Jeng&&Peter Brusilovsky&&Claudia López&&Shaghayegh Sahebi||2012
+conf/um/Peska12||Ladislav Peska||2012
+conf/um/CazellaA05||Sílvio César Cazella&&Luis Otávio Campos Alvares||2005
+conf/um/ArdissonoBS11||Liliana Ardissono&&Gianni Bosio&&Marino Segnan||2011
+conf/um/VinagreJG14||João Vinagre&&Alípio Mário Jorge&&João Gama||2014
+conf/um/MichaudMS01||Lisa N. Michaud&&Kathleen F. McCoy&&Litza A. Stark||2001
+conf/um/ChowdhuryB14||Mohammad Noor Nawaz Chowdhury&&Andrea Bunt||2014
+conf/um/PatsisSVT13||Georgios Patsis&&Hichem Sahli&&Werner Verhelst&&Olga De Troyer||2013
+conf/um/BakerHAC07||Ryan Shaun Joazeiro de Baker&&M. P. Jacob Habgood&&Shaaron Ainsworth&&Albert T. Corbett||2007
+conf/um/ShiLH11||Yue Shi&&Martha Larson&&Alan Hanjalic||2011
+conf/um/Vaz0M13||Paula Cristina Vaz&&Ricardo Ribeiro 0001&&David Martins de Matos||2013
+conf/um/ShenZB09||Xuehua Shen&&ChengXiang Zhai&&Nicholas J. Belkin||2009
+conf/um/DattoloFT09||Antonina Dattolo&&Felice Ferrara&&Carlo Tasso||2009
+conf/um/CarofiglioRC01||Valeria Carofiglio&&Fiorella de Rosis&&Cristiano Castelfranchi||2001
+conf/um/TintarevKMDOV14||Nava Tintarev&&Roman Kutlak&&Judith Masthoff&&Kees van Deemter&&Nir Oren&&Wamberto Vasconcelos||2014
+conf/um/GhorabZLW12||M. Rami Ghorab&&Dong Zhou&&Séamus Lawless&&Vincent Wade||2012
+conf/um/Berkovsky05||Shlomo Berkovsky||2005
+conf/um/QureshiYYMSTOP14||Muhammad Atif Qureshi 0001&&Arjumand Younus&&Muhammad Yousuf&&Abdul Moiz&&Muhammad Saeed&&Nasir Touheed&&Colm O'Riordan&&Gabriella Pasi||2014
+conf/um/FalkowskiS07||Tanja Falkowski&&Myra Spiliopoulou||2007
+conf/um/Mehta07||Bhaskar Mehta||2007
+conf/um/ChinP01||David N. Chin&&Asanga Porage||2001
+conf/um/CenaDLLPV11||Federica Cena&&Antonina Dattolo&&Ernesto William De Luca&&Pasquale Lops&&Till Plumbaum&&Julita Vassileva||2011
+conf/um/YudelsonPK11||Michael Yudelson&&Philip I. Pavlik&&Kenneth R. Koedinger||2011
+conf/um/CasoR14||Antonio Caso&&Silvia Rossi||2014
+conf/um/PesekGPSGSPM14||Matevz Pesek&&Primoz Godec&&Mojca Poredos&&Gregor Strle&&Joze Guna&&Emilija Stojmenova&&Matevz Pogacnik&&Matija Marolt||2014
+conf/um/Lum03||Andrew Lum||2003
+conf/um/FarzanB05||Rosta Farzan&&Peter Brusilovsky||2005
+conf/um/2003||||2003
+conf/um/AbelGHT11||Fabian Abel&&Qi Gao&&Geert-Jan Houben&&Ke Tao||2011
+conf/um/ZhuGH03||Tingshao Zhu&&Russell Greiner&&Gerald Häubl||2003
+conf/um/BeckC07||Joseph E. Beck&&Kai-min Chang||2007
+conf/um/Kalaydjiev01||Ognian Kalaydjiev||2001
+conf/um/Kurdyukova11||Ekaterina Kurdyukova||2011
+conf/um/IrissappaneJZ12||Athirai Aravazhi Irissappane&&Siwei Jiang&&Jie Zhang 0002||2012
+conf/um/MeguebliKDP14||Youssef Meguebli&&Mouna Kacimi&&Bich-Liên Doan&&Fabrice Popineau||2014
+conf/um/SaayaSRS13||Zurina Saaya&&Markus Schaal&&Rachael Rafter&&Barry Smyth||2013
+conf/um/TiroshiBKVK14||Amit Tiroshi&&Shlomo Berkovsky&&Mohamed Ali Kâafar&&David Vallet&&Tsvi Kuflik||2014
+conf/um/SuebnukarnH05||Siriwan Suebnukarn&&Peter Haddawy||2005
+conf/um/BaikadiRML14||Alok Baikadi&&Jonathan P. Rowe&&Bradford W. Mott&&James C. Lester||2014
+conf/um/PiliponyteRK13||Auste Piliponyte&&Francesco Ricci&&Julian Koschwitz||2013
+conf/um/BuntMC07||Andrea Bunt&&Joanna McGrenere&&Cristina Conati||2007
+conf/um/GalanB12||Federico Cirett Galán&&Carole R. Beal||2012
+conf/um/CoceaM11||Mihaela Cocea&&George D. Magoulas||2011
+conf/um/ChiVLJ10||Min Chi&&Kurt VanLehn&&Diane J. Litman&&Pamela W. Jordan||2010
+conf/um/Wang05||Yang Wang 0005||2005
+conf/um/DrumondTHS12||Lucas Drumond&&Nguyen Thai-Nghe&&Tomás Horváth&&Lars Schmidt-Thieme||2012
+conf/um/MustoSLG14||Cataldo Musto&&Giovanni Semeraro&&Pasquale Lops&&Marco de Gemmis||2014
+conf/um/KravcikNK14||Milos Kravcik&&Kateryna Neulinger&&Ralf Klamma||2014
+conf/um/VillonL07||Olivier Villon&&Christine L. Lisetti||2007
+conf/um/CenaCCDGO13||Federica Cena&&Elisa Chiabrando&&Andrea Crevola&&Martina Deplano&&Cristina Gena&&Francesco Osborne||2013
+conf/um/MalackaSZZ11||Ondrej Malacka&&Jan Samek&&Frantisek Zboril&&Frantisek Vítezslav Zboril||2011
+conf/um/BullCM07||Susan Bull&&Neil Cooke&&Andrew Mabbott||2007
+conf/um/KoldijkSNK13||Saskia Koldijk&&Maya Sappelli&&Mark A. Neerincx&&Wessel Kraaij||2013
+conf/um/DijkshoornOAH12||Chris Dijkshoorn&&Jasper Oosterman&&Lora Aroyo&&Geert-Jan Houben||2012
+conf/um/KumarK11||Harshit Kumar&&Hong-Gee Kim||2011
+conf/um/2013w||||2013
+conf/um/BerkovskyFK011||Shlomo Berkovsky&&Jill Freyne&&Stephen Kimani&&Gregory Smith 0003||2011
+conf/um/KantardzicS07||Mehmed M. Kantardzic&&Pedram Sadeghian||2007
+conf/um/KellnerB11||Gudrun Kellner&&Bettina Berendt||2011
+conf/um/ChampaignC12c||John Champaign&&Robin Cohen||2012
+conf/um/BuntC01||Andrea Bunt&&Cristina Conati||2001
+conf/um/StevensGB07||Ronald H. Stevens&&Trysha Galloway&&Chris Berka||2007
+conf/um/HernandezGB03||Felix Hernandez-del-Olmo&&Elena Gaudioso&&Jesus Boticario||2003
+conf/um/OKeeffeW09||Ian O'Keeffe&&Vincent Wade||2009
+conf/um/GaoAHY12||Qi Gao&&Fabian Abel&&Geert-Jan Houben&&Yong Yu||2012
+conf/um/HollinkSH05||Vera Hollink&&Maarten van Someren&&Stephan ten Hagen||2005
+conf/um/ParisW09||Cécile Paris&&Stephen Wan||2009
+conf/um/PeroH13||Stefan Pero&&Tomás Horváth||2013
+conf/um/SantosNZP03||Eugene Santos Jr.&&Hien Nguyen&&Qunhua Zhao&&Erik Pukinskis||2003
+conf/um/EppBJ14||Carrie Demmans Epp&&Susan Bull&&Matthew D. Johnson||2014
+conf/um/BolognaRVGSV13||Ciro Bologna&&Anna Chiara De Rosa&&Alfonso De Vivo&&Matteo Gaeta&&Giuseppe Sansonetti&&Valeria Viserta||2013
+conf/um/KleekS07||Max Van Kleek&&Howard E. Shrobe||2007
+conf/um/McCreathK03||Eric McCreath&&Judy Kay||2003
+conf/um/RazzaqMEMAW11||Leena M. Razzaq&&Robert W. Maloy&&Sharon Edwards&&David Marshall&&Ivon Arroyo&&Beverly Park Woolf||2011
+conf/um/LepriMCPZ09||Bruno Lepri&&Nadia Mana&&Alessandro Cappelletti&&Fabio Pianesi&&Massimo Zancanaro||2009
+conf/um/OctaviaRC09||Johanna Renny Octavia&&Chris Raymaekers&&Karin Coninx||2009
+conf/um/LinB11||Yi-Ling Lin&&Peter Brusilovsky||2011
+conf/um/LynchH14||Danny J. Lynch&&Colm P. Howlin||2014
+conf/um/KacemBF14||Ameni Kacem&&Mohand Boughanem&&Rim Faiz||2014
+conf/um/BohnertZL12||Fabian Bohnert&&Ingrid Zukerman&&Junaidy Laures||2012
+conf/um/MarinilliM05||Mauro Marinilli&&Alessandro Micarelli||2005
+conf/um/YannakakisM05||Georgios N. Yannakakis&&Manolis Maragoudakis||2005
+conf/um/BeckJM03||Joseph E. Beck&&Peng Jia&&Jack Mostow||2003
+conf/um/BiancalanaFGMMS11||Claudio Biancalana&&Andrea Flamini&&Fabio Gasparetti&&Alessandro Micarelli&&Samuele Millevolte&&Giuseppe Sansonetti||2011
+conf/um/Matsuo03||Yutaka Matsuo||2003
+conf/um/MoriMKAT09||Junichiro Mori&&Yutaka Matsuo&&Hitoshi Koshiba&&Kenro Aihara&&Hideaki Takeda||2009
+conf/um/SteichenGOLW14||Ben Steichen&&M. Rami Ghorab&&Alexander O'Connor&&Séamus Lawless&&Vincent Wade||2014
+conf/um/PaquetteLM12||Luc Paquette&&Jean-François Lebeau&&André Mayers||2012
+conf/um/Boa-VenturaS10||Ana Boa-Ventura&&Luís Saboga-Nunes||2010
+conf/um/BelloginSV14||Alejandro Bellogín&&Alan Said&&Arjen P. de Vries||2014
+conf/um/MoschonasTKST12||Panagiotis Moschonas&&Athanasios Tsakiris&&Nikolaos Kaklanis&&Georgios Stavropoulos&&Dimitrios Tzovaras||2012
+conf/um/KuflikCGRSZ05||Tsvi Kuflik&&Charles B. Callaway&&Dina Goren-Bar&&Cesare Rocchi&&Oliviero Stock&&Massimo Zancanaro||2005
+conf/um/Guo12||Guibing Guo||2012
+conf/um/SorgenteBGZMB13||Antonio Sorgente&&Nadia Brancati&&Cristina Giannone&&Fabio Massimo Zanzotto&&Francesco Mele&&Roberto Basili||2013
+conf/um/Ginon12||Blandine Ginon||2012
+conf/um/Methaneethorn05||Jutima Methaneethorn||2005
+conf/um/ZiniR11||Floriano Zini&&Francesco Ricci||2011
+conf/um/NguyenR13||Tien T. Nguyen&&John Riedl||2013
+conf/um/Wilson03||Roy Wilson||2003
+conf/um/OlmedillaFL10||Daniel Olmedilla&&Enrique Frías-Martínez&&Rubén Lara||2010
+conf/um/RafterOHS09||Rachael Rafter&&Michael P. O'Mahony&&Neil J. Hurley&&Barry Smyth||2009
+conf/um/DimK12||Eyal Dim&&Tsvi Kuflik||2012
+conf/um/CristeaC03||Alexandra I. Cristea&&Licia Calvi||2003
+conf/um/AmmariDD11||Ahmad Ammari&&Vania Dimitrova&&Dimoklis Despotakis||2011
+conf/um/ButtussiCN09||Fabio Buttussi&&Luca Chittaro&&Daniele Nadalutti||2009
+conf/um/PalFKK11||Aditya Pal&&Rosta Farzan&&Joseph A. Konstan&&Robert E. Kraut||2011
+conf/um/SongTLS05||Xiaodan Song&&Belle L. Tseng&&Ching-Yung Lin&&Ming-Ting Sun||2005
+conf/um/CooperMAWB10||David G. Cooper&&Kasia Muldner&&Ivon Arroyo&&Beverly Park Woolf&&Winslow Burleson||2010
+conf/um/NazemiK13||Kawa Nazemi&&Jörn Kohlhammer||2013
+conf/um/Hennis11||Thieme Hennis||2011
+conf/um/KapoorH07||Ashish Kapoor&&Eric Horvitz||2007
+conf/um/SiaZCHT07||Ka Cheung Sia&&Shenghuo Zhu&&Yun Chi&&Koji Hino&&Belle L. Tseng||2007
+conf/um/BurnsCS13||Richard Burns&&Sandra Carberry&&Stephanie Elzer Schwartz||2013
+conf/um/PedroBG12||Michael A. Sao Pedro&&Ryan Shaun Joazeiro de Baker&&Janice D. Gobert||2012
+conf/um/CenaLO12||Federica Cena&&Silvia Likavec&&Francesco Osborne||2012
+conf/um/HarperLCK05||F. Maxwell Harper&&Sherry Xin Li&&Yan Chen&&Joseph A. Konstan||2005
+conf/um/JeremicLKD05||Zoran Jeremic&&Taiyu Lin&&Kinshuk&&Vladan Devedzic||2005
+conf/um/Kobsa01||Alfred Kobsa||2001
+conf/um/BentalCPJ03||Diana Bental&&Alison Cawsey&&Janne Pearson&&Ray B. Jones||2003
+conf/um/Epp12||Carrie Demmans Epp||2012
+conf/um/Seroussi10||Yanir Seroussi||2010
+conf/um/DennisMM12||Matt Dennis&&Judith Masthoff&&Chris Mellish||2012
+conf/um/WangK07||Yang Wang 0005&&Alfred Kobsa||2007
+conf/um/NguyenRZG14||Thai Son Nguyen&&Francesco Ricci&&Floriano Zini&&Marcello Granconato||2014
+conf/um/PizzatoRYKK11||Luiz Augusto Sangoi Pizzato&&Tomek Rej&&Kalina Yacef&&Irena Koprinska&&Judy Kay||2011
+conf/um/WeckerKS13||Alan J. Wecker&&Tsvika Kuflik&&Oliviero Stock||2013
+conf/um/Dimitrova03||Vania Dimitrova||2003
+conf/um/CaballeXDF07||Santi Caballé&&Fatos Xhafa&&Thanasis Daradoumis&&Raul Fernandez||2007
+conf/um/TranC03||Thomas T. Tran&&Robin Cohen||2003
+conf/um/Willms03||Swantje Willms||2003
+conf/um/ZibriczkyHPT12||Dávid Zibriczky&&Balázs Hidasi&&Zoltán Petres&&Domonkos Tikk||2012
+conf/um/BonnefoyBLM07||David Bonnefoy&&Makram Bouzid&&Nicolas Lhuillier&&Kevin Mercer||2007
+conf/um/SotsenkoJM14||Alisa Sotsenko&&Marc Jansen&&Marcelo Milrad||2014
+conf/um/HaugerPW11||David Hauger&&Alexandros Paramythis&&Stephan Weibelzahl||2011
+conf/um/MagniniS01||Bernardo Magnini&&Carlo Strapparava||2001
+conf/um/PianesiGZ07||Fabio Pianesi&&Ilenia Graziola&&Massimo Zancanaro||2007
+conf/um/PizzatoASYKK12||Luiz Augusto Sangoi Pizzato&&Joshua Akehurst&&Cameron Silvestrini&&Kalina Yacef&&Irena Koprinska&&Judy Kay||2012
+conf/um/Weibelzahl01||Stephan Weibelzahl||2001
+conf/um/WangASR07||Yiwen Wang&&Lora Aroyo&&Natalia Stash&&Lloyd Rutledge||2007
+conf/um/BlaylockA05||Nate Blaylock&&James F. Allen||2005
+conf/um/2007||||2007
+conf/um/SajgalikBB13||Márius Sajgalík&&Michal Barla&&Mária Bieliková||2013
+conf/um/BaghaeiM07||Nilufar Baghaei&&Antonija Mitrovic||2007
+conf/um/StolzeS01||Markus Stolze&&Michael Ströbel||2001
+conf/um/MichalakA07||Phillip Michalak&&James Allen||2007
+conf/um/Fernandez-TobiasCP13||Ignacio Fernández-Tobías&&Iván Cantador&&Laura Plaza||2013
+conf/um/Cranor05||Lorrie Faith Cranor||2005
+conf/um/CarolisF14||Berardina De Carolis&&Stefano Ferilli||2014
+conf/um/KochISBN13||Fernando Koch&&Márcia Ito&&Annibal B. M. da Silva&&Sergio Borger&&Julio Nogima||2013
+conf/um/Wade09||Vincent Wade||2009
+conf/um/TorselloIC14||Maria Alessandra Torsello&&Leo Iaquinta&&Marco Comerio||2014
+conf/um/PardosH10||Zachary A. Pardos&&Neil T. Heffernan||2010
+conf/um/LageDL14||Ricardo Lage&&Peter Dolog&&Martin Leginus||2014
+conf/um/GrawemeyerC05||Beate Grawemeyer&&Richard Cox||2005
+conf/um/Bontcheva01||Kalina Bontcheva||2001
+conf/um/CarberryE07||Sandra Carberry&&Stephanie Elzer||2007
+conf/um/LipschultzLJK12||Michael Lipschultz&&Diane J. Litman&&Pamela W. Jordan&&Sandra Katz||2012
+conf/um/TangK14||Lie Ming Tang&&Judy Kay||2014
+conf/um/Lloyd-KellyW11||Martyn Lloyd-Kelly&&Adam Wyner||2011
+conf/um/NoguezSE07||Julieta Noguez&&Luis Enrique Sucar&&Enrique David Espinosa||2007
+conf/um/HerderSK14||Eelco Herder&&Patrick Siehndel&&Ricardo Kawase||2014
+conf/um/HammerKRAU13||Stephan Hammer&&Rolf Kiefhaber&&Matthias Redlin&&Elisabeth André&&Theo Ungerer||2013
+conf/um/Channarukul03||Songsak Channarukul||2003
+conf/um/VanLehnKSNHWB07||Kurt VanLehn&&Kenneth R. Koedinger&&Alida Skogsholm&&Adaeze Nwaigwe&&Robert G. M. Hausmann&&Anders Weinstein&&Benjamin Billings||2007
+conf/um/RodriguezLEG01||Manuel de Buenaga Rodríguez&&Manuel J. Maña López&&Alberto Díaz Esteban&&Pablo Gervás Gómez-Navarro||2001
+conf/um/ChaouachiJF11||Maher Chaouachi&&Imene Jraidi&&Claude Frasson||2011
+conf/um/Fernandez-TobiasCB11||Ignacio Fernández-Tobías&&Iván Cantador&&Alejandro Bellogín||2011
+conf/um/JannachLGB13||Dietmar Jannach&&Lukas Lerche&&Fatih Gedikli&&Geoffray Bonnin||2013
+conf/um/BaruaKKP14||Debjanee Barua&&Judy Kay&&Bob Kummerfeld&&Cécile Paris||2014
+conf/um/Picard03||Rosalind W. Picard||2003
+conf/um/GrossT13||Alice Gross&&Manfred Thüring||2013
+conf/um/GemmellMB14||Jonathan Gemmell&&Bamshad Mobasher&&Robin D. Burke||2014
+conf/um/Orlandi12||Fabrizio Orlandi||2012
+conf/um/PengS05||Xiaoyan Peng&&Daniel L. Silver||2005
+conf/um/DespotakisTDL12||Dimoklis Despotakis&&Dhavalkumar Thakker&&Vania Dimitrova&&Lydia Lau||2012
+conf/um/HurleyW07||Teresa Hurley&&Stephan Weibelzahl||2007
+conf/um/Wright14||William R. Wright||2014
+conf/um/ReadBBVP05||Timothy Read&&Elena Bárcena&&Beatriz Barros&&Raquel Varela&&Jesús Pancorbo||2005
+conf/um/GmytrasiewiczL01||Piotr J. Gmytrasiewicz&&Christine L. Lisetti||2001
+conf/um/Harper07||F. Maxwell Harper||2007
+conf/um/Masthoff05||Judith Masthoff||2005
+conf/um/TangP10||Justin Tang&&Donald J. Patterson||2010
+conf/um/MichaudM03||Lisa N. Michaud&&Kathleen F. McCoy||2003
+conf/um/Montes-Garcia14||Alejandro Montes García||2014
+conf/um/AsohOHTTM11||Hideki Asoh&&Chihiro Ono&&Yukiko Habu&&Haruo Takasaki&&Takeshi Takenaka&&Yoichi Motomura||2011
+conf/um/MooreSC13||Adam Moore&&Christina M. Steiner&&Owen Conlan||2013
+conf/um/AmatriainPO09||Xavier Amatriain&&Josep M. Pujol&&Nuria Oliver||2009
+conf/um/Iyilade13||Johnson Iyilade||2013
+conf/um/WebsterV07||Andrew Webster&&Julita Vassileva||2007
+conf/um/BurkeVM14||Robin D. Burke&&Fatemeh Vahedian&&Bamshad Mobasher||2014
+conf/um/Grimnes03||Gunnar Aastrand Grimnes||2003
+conf/um/KomataniKO09||Kazunori Komatani&&Tatsuya Kawahara&&Hiroshi G. Okuno||2009
+conf/um/KobsaF03||Alfred Kobsa&&Josef Fink||2003
+conf/um/BakerCKR05||Ryan Shaun Baker&&Albert T. Corbett&&Kenneth R. Koedinger&&Ido Roll||2005
+conf/um/VerborghVMW13||Ruben Verborgh&&Mathias Verhoeven&&Erik Mannens&&Rik Van de Walle||2013
+conf/um/CastagnosB07||Sylvain Castagnos&&Anne Boyer||2007
+conf/um/OzgobekSG14||Özlem Özgöbek&&Nafiseh Shabib&&Jon Atle Gulla||2014
+conf/um/ChittaroRMS09||Luca Chittaro&&Roberto Ranon&&Luca De Marco&&Augusto Senerchia||2009
+conf/um/Kelly03||Diane Kelly||2003
+conf/um/HarveyCD05||Terrence Harvey&&Sandra Carberry&&Keith S. Decker||2005
+conf/um/CerneaEK13||Daniel Cernea&&Achim Ebert&&Andreas Kerren||2013
+conf/um/TockerCCH12||Dereck Toker&&Cristina Conati&&Giuseppe Carenini&&Mona Haraty||2012
+conf/um/KupperK01||Detlef Küpper&&Alfred Kobsa||2001
+conf/um/HerazF09||Alicia Heraz&&Claude Frasson||2009
+conf/um/BakerCGWMKMG10||Ryan Shaun Joazeiro de Baker&&Albert T. Corbett&&Sujith M. Gowda&&Angela Z. Wagner&&Benjamin A. MacLaren&&Linda R. Kauffman&&Aaron P. Mitchell&&Stephen Giguere||2010
+conf/um/OliverH05||Nuria Oliver&&Eric Horvitz||2005
+conf/um/IaquintaTCFS13||Leo Iaquinta&&Maria Alessandra Torsello&&Marco Comerio&&Anna Maria Fanelli&&Giovanni Semeraro||2013
+conf/um/FinnsonCZTM12||John Finnson&&Robin Cohen&&Jie Zhang 0002&&Thomas T. Tran&&Umar Farooq Minhas||2012
+conf/um/LeeB09||Danielle H. Lee&&Peter Brusilovsky||2009
+conf/um/IntroneA03||Joshua Introne&&Richard Alterman||2003
+conf/um/OsborneR13||Francesco Osborne&&Alice Ruggeri||2013
+conf/um/GinonCJ12||Blandine Ginon&&Pierre-Antoine Champin&&Stéphanie Jean-Daubias||2012
+conf/um/ChenP10||Li Chen&&Pearl Pu||2010
+conf/um/Dumais09||Susan T. Dumais||2009
+conf/um/GuzmanCG10||Eduardo Guzmán&&Ricardo Conejo&&Jaime Gálvez||2010
+conf/um/MandlF12||Monika Mandl&&Alexander Felfernig||2012
+conf/um/JonghDB13||Martijn de Jongh&&Patrick M. Dudas&&Peter Brusilovsky||2013
+conf/um/AbelHHK10||Fabian Abel&&Nicola Henze&&Eelco Herder&&Daniel Krause||2010
+conf/um/SpaethD13||Alexandre Spaeth&&Michel C. Desmarais||2013
+conf/um/PronkGV05||Verus Pronk&&S. V. R. Gutta&&Wim F. J. Verhaegh||2005
+conf/um/MitrovicKM03||Antonija Mitrovic&&Kenneth R. Koedinger&&Brent Martin||2003
+conf/um/NepalPB12||Surya Nepal&&Cécile Paris&&Sanat Kumar Bista||2012
+conf/um/2010||||2010
+conf/um/StathacopoulouGMM03||Regina Stathacopoulou&&Maria Grigoriadou&&George D. Magoulas&&Denis Mitropoulos||2003
+conf/um/AlfonsecaR03||Enrique Alfonseca&&Pilar Rodríguez||2003
+conf/um/MirandaGPS12||Cristian Miranda&&Julio Guerra&&Denis Parra&&Eliana Scheihing||2012
+conf/um/BullGATC09||Susan Bull&&Peter Gardner&&Norasnita Ahmad&&Jeffrey Ting&&Ben Clarke||2009
+conf/um/SabourinML13||Jennifer Sabourin&&Bradford W. Mott&&James C. Lester||2013
+conf/um/Storey05||David Storey||2005
+conf/um/BertiniCCGK05||Enrico Bertini&&Andrea Calì&&Tiziana Catarci&&Silvia Gabrielli&&Stephen Kimani||2005
+conf/um/ThakkerLDDBS14||Dhavalkumar Thakker&&Lydia Lau&&Ronald Denaux&&Vania Dimitrova&&Paul Brna&&Christina M. Steiner||2014
+conf/um/KrummH07||John Krumm&&Eric Horvitz||2007
+conf/um/Eivazi11||Shahram Eivazi||2011
+conf/um/DesmaraisNB12||Michel C. Desmarais&&Rhouma Naceur&&Behzad Beheshti||2012
+conf/um/TokerSB14||Dereck Toker&&Ben Steichen&&Max Birk||2014
+conf/um/Karuzaki14||Effie Karuzaki||2014
+conf/um/KleinsmithSB05||Andrea Kleinsmith&&P. Ravindra De Silva&&Nadia Bianchi-Berthouze||2005
+conf/um/KaklanisMPBLT12||Nikolaos Kaklanis&&Yehya Mohamad&&Matthias Peissner&&Pradipta Biswas&&Patrick Langdon&&Dimitrios Tzovaras||2012
+conf/um/NepalBP12||Surya Nepal&&Sanat Kumar Bista&&Cécile Paris||2012
+conf/um/Guerrero03||José David Martín-Guerrero||2003
+conf/um/NussbaumerKA12||Alexander Nussbaumer&&Milos Kravcik&&Dietrich Albert||2012
+conf/um/CooperAWMBC09||David G. Cooper&&Ivon Arroyo&&Beverly Park Woolf&&Kasia Muldner&&Winslow Burleson&&Robert Christopherson||2009
+conf/um/SaulW14||Christian Saul&&Heinz-Dietrich Wuttke||2014
+conf/um/LinazaMO13||Mariate Linaza&&Kieran Moran&&Noel E. O'Connor||2013
+conf/um/JangYY14||Jincheul Jang&&Mun Yi&&Wan Chul Yoon||2014
+conf/um/OrtigosaC03||Alvaro Ortigosa&&Rosa M. Carro||2003
+conf/um/GarciaRVC09||Enrique García&&Cristóbal Romero&&Sebastián Ventura&&Carlos de Castro||2009
+conf/um/WasingerFKK12||Rainer Wasinger&&Michael Fry&&Judy Kay&&Bob Kummerfeld||2012
+conf/um/ArdissonoLSV14||Liliana Ardissono&&Maurizio Lucenteforte&&Adriano Savoca&&Angioletta Voghera||2014
+conf/um/CoceaW07||Mihaela Cocea&&Stephan Weibelzahl||2007
+conf/um/CenaVG10||Federica Cena&&Fabiana Vernero&&Cristina Gena||2010
+conf/um/BretzkeV03||Helen Bretzke&&Julita Vassileva||2003
+conf/um/KimHK01||Sanghee Kim&&Wendy Hall&&Andy J. Keane||2001
+conf/um/Kille13||Benjamin Kille||2013
+conf/um/ConatiM05||Cristina Conati&&Heather Maclaren||2005
+conf/um/LoboSB14||Jesus L. Lobo&&Olga C. Santos&&Jesus Boticario||2014
+conf/um/Herder03||Eelco Herder||2003
+conf/um/DaoudTB10||Mariam Daoud&&Lynda Tamine&&Mohand Boughanem||2010
+conf/um/BiagioniK13||James Biagioni&&John Krumm||2013
+conf/um/TiroshiK12||Amit Tiroshi&&Tsvi Kuflik||2012
+conf/um/OnoKMA07||Chihiro Ono&&Mori Kurokawa&&Yoichi Motomura&&Hideki Asoh||2007
+conf/um/GranitzerSRT13||Michael Granitzer&&Christin Seifert&&Silvia Russegger&&Klaus Tochtermann||2013
+conf/um/Konstan01||Joseph A. Konstan||2001
+conf/um/PenadesMCG14||María del Carmen Penadés&&Pau Martí&&José Hilario Canós&&Abel Gómez||2014
+conf/um/HampsonBMLC13||Cormac Hampson&&Eoin Bailey&&Gary Munnelly&&Séamus Lawless&&Owen Conlan||2013
+conf/um/ReddyGS09||Swapna Reddy&&Ya'akov Gal&&Stuart M. Shieber||2009
+conf/um/KaocharPMFWC11||Tasneem Kaochar&&Raquel Torres Peralta&&Clayton T. Morrison&&Ian R. Fasel&&Thomas J. Walsh&&Paul R. Cohen||2011
+conf/um/ConsoleBCCCFGGLLMPRVSACDFGMMMPPFGT12||Luca Console&&Giulia Biamino&&Francesca Carmagnola&&Federica Cena&&Elisa Chiabrando&&Roberto Furnari&&Cristina Gena&&Pierluigi Grillo&&Silvia Likavec&&Ilaria Lombardi&&Michele Mioli&&Claudia Picardi&&Amon Rapp&&Fabiana Vernero&&Rossana Simeoni&&Fabrizio Antonelli&&Vincenzo Cuciti&&Matteo Demichelis&&Fabrizio Franceschi&&Marina Geymonat&&Alessandro Marcengo&&Dario Mana&&Mario Mirabelli&&Monica Perrero&&Federica Protti&&Franco Fassio&&Piercarlo Grimaldi&&Fabio Torta||2012
+conf/um/BiswasSKL14||Pradipta Biswas&&Sanat Sarangi&&Subrat Kar&&Patrick Langdon||2014
+conf/um/BiancalanaGMMS12||Claudio Biancalana&&Fabio Gasparetti&&Alessandro Micarelli&&Alfonso Miola&&Giuseppe Sansonetti||2012
+conf/um/KaminskasR11||Marius Kaminskas&&Francesco Ricci||2011
+conf/um/HsiaoBBK11||I-Han Hsiao&&Fedor Bakalov&&Peter Brusilovsky&&Birgitta König-Ries||2011
+conf/um/Bunt05||Andrea Bunt||2005
+conf/um/DesarkarSS12||Maunendra Sankar Desarkar&&Roopam Saxena&&Sudeshna Sarkar||2012
+conf/um/DenauxDA05||Ronald Denaux&&Vania Dimitrova&&Lora Aroyo||2005
+conf/um/HenningHSZSBZ14||Peter Henning&&Florian Heberle&&Alexander Streicher&&Andrea Zielinski&&Christian Swertz&&Jürgen Bock&&Stefan Zander||2014
+conf/um/CrosbyIC01||Martha E. Crosby&&Marie Iding&&David N. Chin||2001
+conf/um/FischerN10||Philipp Fischer&&Andreas Nürnberger||2010
+conf/um/BarralKJ14||Oswald Barral&&Ilkka Kosunen&&Giulio Jacucci||2014
+conf/um/SahebiB13||Shaghayegh Sahebi&&Peter Brusilovsky||2013
+conf/um/DragonMMG11||Toby Dragon&&Bruce M. McLaren&&Manolis Mavrikis&&Eirini Geraniou||2011
+conf/um/SteichenCC12||Ben Steichen&&Giuseppe Carenini&&Cristina Conati||2012
+conf/um/MaccatrozzoAH13||Valentina Maccatrozzo&&Lora Aroyo&&Willem Robert van Hage||2013
+conf/um/Pero13||Stefan Pero||2013
+conf/um/AsteriadisKSY12||Stylianos Asteriadis&&Kostas Karpouzis&&Noor Shaker&&Georgios N. Yannakakis||2012
+conf/um/RitterBW03||Steven Ritter&&Stephen Blessing&&Leslie Wheeler||2003
+conf/um/TiroshiKKK11||Amit Tiroshi&&Tsvi Kuflik&&Judy Kay&&Bob Kummerfeld||2011
+conf/um/KleijnAMBS13||Maurice de Kleijn&&Chris van Aart&&Niels van Manen&&Gert-Jan Burgers&&Henk Scholten||2013
+conf/um/ChengC05||Michael Y. K. Cheng&&Robin Cohen||2005
+conf/um/Gervas01||Pablo Gervás||2001
+conf/um/GuoZT12||Guibing Guo&&Jie Zhang 0002&&Daniel Thalmann||2012
+conf/um/SethZC10||Aaditeshwar Seth&&Jie Zhang 0002&&Robin Cohen||2010
+conf/um/ConatiHTS13||Cristina Conati&&Enamul Hoque&&Dereck Toker&&Ben Steichen||2013
+conf/um/GenaBCV11||Cristina Gena&&Roberto Brogi&&Federica Cena&&Fabiana Vernero||2011
+conf/um/MarinARP07||Diana Rosario Pérez Marín&&Enrique Alfonseca&&Pilar Rodríguez&&Ismael Pascual-Nieto||2007
+conf/um/TangK13||Lie Ming Tang&&Judy Kay||2013
+conf/um/ShanabrookAW12||David H. Shanabrook&&Ivon Arroyo&&Beverly Park Woolf||2012
+conf/um/Al-JabariMT09||Mohanad Al-Jabari&&Michael Mrissa&&Philippe Thiran||2009
+conf/um/HenningHFSSFZ14||Peter Henning&&Florian Heberle&&Kevin Fuchs&&Christian Swertz&&Alexander Schmölz&&Alexandra Forstner&&Andrea Zielinski||2014
+conf/um/AsikinW14||Yonata Andrelo Asikin&&Wolfgang Wörndl||2014
+conf/um/HuangXB14||Yun Huang&&Yanbo Xu&&Peter Brusilovsky||2014
+conf/um/PardosH11||Zachary A. Pardos&&Neil T. Heffernan||2011
+conf/um/JinZM05||Xin Jin&&Yanzan Zhou&&Bamshad Mobasher||2005
+conf/um/MuldnerBV10||Kasia Muldner&&Winslow Burleson&&Kurt VanLehn||2010
+conf/um/IfadaN14||Noor Ifada&&Richi Nayak||2014
+conf/um/QuWJ05||Lei Qu&&Ning Wang&&W. Lewis Johnson||2005
+conf/um/MullerKK07||Jörg Müller&&Antonio Krüger&&Tsvi Kuflik||2007
+conf/um/Salmeron-MajadasSB13||Sergio Salmeron-Majadas&&Olga C. Santos&&Jesus Boticario||2013
+conf/um/Stegmann05||Rosmary Stegmann||2005
+conf/um/NajarMM14||Amir Shareghi Najar&&Antonija Mitrovic&&Bruce M. McLaren||2014
+conf/um/DennisMM12a||Matt Dennis&&Judith Masthoff&&Chris Mellish||2012
+conf/um/WhiteKD10||Ryen W. White&&Ashish Kapoor&&Susan T. Dumais||2010
+conf/um/TokerC14||Dereck Toker&&Cristina Conati||2014
+conf/um/Torre13||Ilaria Torre||2013
+conf/um/Jameson05||Anthony Jameson||2005
+conf/um/ChenC14||Guanliang Chen&&Li Chen||2014
+conf/um/2001||||2001
+conf/um/LuoD11||Min Luo&&Ralph Deters||2011
+conf/um/UtherK03||James Uther&&Judy Kay||2003
+conf/um/TkalcicFSLMOK14||Marko Tkalcic&&Bruce Ferwerda&&Markus Schedl&&Cynthia Liem&&Mark Melenhorst&&Ante Odic&&Andrej Kosir||2014
+conf/um/FeldMMSK13||Michael Feld&&Gerrit Meixner&&Angela Mahr&&Marc Seissler&&Balaji Kalyanasundaram||2013
+conf/um/CarolisPP03||Berardina De Carolis&&Sebastiano Pizzutilo&&Ignazio Palmisano||2003
+conf/um/LagunaOB11||Javier Ortiz Laguna&&Angel García Olaya&&Daniel Borrajo||2011
+conf/um/GreenWCBC11||Derek T. Green&&Thomas J. Walsh&&Paul R. Cohen&&Carole R. Beal&&Yu-Han Chang||2011
+conf/um/Warnestal05||Pontus Wärnestål||2005
+conf/um/ChampaignZC11||John Champaign&&Jie Zhang 0002&&Robin Cohen||2011
+conf/um/MatsudaV03||Noboru Matsuda&&Kurt VanLehn||2003
+conf/um/NusratV11||Sabrina Nusrat&&Julita Vassileva||2011
+conf/um/BixlerKD14||Robert Bixler&&Kristopher Kopp&&Sidney K. D'Mello||2014
+conf/um/KompanB14||Michal Kompan&&Mária Bieliková||2014
+conf/um/TunleyBLHU05||Hilary Tunley&&Benedict du Boulay&&Rosemary Luckin&&Joe Holmberg&&Joshua Underwood||2005
+conf/um/BraunhoferER14||Matthias Braunhofer&&Mehdi Elahi&&Francesco Ricci||2014
+conf/um/Ying12||Annie T. T. Ying||2012
+conf/um/ZukermanGG03||Ingrid Zukerman&&Sarah George&&Mark George||2003
+conf/um/NunesMLL12||Ingrid Nunes&&Simon Miles&&Michael Luck&&Carlos José Pereira de Lucena||2012
+conf/um/TarakciC12||Hilal Tarakçi&&Nihan Kesim Cicekli||2012
+conf/um/Hoppner01||Silke Höppner||2001
+conf/um/SlaneySM03||Malcolm Slaney&&Jayashree Subrahmonia&&Paul P. Maglio||2003
+conf/um/TingZ07||Choo-Yee Ting&&Mohammad Reza Beik Zadeh||2007
+conf/um/StaceySNBS03||Kaye Stacey&&Liz Sonenberg&&Ann E. Nicholson&&Tal Boneh&&Vicki Steinle||2003
+conf/um/TanenbaumHT11||Karen Tanenbaum&&Marek Hatala&&Joshua Tanenbaum||2011
+conf/um/HorvitzAS05||Eric Horvitz&&Johnson Apacible&&Muru Subramani||2005
+conf/um/CarmonaMPTC05||Cristina Carmona&&Eva Millán&&José-Luis Pérez-de-la-Cruz&&Mónica Trella&&Ricardo Conejo||2005
+conf/um/KardanC13||Samad Kardan&&Cristina Conati||2013
+conf/um/KosirOTS14||Andrej Kosir&&Ante Odic&&Marko Tkalcic&&Matija Svetina||2014
+conf/um/ArditoCDLM13||Carmelo Ardito&&Maria Francesca Costabile&&Giuseppe Desolda&&Rosa Lanzilotti&&Maristella Matera||2013
+conf/um/PlumbaumSK09||Till Plumbaum&&Tino Stelter&&Alexander Korth||2009
+conf/um/NotP13||Elena Not&&Daniela Petrelli||2013
+conf/um/KoldijkKNK14||Saskia Koldijk&&Gijs Koot&&Mark A. Neerincx&&Wessel Kraaij||2014
+conf/um/RollBAMK05||Ido Roll&&Ryan Shaun Baker&&Vincent Aleven&&Bruce M. McLaren&&Kenneth R. Koedinger||2005
+conf/um/Braunhofer14||Matthias Braunhofer||2014
+conf/um/MartinezKWY11||Roberto Martínez Maldonado&&Judy Kay&&James R. Wallace&&Kalina Yacef||2011
+conf/um/ShenBL13||Jianqiang Shen&&Oliver Brdiczka&&Juan Liu||2013
+conf/um/VanLehn03||Kurt VanLehn||2003
+conf/um/BrunBB09||Armelle Brun&&Geoffray Bonnin&&Anne Boyer||2009
+conf/um/YelizarovG13||Anatoly Yelizarov&&Dennis Gamayunov||2013
+conf/um/MoshtaghiZAR13||Masud Moshtaghi&&Ingrid Zukerman&&David W. Albrecht&&R. Andrew Russell||2013
+conf/um/PardosHAH07||Zachary A. Pardos&&Neil T. Heffernan&&Brigham Anderson&&Cristina Linquist-Heffernan||2007
+conf/um/BerkovskyKR07||Shlomo Berkovsky&&Tsvi Kuflik&&Francesco Ricci||2007
+conf/um/ChampaignC12b||John Champaign&&Robin Cohen||2012
+conf/um/ParamythisW05||Alex Paramythis&&Stephan Weibelzahl||2005
+conf/um/HerderDd13||Eelco Herder&&Stefan Dietze&&Mathieu d'Aquin||2013
+conf/um/SimkoB10||Marián Simko&&Mária Bieliková||2010
+conf/um/BelkGFS14||Marios Belk&&Panagiotis Germanakos&&Christos Fidas&&George Samaras||2014
+conf/um/YudelsonBZ07||Michael Yudelson&&Peter Brusilovsky&&Vladimir Zadorozhny||2007
+conf/um/TintarevDM13||Nava Tintarev&&Matt Dennis&&Judith Masthoff||2013
+conf/um/2009||||2009
+conf/um/HopfgartnerJ09||Frank Hopfgartner&&Joemon M. Jose||2009
+conf/um/Villena-RomanCC14||Julio Villena-Román&&Adrián Luna Cobos&&José Carlos González Cristóbal||2014
+conf/um/AlonsoHL09||Jason B. Alonso&&Catherine Havasi&&Henry Lieberman||2009
+conf/um/DesmaraisP05||Michel Desmarais&&Xiaoming Pu||2005
+conf/um/Verostek12||John P. Verostek||2012
+conf/um/Plumbaum10||Till Plumbaum||2010
+conf/um/BelkGFS13||Marios Belk&&Panagiotis Germanakos&&Christos Fidas&&George Samaras||2013
+conf/um/WangPC13||Feng Wang&&Weike Pan&&Li Chen||2013
+conf/um/BakerC13||Ryan Shaun Joazeiro de Baker&&Jody Clarke-Midura||2013
+conf/um/MartinN07||Brent Martin&&Amanda Nicholas||2007
+conf/um/Ruvini03||Jean-David Ruvini||2003
+conf/um/Schwab01||Ingo Schwab||2001
+conf/um/ThangDD07||Minh Dang Thang&&Vania Dimitrova&&Karim Djemame||2007
+conf/um/MartinM05||Brent Martin&&Antonija Mitrovic||2005
+conf/um/SvecS13||Tomás Svec&&Jan Samek||2013
+conf/um/BertolaP13||Federico Bertola&&Viviana Patti||2013
+conf/um/AthukoralaOGVJ14||Kumaripaba Athukorala&&Antti Oulasvirta&&Dorota Glowacka&&Jilles Vreeken&&Giulio Jacucci||2014
+conf/um/Heckmann01||Dominik Heckmann||2001
+conf/um/MuirC11||Mary Muir&&Cristina Conati||2011
+conf/um/TomleinT14||Matús Tomlein&&Jozef Tvarozek||2014
+conf/um/WasingerWPKKBK13||Rainer Wasinger&&James Wallbank&&Luiz Augusto Sangoi Pizzato&&Judy Kay&&Bob Kummerfeld&&Matthias Böhmer&&Antonio Krüger||2013
+conf/um/Kumamoto05||Tadahiko Kumamoto||2005
+conf/um/Lippitsch03||Stefan Lippitsch||2003
+conf/um/KyriacouDT09||Demetris Kyriacou&&Hugh C. Davis&&Thanassis Tiropanis||2009
+conf/um/LeginusDZ12||Martin Leginus&&Peter Dolog&&Valdas Zemaitis||2012
+conf/um/UptonK09||Kimberley Upton&&Judy Kay||2009
+conf/um/PannellA10||Grant Pannell&&Helen Ashman||2010
+conf/um/KramarBB10||Tomás Kramár&&Michal Barla&&Mária Bieliková||2010
+conf/um/DraierG01||Thomas Draier&&Patrick Gallinari||2001
+conf/um/MagalhaesSSCF12||Jonathas Magalhães&&Cleyton Caetano de Souza&&Priscylla Silva&&Evandro Costa&&Joseana Macêdo Fechine||2012
+conf/um/Osborne13||Francesco Osborne||2013
+conf/um/GhorabLOZW13||M. Rami Ghorab&&Séamus Lawless&&Alexander O'Connor&&Dong Zhou&&Vincent Wade||2013
+conf/um/SteichenWTCC14||Ben Steichen&&Michael M. A. Wu&&Dereck Toker&&Cristina Conati&&Giuseppe Carenini||2014
+conf/um/LabajB13a||Martin Labaj&&Mária Bieliková||2013
+conf/um/SahW14||Melike Sah&&Vincent Wade||2014
+conf/um/SaidBVK13||Alan Said&&Alejandro Bellogín&&Arjen P. de Vries&&Benjamin Kille||2013
+conf/um/ZancanaroKBGG07||Massimo Zancanaro&&Tsvi Kuflik&&Zvi Boger&&Dina Goren-Bar&&Dan Goldwasser||2007
+conf/um/DattoloP11||Antonina Dattolo&&Emanuela Pitassi||2011
+conf/um/HuP13||Rong Hu&&Pearl Pu||2013
+conf/um/BennettQ11||Mike Bennett&&Aaron J. Quigley||2011
+conf/um/ChengV05||Ran Cheng&&Julita Vassileva||2005
+conf/um/ShenBDYB12||Jianqiang Shen&&Oliver Brdiczka&&Nicolas Ducheneaut&&Nicholas Yee&&Bo Begole||2012
+conf/um/Tuset-Peiro11||Pere Tuset-Peiró||2011
+conf/um/CostaSMS12||Evandro de Barros Costa&&Priscylla Silva&&Jonathas Magalhães&&Marlos Silva||2012
+conf/um/RicciSGL11||Francesco Ricci&&Giovanni Semeraro&&Marco de Gemmis&&Pasquale Lops||2011
+conf/um/RiescoSBS13||Angeles Manjarrés Riesco&&Olga C. Santos&&Jesus Boticario&&Mar Saneiro||2013
+conf/um/MartinHC11||Estefanía Martín&&Pablo A. Haya&&Rosa M. Carro||2011
+conf/um/BeheshtiD12||Behzad Beheshti&&Michel Desmarais||2012
+conf/um/BossiBDT13||Lorenzo Bossi&&Stefano Braghin&&Anwitaman Datta&&Alberto Trombetta||2013
+conf/um/SaidJNP12||Alan Said&&Brijnesh J. Jain&&Sascha Narr&&Till Plumbaum||2012
+conf/um/CarmagnolaCCGT07||Francesca Carmagnola&&Federica Cena&&Omar Cortassa&&Cristina Gena&&Ilaria Torre||2007
+conf/um/BakerMM10||Ryan Shaun Joazeiro de Baker&&Antonija Mitrovic&&Moffat Mathews||2010
+conf/um/WasingerWCFKK12||Rainer Wasinger&&Matthew Wardrop&&Anthony Collins&&Michael Fry&&Judy Kay&&Bob Kummerfeld||2012
+conf/um/WolfeZ10||Shawn R. Wolfe&&Yi Zhang 0001||2010
+conf/um/XieCW14||Haoran Xie&&Li Chen&&Feng Wang||2014
+conf/um/OdicTTK13||Ante Odic&&Marko Tkalcic&&Jurij F. Tasic&&Andrej Kosir||2013
+conf/um/GhineaM01||George Ghinea&&George D. Magoulas||2001
+conf/um/CaridiCV13||Andrea Caridi&&Mauro Coccoli&&Valentina Volpi||2013
+conf/um/Rizzo13||Giuseppe Rizzo 0001||2013
+conf/um/Erickson05||Thomas Erickson||2005
+conf/um/VerberneSK13||Suzan Verberne&&Maya Sappelli&&Wessel Kraaij||2013
+conf/um/HorvitzKS07||Eric Horvitz&&Paul Koch&&Muru Subramani||2007
+conf/um/ChinKI09||David N. Chin&&Dong-Wan Kang&&Curtis S. Ikehara||2009
+conf/um/2005||||2005
+conf/um/ArdissonoGHPS03||Liliana Ardissono&&Anna Goy&&Matt Holland&&Giovanna Petrone&&Ralph Schäfer||2003
+conf/um/LefevreGJ12||Marie Lefevre&&Nathalie Guin&&Stéphanie Jean-Daubias||2012
+conf/um/BrunBR10||Armelle Brun&&Anne Boyer&&Liana Razmerita||2010
+conf/um/Desmarais11||Michel C. Desmarais||2011
+conf/um/AksenovKA14||Petr Aksenov&&Astrid Kemperman&&Theo A. Arentze||2014
+conf/um/HeinathDWU07||Marcus Heinath&&Jeronimo Dzaack&&Andre Wiesner&&Leon Urbas||2007
+conf/um/ParisWWW01||Cécile Paris&&Stephen Wan&&Ross Wilkinson&&Mingfang Wu||2001
+conf/um/BaderWKL11||Roland Bader&&Wolfgang Woerndl&&Andreas Karitnig&&Gerhard Leitner||2011
+conf/um/MooreWSHDDC13||Adam Moore&&Gudrun Wesiak&&Christina M. Steiner&&Claudia Hauff&&Declan Dagger&&Gary Donohoe&&Owen Conlan||2013
+conf/um/GrassoHM11||Floriana Grasso&&Jaap Ham&&Judith Masthoff||2011
+conf/um/ZhangSS07||Hui Zhang&&Yu Song&&Han-Tao Song||2007
+conf/um/MooreMC11||Adam Moore&&Victoria Macarthur&&Owen Conlan||2011
+conf/um/BerkovskyF012||Shlomo Berkovsky&&Jill Freyne&&Gregory Smith 0003||2012
+conf/um/Lores13||Henry Blanco Lores||2013
+conf/um/PlumbaumLLA11||Till Plumbaum&&Andreas Lommatzsch&&Ernesto William De Luca&&Sahin Albayrak||2011
+conf/um/LiST13||Alberto Quattrini Li&&Licia Sbattella&&Roberto Tedesco||2013
+conf/um/AhmanW01||Fredrik Åhman&&Annika Waern||2001
+conf/um/FreyneB011||Jill Freyne&&Shlomo Berkovsky&&Gregory Smith 0003||2011
+conf/um/CantadorFB13||Iván Cantador&&Ignacio Fernández-Tobías&&Alejandro Bellogín||2013
+conf/um/Cooper10||David G. Cooper||2010
+conf/um/FarnadiSRKSMDC14||Golnoosh Farnadi&&Geetha Sitaraman&&Mehrdad Rohani&&Michal Kosinski&&David Stillwell&&Marie-Francine Moens&&Sergio Davalos&&Martine De Cock||2014
+conf/um/AthukoralaOGVJ14a||Kumaripaba Athukorala&&Antti Oulasvirta&&Dorota Glowacka&&Jilles Vreeken&&Giulio Jacucci||2014
+conf/um/Zapata-Rivera12||Diego Zapata-Rivera||2012
+conf/um/BuenoD01||David Bueno&&Amos David||2001
+conf/um/Hernandez-del-OlmoGB05||Felix Hernandez-del-Olmo&&Elena Gaudioso&&Jesus Boticario||2005
+conf/um/KravcikNK14a||Milos Kravcik&&Petru Nicolaescu&&Ralf Klamma||2014
+conf/um/LopezB11||Claudia López&&Peter Brusilovsky||2011
+conf/um/SilvaVR01||António Silva&&Zita A. Vale&&Carlos Ramos||2001
+conf/um/CarolisM11||Berardina De Carolis&&Irene Mazzotta||2011
+conf/um/Corbett01||Albert T. Corbett||2001
+conf/um/WrightC14||William R. Wright&&David N. Chin||2014
+conf/um/CorbettWLUS07||Albert T. Corbett&&Angela Z. Wagner&&Sharon Lesgold&&Harry Ulrich&&Scott M. Stevens||2007
+conf/um/LeyKG10||Tobias Ley&&Barbara Kump&&Cornelia Gerdenitsch||2010
+conf/um/Fernandez-Tobias13||Ignacio Fernández-Tobías||2013
+conf/um/Esteban01||Alberto Díaz Esteban||2001
+conf/um/SenotKBPAB10||Christophe Senot&&Dimitre Kostadinov&&Makram Bouzid&&Jérôme Picault&&Armen Aghasaryan&&Cédric Bernier||2010
+conf/um/ParraA11||Denis Parra&&Xavier Amatriain||2011
+conf/um/FreyneB10||Jill Freyne&&Shlomo Berkovsky||2010
+conf/um/2013||||2013
+conf/um/Goren-BarKLS01||Dina Goren-Bar&&Tsvi Kuflik&&Dror Lev&&Peretz Shoval||2001
+conf/um/Masthoff03||Judith Masthoff||2003
+conf/um/McEleneyO05||Bryan McEleney&&Gregory M. P. O'Hare||2005
+conf/um/BohnertZA12||Fabian Bohnert&&Ingrid Zukerman&&David W. Albrecht||2012
+conf/um/MustoNLSGBKPC12||Cataldo Musto&&Fedelucio Narducci&&Pasquale Lops&&Giovanni Semeraro&&Marco de Gemmis&&Mauro Barbieri&&Jan H. M. Korst&&Verus Pronk&&Ramon Clout||2012
+conf/um/Kayal13||Abdullah Kayal||2013
+conf/um/LeyKMMA09||Tobias Ley&&Barbara Kump&&Antonia Maas&&Neil A. M. Maiden&&Dietrich Albert||2009
+conf/um/BaerGK13||Nina Baer&&Jessica Göthel&&Josef Krems||2013
+conf/um/McNeeLKR03||Sean M. McNee&&Shyong K. Lam&&Joseph A. Konstan&&John Riedl||2003
+conf/um/2014w||||2014
+conf/um/DologS05||Peter Dolog&&Michael Schäfer||2005
+conf/um/GoldbergP14||Robin Goldberg&&Daniela Petrelli||2014
+conf/um/KimJYJ07||Heung-Nam Kim&&Ae-Ttie Ji&&Cheol Yeon&&GeunSik Jo||2007
+conf/um/GeorgeZN05||Sarah George&&Ingrid Zukerman&&Michael Niemann||2005
+conf/um/Pazzani03||Michael J. Pazzani||2003
+conf/um/CodinaRC13||Victor Codina&&Francesco Ricci&&Luigi Ceccaroni||2013
+conf/um/HorvitzP01||Eric Horvitz&&Tim Paek||2001
+conf/um/HerderS12||Eelco Herder&&Patrick Siehndel||2012
+conf/um/CenaLRS14||Federica Cena&&Ilaria Lombardi&&Amon Rapp&&Federico Sarzotti||2014
+conf/um/2014||||2014
+conf/um/AbelDHH11||Fabian Abel&&Vania Dimitrova&&Eelco Herder&&Geert-Jan Houben||2011
+conf/um/JuvinaH05||Ion Juvina&&Eelco Herder||2005
+conf/um/GongBR12||Yue Gong&&Joseph E. Beck&&Carolina Ruiz||2012
+conf/um/SmythBCO09||Barry Smyth&&Peter Briggs&&Maurice Coyle&&Michael P. O'Mahony||2009
+conf/um/HorvitzKSAS05||Eric Horvitz&&Paul Koch&&Raman Sarin&&Johnson Apacible&&Muru Subramani||2005
+conf/um/BeelLGG14||Jöran Beel&&Stefan Langer&&Marcel Genzmehr&&Bela Gipp||2014
+conf/um/BeckmannG13||Christoph Beckmann&&Tom Gross||2013
+conf/um/BauerD05||Mathias Bauer&&Matthieu Deru||2005
+conf/um/KadoucheMM05||Rachid Kadouche&&Mounir Mokhtari&&Marc Maier||2005
+conf/um/PierrakosP05||Dimitrios Pierrakos&&Georgios Paliouras||2005
+conf/um/FontS11||Frederic Font&&Xavier Serra||2011
+conf/um/BurnsSC13||Richard Burns&&Stephanie Elzer Schwartz&&Sandra Carberry||2013
+conf/um/SotoFVF11||Victor Soto&&Vanessa Frías-Martínez&&Jesus Virseda&&Enrique Frías-Martínez||2011
+conf/um/Razavi11||Reza Razavi||2011
+conf/um/Marshall01||Sandra P. Marshall||2001
+conf/um/SchmidtZA09||Daniel Francis Schmidt&&Ingrid Zukerman&&David W. Albrecht||2009
+conf/um/Schoefegger11||Karin Schoefegger||2011
+conf/um/Thai-NgheDHS12||Nguyen Thai-Nghe&&Lucas Drumond&&Tomás Horváth&&Lars Schmidt-Thieme||2012
+conf/um/WilsonS14||David C. Wilson&&Carlos E. Seminario||2014
+conf/um/NepalPPFB13||Surya Nepal&&Cécile Paris&&Payam Aghaei Pour&&Jill Freyne&&Sanat Kumar Bista||2013
+conf/um/PirolliF03||Peter Pirolli&&Wai-Tat Fu||2003
+conf/um/ArdissonoVV13||Liliana Ardissono&&Angioletta Voghera&&Mauro Velluto||2013
+conf/um/CenaA07||Federica Cena&&Lora Aroyo||2007
+conf/um/FischerY01||Gerhard Fischer&&Yunwen Ye||2001
+conf/um/BeckJSM03||Joseph E. Beck&&Peng Jia&&June Sison&&Jack Mostow||2003
+conf/um/OviattCL05||Sharon L. Oviatt&&Rachel Coulston&&Rebecca Lunsford||2005
+conf/um/ZhuGHJP05||Tingshao Zhu&&Russell Greiner&&Gerald Häubl&&Kevin Jewell&&Robert Price||2005
+conf/um/SchmittDB03||Christian Schmitt&&Dietmar Dengler&&Mathias Bauer||2003
+conf/um/WixonBGOB12||Michael Wixon&&Ryan Shaun Joazeiro de Baker&&Janice D. Gobert&&Jaclyn Ocumpaugh&&Matthew Bachmann||2012
+conf/um/BakerPGNH11||Ryan Shaun Joazeiro de Baker&&Zachary A. Pardos&&Sujith M. Gowda&&Bahador B. Nooraei&&Neil T. Heffernan||2011
+conf/um/PoggiMBGT07||Nicolás Poggi&&Toni Moreno&&Josep Lluis Berral&&Ricard Gavaldà&&Jordi Torres||2007
+conf/um/TandukarV11||Udeep Tandukar&&Julita Vassileva||2011
+conf/um/MullerGJRW01||Christian A. Müller&&Barbara Großmann-Hutter&&Anthony Jameson&&Ralf Rummer&&Frank Wittig||2001
+conf/um/ChampaignC12||John Champaign&&Robin Cohen||2012
+conf/um/Arevalillo-HerraezAMGMMASBSSCQ14||Miguel Arevalillo-Herráez&&David Arnau&&Luis Marco-Giménez&&José Antonio González-Calero&&Salvador Moreno-Picot&&Paloma Moreno-Clari&&Aladdin Ayesh&&Olga C. Santos&&Jesus Boticario&&Mar Saneiro&&Sergio Salmeron-Majadas&&Raúl Cabestrero&&Pilar Quirós||2014
+conf/um/DimitrovaSB01||Vania Dimitrova&&John A. Self&&Paul Brna||2001
+conf/um/EnoSGT11||Joshua Eno&&Gregory Stafford&&Susan Gauch&&Craig W. Thompson||2011
+conf/um/Yaghoubzadeh11||Ramin Yaghoubzadeh||2011
+conf/um/SeroussiZB10||Yanir Seroussi&&Ingrid Zukerman&&Fabian Bohnert||2010
+conf/um/MingM12||Norma Ming&&Vivienne Ming||2012
+conf/um/UllrichLM09||Carsten Ullrich&&Tianxiang Lu&&Erica Melis||2009
+conf/um/SymeonidisNM07||Panagiotis Symeonidis&&Alexandros Nanopoulos&&Yannis Manolopoulos||2007
+conf/um/HohwaldFO10||Heath Hohwald&&Enrique Frías-Martínez&&Nuria Oliver||2010
+conf/um/Lamche14||Béatrice Lamche||2014
+conf/um/Bull03||Susan Bull||2003
+conf/um/MehtaNSDLS05||Bhaskar Mehta&&Claudia Niederée&&Avare Stewart&&Marco Degemmis&&Pasquale Lops&&Giovanni Semeraro||2005
+conf/um/LHuillierCB14||Amaury L'Huillier&&Sylvain Castagnos&&Anne Boyer||2014
+conf/um/2012||||2012
+conf/um/PartridgeP09||Kurt Partridge&&Bob Price||2009
+conf/um/OcumpaughBKM14||Jaclyn Ocumpaugh&&Ryan Shaun Baker&&Amy M. Kamarainen&&Shari J. Metcalf||2014
+conf/um/Salmeron-Majadas14||Sergio Salmeron-Majadas||2014
+conf/csmr/KnodelMHM08||Jens Knodel&&Dirk Muthig&&Uwe Haury&&Gerald Meier||2008
+conf/csmr/LagoNV04||Patricia Lago&&Eila Niemelä&&Hans van Vliet||2004
+conf/csmr/RiccaTPG04||Filippo Ricca&&Paolo Tonella&&Emanuele Pianta&&Christian Girardi||2004
+conf/csmr/GreevyD05||Orla Greevy&&Stéphane Ducasse||2005
+conf/csmr/NaseemMM11||Rashid Naseem&&Onaiza Maqbool&&Siraj Muhammad||2011
+conf/csmr/Keller00||Walter Keller||2000
+conf/csmr/ShahDM12||Syed M. Ali Shah&&Jens Dietrich&&Catherine McCartin||2012
+conf/csmr/Kleuker98||Stephan Kleuker||1998
+conf/csmr/Holl97||Burkhard Holl||1997
+conf/csmr/NagyM09||Csaba Nagy&&Spiros Mancoridis||2009
+conf/csmr/GranjaJ99||Ivan Granja&&Mario Jino||1999
+conf/csmr/AversanoCP07||Lerina Aversano&&Luigi Cerulo&&Massimiliano Di Penta||2007
+conf/csmr/GhannouchiGK98||Sonia Ayachi Ghannouchi&&Henda Hadjami Ben Ghézala&&Farouk Kamoun||1998
+conf/csmr/LanzaGD09||Michele Lanza&&Harald Gall&&Philippe Dugerdil||2009
+conf/csmr/BrytonA08||Sergio Bryton&&Fernando Brito e Abreu||2008
+conf/csmr/MendeK10||Thilo Mende&&Rainer Koschke||2010
+conf/csmr/YehK02||Dowming Yeh&&Wen-Yuan Kuo||2002
+conf/csmr/HerraizIR09||Israel Herraiz&&Daniel Izquierdo-Cortazar&&Francisco Rivas-Hernández||2009
+conf/csmr/MittermeirPR98||Roland Mittermeir&&Helfried Pirker&&Dominik Rauner-Reithmayer||1998
+conf/csmr/FioravantiNP98||Fabrizio Fioravanti&&Paolo Nesi&&Sandro Perlini||1998
+conf/csmr/MoghadamC12||Iman Hemati Moghadam&&Mel Ó Cinnéide||2012
+conf/csmr/BusingeSB13||John Businge&&Alexander Serebrenik&&Mark van den Brand||2013
+conf/csmr/Rysselberghe06||Filip Van Rysselberghe||2006
+conf/csmr/Nesi97||Paolo Nesi||1997
+conf/csmr/BertranGCS13||Isela Macia Bertran&&Alessandro Garcia&&Christina Chavez&&Arndt von Staa||2013
+conf/csmr/ArdimentoBCV07||Pasquale Ardimento&&Giovanni Bruno&&Danilo Caivano&&Giuseppe Visaggio||2007
+conf/csmr/AversanoEMT04||Lerina Aversano&&Raffaele Esposito&&Teresa Mallardo&&Maria Tortorella||2004
+conf/csmr/Sneed11||Harry M. Sneed||2011
+conf/csmr/NunesGFL11||Camila Nunes&&Alessandro Garcia&&Eduardo Figueiredo&&Carlos José Pereira de Lucena||2011
+conf/csmr/TjortjisZ11||Christos Tjortjis&&Christian Zillmann||2011
+conf/csmr/SiikarlaS08||Mika Siikarla&&Tarja Systä||2008
+conf/csmr/WildeBPR01||Norman Wilde&&Michelle Buckellew&&Henry Page&&Václav Rajlich||2001
+conf/csmr/Bull08||R. Ian Bull||2008
+conf/csmr/KellensSDJP09||Andy Kellens&&Kris De Schutter&&Theo D'Hondt&&Luc Jorissen&&Bart Van Passel||2009
+conf/csmr/BurgerH12||Stefan Burger&&Oliver Hummel||2012
+conf/csmr/MendoncaK97||Nabor C. Mendonça&&Jeff Kramer||1997
+conf/csmr/KaushikT12||Nilam Kaushik&&Ladan Tahvildari||2012
+conf/csmr/CanforaFFT06a||Gerardo Canfora&&Anna Rita Fasolino&&Gianni Frattolillo&&Porfirio Tramontana||2006
+conf/csmr/Evanco01||William M. Evanco||2001
+conf/csmr/SeyboldK08||Christian Seybold&&Rudolf K. Keller||2008
+conf/csmr/BittencourtG09||Roberto Almeida Bittencourt&&Dalton Dario Serey Guerrero||2009
+conf/csmr/GeSDM14||Xi Ge&&David Shepherd&&Kostadin Damevski&&Emerson R. Murphy-Hill||2014
+conf/csmr/TjortjisV09||Christos Tjortjis&&Joost Visser||2009
+conf/csmr/1998||||1998
+conf/csmr/RompaeyBDPPMDG09||Bart Van Rompaey&&Bart Du Bois&&Serge Demeyer&&John Pleunis&&Ron Putman&&Karel Meijfroidt&&Juan C. Dueñas&&Boni García||2009
+conf/csmr/StoecklinWS98||Sara Stoecklin&&Deidre Wiliams&&Peter Stoecklin||1998
+conf/csmr/CoutoVF11||Marcus Vinicius Couto&&Marco Tulio Valente&&Eduardo Figueiredo||2011
+conf/csmr/LamLS99||W. Lam&&Martin Loomes&&V. Shankararaman||1999
+conf/csmr/VidacsBF04||László Vidács&&Árpád Beszédes&&Rudolf Ferenc||2004
+conf/csmr/BoisDV05||Bart Du Bois&&Serge Demeyer&&Jan Verelst||2005
+conf/csmr/GueheneucMW06||Yann-Gaël Guéhéneuc&&Kim Mens&&Roel Wuyts||2006
+conf/csmr/SubramaniamS07||Mahadevan Subramaniam&&Harvey P. Siy||2007
+conf/csmr/HillRFM14||Emily Hill&&Manuel Roldan-Vega&&Jerry Alan Fails&&Greg Mallet||2014
+conf/csmr/XiaFLCW14||Xin Xia&&Yang Feng&&David Lo&&Zhenyu Chen&&Xinyu Wang||2014
+conf/csmr/Trifu08||Mircea Trifu||2008
+conf/csmr/KazatoHOMHS12||Hiroshi Kazato&&Shinpei Hayashi&&Satoshi Okada&&Shunsuke Miyata&&Takashi Hoshino&&Motoshi Saeki||2012
+conf/csmr/DuenasOP98||Juan C. Dueñas&&William Lopes de Oliveira&&Juan Antonio de la Puente||1998
+conf/csmr/GhaithWPM13||Shadi Ghaith&&Miao Wang&&Philip Perry&&John Murphy||2013
+conf/csmr/Vangheluwe11||Hans Vangheluwe||2011
+conf/csmr/BodhuinT05||Thierry Bodhuin&&Maria Tortorella||2005
+conf/csmr/CortellessaMP10||Vittorio Cortellessa&&Raffaela Mirandola&&Pasqualina Potena||2010
+conf/csmr/WangLJ13||Shaowei Wang&&David Lo&&Lingxiao Jiang||2013

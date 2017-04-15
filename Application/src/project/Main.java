@@ -41,7 +41,7 @@ public class Main extends Application {
 //        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph();
 //        DefaultWeightedEdge e1 = weightedGraph.getEdge(new Author("AAA"), new Author("BBB"));
 //        System.out.println(weightedGraph.getEdgeWeight(e1));
-    	//System.out.println(db.getAuthorMapByCont(3).toString());
+    	  System.out.println(db.getAuthorMapByCont(10).toString());
 
         root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 //        BorderPane root = new BorderPane();
@@ -66,7 +66,8 @@ public class Main extends Application {
     }
     private void addGraphComponents() {
 
-        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph();
+        //SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(new Author("Massimo De Gregorio"));
+        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(new Author("AAA"));
 
         Model model = graph.getModel();
 
