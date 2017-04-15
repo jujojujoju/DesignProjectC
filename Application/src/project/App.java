@@ -17,7 +17,7 @@ public class App {
 		//System.out.println(db.getAuthorSet().toString());
 		//System.out.println(db.getPaperSet().toString());
 		//System.out.println(db.getCoauthorSet(new Author("AAA"), new Author("BBB")).toString());
-		System.out.println(db.getAuthorMapByCont(3).toString());
+		//System.out.println(db.getAuthorMapByCont(3).toString());
 
 	}
 

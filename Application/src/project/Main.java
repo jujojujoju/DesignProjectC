@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 
 import javafx.scene.layout.BorderPane;
 
+import org.jgrapht.graph.DefaultWeightedEdge;
+import org.jgrapht.graph.SimpleWeightedGraph;
 import project.*;
 import sample.CellType;
 import sample.Graph;
@@ -33,7 +35,12 @@ public class Main extends Application {
 
     	Database db = new Database();
     	db.readFile();
-    	System.out.println(db.getAuthorMapByCont(3).toString());
+
+        //System.out.println(db.getCoauthorGraph(new Author("AAA"), new Author("BBB")).toString());
+        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph();
+        DefaultWeightedEdge e1 = weightedGraph.getEdge(new Author("AAA"), new Author("BBB"));
+        System.out.println(weightedGraph.getEdgeWeight(e1));
+    	//System.out.println(db.getAuthorMapByCont(3).toString());
 
         root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 //        BorderPane root = new BorderPane();
