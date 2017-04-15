@@ -40,7 +40,7 @@ public class Database {
 		//String paperURL = "dblp-paper.txt";
 
         //String coauthorURL = "coauthorList.txt";
-		String paperURL = "paperList3.txt";
+		String paperURL = "paperList2.txt";
 
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(paperURL));
@@ -77,6 +77,7 @@ public class Database {
 
 	}
 
+	//같이 쓴 논문
 	public Set<Node> getCoauthorSet(Author sourceAuthor, Author targetAuthor){
     	Set<Node> sourceSet = new HashSet<Node>();
 
@@ -118,7 +119,10 @@ public class Database {
     }
 
 	public Map<Author, Integer> getAuthorMapByCont(){
+		int max = 0;
+		int count = 0;
 		Map<Author, Integer> contributeList = new HashMap<Author, Integer>();
+
 		for(Author author:authorSet){
 			contributeList.put(author, mainGraph.degreeOf(author));
 		}
