@@ -3,15 +3,13 @@ package project;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
 import org.jgrapht.UndirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleGraph;
+import org.jgrapht.graph.SimpleWeightedGraph;
 
 public class Database {
 	private UndirectedGraph<Node, DefaultEdge> mainGraph;
@@ -40,7 +38,7 @@ public class Database {
 		//String paperURL = "dblp-paper.txt";
 
         //String coauthorURL = "coauthorList.txt";
-		String paperURL = "paperList2.txt";
+		String paperURL = "paperList3.txt";
 
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(paperURL));
@@ -58,6 +56,7 @@ public class Database {
 
 				Paper paperTemp = new Paper(paperkey);
 				paperTemp.setYear(Integer.parseInt(year));
+
 				mainGraph.addVertex(paperTemp);
 				paperSet.add(paperTemp);
 
@@ -100,23 +99,47 @@ public class Database {
 
 	public UndirectedGraph<Node, DefaultEdge> getCoauthorGraph(Author sourceAuthor, Author targetAuthor)
     {
-    	Set<Node> sourceSet = new HashSet<Node>();
+		UndirectedGraph<Node, DefaultEdge> graph = new SimpleGraph<>(DefaultEdge.class);
+		Set<Node> sourceSet = new HashSet<Node>();
+
+		graph.addVertex(sourceAuthor);
+		graph.addVertex(targetAuthor);
 
 		for (DefaultEdge connectedEdge: mainGraph.edgesOf(sourceAuthor)){
 			sourceSet.add(mainGraph.getEdgeSource(connectedEdge));
 		}
-
-		Set<Node> targetSet = new HashSet<Node>();
-
-		for (DefaultEdge connectedEdge: mainGraph.edgesOf(targetAuthor)){
-			targetSet.add(mainGraph.getEdgeSource(connectedEdge));
+		for(Node temp:sourceSet){
+			if(mainGraph.getEdge(temp, targetAuthor)!=null){
+				graph.addVertex(temp);
+				graph.addEdge(temp, targetAuthor);
+				graph.addEdge(temp, sourceAuthor);
+			}
 		}
 
-		Set<Node> intersection = new HashSet<Node>(sourceSet);
-		intersection.retainAll(targetSet);
-
-		return null;
+		return graph;
     }
+
+	public SimpleWeightedGraph<Node, DefaultWeightedEdge> getCoauthorWeightedGraph()
+	{
+		SimpleWeightedGraph<Node, DefaultWeightedEdge> graph = new SimpleWeightedGraph<Node, DefaultWeightedEdge>(DefaultWeightedEdge.class);
+
+		for(Author sourceAuthor: authorSet){
+			HashSet<Author> tempSet = new HashSet<Author>();
+			tempSet.addAll(authorSet);
+			tempSet.remove(sourceAuthor);
+
+			for(Author tempAuthor: tempSet){
+				graph.addVertex(sourceAuthor);
+				graph.addVertex(tempAuthor);
+				int size =  getCoauthorSet(sourceAuthor, tempAuthor).size();
+				DefaultWeightedEdge e1 = graph.addEdge(sourceAuthor, tempAuthor);
+				if(e1 != null)
+					graph.setEdgeWeight(e1, size);
+			}
+		}
+
+		return graph;
+	}
 
 	public Map<Author, Integer> getAuthorMapByCont(int count){
 		int max = 0;

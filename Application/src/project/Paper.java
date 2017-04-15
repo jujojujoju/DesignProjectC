@@ -1,6 +1,9 @@
 package project;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Paper extends Node{
 	private int year;
 	private String paperKey;
@@ -14,6 +17,7 @@ public class Paper extends Node{
 		// TODO Auto-generated constructor stub
 		this.setName(paper);
 	}
+
 	public int getYear() {
 		return year;
 	}
