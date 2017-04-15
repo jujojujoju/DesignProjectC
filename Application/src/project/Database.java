@@ -71,13 +71,13 @@ public class Database {
 			in.close();
 			return true;
 		} catch (IOException e) {
-			System.err.println(e); // 에러가 있다면 메시지 출력
+			System.err.println(e);
 			return false;
 		}
 
 	}
 
-	//같이 쓴 논문
+
 	public Set<Node> getCoauthorSet(Author sourceAuthor, Author targetAuthor){
     	Set<Node> sourceSet = new HashSet<Node>();
 
@@ -118,13 +118,25 @@ public class Database {
 		return null;
     }
 
-	public Map<Author, Integer> getAuthorMapByCont(){
+	public Map<Author, Integer> getAuthorMapByCont(int count){
 		int max = 0;
-		int count = 0;
+		int row = 0;
 		Map<Author, Integer> contributeList = new HashMap<Author, Integer>();
 
 		for(Author author:authorSet){
-			contributeList.put(author, mainGraph.degreeOf(author));
+			int contributeNum = mainGraph.degreeOf(author);
+			if(row < count){
+				if(contributeNum>max)
+					max = contributeNum;
+				contributeList.put(author, contributeNum);
+				row++;
+			}
+			else{
+				if(contributeNum>max){
+
+				}
+			}
+
 		}
 
 		ValueComparator<Author> bvc =  new ValueComparator<Author>(contributeList);

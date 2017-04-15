@@ -13,7 +13,7 @@ conf/iastedCSN/ArcoCGM06||Juan M. Arco&&Juan A. Carral&&A. Garcia&&M. Moreno||20
 conf/iastedCSN/Turcza06||Pawel Turcza||2006
 conf/iastedCSN/PakkalaKL06||Daniel Pakkala&&Aki Koivukoski&&Juhani Latvakoski||2006
 conf/iastedCSN/Al-khairB06||Ala'a D. Abu Al-khair&&Mohammad M. Banat||2006
-conf/iastedCSN/ViessmannSHBWBJ06||Alexander Vie©¬mann&&Tobias Scholand&&Arjang Hessamian-Alinejad&&Admir Burnic&&Andreas Waadt&&Guido Horst Bruck&&Peter Jung||2006
+conf/iastedCSN/ViessmannSHBWBJ06||Alexander Vieï¿½ï¿½mann&&Tobias Scholand&&Arjang Hessamian-Alinejad&&Admir Burnic&&Andreas Waadt&&Guido Horst Bruck&&Peter Jung||2006
 conf/iastedCSN/KooijKB06||Robert E. Kooij&&Ahmed Kamal&&Kjell Brunnstrom||2006
 conf/iastedCSN/WooPLYI06||Dae Sic Woo&&Seongsoo Park&&DongHahk Lee&&Jaehwang Yu&&JongTae Ihm||2006
 conf/iastedCSN/2006||||2006
@@ -476,7 +476,7 @@ conf/hcied/ChambelADCG07||Teresa Chambel&&Pedro Antunes&&Carlos Duarte&&Luis Car
 conf/hcied/KoukouletsosKDO07||Kostas Koukouletsos&&Babak Khazaei&&Andy Dearden&&Mehmet B. Ozcan||2007
 conf/hcied/KotzeP07||Paula Kotze&&Peter Purgathofer||2007
 conf/hcied/SasD07||Corina Sas&&Alan J. Dix||2007
-conf/hcied/WongKRBH07||William Wong&&Paula Kotze&&Janet Read&&Liam Bannon&&Ebba ¨­ora Hvannberg||2007
+conf/hcied/WongKRBH07||William Wong&&Paula Kotze&&Janet Read&&Liam Bannon&&Ebba ï¿½ï¿½ora Hvannberg||2007
 conf/hcied/FonsecaJG0V07||Manuel J. Fonseca&&Joaquim A. Jorge&&Mario Rui Gomes&&Daniel Goncalves 0002&&Marco Vala||2007
 conf/hcied/Larusdottir07||Marta Kristin Larusdottir||2007
 conf/hcied/Greenberg07||Saul Greenberg||2007
@@ -511,7 +511,7 @@ conf/aaim/WangZ13||Tao-Ming Wang&&Guang-Hui Zhang||2013
 conf/aaim/Lefmann08||Hanno Lefmann||2008
 conf/aaim/Xiao14||Mingyu Xiao||2014
 conf/aaim/ChinZZ07||Francis Y. L. Chin&&Yong Zhang&&Hong Zhu||2007
-conf/aaim/BrandenburgGH11||Franz-Josef Brandenburg&&Andreas Glei©¬ner&&Andreas Hofmeier||2011
+conf/aaim/BrandenburgGH11||Franz-Josef Brandenburg&&Andreas Gleiï¿½ï¿½ner&&Andreas Hofmeier||2011
 conf/aaim/Harutyunyan14||Hovhannes A. Harutyunyan||2014
 conf/aaim/ChinCY09||Francis Y. L. Chin&&Marek Chrobak&&Li Yan||2009
 conf/aaim/TanJ12||Xuehou Tan&&Bo Jiang||2012
