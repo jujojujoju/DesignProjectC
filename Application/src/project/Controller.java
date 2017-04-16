@@ -28,6 +28,8 @@ import sample.Model;
 import sample.RandomLayout;
 
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Controller {
 
@@ -40,6 +42,8 @@ public class Controller {
 
     private CheckBox [] mCheckBoxArray;
 
+    private HashSet<Author> selectedAuthorSet;
+
     public void buttonclick1(ActionEvent actionEvent) {
 
         ////데이터 읽는 시점 변경 시도해볼만함
@@ -47,7 +51,7 @@ public class Controller {
 //        db.readFile();
 
         graph = new Graph();
-        System.out.println(db.getAuthorMapByCont(10).toString());
+//        System.out.println(db.getAuthorMapByCont(10).toString());
 
 
         Stage stage = new Stage();
@@ -75,24 +79,27 @@ public class Controller {
         layout.execute();
 
 
-        for(int i=0;i<mCheckBoxArray.length;i++)
-        {
-            if(mCheckBoxArray[i].isSelected()) {
-                System.out.print(mCheckBoxArray[i].getText()+" ");
-                System.out.println(mCheckBoxArray[i].isSelected());
-            }
-        }
-
     }
     private void addGraphComponents() {
 
-        //SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(new Author("Massimo De Gregorio"));
-        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(new Author("AAA"));
+        selectedAuthorSet = new HashSet<Author>();
+//
+        for(int i=0;i<mCheckBoxArray.length;i++)
+        {
+            if(mCheckBoxArray[i].isSelected()) {
+                selectedAuthorSet.add(new Author(mCheckBoxArray[i].getText()));
+//                System.out.println(mCheckBoxArray[i].isSelected());
+            }
+        }
+
+//        selectedAuthorSet.add(new Author("Fabrício Figueiredo"));
+//        selectedAuthorSet.add(new Author("Fábio Violaro"));
+//        selectedAuthorSet.add(new Author("Allan Kardec Barros"));
+
+        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(selectedAuthorSet);
 
         Model model = graph.getModel();
-
         graph.beginUpdate();
-
 
         for(Node author:weightedGraph.vertexSet())
         {
@@ -100,7 +107,7 @@ public class Controller {
         }
 
         for(DefaultWeightedEdge edge :weightedGraph.edgeSet()) {
-            if(weightedGraph.getEdgeWeight(edge)>1)
+            if(weightedGraph.getEdgeWeight(edge)>=1)    //웨이트가 1이상이면 표시가 되어야 합니다.
                 model.addEdge(weightedGraph.getEdgeTarget(edge).getName(), weightedGraph.getEdgeSource(edge).getName(), weightedGraph.getEdgeWeight(edge));
         }
 
@@ -111,6 +118,7 @@ public class Controller {
     }
 
     public void initManager(Main main) {
+
         db = new Database();
         db.readFile();
         this.main = main;

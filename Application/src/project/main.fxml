@@ -4,18 +4,11 @@
 <?import javafx.scene.layout.Pane?>
 
 
+<?import javafx.scene.control.ScrollPane?>
 <Pane fx:controller="project.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
 
-       <Button fx:id="button1" onAction="#buttonclick1" layoutX="140.0" layoutY="106.0" mnemonicParsing="false" text="Button1" />
-
+    <Button fx:id="button1" onAction="#buttonclick1" layoutX="250.0" layoutY="106.0" mnemonicParsing="false" text="검색" />
 
 
 
-       <!--<Button layoutX="395.0" layoutY="99.0" mnemonicParsing="false" text="Button2" />-->
-      <!--<Button layoutX="140.0" layoutY="239.0" mnemonicParsing="false" text="Button3" />-->
-      <!--<Button layoutX="395.0" layoutY="239.0" mnemonicParsing="false" text="Button4" />-->
-       <!---->
-
-   </children>
 </Pane>
