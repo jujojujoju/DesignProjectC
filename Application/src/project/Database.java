@@ -81,7 +81,7 @@ public class Database {
 
 
 
-				System.out.println(count++);
+//				System.out.println(count++);
 			}
 			in.close();
 			return true;
@@ -94,10 +94,10 @@ public class Database {
 
 
 	public Set<Node> getCoauthorSet(Author sourceAuthor, Author targetAuthor){
-    	Set<Node> sourceSet = new HashSet<Node>();
+		Set<Node> sourceSet = new HashSet<Node>();
 
-    	if(!authorSet.contains(sourceAuthor)||!authorSet.contains(targetAuthor))
-    		return sourceSet;
+		if(!authorSet.contains(sourceAuthor)||!authorSet.contains(targetAuthor))
+			return sourceSet;
 
 		for (DefaultEdge connectedEdge: mainGraph.edgesOf(sourceAuthor)){
 			sourceSet.add(mainGraph.getEdgeSource(connectedEdge));
@@ -117,7 +117,7 @@ public class Database {
 
 
 	public UndirectedGraph<Node, DefaultEdge> getCoauthorGraph(Author sourceAuthor, Author targetAuthor)
-    {
+	{
 		UndirectedGraph<Node, DefaultEdge> graph = new SimpleGraph<>(DefaultEdge.class);
 		Set<Node> sourceSet = new HashSet<Node>();
 
@@ -136,7 +136,7 @@ public class Database {
 		}
 
 		return graph;
-    }
+	}
 
 	public UndirectedGraph<Node, DefaultEdge> getRelationGraph(Author sourceAuthor, Author targetAuthor)
 	{
@@ -175,24 +175,24 @@ public class Database {
 	{
 		SimpleWeightedGraph<Node, DefaultWeightedEdge> graph = new SimpleWeightedGraph<Node, DefaultWeightedEdge>(DefaultWeightedEdge.class);
 
-			HashSet<Author> tempSet = new HashSet<Author>();
-			tempSet.addAll(authorSet);
-			if(!authorSet.contains(sourceAuthor))
-				return graph;
-			tempSet.remove(sourceAuthor);
+		HashSet<Author> tempSet = new HashSet<Author>();
+		tempSet.addAll(authorSet);
+		if(!authorSet.contains(sourceAuthor))
+			return graph;
+		tempSet.remove(sourceAuthor);
 
-			graph.addVertex(sourceAuthor);
-			for(Author tempAuthor: tempSet){
-				int size =  getCoauthorSet(sourceAuthor, tempAuthor).size();
+		graph.addVertex(sourceAuthor);
+		for(Author tempAuthor: tempSet){
+			int size =  getCoauthorSet(sourceAuthor, tempAuthor).size();
 
-				if(size>0) {
-					graph.addVertex(tempAuthor);
+			if(size>0) {
+				graph.addVertex(tempAuthor);
 
-					DefaultWeightedEdge e1 = graph.addEdge(sourceAuthor, tempAuthor);
-					if (e1 != null)
-						graph.setEdgeWeight(e1, size);
-				}
+				DefaultWeightedEdge e1 = graph.addEdge(sourceAuthor, tempAuthor);
+				if (e1 != null)
+					graph.setEdgeWeight(e1, size);
 			}
+		}
 
 		return graph;
 	}
@@ -255,6 +255,7 @@ public class Database {
 			}
 			return result;
 		}
+
 	}
 
 	public Map<Author, Integer> getAuthorMapByCont(Author sourceAuthor, int count){

@@ -4,12 +4,16 @@ package sample;
  * Created by joju on 2017. 4. 14..
  */
 import javafx.scene.Group;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 
 public class Edge extends Group {
 
     private Cell source;
     private Cell target;
+
+
+    private Line line = new Line();
 
     Edge(Cell source, Cell target) {
 
@@ -19,7 +23,7 @@ public class Edge extends Group {
         source.addCellChild(target);
         target.addCellParent(source);
 
-        Line line = new Line();
+//        Line line = new Line();
 
         line.startXProperty().bind( source.layoutXProperty().add(source.getBoundsInParent().getWidth() / 2.0));
         line.startYProperty().bind( source.layoutYProperty().add(source.getBoundsInParent().getHeight() / 2.0));
@@ -39,8 +43,8 @@ public class Edge extends Group {
 
         source.addCellChild(target);
         target.addCellParent(source);
-
-        Line line = new Line();
+//
+//        Line line = new Line();
 
         line.startXProperty().bind( source.layoutXProperty().add(source.getBoundsInParent().getWidth() / 2.0));
         line.startYProperty().bind( source.layoutYProperty().add(source.getBoundsInParent().getHeight() / 2.0));
@@ -54,6 +58,13 @@ public class Edge extends Group {
 
     }
 
+    public void edgeClicked()
+    {
+//        line.setFill(Color.RED);
+        line.setStrokeWidth(10);
+
+
+    }
 
     public Cell getSource() {
         return source;
