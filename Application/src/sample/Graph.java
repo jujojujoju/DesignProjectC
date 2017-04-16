@@ -73,6 +73,11 @@ public class Graph {
             mouseGestures.makeDraggable(cell);
         }
 
+        // enable clickable of edge
+        for (Edge edge : model.getAddedEdges()) {
+            mouseGestures.makeDraggable(edge);
+        }
+
         // every cell must have a parent, if it doesn't, then the graphParent is
         // the parent
         getModel().attachOrphansToGraphParent(model.getAddedCells());

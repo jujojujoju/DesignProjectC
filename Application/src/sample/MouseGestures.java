@@ -19,12 +19,28 @@ public class MouseGestures {
 
     public void makeDraggable( final Node node) {
 
-
         node.setOnMousePressed(onMousePressedEventHandler);
         node.setOnMouseDragged(onMouseDraggedEventHandler);
         node.setOnMouseReleased(onMouseReleasedEventHandler);
 
     }
+
+    public void makeDraggable( final Edge edge) {
+        edge.setOnMouseClicked(onMouseClickedEventHandler);
+    }
+
+    EventHandler<MouseEvent> onMouseClickedEventHandler = new EventHandler<MouseEvent>() {
+
+        @Override
+        public void handle(MouseEvent event) {
+
+            if(event.getSource().getClass() == Edge.class)
+            {
+                Edge edge = (Edge) event.getSource();
+                edge.edgeClicked();
+            }
+        }
+    };
 
     EventHandler<MouseEvent> onMousePressedEventHandler = new EventHandler<MouseEvent>() {
 
@@ -32,7 +48,6 @@ public class MouseGestures {
         public void handle(MouseEvent event) {
 
             Node node = (Node) event.getSource();
-
             double scale = graph.getScale();
 
             dragContext.x = node.getBoundsInParent().getMinX() * scale - event.getScreenX();

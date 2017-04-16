@@ -22,11 +22,7 @@ import sample.RandomLayout;
 
 public class Main extends Application {
 
-    private int nodeNum = 100;
     private Graph graph;
-
-
-
     Database db = new Database();
 
     BorderPane root;
@@ -72,6 +68,9 @@ public class Main extends Application {
 
         graph.beginUpdate();
 
+//
+//        weightedGraph.vertexSet().
+
         for(Node author:weightedGraph.vertexSet())
         {
             model.addCell(author.getName(), CellType.LABEL);
@@ -81,8 +80,6 @@ public class Main extends Application {
             if(weightedGraph.getEdgeWeight(edge)>1)
             model.addEdge(weightedGraph.getEdgeTarget(edge).getName(), weightedGraph.getEdgeSource(edge).getName(), weightedGraph.getEdgeWeight(edge));
         }
-
-
 
 //
 //        int random_node1;
@@ -94,8 +91,6 @@ public class Main extends Application {
 //            random_node2 = (int)(Math.random()* nodeNum);
 //            model.addEdge("Cell "+random_node1, "Cell "+random_node2);
 //        }
-
-
 
 
         graph.endUpdate();
