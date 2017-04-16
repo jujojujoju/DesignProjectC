@@ -4,7 +4,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 
@@ -20,92 +22,117 @@ import sample.Layout;
 import sample.Model;
 import sample.RandomLayout;
 
+import java.util.Set;
+
 public class Main extends Application {
 
-    private Graph graph;
+//    private Graph graph;
     Database db = new Database();
+    CheckBox [] checkBoxArray;
 
-    BorderPane root;
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-//        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        db.readFile();
+        checkBoxArray = new CheckBox[db.getAuthorSet().size()];
 
-    	db.readFile();
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("main.fxml")
+        );
+        Pane root = loader.load();
 
-        //System.out.println(db.getCoauthorGraph(new Author("AAA"), new Author("BBB")).toString());
-//        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph();
-//        DefaultWeightedEdge e1 = weightedGraph.getEdge(new Author("AAA"), new Author("BBB"));
-//        System.out.println(weightedGraph.getEdgeWeight(e1));
-    	  System.out.println(db.getAuthorMapByCont(10).toString());
+        Controller controller =
+                loader.<Controller>getController();
+        controller.initManager(this);
 
-        root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-//        BorderPane root = new BorderPane();
-
-        graph = new Graph();
-        root.setCenter(graph.getScrollPane());
+//        Pane root = FXMLLoader.load(getClass().getResource("main.fxml"));
 
         Scene scene = new Scene(root, 1024, 768);
         scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+
+
+        int i=0;
+        for(Node author : db.getAuthorSet())
+        {
+            checkBoxArray[i] = new CheckBox();
+            checkBoxArray[i].setText(author.getName());
+            checkBoxArray[i].setLayoutX(10);
+            checkBoxArray[i].setLayoutY(10 + i * 20);
+
+            root.getChildren().add(checkBoxArray[i]);
+            i++;
+        }
+
+//
+//    	for(int i =0;i<5;i++)
+//        {
+//            Author author = (Author) dbAuthorSet.iterator();
+//            System.out.println(author.getName());
+//
+////            author.getName();
+////            node.getName();
+////            System.out.println(db.getAuthorSet().toString());
+//        }
+
+
+
+//        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(new Author("AAA"));
+
+
+//
+//    	  System.out.println(db.getAuthorMapByCont(10).toString());
+//
+//        root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+//
+//        graph = new Graph();
+//
+//        BorderPane root;
+//        root.setCenter(graph.getScrollPane());
+//
+//        Scene scene = new Scene(root, 1024, 768);
+//        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+//
+//        primaryStage.setTitle("jujoju");
+//        primaryStage.setScene(scene);
+//        primaryStage.show();
+//
+//        addGraphComponents();
+//
+//        Layout layout = new RandomLayout(graph);
+//        layout.execute();
+
 
         primaryStage.setTitle("jujoju");
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        addGraphComponents();
 
-        Layout layout = new RandomLayout(graph);
-        layout.execute();
-
-//        subscreen();
 
     }
-    private void addGraphComponents() {
 
+//    private void addGraphComponents() {
+//
         //SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(new Author("Massimo De Gregorio"));
-        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(new Author("AAA"));
-
-        Model model = graph.getModel();
-
-        graph.beginUpdate();
-
+//        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(new Author("AAA"));
 //
-//        weightedGraph.vertexSet().
-
-        for(Node author:weightedGraph.vertexSet())
-        {
-            model.addCell(author.getName(), CellType.LABEL);
-        }
-
-        for(DefaultWeightedEdge edge :weightedGraph.edgeSet()) {
-            if(weightedGraph.getEdgeWeight(edge)>1)
-            model.addEdge(weightedGraph.getEdgeTarget(edge).getName(), weightedGraph.getEdgeSource(edge).getName(), weightedGraph.getEdgeWeight(edge));
-        }
-
+//        Model model = graph.getModel();
 //
-//        int random_node1;
-//        int random_node2;
+//        graph.beginUpdate();
 //
-//        for(int i = 0; i<nodeNum/2; i++)
+//
+//        for(Node author:weightedGraph.vertexSet())
 //        {
-//            random_node1 = (int)(Math.random()* nodeNum);
-//            random_node2 = (int)(Math.random()* nodeNum);
-//            model.addEdge("Cell "+random_node1, "Cell "+random_node2);
+//            model.addCell(author.getName(), CellType.LABEL);
 //        }
+//
+//        for(DefaultWeightedEdge edge :weightedGraph.edgeSet()) {
+//            if(weightedGraph.getEdgeWeight(edge)>1)
+//            model.addEdge(weightedGraph.getEdgeTarget(edge).getName(), weightedGraph.getEdgeSource(edge).getName(), weightedGraph.getEdgeWeight(edge));
+//        }
+//
+//        graph.endUpdate();
+//    }
 
-
-        graph.endUpdate();
-    }
-    public void subscreen()
-    {
-//        BorderPane /**/sub = new BorderPane();
-
-
-        Label label = new Label("Sdf");
-
-        root.setCenter(label);
-
-    }
 
     public static void main(String[] args) {
         launch(args);
