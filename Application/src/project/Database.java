@@ -39,6 +39,7 @@ public class Database {
 
         //String coauthorURL = "coauthorList.txt";
 		String paperURL = "paperList3.txt";
+		int count = 0;
 
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(paperURL));
@@ -60,12 +61,18 @@ public class Database {
 				mainGraph.addVertex(paperTemp);
 				paperSet.add(paperTemp);
 
-				for(String author: authorStringList){
-					Author authorTemp = new Author(author);
-					mainGraph.addVertex(authorTemp);
-					authorSet.add(authorTemp);
-					mainGraph.addEdge(paperTemp, authorTemp);
+				if(!authorkey.equals("")){
+					for(String author: authorStringList){
+						Author authorTemp = new Author(author);
+						mainGraph.addVertex(authorTemp);
+						authorSet.add(authorTemp);
+						mainGraph.addEdge(paperTemp, authorTemp);
+					}
 				}
+
+
+
+				System.out.println(count++);
 			}
 			in.close();
 			return true;
@@ -141,6 +148,30 @@ public class Database {
 		return graph;
 	}
 
+	public SimpleWeightedGraph<Node, DefaultWeightedEdge> getCoauthorWeightedGraph(Author sourceAuthor)
+	{
+		SimpleWeightedGraph<Node, DefaultWeightedEdge> graph = new SimpleWeightedGraph<Node, DefaultWeightedEdge>(DefaultWeightedEdge.class);
+
+			HashSet<Author> tempSet = new HashSet<Author>();
+			tempSet.addAll(authorSet);
+			tempSet.remove(sourceAuthor);
+
+			graph.addVertex(sourceAuthor);
+			for(Author tempAuthor: tempSet){
+				int size =  getCoauthorSet(sourceAuthor, tempAuthor).size();
+
+				if(size>0) {
+					graph.addVertex(tempAuthor);
+
+					DefaultWeightedEdge e1 = graph.addEdge(sourceAuthor, tempAuthor);
+					if (e1 != null)
+						graph.setEdgeWeight(e1, size + 1);
+				}
+			}
+
+		return graph;
+	}
+
 	public Map<Author, Integer> getAuthorMapByCont(int count){
 		int max = 0;
 		int row = 0;
@@ -148,24 +179,29 @@ public class Database {
 
 		for(Author author:authorSet){
 			int contributeNum = mainGraph.degreeOf(author);
-			if(row < count){
-				if(contributeNum>max)
-					max = contributeNum;
-				contributeList.put(author, contributeNum);
-				row++;
-			}
-			else{
-				if(contributeNum>max){
-
-				}
-			}
-
+			contributeList.put(author, contributeNum);
 		}
 
 		ValueComparator<Author> bvc =  new ValueComparator<Author>(contributeList);
 		TreeMap<Author,Integer> sorted_map = new TreeMap<Author,Integer>(bvc);
 		sorted_map.putAll(contributeList);
 
+		TreeMap<Author,Integer> result = new TreeMap<Author,Integer>(bvc);
+
+		if(count>=sorted_map.size()){
+			return sorted_map;
+		}
+
+		Iterator it = sorted_map.entrySet().iterator();
+
+		int index = 0;
+		while(it.hasNext()){
+			if (index >= count)
+				break;
+			Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
+			result.put(entry.getKey(), entry.getValue());
+			index++;
+		}
 		return sorted_map;
 	}
 }
