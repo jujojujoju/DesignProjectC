@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.*;
 
 import org.jgrapht.UndirectedGraph;
+import org.jgrapht.alg.interfaces.ShortestPathAlgorithm;
+import org.jgrapht.alg.shortestpath.FloydWarshallShortestPaths;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleGraph;
@@ -13,11 +15,13 @@ import org.jgrapht.graph.SimpleWeightedGraph;
 
 public class Database {
 	private UndirectedGraph<Node, DefaultEdge> mainGraph;
+	private SimpleWeightedGraph<Author, DefaultWeightedEdge> authorGraph;
 	private Set<Author> authorSet;
 	private Set<Paper> paperSet;
 
 	public Database(){
 		mainGraph = new SimpleGraph<>(DefaultEdge.class);
+		authorGraph = new SimpleWeightedGraph<Author, DefaultWeightedEdge> (DefaultWeightedEdge.class);
 		authorSet = new HashSet<Author>();
 		paperSet = new HashSet<Paper>();
 	}
@@ -35,9 +39,7 @@ public class Database {
 	}
 
 	public boolean readFile(){
-		//String paperURL = "dblp-paper.txt";
 
-        //String coauthorURL = "coauthorList.txt";
 		String paperURL = "paperList4.txt";
 		int count = 0;
 
@@ -67,6 +69,13 @@ public class Database {
 						mainGraph.addVertex(authorTemp);
 						authorSet.add(authorTemp);
 						mainGraph.addEdge(paperTemp, authorTemp);
+					}
+
+					List<Author> authorList = new ArrayList<Author>();
+					for(String authorString: authorStringList){
+						Author authorTemp = new Author(authorString);
+						authorGraph.addVertex(authorTemp);
+						authorList.add(authorTemp);
 					}
 				}
 
@@ -129,6 +138,14 @@ public class Database {
 		return graph;
     }
 
+	public UndirectedGraph<Node, DefaultEdge> getRelationGraph(Author sourceAuthor, Author targetAuthor)
+	{
+		UndirectedGraph<Node, DefaultEdge> graph = new SimpleGraph<>(DefaultEdge.class);
+
+
+		return graph;
+	}
+
 	public SimpleWeightedGraph<Node, DefaultWeightedEdge> getCoauthorWeightedGraph()
 	{
 		SimpleWeightedGraph<Node, DefaultWeightedEdge> graph = new SimpleWeightedGraph<Node, DefaultWeightedEdge>(DefaultWeightedEdge.class);
@@ -140,11 +157,14 @@ public class Database {
 
 			for(Author tempAuthor: tempSet){
 				graph.addVertex(sourceAuthor);
-				graph.addVertex(tempAuthor);
+
 				int size =  getCoauthorSet(sourceAuthor, tempAuthor).size();
-				DefaultWeightedEdge e1 = graph.addEdge(sourceAuthor, tempAuthor);
-				if(e1 != null)
-					graph.setEdgeWeight(e1, size);
+				if(size>0) {
+					graph.addVertex(tempAuthor);
+					DefaultWeightedEdge e1 = graph.addEdge(sourceAuthor, tempAuthor);
+					if (e1 != null)
+						graph.setEdgeWeight(e1, size);
+				}
 			}
 		}
 
@@ -181,20 +201,28 @@ public class Database {
 	{
 		SimpleWeightedGraph<Node, DefaultWeightedEdge> graph = new SimpleWeightedGraph<Node, DefaultWeightedEdge>(DefaultWeightedEdge.class);
 
+		HashSet<Author> tempSet = new HashSet<Author>();
+
 		for(Author sourceAuthor: sourceAuthorSet){
-			HashSet<Author> tempSet = new HashSet<Author>();
 			tempSet.addAll(authorSet);
 			tempSet.remove(sourceAuthor);
 
-
+			graph.addVertex(sourceAuthor);
+			for(Author tempAuthor: tempSet){
+				int size =  getCoauthorSet(sourceAuthor, tempAuthor).size();
+				if(size>0) {
+					graph.addVertex(tempAuthor);
+					DefaultWeightedEdge e1 = graph.addEdge(sourceAuthor, tempAuthor);
+					if (e1 != null)
+						graph.setEdgeWeight(e1, size);
+				}
+			}
 		}
 
 		return graph;
 	}
 
 	public Map<Author, Integer> getAuthorMapByCont(int count){
-		int max = 0;
-		int row = 0;
 		Map<Author, Integer> contributeList = new HashMap<Author, Integer>();
 
 		for(Author author:authorSet){
@@ -211,17 +239,58 @@ public class Database {
 		if(count>=sorted_map.size()){
 			return sorted_map;
 		}
+		else{
+			Iterator it = sorted_map.entrySet().iterator();
+			int min = -1;
+			int index = 0;
+			while(it.hasNext()){
+				Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
+				if (index >= count && min > entry.getValue()) //개수가 count 개 이상이고 최소 값이 count 등의 value 보다 작으면 탈출시킨다.
+					break;
 
-		Iterator it = sorted_map.entrySet().iterator();
 
-		int index = 0;
-		while(it.hasNext()){
-			if (index >= count)
-				break;
-			Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
-			result.put(entry.getKey(), entry.getValue());
-			index++;
+				result.put(entry.getKey(), entry.getValue());
+				index++;
+				min = entry.getValue();
+			}
+			return result;
 		}
-		return sorted_map;
+	}
+
+	public Map<Author, Integer> getAuthorMapByCont(Author sourceAuthor, int count){
+		Map<Author, Integer> contributeList = new HashMap<Author, Integer>();
+
+		for(Author author:authorSet){
+			if(getCoauthorSet(sourceAuthor,author).size() > 0) {
+				int contributeNum = mainGraph.degreeOf(author);
+				contributeList.put(author, contributeNum);
+			}
+		}
+
+		ValueComparator<Author> bvc =  new ValueComparator<Author>(contributeList);
+		TreeMap<Author,Integer> sorted_map = new TreeMap<Author,Integer>(bvc);
+		sorted_map.putAll(contributeList);
+
+		TreeMap<Author,Integer> result = new TreeMap<Author,Integer>(bvc);
+
+		if(count>=sorted_map.size()){
+			return sorted_map;
+		}
+		else{
+			Iterator it = sorted_map.entrySet().iterator();
+			int min = -1;
+			int index = 0;
+			while(it.hasNext()){
+				Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
+				if (index >= count && min > entry.getValue()) //개수가 count 개 이상이고 최소 값이 count 등의 value 보다 작으면 탈출시킨다.
+					break;
+
+
+				result.put(entry.getKey(), entry.getValue());
+				index++;
+				min = entry.getValue();
+			}
+			return result;
+		}
 	}
 }
