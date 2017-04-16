@@ -38,7 +38,7 @@ public class Database {
 		//String paperURL = "dblp-paper.txt";
 
         //String coauthorURL = "coauthorList.txt";
-		String paperURL = "paperList3.txt";
+		String paperURL = "paperList4.txt";
 		int count = 0;
 
 		try {
@@ -86,6 +86,9 @@ public class Database {
 
 	public Set<Node> getCoauthorSet(Author sourceAuthor, Author targetAuthor){
     	Set<Node> sourceSet = new HashSet<Node>();
+
+    	if(!authorSet.contains(sourceAuthor)||!authorSet.contains(targetAuthor))
+    		return sourceSet;
 
 		for (DefaultEdge connectedEdge: mainGraph.edgesOf(sourceAuthor)){
 			sourceSet.add(mainGraph.getEdgeSource(connectedEdge));
@@ -141,7 +144,7 @@ public class Database {
 				int size =  getCoauthorSet(sourceAuthor, tempAuthor).size();
 				DefaultWeightedEdge e1 = graph.addEdge(sourceAuthor, tempAuthor);
 				if(e1 != null)
-					graph.setEdgeWeight(e1, size+1);
+					graph.setEdgeWeight(e1, size);
 			}
 		}
 
@@ -154,6 +157,8 @@ public class Database {
 
 			HashSet<Author> tempSet = new HashSet<Author>();
 			tempSet.addAll(authorSet);
+			if(!authorSet.contains(sourceAuthor))
+				return graph;
 			tempSet.remove(sourceAuthor);
 
 			graph.addVertex(sourceAuthor);
@@ -165,9 +170,24 @@ public class Database {
 
 					DefaultWeightedEdge e1 = graph.addEdge(sourceAuthor, tempAuthor);
 					if (e1 != null)
-						graph.setEdgeWeight(e1, size + 1);
+						graph.setEdgeWeight(e1, size);
 				}
 			}
+
+		return graph;
+	}
+
+	public SimpleWeightedGraph<Node, DefaultWeightedEdge> getCoauthorWeightedGraph(Set<Author> sourceAuthorSet)
+	{
+		SimpleWeightedGraph<Node, DefaultWeightedEdge> graph = new SimpleWeightedGraph<Node, DefaultWeightedEdge>(DefaultWeightedEdge.class);
+
+		for(Author sourceAuthor: sourceAuthorSet){
+			HashSet<Author> tempSet = new HashSet<Author>();
+			tempSet.addAll(authorSet);
+			tempSet.remove(sourceAuthor);
+
+
+		}
 
 		return graph;
 	}

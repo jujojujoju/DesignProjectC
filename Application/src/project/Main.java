@@ -20,6 +20,8 @@ import sample.Layout;
 import sample.Model;
 import sample.RandomLayout;
 
+import java.util.HashSet;
+
 public class Main extends Application {
 
     private int nodeNum = 100;
@@ -37,11 +39,11 @@ public class Main extends Application {
 
     	db.readFile();
 
-        //System.out.println(db.getCoauthorGraph(new Author("AAA"), new Author("BBB")).toString());
+//        System.out.println(db.getCoauthorGraph(new Author("AAA"), new Author("DDD")).toString());
 //        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph();
-//        DefaultWeightedEdge e1 = weightedGraph.getEdge(new Author("AAA"), new Author("BBB"));
+//        DefaultWeightedEdge e1 = weightedGraph.getEdge(new Author("AAA"), new Author("DDD"));
 //        System.out.println(weightedGraph.getEdgeWeight(e1));
-    	  System.out.println(db.getAuthorMapByCont(10).toString());
+//    	  System.out.println(db.getAuthorMapByCont(10).toString());
 
         root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 //        BorderPane root = new BorderPane();
@@ -66,8 +68,15 @@ public class Main extends Application {
     }
     private void addGraphComponents() {
 
-        //SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(new Author("Massimo De Gregorio"));
-        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(new Author("AAA"));
+        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(new Author("Massimo De Gregorio"));
+//        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(new Author("AAA"));
+
+        HashSet<Author> selectedAuthorSet = new HashSet<Author>();
+        selectedAuthorSet.add(new Author("Fabrício Figueiredo"));
+        selectedAuthorSet.add(new Author("Fábio Violaro"));
+        selectedAuthorSet.add(new Author("Allan Kardec Barros"));
+
+//        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(selectedAuthorSet);
 
         Model model = graph.getModel();
 
@@ -79,8 +88,8 @@ public class Main extends Application {
         }
 
         for(DefaultWeightedEdge edge :weightedGraph.edgeSet()) {
-            if(weightedGraph.getEdgeWeight(edge)>1)
-            model.addEdge(weightedGraph.getEdgeTarget(edge).getName(), weightedGraph.getEdgeSource(edge).getName(), weightedGraph.getEdgeWeight(edge));
+            if(weightedGraph.getEdgeWeight(edge)>=1)    //웨이트가 1이상이면 표시가 되어야 합니다.
+                model.addEdge(weightedGraph.getEdgeTarget(edge).getName(), weightedGraph.getEdgeSource(edge).getName(), weightedGraph.getEdgeWeight(edge));
         }
 
 
