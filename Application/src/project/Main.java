@@ -22,6 +22,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         db.readFile();
+        System.out.print(db.getRelationGraph(new Author("Marcelo Barros de Almeida"), new Author("Stylianos C. Panagiotou")).toString());
         checkBoxArray = new CheckBox[db.getAuthorSet().size()];
 
         FXMLLoader loader = new FXMLLoader(

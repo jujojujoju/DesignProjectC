@@ -5,8 +5,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
+import com.sun.javafx.geom.transform.BaseTransform;
+import org.jgrapht.Graph;
+import org.jgrapht.GraphPath;
 import org.jgrapht.UndirectedGraph;
 import org.jgrapht.alg.interfaces.ShortestPathAlgorithm;
+import org.jgrapht.alg.interfaces.ShortestPathAlgorithm.*;
+import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.alg.shortestpath.FloydWarshallShortestPaths;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.DefaultWeightedEdge;
@@ -40,7 +45,7 @@ public class Database {
 
 	public boolean readFile(){
 
-		String paperURL = "paperList4.txt";
+		String paperURL = "paperList4.txt";	//페이퍼 DB를 기준으로 불러온다.
 		int count = 0;
 
 		try {
@@ -48,8 +53,7 @@ public class Database {
 			String s;
 
 			while ((s = in.readLine()) != null) {
-				//System.out.println(s);
-				String[] result = s.split("\\|\\|");
+				String[] result = s.split("\\|\\|");	// ||를 기준으로 스플릿
 
 				String paperkey = result[0];
 				String authorkey = result[1];
@@ -57,11 +61,11 @@ public class Database {
 
 				String[] authorStringList = authorkey.split("\\&\\&");
 
-				Paper paperTemp = new Paper(paperkey);
-				paperTemp.setYear(Integer.parseInt(year));
+				Paper paperTemp = new Paper(paperkey);	//페이퍼 이름 기준으로 생성
+				paperTemp.setYear(Integer.parseInt(year));	//연도 등록
 
-				mainGraph.addVertex(paperTemp);
-				paperSet.add(paperTemp);
+				mainGraph.addVertex(paperTemp);	//페이퍼 노드 추가
+				paperSet.add(paperTemp);	//조회를 쉽게하기 위한 페이퍼 셋에 페이퍼 추가
 
 				if(!authorkey.equals("")){
 					for(String author: authorStringList){
@@ -77,6 +81,7 @@ public class Database {
 						authorGraph.addVertex(authorTemp);
 						authorList.add(authorTemp);
 					}
+
 				}
 
 
@@ -141,7 +146,25 @@ public class Database {
 	public UndirectedGraph<Node, DefaultEdge> getRelationGraph(Author sourceAuthor, Author targetAuthor)
 	{
 		UndirectedGraph<Node, DefaultEdge> graph = new SimpleGraph<>(DefaultEdge.class);
+		DijkstraShortestPath<Node, DefaultEdge> dijkstraShortestPath = new DijkstraShortestPath(mainGraph);
+		ShortestPathAlgorithm.SingleSourcePaths<Node, DefaultEdge> paths =  dijkstraShortestPath.getPaths(sourceAuthor);
 
+		Set<Author> relatedAuthor = new HashSet<Author>();
+		Set<GraphPath<Node, DefaultEdge>> graphSet = new HashSet<GraphPath<Node, DefaultEdge>>();
+		for(Author author: authorSet){
+			double length = paths.getWeight(author);
+			if(length<=6) {
+				graphSet.add(paths.getPath(author));
+			}
+		}
+		for(GraphPath<Node, DefaultEdge> path: graphSet){
+			for(Node node: path.getVertexList())
+				graph.addVertex(node);
+			for(DefaultEdge edge: path.getEdgeList())
+				graph.addEdge(mainGraph.getEdgeSource(edge), mainGraph.getEdgeTarget(edge));
+		}
+//		System.out.println(count);
+		//System.out.println(paths.getPath(targetAuthor));
 
 		return graph;
 	}
