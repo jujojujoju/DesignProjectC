@@ -5,8 +5,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
+import org.jgrapht.GraphPath;
 import org.jgrapht.UndirectedGraph;
 import org.jgrapht.alg.interfaces.ShortestPathAlgorithm;
+import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.alg.shortestpath.FloydWarshallShortestPaths;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.DefaultWeightedEdge;
@@ -138,10 +140,33 @@ public class Database {
 		return graph;
 	}
 
+	int _length = 6;
+
+	/////둘 사이 관계도 그래프
 	public UndirectedGraph<Node, DefaultEdge> getRelationGraph(Author sourceAuthor, Author targetAuthor)
 	{
 		UndirectedGraph<Node, DefaultEdge> graph = new SimpleGraph<>(DefaultEdge.class);
+		DijkstraShortestPath<Node, DefaultEdge> dijkstraShortestPath = new DijkstraShortestPath(mainGraph);
+		ShortestPathAlgorithm.SingleSourcePaths<Node, DefaultEdge> paths =  dijkstraShortestPath.getPaths(sourceAuthor);
+		DijkstraShortestPath<Node, DefaultEdge> dijkstraShortestPath2 = new DijkstraShortestPath(mainGraph);
+		ShortestPathAlgorithm.SingleSourcePaths<Node, DefaultEdge> paths2 =  dijkstraShortestPath.getPaths(targetAuthor);
 
+		Set<Author> relatedAuthor = new HashSet<Author>();
+		Set<GraphPath<Node, DefaultEdge>> graphSet = new HashSet<GraphPath<Node, DefaultEdge>>();
+		for(Author author: authorSet){
+			double length = paths.getWeight(author);
+			double length2 = paths2.getWeight(author);
+			if(length+length2<=6) {
+				graphSet.add(paths.getPath(author));
+				graphSet.add(paths2.getPath(author));
+			}
+		}
+		for(GraphPath<Node, DefaultEdge> path: graphSet){
+			for(Node node: path.getVertexList())
+				graph.addVertex(node);
+			for(DefaultEdge edge: path.getEdgeList())
+				graph.addEdge(mainGraph.getEdgeSource(edge), mainGraph.getEdgeTarget(edge));
+		}
 
 		return graph;
 	}
@@ -222,6 +247,8 @@ public class Database {
 		return graph;
 	}
 
+
+	//////전체 노드에서 탑케이
 	public Map<Author, Integer> getAuthorMapByCont(int count){
 		Map<Author, Integer> contributeList = new HashMap<Author, Integer>();
 
@@ -248,7 +275,6 @@ public class Database {
 				if (index >= count && min > entry.getValue()) //개수가 count 개 이상이고 최소 값이 count 등의 value 보다 작으면 탈출시킨다.
 					break;
 
-
 				result.put(entry.getKey(), entry.getValue());
 				index++;
 				min = entry.getValue();
@@ -258,6 +284,7 @@ public class Database {
 
 	}
 
+	///저자 기준으로 탑테이
 	public Map<Author, Integer> getAuthorMapByCont(Author sourceAuthor, int count){
 		Map<Author, Integer> contributeList = new HashMap<Author, Integer>();
 

@@ -3,16 +3,14 @@ package sample;
 import javafx.scene.control.Label;
 
 /**
- * Created by joju on 2017. 4. 14..
+ * Created by joju on 2017. 4. 17..
  */
-public class LabelCell extends Cell {
-
-    public LabelCell(String id) {
+public class PaperLabelCell extends Cell{
+    public PaperLabelCell(String id) {
         super(id);
 
         Label view = new Label(id);
         setView(view);
 
     }
-
 }

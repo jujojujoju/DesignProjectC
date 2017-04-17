@@ -85,8 +85,14 @@ public class Model {
 
             case LABEL:
                 LabelCell labelCell = new LabelCell(id);
-                labelCell.setStyle("-fx-background-color: salmon");
+                labelCell.setStyle("-fx-background-color: gold");
                 addCell(labelCell);
+                break;
+
+            case PAPERLABEL:
+                PaperLabelCell paperlabelCell = new PaperLabelCell(id);
+                paperlabelCell.setStyle("-fx-background-color: aqua");
+                addCell(paperlabelCell);
                 break;
 
             case TRIANGLE:
