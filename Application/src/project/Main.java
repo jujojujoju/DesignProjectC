@@ -64,9 +64,6 @@ public class Main extends Application {
             i++;
         }
 
-
-
-//        anchorPane.sets
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
 
         scrollPane.setContent(anchorPane);
