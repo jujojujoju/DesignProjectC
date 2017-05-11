@@ -45,21 +45,51 @@ public class Controller {
 
     private HashSet<Author> selectedAuthorSet;
 
+    public void initManager(Main main) {
+
+        db = new Database();
+        db.readFile();
+        this.main = main;
+        mCheckBoxArray = main.checkBoxArray;
+
+    }
+
+    public void Authorityscreen(ActionEvent actionEvent) {
+    }
+
+    public void sendConnection(Connection connection) {
+
+        this.connection = connection;
+
+    }
+
     public void buttonclick1(ActionEvent actionEvent) {
+        MakeNewStageForGraph("Graph");
+    }
+    public void buttonclick2(ActionEvent actionEvent) {
+        MakeNewStageForGraph("Relation Graph");
+    }
+    public void buttonclick3(ActionEvent actionEvent) {
+        MakeNewStageForChart("Top K");
+    }
+    public void buttonclick4(ActionEvent actionEvent) {
+        MakeNewStageForChart("Top K For Author");
+    }
+
+    private void MakeNewStageForGraph(String string) {
 
         graph = new Graph();
-
         Stage stage = new Stage();
 
         BorderPane root = null;
         try {
 
-        root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        root.setCenter(graph.getScrollPane());
+            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root.setCenter(graph.getScrollPane());
 
             Scene scene = new Scene(root, 1024, 768);
             scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            stage.setTitle("graph");
+            stage.setTitle(string);
             stage.setScene(scene);
 
         } catch (IOException e) {
@@ -68,13 +98,15 @@ public class Controller {
         assert root != null;
         stage.show();
 
+        if(string.equals("Graph"))
         addGraphComponents();
+        else
+            addGraphComponentsRelation();
 
         Layout layout = new RandomLayout(graph);
         layout.execute();
 
     }
-
     private void addGraphComponents() {
 
         selectedAuthorSet = new HashSet<Author>();
@@ -84,7 +116,6 @@ public class Controller {
                 selectedAuthorSet.add(new Author(mCheckBoxArray[i].getText()));
             }
         }
-
 
         SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(selectedAuthorSet);
 
@@ -104,55 +135,7 @@ public class Controller {
         graph.endUpdate();
     }
 
-    public void initManager(Main main) {
-
-        db = new Database();
-        db.readFile();
-        this.main = main;
-        mCheckBoxArray = main.checkBoxArray;
-
-
-    }
-
-    public void Authorityscreen(ActionEvent actionEvent) {
-    }
-
-    public void sendConnection(Connection connection) {
-
-        this.connection = connection;
-
-    }
-
-    public void buttonclick2(ActionEvent actionEvent) {
-
-        graph = new Graph();
-        Stage stage = new Stage();
-
-        BorderPane root = null;
-        try {
-
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-            root.setCenter(graph.getScrollPane());
-
-            Scene scene = new Scene(root, 1024, 768);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            stage.setTitle("graph");
-            stage.setScene(scene);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        assert root != null;
-        stage.show();
-
-        addGraphComponents2();
-
-        Layout layout = new RandomLayout(graph);
-        layout.execute();
-
-    }
-
-    private void addGraphComponents2()
+    private void addGraphComponentsRelation()
     {
 
         ArrayList<Author> authors = new ArrayList<Author>();
@@ -185,7 +168,7 @@ public class Controller {
     }
 
 
-    public void buttonclick3(ActionEvent actionEvent) {
+    private void MakeNewStageForChart(String string) {
 
         graph = new Graph();
         Stage stage = new Stage();
@@ -195,15 +178,15 @@ public class Controller {
         final NumberAxis yAxis = new NumberAxis();
         final BarChart<String,Number> bc =
                 new BarChart<String,Number>(xAxis,yAxis);
-        bc.setTitle("Top K ");
+        bc.setTitle(string);
         xAxis.setLabel("Authors");
         yAxis.setLabel("Paper Number");
-
         XYChart.Series series1 = new XYChart.Series();
-//        series1.setName("2003");
 
-
-        addGraphComponentsTopK(series1);
+        if(string.equals("Top K"))
+            addGraphComponentsTopK(series1);
+        else
+        addGraphComponentsTopKAroundAuthor(series1);
 
 
         bc.getData().addAll(series1);
@@ -212,12 +195,11 @@ public class Controller {
         try {
 
             root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-//            root.setCenter(graph.getScrollPane());
             root.setCenter(bc);
 
             Scene scene = new Scene(root, 1024, 768);
             scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            stage.setTitle("Top K");
+            stage.setTitle(string);
             stage.setScene(scene);
 
         } catch (IOException e) {
@@ -244,54 +226,6 @@ public class Controller {
         }
     }
 
-    public void buttonclick4(ActionEvent actionEvent) {
-
-
-        graph = new Graph();
-        Stage stage = new Stage();
-
-
-        final CategoryAxis xAxis = new CategoryAxis();
-        final NumberAxis yAxis = new NumberAxis();
-        final BarChart<String,Number> bc =
-                new BarChart<String,Number>(xAxis,yAxis);
-        bc.setTitle("Top K From Author");
-        xAxis.setLabel("Authors");
-        yAxis.setLabel("Paper Number");
-
-        XYChart.Series series1 = new XYChart.Series();
-//        series1.setName("Paper Number");
-
-
-        addGraphComponentsTopKAroundAuthor(series1);
-
-
-        bc.getData().addAll(series1);
-
-        BorderPane root = null;
-        try {
-
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-//            root.setCenter(graph.getScrollPane());
-            root.setCenter(bc);
-
-            Scene scene = new Scene(root, 1024, 768);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            stage.setTitle("Top K For Author");
-            stage.setScene(scene);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        assert root != null;
-        stage.show();
-
-
-        Layout layout = new RandomLayout(graph);
-        layout.execute();
-
-    }
-
     private void addGraphComponentsTopKAroundAuthor(XYChart.Series series1) {
 
         Author author = new Author();
@@ -302,10 +236,7 @@ public class Controller {
                 break;
             }
         }
-
-
         SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(author,5);
-
         Iterator it = sortedMap.entrySet().iterator();
 
         while(it.hasNext()){
