@@ -2,7 +2,7 @@ dblp-coauthor.txt
 dblp-paper.txt
 .idea/workspace.xml
 Application/out/
-.Application/.idea/workspace.xml
+Application/.idea/workspace.xml
 
 # Created by https://www.gitignore.io/api/jetbrains
 
@@ -60,8 +60,9 @@ fabric.properties
 ### JetBrains Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
 
-# *.iml
-# modules.xml
+Application/.idea/*.iml
+Application/.idea/modules.xml
+.idea/modules.xml
 # .idea/misc.xml
 # *.ipr
 
