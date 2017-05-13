@@ -33,8 +33,6 @@ import java.util.*;
 
 public class Controller {
 
-    public Button button1;
-    public Button button2;
     private Database db;
     private Graph graph;
 
@@ -166,7 +164,6 @@ public class Controller {
 
         graph.endUpdate();
     }
-
 
     private void MakeNewStageForChart(String string) {
 

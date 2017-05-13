@@ -211,7 +211,6 @@ public class Database {
 	{
 		SimpleWeightedGraph<Node, DefaultWeightedEdge> graph = new SimpleWeightedGraph<Node, DefaultWeightedEdge>(DefaultWeightedEdge.class);
 
-		//
 		for(Author sourceAuthor: authorGraph.vertexSet()){
 			HashSet<Author> tempSet = new HashSet<Author>();
 			tempSet.addAll(authorGraph.vertexSet());
@@ -357,7 +356,6 @@ public class Database {
 				Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();	//값을 뽑아낸다.
 				if (index >= count && min > entry.getValue()) //개수가 count 개 이상이고 최소 값이 count 등의 value 보다 작으면 탈출시킨다.
 					break;
-
 
 				result.put(entry.getKey(), entry.getValue());
 				index++;
