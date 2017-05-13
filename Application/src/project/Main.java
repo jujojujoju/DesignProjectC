@@ -13,11 +13,11 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    Database db = new Database();
+    private Database db = new Database();
     CheckBox [] checkBoxArray;
 
-    ScrollPane scrollPane = new ScrollPane();
-    AnchorPane anchorPane = new AnchorPane();
+    private ScrollPane scrollPane = new ScrollPane();
+    private AnchorPane anchorPane = new AnchorPane();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
