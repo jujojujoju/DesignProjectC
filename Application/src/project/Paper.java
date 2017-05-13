@@ -14,8 +14,13 @@ public class Paper extends Node{
 	}
 
 	public Paper(String paper) {
-		// TODO Auto-generated constructor stub
 		this.setName(paper);
+	}
+
+
+	public Paper(String name, String year) {
+		this.setName(name);
+		this.setYear(Integer.parseInt(year));
 	}
 
 	public int getYear() {

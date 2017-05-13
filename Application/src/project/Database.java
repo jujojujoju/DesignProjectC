@@ -19,16 +19,14 @@ import org.jgrapht.graph.SimpleWeightedGraph;
 public class Database {
 	private UndirectedGraph<Node, DefaultEdge> mainGraph;
 	private SimpleWeightedGraph<Author, DefaultWeightedEdge> authorGraph;
-	private Set<Author> authorSet;
-	private Set<Paper> paperSet;
+
 	private Map<String, Author> authorMap;
 	private Map<String, Paper> paperMap;
 
 	public Database(){
 		mainGraph = new SimpleGraph<>(DefaultEdge.class);
 		authorGraph = new SimpleWeightedGraph<Author, DefaultWeightedEdge> (DefaultWeightedEdge.class);
-		authorSet = new HashSet<Author>();
-		paperSet = new HashSet<Paper>();
+
 		authorMap = new HashMap<String, Author>();
 		paperMap = new HashMap<String, Paper>();
 	}
@@ -37,13 +35,13 @@ public class Database {
 		return mainGraph;
 	}
 
+	public SimpleWeightedGraph<Author, DefaultWeightedEdge> getAuthorGraph() { return authorGraph; }
+
 	public Set<Author> getAuthorSet(){
 		return authorGraph.vertexSet();
 	}
 
-	public Set<Paper> getPaperSet(){
-		return paperSet;
-	}
+	public Collection<Paper> getPaperCollection() { return paperMap.values(); }
 
 	public boolean readFile(){
 
@@ -55,25 +53,40 @@ public class Database {
 			while ((s = in.readLine()) != null) {
 				String[] result = s.split("\\|\\|");	//페이퍼 리스트를 분할
 
-				String paperkey = result[0];	//페이퍼 이름
+				String paperName = result[0];	//페이퍼 이름
 				String authorkey = result[1];	//저자 목록
 				String year = result[2];		//연도
 
 				String[] authorStringList = authorkey.split("\\&\\&");	//연도 목록을 분할
 
-				Paper paperTemp = new Paper(paperkey);	//새로운 페이퍼 생성
-				paperTemp.setYear(Integer.parseInt(year));	//페이퍼 연도 지정
+				Paper paperTemp = new Paper(paperName, year);	//새로운 페이퍼 생성
 
-				mainGraph.addVertex(paperTemp);	//페이퍼 노드를 추가한다.
-				paperSet.add(paperTemp);			//페이퍼를 찾기 쉽게 set에 페이퍼 추가
+				paperTemp = addPaper(paperTemp);
 
 				if(!authorkey.equals("")){
-					for(String author: authorStringList){
-						Author authorTemp = new Author(author);		//저자 생성
-						mainGraph.addVertex(authorTemp);			//저자 노드를 추가
-						authorGraph.addVertex(authorTemp);					//저자를 찾기 쉽게 set에 저자 추가
+					List<Author> list = new ArrayList<Author>();
+
+					for(String authorName: authorStringList){
+						Author authorTemp = new Author(authorName);		//저자 생성
+						authorTemp = addAuthor(authorTemp);
 						mainGraph.addEdge(paperTemp, authorTemp);	//저자와 해당 페이퍼를 잇는 edge추가
+						list.add(authorTemp);
 					}
+
+					Set<Set<Author>> resultSet = new HashSet<Set<Author>> ();
+					resultSet = Combination.getCombinationsFor(list, 2);
+
+
+					//여기서 주변 사람들 그래프 재 설정
+					for(Set<Author> connectedSet: resultSet) {
+						Author[] arr = new Author[2];
+						connectedSet.toArray(arr);
+
+						DefaultWeightedEdge e1 = authorGraph.addEdge(arr[0], arr[1]);
+						if (e1 != null)
+							authorGraph.setEdgeWeight(e1, authorGraph.getEdgeWeight(e1)+1);
+					}
+
 				}
 			}
 			in.close();
@@ -85,15 +98,27 @@ public class Database {
 
 	}
 
-	public boolean addAuthor(String name) {
-		Author author = new Author(name);
-		if(authorSet.contains(author))
-			return false;
+
+
+	public Paper addPaper(Paper paper) {
+		if(paperMap.get(paper.getName()) != null) {
+			return paperMap.get(paper.getName());
+		}
 		else {
-			authorSet.add(author);
+			paperMap.put(paper.getName(), paper);
+			mainGraph.addVertex(paper);
+			return paper;
+		}
+	}
+
+	public Author addAuthor(Author author) {
+		if(authorGraph.vertexSet().contains(author))
+			return authorMap.get(author.getName());
+		else {
 			mainGraph.addVertex(author);
 			authorGraph.addVertex(author);
-			return true;
+			authorMap.put(author.getName(), author);
+			return author;
 		}
 	}
 
