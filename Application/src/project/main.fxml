@@ -4,14 +4,33 @@
 <?import javafx.scene.layout.Pane?>
 
 
-<Pane fx:controller="project.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Button fx:id="button1" layoutX="390.0" layoutY="42.0" mnemonicParsing="false" text="검색" onAction="#buttonclick1"/>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.ToolBar?>
+<Pane fx:controller="project.Controller" maxHeight="800" maxWidth="1024" minHeight="800" minWidth="1024" prefHeight="800.0"
+      prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
 
-       <Button fx:id="button2" layoutX="700.0" layoutY="42.0" mnemonicParsing="false" text="Relation Graph" onAction="#buttonclick2"/>
 
-       <Button fx:id="button3" layoutX="390.0" layoutY="100.0" mnemonicParsing="false" text="topk" onAction="#buttonclick3"/>
+    <ToolBar prefWidth="1024">
+        <items>
+            <Button text="검색" onAction="#buttonclick1"/>
+            <Button text="Relation Graph" onAction="#buttonclick2"/>
+            <Button text="Topk" onAction="#buttonclick3"/>
+            <Button text="Topk From Author" onAction="#buttonclick4"/>
 
-       <Button fx:id="button4" layoutX="700.0" layoutY="100.0" mnemonicParsing="false" text="topk From Author" onAction="#buttonclick4"/>
-   </children>
+        </items>
+    </ToolBar>
+
+    <children>
+
+
+    </children>
+      <!--<Button fx:id="button1" layoutX="390.0" layoutY="42.0" mnemonicParsing="false" text="검색" onAction="#buttonclick1"/>-->
+
+       <!--<Button fx:id="button2" layoutX="700.0" layoutY="42.0" mnemonicParsing="false" text="Relation Graph" onAction="#buttonclick2"/>-->
+
+       <!--<Button fx:id="button3" layoutX="390.0" layoutY="100.0" mnemonicParsing="false" text="topk" onAction="#buttonclick3"/>-->
+
+       <!--<Button fx:id="button4" layoutX="700.0" layoutY="100.0" mnemonicParsing="false" text="topk From Author" onAction="#buttonclick4"/>-->
+
 </Pane>
