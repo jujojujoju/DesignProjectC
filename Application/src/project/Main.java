@@ -1,5 +1,6 @@
 package project;
 
+import com.sun.media.jfxmedia.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Orientation;
@@ -16,6 +17,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     private Database db = new Database();
+
+
 
     FXMLLoader loader;
 

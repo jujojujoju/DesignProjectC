@@ -8,6 +8,7 @@ import java.util.*;
 import org.jgrapht.GraphPath;
 import org.jgrapht.UndirectedGraph;
 import org.jgrapht.alg.interfaces.ShortestPathAlgorithm;
+import org.jgrapht.alg.scoring.PageRank;
 import org.jgrapht.alg.shortestpath.BellmanFordShortestPath;
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.alg.shortestpath.FloydWarshallShortestPaths;
@@ -15,20 +16,20 @@ import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleGraph;
 import org.jgrapht.graph.SimpleWeightedGraph;
+import org.jgrapht.traverse.BreadthFirstIterator;
+import org.jgrapht.traverse.GraphIterator;
 
 public class Database {
 	private UndirectedGraph<Node, DefaultEdge> mainGraph;
 	private SimpleWeightedGraph<Author, DefaultWeightedEdge> authorGraph;
-	private Set<Author> authorSet;
-	private Set<Paper> paperSet;
+
 	private Map<String, Author> authorMap;
 	private Map<String, Paper> paperMap;
 
 	public Database(){
 		mainGraph = new SimpleGraph<>(DefaultEdge.class);
 		authorGraph = new SimpleWeightedGraph<Author, DefaultWeightedEdge> (DefaultWeightedEdge.class);
-		authorSet = new HashSet<Author>();
-		paperSet = new HashSet<Paper>();
+
 		authorMap = new HashMap<String, Author>();
 		paperMap = new HashMap<String, Paper>();
 	}
@@ -37,17 +38,18 @@ public class Database {
 		return mainGraph;
 	}
 
+	public SimpleWeightedGraph<Author, DefaultWeightedEdge> getAuthorGraph() { return authorGraph; }
+
 	public Set<Author> getAuthorSet(){
 		return authorGraph.vertexSet();
 	}
 
-	public Set<Paper> getPaperSet(){
-		return paperSet;
-	}
+	public Collection<Paper> getPaperCollection() { return paperMap.values(); }
 
 	public boolean readFile(){
 
 		String paperURL = "paperList4.txt";
+		int index = 0;
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(paperURL));
 			String s;
@@ -55,26 +57,62 @@ public class Database {
 			while ((s = in.readLine()) != null) {
 				String[] result = s.split("\\|\\|");	//페이퍼 리스트를 분할
 
-				String paperkey = result[0];	//페이퍼 이름
+				String paperName = result[0];	//페이퍼 이름
 				String authorkey = result[1];	//저자 목록
 				String year = result[2];		//연도
 
+
+				String[] paperStringList = paperName.split("\\/");	//논문 이름을 분할
 				String[] authorStringList = authorkey.split("\\&\\&");	//연도 목록을 분할
 
-				Paper paperTemp = new Paper(paperkey);	//새로운 페이퍼 생성
-				paperTemp.setYear(Integer.parseInt(year));	//페이퍼 연도 지정
+				Paper paperTemp = new Paper();	//새로운 페이퍼 생성
+				paperTemp.setPaperKey(paperName);
+				paperTemp.setCategory(paperStringList[0]);
+				paperTemp.setJournal(paperStringList[1]);
+				paperTemp.setName(paperStringList[2]);
+				paperTemp.setYear(Integer.parseInt(year));
 
-				mainGraph.addVertex(paperTemp);	//페이퍼 노드를 추가한다.
-				paperSet.add(paperTemp);			//페이퍼를 찾기 쉽게 set에 페이퍼 추가
+				paperTemp = addPaper(paperTemp);
 
 				if(!authorkey.equals("")){
-					for(String author: authorStringList){
-						Author authorTemp = new Author(author);		//저자 생성
-						mainGraph.addVertex(authorTemp);			//저자 노드를 추가
-						authorGraph.addVertex(authorTemp);					//저자를 찾기 쉽게 set에 저자 추가
+					List<Author> list = new ArrayList<Author>();
+
+					for(String authorName: authorStringList){
+						Author authorTemp = new Author(authorName);		//저자 생성
+						authorTemp = addAuthor(authorTemp);
 						mainGraph.addEdge(paperTemp, authorTemp);	//저자와 해당 페이퍼를 잇는 edge추가
+						list.add(authorTemp);
 					}
+
+					Set<Set<Author>> resultSet = new HashSet<Set<Author>> ();
+					Combination<Author> combination = new Combination<Author>();
+					resultSet = combination.getCombinationsFor (list, 2);
+
+
+					//여기서 주변 사람들 그래프 재 설정
+					for(Set<Author> connectedSet: resultSet) {
+						Author[] arr = new Author[2];
+						connectedSet.toArray(arr);
+
+						DefaultWeightedEdge e1 = authorGraph.addEdge(arr[0], arr[1]);
+						if (e1 != null) // edge 새로 생성된 경우
+							authorGraph.setEdgeWeight(e1, 1);
+						else {			 // edge 이미 만들어 진 경우
+							DefaultWeightedEdge e2 = authorGraph.getEdge(arr[0], arr[1]);
+							double weight = authorGraph.getEdgeWeight(e2);
+							// 많이 같이 쓸 수록 가깝게 표현해야 한다.
+							weight = 1 / weight;
+							weight += 1;
+							weight = 1 / weight;
+							// 역수를 반영한다.
+							authorGraph.setEdgeWeight(e2, weight);
+						}
+
+					}
+
+
 				}
+				System.out.println(++index);
 			}
 			in.close();
 			return true;
@@ -85,15 +123,27 @@ public class Database {
 
 	}
 
-	public boolean addAuthor(String name) {
-		Author author = new Author(name);
-		if(authorSet.contains(author))
-			return false;
+
+
+	public Paper addPaper(Paper paper) {
+		if(paperMap.get(paper.getName()) != null) {
+			return paperMap.get(paper.getName());
+		}
 		else {
-			authorSet.add(author);
+			paperMap.put(paper.getName(), paper);
+			mainGraph.addVertex(paper);
+			return paper;
+		}
+	}
+
+	public Author addAuthor(Author author) {
+		if(authorGraph.vertexSet().contains(author))
+			return authorMap.get(author.getName());
+		else {
 			mainGraph.addVertex(author);
 			authorGraph.addVertex(author);
-			return true;
+			authorMap.put(author.getName(), author);
+			return author;
 		}
 	}
 
@@ -153,57 +203,27 @@ public class Database {
 	/////둘 사이 관계도 그래프
 	public UndirectedGraph<Node, DefaultEdge> getRelationGraph(Author sourceAuthor, Author targetAuthor)
 	{
-		//그래프 생성
+		// 그래프 생성
 		UndirectedGraph<Node, DefaultEdge> graph = new SimpleGraph<>(DefaultEdge.class);
-		//모든 노드로의 거리 계산
-		BellmanFordShortestPath<Node, DefaultEdge> dijkstraShortestPath = new BellmanFordShortestPath(mainGraph);
-		ShortestPathAlgorithm.SingleSourcePaths<Node, DefaultEdge> paths =  dijkstraShortestPath.getPaths(sourceAuthor);
-		BellmanFordShortestPath<Node, DefaultEdge> dijkstraShortestPath2 = new BellmanFordShortestPath(mainGraph);
-		ShortestPathAlgorithm.SingleSourcePaths<Node, DefaultEdge> paths2 =  dijkstraShortestPath.getPaths(targetAuthor);
 
-		Set<Author> relatedAuthor = new HashSet<Author>();
-		Set<GraphPath<Node, DefaultEdge>> graphSet = new HashSet<GraphPath<Node, DefaultEdge>>();
+		// 먼저 최단거리 경로를 찾는다.
+		BellmanFordShortestPath<Node, DefaultWeightedEdge> shortestPathAlg = new BellmanFordShortestPath(authorGraph);
+		GraphPath<Node, DefaultWeightedEdge> path =  shortestPathAlg.getPath(sourceAuthor, targetAuthor);
 
-		/*
-		Queue <Node> queue = new <Node> LinkedList();
-		Map<Node, Boolean> visited = new HashMap<Node, Boolean>();
-
-		queue.add(sourceAuthor);
-		while(!queue.isEmpty()) {
-			Node node = queue.poll();
-			if(node.equals(targetAuthor)) {
-				break;
-			}
-			for(DefaultEdge edge: mainGraph.edgesOf(node)) {
-				Node node1 = mainGraph.getEdgeSource(edge);
-				if(!visited.get(node1)) {
-					visited.put(node1, true);
-					queue.add(node1);
+		if(path != null) {
+			List<Node> authors = path.getVertexList();
+			for(Node author: authors) {
+				graph.addVertex(author);
+				Set<DefaultEdge> set = mainGraph.edgesOf(author);
+				for(DefaultEdge edge: set) {
+					graph.addVertex(mainGraph.getEdgeSource(edge));
+					graph.addVertex(mainGraph.getEdgeTarget(edge));
+					graph.addEdge(mainGraph.getEdgeSource(edge), mainGraph.getEdgeTarget(edge));
 				}
 			}
 		}
-		*/
 
-
-		//이 부분을 바꿔야 됨
-
-		for(Author author: authorGraph.vertexSet()){
-			double length = paths.getWeight(author);
-			double length2 = paths2.getWeight(author);
-			System.out.printf("(%f, %f)", length, length2);
-			if(length+length2<=6) {
-				graphSet.add(paths.getPath(author));
-				graphSet.add(paths2.getPath(author));
-			}
-		}
-		for(GraphPath<Node, DefaultEdge> path: graphSet){
-			for(Node node: path.getVertexList())
-				graph.addVertex(node);
-			for(DefaultEdge edge: path.getEdgeList())
-				graph.addEdge(mainGraph.getEdgeSource(edge), mainGraph.getEdgeTarget(edge));
-		}
-
-
+		// 그래프를 출력한다.
 		return graph;
 	}
 
@@ -363,5 +383,15 @@ public class Database {
 			}
 			return result;
 		}
+	}
+
+	public Map<Node, Integer> getRecommandPaperMap() {
+		Map<Node, Integer> resultPaperList = new HashMap<Node, Integer>();
+
+		PageRank rankAlg = new PageRank(mainGraph, 0.85);
+		resultPaperList = rankAlg.getScores();
+		System.out.println(resultPaperList);
+
+		return resultPaperList;
 	}
 }
