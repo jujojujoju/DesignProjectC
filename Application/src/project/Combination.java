@@ -8,19 +8,19 @@ import java.util.Set;
 /**
  * Created by jhyeo on 2017-05-13.
  */
-public class Combination {
-    public static Set<Set<Author>> getCombinationsFor(List<Author> group, int subsetSize) {
-        Set<Set<Author>> resultingCombinations = new HashSet<Set<Author>>();
+public class Combination <T> {
+    public Set<Set<T>> getCombinationsFor(List<T> group, int subsetSize) {
+        Set<Set<T>> resultingCombinations = new HashSet<Set<T>>();
         int totalSize=group.size();
         if (subsetSize == 0) {
             emptySet(resultingCombinations);
         } else if (subsetSize <= totalSize) {
-            List<Author> remainingElements = new ArrayList<Author>(group);
-            Author X = popLast(remainingElements);
+            List<T> remainingElements = new ArrayList<T>(group);
+            T X = popLast(remainingElements);
 
-            Set<Set<Author>> combinationsExclusiveX = getCombinationsFor(remainingElements, subsetSize);
-            Set<Set<Author>> combinationsInclusiveX = getCombinationsFor(remainingElements, subsetSize-1);
-            for (Set<Author> combination : combinationsInclusiveX) {
+            Set<Set<T>> combinationsExclusiveX = getCombinationsFor(remainingElements, subsetSize);
+            Set<Set<T>> combinationsInclusiveX = getCombinationsFor(remainingElements, subsetSize-1);
+            for (Set<T> combination : combinationsInclusiveX) {
                 combination.add(X);
             }
             resultingCombinations.addAll(combinationsExclusiveX);
@@ -29,11 +29,11 @@ public class Combination {
         return resultingCombinations;
     }
 
-    private static void emptySet(Set<Set<Author>> resultingCombinations) {
-        resultingCombinations.add(new HashSet<Author>());
+    private void emptySet(Set<Set<T>> resultingCombinations) {
+        resultingCombinations.add(new HashSet<T>());
     }
 
-    private static Author popLast(List<Author> elementsExclusiveX) {
+    private T popLast(List<T> elementsExclusiveX) {
         return elementsExclusiveX.remove(elementsExclusiveX.size()-1);
     }
 }
