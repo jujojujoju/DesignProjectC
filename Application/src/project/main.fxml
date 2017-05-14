@@ -15,13 +15,15 @@
         <items>
             <Button text="검색" onAction="#buttonclick1"/>
             <Button text="Relation Graph" onAction="#buttonclick2"/>
-            <Button text="Topk" onAction="#buttonclick3"/>
-            <Button text="Topk From Author" onAction="#buttonclick4"/>
+            <Button text="Top k" onAction="#buttonclick3"/>
+            <Button text="Top K For Author" onAction="#buttonclick4"/>
 
         </items>
     </ToolBar>
 
     <children>
+
+        <Button fx:id="buttonOK" text="OK" onAction="#buttonclick_OK"/>
 
 
     </children>

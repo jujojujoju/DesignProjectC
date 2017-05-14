@@ -17,19 +17,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     private Database db = new Database();
-    CheckBox [] checkBoxArray;
 
-    private ScrollPane scrollPane = new ScrollPane();
-    private AnchorPane anchorPane = new AnchorPane();
-
-
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-
-    db.readFile();
-  
-        /*
-    ScrollBar scrollBar = new ScrollBar();
 
 
     FXMLLoader loader;
