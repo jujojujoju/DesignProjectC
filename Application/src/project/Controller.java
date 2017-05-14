@@ -34,6 +34,8 @@ import java.io.IOException;
 import java.util.*;
 
 public class Controller {
+    private String buttonFlag = "";
+    public Button buttonOK;
     private Database db;
     private Graph graph;
 
@@ -45,12 +47,17 @@ public class Controller {
 
     private HashSet<Author> selectedAuthorSet;
 
-    private TextArea textArea = new TextArea();
-    private AnchorPane anchorPane = new AnchorPane();
-    private ScrollBar scrollBar = new ScrollBar();
+    private TextArea textArea;
+    private AnchorPane anchorPane;
+    private ScrollPane scrollPane;
+    private ScrollBar scrollBar;
     private CheckBox [] checkBoxArray;
 
-    public void initManager(Main main,Pane root, Stage stage) {
+    void initManager(Main main, Pane root, Stage stage) {
+        textArea = new TextArea();
+        anchorPane = new AnchorPane();
+        scrollPane = new ScrollPane();
+        scrollBar = new ScrollBar();
 
         this.main = main;
 
@@ -74,46 +81,39 @@ public class Controller {
         this.substage = stage;
         this.root = root;
 
+
+        buttonOK.setLayoutX(350);
+        buttonOK.setLayoutY(300);
+
+        textArea.setLayoutX(360);
+        textArea.setLayoutY(50);
+        textArea.setMaxHeight(100);
+
     }
 
     public void Authorityscreen(ActionEvent actionEvent) {
     }
 
     public void sendConnection(Connection connection) {
-
         this.connection = connection;
-
     }
 
     public void buttonclick1(ActionEvent actionEvent) {
-//        MakeNewStageForGraph("Graph");
         transformToMainGraph();
     }
     public void buttonclick2(ActionEvent actionEvent) {
         transformToRelationGraph();
-//        MakeNewStageForGraph("Relation Graph");
     }
     public void buttonclick3(ActionEvent actionEvent) {
-//        MakeNewStageForChart("Top K");
         transformToTopKChart();
     }
     public void buttonclick4(ActionEvent actionEvent) {
-//        MakeNewStageForChart("Top K For Author");
         transformToTopKFromAuthorChart();
-    }
-
-    private void transformToTopKChart() {
-    }
-
-    private void transformToTopKFromAuthorChart() {
     }
 
     private ScrollPane getScrollPane(Scene scene)
     {
         double height = scene.getHeight();
-
-
-        ScrollPane scrollPane = new ScrollPane();
 
         anchorPane.setMaxHeight(height);
         scrollPane.setMinHeight(height-100);
@@ -134,8 +134,7 @@ public class Controller {
         return scrollPane;
 
     }
-
-    public void transformToMainGraph()
+    void transformToMainGraph()
     {
         Pane root = (Pane)substage.getScene().getRoot();
         substage.getScene().setRoot(new Pane());
@@ -144,15 +143,21 @@ public class Controller {
         Scene scene = new Scene(root, 1024, 768);
         scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
+        if(root.getChildren().contains(scrollPane))
+            root.getChildren().removeAll(scrollPane);
+
+        textArea.setText("여러명의 저자를 선택하면, 그들의 관계를 보여줍니다.");
+
+        if(!root.getChildren().contains(textArea))
+            root.getChildren().add(textArea);
+
+
         root.getChildren().addAll(getScrollPane(scene));
-
-
-        if(textArea != null)
-        root.getChildren().remove(textArea);
-
         substage.setScene(scene);
-        substage.setTitle("Graph");
+        substage.setTitle(buttonFlag = "Graph");
         substage.show();
+
+
     }
     private void transformToRelationGraph()
     {
@@ -165,111 +170,160 @@ public class Controller {
         Scene scene = new Scene(root, 1024, 768);
         scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
-        textArea.setLayoutX(300);
-        textArea.setLayoutY(300);
-        textArea.setText("Hello\nworld!");
+
+        textArea.setText("두명의 저자를 선택해 주세요");
+
+        if(root.getChildren().contains(scrollPane))
+            root.getChildren().removeAll(scrollPane);
+
+        if(!root.getChildren().contains(textArea))
+            root.getChildren().add(textArea);
+
+        root.getChildren().addAll(getScrollPane(scene));
+
+        substage.setScene(scene);
+        substage.setTitle(buttonFlag = "Relation Graph");
+        substage.show();
+    }
+    private void transformToTopKChart() {
+        Pane root = (Pane)substage.getScene().getRoot();
+        substage.getScene().setRoot(new Pane());
+        substage.setScene(null);
+
+        Scene scene = new Scene(root, 1024, 768);
+        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+
+        if(root.getChildren().contains(scrollPane))
+            root.getChildren().removeAll(scrollPane);
+
+        textArea.setText("전체 저자 중 Top K를 보여줍니다.");
+
+        if(!root.getChildren().contains(textArea))
+            root.getChildren().add(textArea);
+
+        substage.setScene(scene);
+        substage.setTitle(buttonFlag = "Top K");
+        substage.show();
+
+    }
+
+    private void transformToTopKFromAuthorChart() {
+
+        Pane root = (Pane)substage.getScene().getRoot();
+        substage.getScene().setRoot(new Pane());
+        substage.setScene(null);
+
+        Scene scene = new Scene(root, 1024, 768);
+        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+
+
+        if(root.getChildren().contains(scrollPane))
+            root.getChildren().removeAll(scrollPane);
+
+        textArea.setText("선택된 저자와 관계된 저자 중 Top K ");
+
+        if(!root.getChildren().contains(textArea))
+            root.getChildren().add(textArea);
 
 
         root.getChildren().addAll(getScrollPane(scene));
-        root.getChildren().add(textArea);
-
 
         substage.setScene(scene);
-        substage.setTitle("Relation Graph");
+        substage.setTitle(buttonFlag = "Top K For Author");
         substage.show();
+
+    }
+    private void MakeNewStageForGraph(String string) {
+
+        graph = new Graph();
+        Stage stage = new Stage();
+
+        BorderPane root = null;
+        try {
+
+            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root.setCenter(graph.getScrollPane());
+
+            Scene scene = new Scene(root, 1024, 768);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            stage.setTitle(string);
+            stage.setScene(scene);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        assert root != null;
+        stage.show();
+
+        if(string.equals("Graph"))
+        addGraphComponents();
+        else
+            addGraphComponentsRelation();
+
+        Layout layout = new RandomLayout(graph);
+        layout.execute();
+
     }
 
+    private void addGraphComponents() {
 
-//    private void MakeNewStageForGraph(String string) {
+        selectedAuthorSet = new HashSet<Author>();
+        for(int i=0;i<checkBoxArray.length;i++)
+        {
+            if(checkBoxArray[i].isSelected()) {
+                selectedAuthorSet.add(new Author(checkBoxArray[i].getText()));
+            }
+        }
+
+        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(selectedAuthorSet);
+
+        Model model = graph.getModel();
+        graph.beginUpdate();
+
+        for(Node author:weightedGraph.vertexSet())
+        {
+            model.addCell(author.getName(), CellType.LABEL);
+        }
+
+        for(DefaultWeightedEdge edge :weightedGraph.edgeSet()) {
+            if(weightedGraph.getEdgeWeight(edge)>=1)    //웨이트가 1이상이면 표시가 되어야 합니다.
+                model.addEdge(weightedGraph.getEdgeTarget(edge).getName(), weightedGraph.getEdgeSource(edge).getName(), weightedGraph.getEdgeWeight(edge));
+        }
+
+        graph.endUpdate();
+    }
 //
-//        graph = new Graph();
-//        Stage stage = new Stage();
+    private void addGraphComponentsRelation()
+    {
+
+        ArrayList<Author> authors = new ArrayList<Author>();
 //
-//        BorderPane root = null;
-//        try {
-//
-//            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-//            root.setCenter(graph.getScrollPane());
-//
-//            Scene scene = new Scene(root, 1024, 768);
-//            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-//            stage.setTitle(string);
-//            stage.setScene(scene);
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        assert root != null;
-//        stage.show();
-//
-//        if(string.equals("Graph"))
-//        addGraphComponents();
-//        else
-//            addGraphComponentsRelation();
-//
-//        Layout layout = new RandomLayout(graph);
-//        layout.execute();
-//
-//    }
-//    private void addGraphComponents() {
-//
-//        selectedAuthorSet = new HashSet<Author>();
-//        for(int i=0;i<mCheckBoxArray.length;i++)
-//        {
-//            if(mCheckBoxArray[i].isSelected()) {
-//                selectedAuthorSet.add(new Author(mCheckBoxArray[i].getText()));
-//            }
-//        }
-//
-//        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(selectedAuthorSet);
-//
-//        Model model = graph.getModel();
-//        graph.beginUpdate();
-//
-//        for(Node author:weightedGraph.vertexSet())
-//        {
-//            model.addCell(author.getName(), CellType.LABEL);
-//        }
-//
-//        for(DefaultWeightedEdge edge :weightedGraph.edgeSet()) {
-//            if(weightedGraph.getEdgeWeight(edge)>=1)    //웨이트가 1이상이면 표시가 되어야 합니다.
-//                model.addEdge(weightedGraph.getEdgeTarget(edge).getName(), weightedGraph.getEdgeSource(edge).getName(), weightedGraph.getEdgeWeight(edge));
-//        }
-//
-//        graph.endUpdate();
-//    }
-//
-//    private void addGraphComponentsRelation()
-//    {
-//
-//        ArrayList<Author> authors = new ArrayList<Author>();
-////
-//        for(int i=0;i<mCheckBoxArray.length;i++)
-//        {
-//            if(mCheckBoxArray[i].isSelected()) {
-//                authors.add(new Author(mCheckBoxArray[i].getText()));
-//            }
-//        }
-//
-//        UndirectedGraph<Node, DefaultEdge> undirectedGraph = db.getRelationGraph(authors.get(0), authors.get(1));
-//
-//        Model model = graph.getModel();
-//        graph.beginUpdate();
-//
-//        for(Node author:undirectedGraph.vertexSet())
-//        {
-//            if(author.getClass().getName().equals("project.Paper"))
-//                model.addCell(author.getName(), CellType.PAPERLABEL);
-//            else
-//                model.addCell(author.getName(), CellType.LABEL);
-//        }
-//
-//        for(DefaultEdge edge :undirectedGraph.edgeSet()) {
-//            model.addEdge(undirectedGraph.getEdgeTarget(edge).getName(), undirectedGraph.getEdgeSource(edge).getName());
-//        }
-//
-//        graph.endUpdate();
-//    }
+        for(int i=0;i<checkBoxArray.length;i++)
+        {
+            if(checkBoxArray[i].isSelected()) {
+                authors.add(new Author(checkBoxArray[i].getText()));
+            }
+        }
+
+        UndirectedGraph<Node, DefaultEdge> undirectedGraph = db.getRelationGraph(authors.get(0), authors.get(1));
+
+        Model model = graph.getModel();
+        graph.beginUpdate();
+
+        for(Node author:undirectedGraph.vertexSet())
+        {
+            if(author.getClass().getName().equals("project.Paper"))
+                model.addCell(author.getName(), CellType.PAPERLABEL);
+            else
+                model.addCell(author.getName(), CellType.LABEL);
+        }
+
+        for(DefaultEdge edge :undirectedGraph.edgeSet()) {
+            model.addEdge(undirectedGraph.getEdgeTarget(edge).getName(), undirectedGraph.getEdgeSource(edge).getName());
+        }
+
+        graph.endUpdate();
+    }
 
     private void MakeNewStageForChart(String string) {
 
@@ -289,7 +343,7 @@ public class Controller {
         if(string.equals("Top K"))
             addGraphComponentsTopK(series1);
         else
-//        addGraphComponentsTopKAroundAuthor(series1);
+        addGraphComponentsTopKAroundAuthor(series1);
 
 
         bc.getData().addAll(series1);
@@ -329,22 +383,41 @@ public class Controller {
         }
     }
 
-//    private void addGraphComponentsTopKAroundAuthor(XYChart.Series series1) {
-//
-//        Author author = new Author();
-//        for(int i=0;i<mCheckBoxArray.length;i++)
-//        {
-//            if(mCheckBoxArray[i].isSelected()) {
-//                author = new Author(mCheckBoxArray[i].getText());
-//                break;
-//            }
-//        }
-//        SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(author,5);
-//        Iterator it = sortedMap.entrySet().iterator();
-//
-//        while(it.hasNext()){
-//            Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
-//            series1.getData().add(new XYChart.Data(entry.getKey().getName(),entry.getValue()));
-//        }
-//    }
+    public void buttonclick_OK(ActionEvent actionEvent) {
+
+        if(buttonFlag.equals("Graph"))
+        {
+            MakeNewStageForGraph(buttonFlag);
+        }
+        else if(buttonFlag.equals("Relation Graph"))
+        {
+            MakeNewStageForGraph(buttonFlag);
+        }else if(buttonFlag.equals("Top K"))
+        {
+            MakeNewStageForChart("Top K");
+        }
+        else if(buttonFlag.equals("Top K For Author"))
+        {
+            MakeNewStageForChart("Top K For Author");
+        }
+    }
+
+    private void addGraphComponentsTopKAroundAuthor(XYChart.Series series1) {
+
+        Author author = new Author();
+        for(int i=0;i<checkBoxArray.length;i++)
+        {
+            if(checkBoxArray[i].isSelected()) {
+                author = new Author(checkBoxArray[i].getText());
+                break;
+            }
+        }
+        SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(author,5);
+        Iterator it = sortedMap.entrySet().iterator();
+
+        while(it.hasNext()){
+            Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
+            series1.getData().add(new XYChart.Data(entry.getKey().getName(),entry.getValue()));
+        }
+    }
 }
