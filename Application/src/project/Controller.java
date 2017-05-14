@@ -387,10 +387,20 @@ public class Controller {
 
         if(buttonFlag.equals("Graph"))
         {
+
             MakeNewStageForGraph(buttonFlag);
         }
         else if(buttonFlag.equals("Relation Graph"))
         {
+            int count = 0;
+            for(int i=0;i<checkBoxArray.length;i++)
+            {
+                if(checkBoxArray[i].isSelected())
+                    count++;
+                if(count>=3)
+                    break;
+            }
+            if(count<3)
             MakeNewStageForGraph(buttonFlag);
         }else if(buttonFlag.equals("Top K"))
         {
@@ -398,6 +408,15 @@ public class Controller {
         }
         else if(buttonFlag.equals("Top K For Author"))
         {
+            int count = 0;
+            for(int i=0;i<checkBoxArray.length;i++)
+            {
+                if(checkBoxArray[i].isSelected())
+                    count++;
+                if(count>=2)
+                    break;
+            }
+            if(count<2)
             MakeNewStageForChart("Top K For Author");
         }
     }
