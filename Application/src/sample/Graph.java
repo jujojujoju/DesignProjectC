@@ -7,6 +7,8 @@ import javafx.scene.Group;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Pane;
 
+import java.util.List;
+
 
 public class Graph {
 
@@ -16,7 +18,7 @@ public class Graph {
 
     private ZoomableScrollPane scrollPane;
 
-    MouseGestures mouseGestures;
+    private MouseGestures mouseGestures;
 
     /**
      * the pane wrapper is necessary or else the scrollpane would always align
@@ -58,11 +60,22 @@ public class Graph {
     public void beginUpdate() {
     }
 
+    public void endUpdate(List<Cell> intersectionList)
+    {
+        getCellLayer().getChildren().addAll(model.getAddedCells());
+        getModel().attachOrphansToGraphParent(model.getAddedCells());
+        getModel().merge();
+
+    }
     public void endUpdate() {
 
         // add components to graph pane
         getCellLayer().getChildren().addAll(model.getAddedEdges());
         getCellLayer().getChildren().addAll(model.getAddedCells());
+
+        for(int i = 0; i <model.getPaperListForAuthor().size();i++) {
+            getCellLayer().getChildren().addAll(model.getPaperListForAuthor().get(i));
+        }
 
         // remove components from graph pane
         getCellLayer().getChildren().removeAll(model.getRemovedCells());
@@ -81,6 +94,10 @@ public class Graph {
         // every cell must have a parent, if it doesn't, then the graphParent is
         // the parent
         getModel().attachOrphansToGraphParent(model.getAddedCells());
+
+        for(int i = 0; i <model.getPaperListForAuthor().size();i++) {
+            getModel().attachOrphansToGraphParent(model.getPaperListForAuthor().get(i));
+        }
 
         // remove reference to graphParent
         getModel().disconnectFromGraphParent(model.getRemovedCells());

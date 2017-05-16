@@ -18,11 +18,9 @@ public class MouseGestures {
     }
 
     public void makeDraggable( final Node node) {
-
         node.setOnMousePressed(onMousePressedEventHandler);
         node.setOnMouseDragged(onMouseDraggedEventHandler);
         node.setOnMouseReleased(onMouseReleasedEventHandler);
-
     }
 
     public void makeDraggable( final Edge edge) {
@@ -37,7 +35,7 @@ public class MouseGestures {
             if(event.getSource().getClass() == Edge.class)
             {
                 Edge edge = (Edge) event.getSource();
-                edge.edgeClicked();
+                edge.edgeClicked(graph);
             }
         }
     };

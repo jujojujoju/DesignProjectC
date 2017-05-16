@@ -8,14 +8,11 @@ import java.util.Random;
 
 public class RandomLayout extends Layout {
 
-    Graph graph;
-
-    Random rnd = new Random();
+    private Graph graph;
+    private Random rnd = new Random();
 
     public RandomLayout(Graph graph) {
-
         this.graph = graph;
-
     }
 
     public void execute() {

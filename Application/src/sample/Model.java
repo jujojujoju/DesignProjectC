@@ -3,24 +3,25 @@ package sample;
 /**
  * Created by joju on 2017. 4. 14..
  */
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import project.Node;
+
+import java.util.*;
 
 public class Model {
 
-    Cell graphParent;
+    private Cell graphParent;
 
-    List<Cell> allCells;
-    List<Cell> addedCells;
-    List<Cell> removedCells;
+    private List<Cell> allCells;
+    private List<Cell> addedCells;
+    private List<Cell> removedCells;
 
-    List<Edge> allEdges;
-    List<Edge> addedEdges;
-    List<Edge> removedEdges;
+    private List<Edge> allEdges;
+    private List<Edge> addedEdges;
+    private List<Edge> removedEdges;
 
-    Map<String,Cell> cellMap; // <id,cell>
+    private Map<String,Cell> cellMap; // <id,cell>
+
+    private List<List<Cell>> paperListForAuthor;
 
     public Model() {
 
@@ -31,6 +32,7 @@ public class Model {
     }
 
     public void clear() {
+        paperListForAuthor = new ArrayList<List<Cell>>();
 
         allCells = new ArrayList<>();
         addedCells = new ArrayList<>();
@@ -71,6 +73,10 @@ public class Model {
 
     public List<Edge> getAllEdges() {
         return allEdges;
+    }
+
+    public List<List<Cell>> getPaperListForAuthor(){
+        return paperListForAuthor;
     }
 
     public void addCell(String id, CellType type) {
@@ -128,11 +134,30 @@ public class Model {
         Cell sourceCell = cellMap.get( sourceId);
         Cell targetCell = cellMap.get( targetId);
 
-        Edge edge = new Edge( sourceCell, targetCell, weight);
+        Edge edge = new Edge(sourceCell, targetCell, weight);
 
-        addedEdges.add( edge);
+        addedEdges.add(edge);
 
     }
+    public void addEdge(String sourceId, String targetId, double weight, Set<Node> intersection) {
+
+        Cell sourceCell = cellMap.get( sourceId);
+        Cell targetCell = cellMap.get( targetId);
+
+        List<Cell> intersectionList = new ArrayList<>();
+        for(Node node: intersection) {
+            PaperLabelCell paperlabelCell = new PaperLabelCell(node.getName());
+            paperlabelCell.setStyle("-fx-background-color: aqua");
+            paperlabelCell.setVisible(false);
+            intersectionList.add(paperlabelCell);
+        }
+
+        paperListForAuthor.add(intersectionList);
+        Edge edge = new Edge(sourceCell, targetCell, weight, paperListForAuthor.indexOf(intersectionList));
+
+        addedEdges.add(edge);
+    }
+
 
     /**
      * Attach all cells which don't have a parent to graphParent
@@ -164,6 +189,9 @@ public class Model {
         // cells
         allCells.addAll( addedCells);
         allCells.removeAll( removedCells);
+
+        for(int i = 0; i <paperListForAuthor.size();i++)
+                allCells.addAll(paperListForAuthor.get(i));
 
         addedCells.clear();
         removedCells.clear();
