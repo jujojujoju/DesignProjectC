@@ -1708,3 +1708,4 @@ conf/csmr/Vangheluwe11||Hans Vangheluwe||2011
 conf/csmr/BodhuinT05||Thierry Bodhuin&&Maria Tortorella||2005
 conf/csmr/CortellessaMP10||Vittorio Cortellessa&&Raffaela Mirandola&&Pasqualina Potena||2010
 conf/csmr/WangLJ13||Shaowei Wang&&David Lo&&Lingxiao Jiang||2013
+conf/csmr/WangLJ14||Shaowei Wang&&David Jin&&Lingxiao Ming||2013
