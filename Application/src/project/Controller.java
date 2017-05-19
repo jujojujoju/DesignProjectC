@@ -178,7 +178,17 @@ public class Controller {
             checkBoxList.add(checkBox);
         }
 
+
+//        System.out.println(checkBoxList.size());
+
+        textfield.setText("총 저자 : " + checkBoxList.size() + " 명");
+        textfield.setLayoutX(14);
+        textfield.setLayoutY(720);
+
+
         anchorPane.getChildren().addAll(checkBoxList);
+
+
 
     }
 
@@ -211,14 +221,6 @@ public class Controller {
         scrollPane.setLayoutX(14);
         scrollPane.setLayoutY(50);
 
-
-        System.out.println(checkBoxList.size());
-
-
-//        textfield.setText("Asdfasdfasdf");
-        textfield.setText("총 저자 : " + checkBoxList.size() + " 명");
-        textfield.setLayoutX(14);
-        textfield.setLayoutY(720);
 
 
 //        textfield.setText(""+checkBoxList.size());
