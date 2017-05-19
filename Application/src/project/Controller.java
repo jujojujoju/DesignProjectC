@@ -476,7 +476,7 @@ public class Controller {
         ArrayList<Author> authors = new ArrayList<Author>();
         for(int i=0;i<checkBoxList.size();i++)
             if(checkBoxList.get(i).isSelected())
-                selectedAuthorSet.add(new Author(checkBoxList.get(i).getText()));
+                authors.add(new Author(checkBoxList.get(i).getText()));
 
 
 
@@ -518,7 +518,7 @@ public class Controller {
         Author author = new Author();
         for(int i=0;i<checkBoxList.size();i++)
             if(checkBoxList.get(i).isSelected())
-                selectedAuthorSet.add(new Author(checkBoxList.get(i).getText()));
+                author = new Author(checkBoxList.get(i).getText());
 
 
         SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(author,numOfK);
