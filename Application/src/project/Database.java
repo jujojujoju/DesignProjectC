@@ -69,11 +69,13 @@ public class Database {
 
 	public Collection<Paper> getPaperCollection() { return paperMap.values(); }
 
+	//파일의 수정시간을 다시 고친다.
 	public void initModifiedTime() {
 		File file = new File(dbName);
 		timecheck = file.lastModified();
 	}
 
+	//DB파일의 수정시간을 체크한다.
 	public boolean checkFile(){
 		File file = new File(dbName);
 		if(timecheck == file.lastModified()){
@@ -223,7 +225,7 @@ public class Database {
 		return intersection;
 	}
 
-	//
+	//두 저자 사이의 공동 제작 논문을 그래프로 보여준다.
 	public UndirectedGraph<Node, DefaultEdge> getCoauthorGraph(Author sourceAuthor, Author targetAuthor)
 	{
 		UndirectedGraph<Node, DefaultEdge> graph = new SimpleGraph<>(DefaultEdge.class);
@@ -245,8 +247,6 @@ public class Database {
 
 		return graph;
 	}
-
-	int _length = 6;
 
 	/////둘 사이 관계도 그래프
 	public UndirectedGraph<Node, DefaultEdge> getRelationGraph(Author sourceAuthor, Author targetAuthor)

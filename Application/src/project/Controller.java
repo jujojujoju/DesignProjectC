@@ -1,6 +1,7 @@
 package project;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Orientation;
 import javafx.scene.Parent;
@@ -11,6 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import org.jgrapht.UndirectedGraph;
 import org.jgrapht.graph.*;
 import project.Author;
@@ -122,6 +124,12 @@ public class Controller {
 
         numOfK = 5;
 
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            public void handle(WindowEvent we) {
+                System.out.println("Stage is closing");
+                service.shutdown();
+            }
+        });
     }
 
     public void Authorityscreen(ActionEvent actionEvent) {
