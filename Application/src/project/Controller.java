@@ -22,7 +22,11 @@ import sample.Model;
 import sample.RandomLayout;
 
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.util.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class Controller {
 
@@ -54,8 +58,29 @@ public class Controller {
 
         this.main = main;
 
-        db = new Database();
+        db = new Database("paperList4.txt");
         db.readFile();
+        Runnable runnable = new Runnable() {
+            String digest;
+            @Override
+            public void run() {
+                System.out.println("시작");
+
+                if(db.checkFile()) {
+                    System.out.println("다르다");
+                    db.readFile();
+                }
+                else {
+                    System.out.println("같다");
+                }
+
+
+            }
+        };
+
+        ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+        service.scheduleWithFixedDelay(runnable,0, 10, TimeUnit.SECONDS);
+
 
         checkBoxList = new ArrayList<>();
 

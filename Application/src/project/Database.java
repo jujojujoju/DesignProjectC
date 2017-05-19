@@ -1,8 +1,15 @@
 package project;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.security.DigestInputStream;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.Date;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.*;
 
 import org.jgrapht.GraphPath;
@@ -21,12 +28,15 @@ import org.jgrapht.graph.SimpleWeightedGraph;
 import org.jgrapht.traverse.BreadthFirstIterator;
 import org.jgrapht.traverse.GraphIterator;
 
-public class Database  implements Runnable {
+public class Database {
 	private UndirectedGraph<Node, DefaultEdge> mainGraph;
 	private SimpleWeightedGraph<Author, DefaultWeightedEdge> authorGraph;
 
 	private Map<String, Author> authorMap;
 	private Map<String, Paper> paperMap;
+
+	private String dbName = "";
+	private long timecheck;
 
 	private int seq = 0;
 
@@ -36,6 +46,15 @@ public class Database  implements Runnable {
 
 		authorMap = new HashMap<String, Author>();
 		paperMap = new HashMap<String, Paper>();
+	}
+
+	public Database(String dbName){
+		mainGraph = new SimpleGraph<>(DefaultEdge.class);
+		authorGraph = new SimpleWeightedGraph<Author, DefaultWeightedEdge> (DefaultWeightedEdge.class);
+
+		authorMap = new HashMap<String, Author>();
+		paperMap = new HashMap<String, Paper>();
+		this.dbName = dbName;
 	}
 
 	public UndirectedGraph<Node, DefaultEdge> getMainGraph(){
@@ -50,21 +69,26 @@ public class Database  implements Runnable {
 
 	public Collection<Paper> getPaperCollection() { return paperMap.values(); }
 
-	//시간마다 파일을 읽어오도록 한다.
-	public void run() {
-		seq++;
-		System.out.println(this.seq+" thread start.");
-		try {
-			Thread.sleep(1000);
-		}catch(Exception e) {
-		}
-		System.out.println(this.seq+" thread end.");
+	public void initModifiedTime() {
+		File file = new File(dbName);
+		timecheck = file.lastModified();
 	}
 
+	public boolean checkFile(){
+		File file = new File(dbName);
+		if(timecheck == file.lastModified()){
+			return false;
+		}
+		else{
+			initModifiedTime();
+			return true;
+		}
+	}
 
+	//시간마다 파일을 읽어오도록 한다.
 	public boolean readFile(){
 
-		String paperURL = "paperList4.txt";
+		String paperURL = dbName;
 		int index = 0;
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(paperURL));
@@ -131,6 +155,9 @@ public class Database  implements Runnable {
 				System.out.println(++index);
 			}
 			in.close();
+
+
+			//테스팅 부분임
 
 			getRecommandPaperMap(new Author("Shuichi Itoh"));
 			//getRecommandPaperMap(new Author("AAA"));
@@ -411,7 +438,8 @@ public class Database  implements Runnable {
 		ShortestPathAlgorithm.SingleSourcePaths<Node, DefaultEdge> paths =  shortestPathAlg.getPaths(sourceAuthor);
 		//경로가 긴 순서대로 나열한다.
 		for(Node node: mainGraph.vertexSet()) {
-			aroundNodeMap.put(node, paths.getWeight(node));
+			if(Double.isFinite(paths.getWeight(node)))
+				aroundNodeMap.put(node, paths.getWeight(node));
 		}
 
 		//ValueComparator는 value기준 내림차순 정렬해주는 인터페이스
