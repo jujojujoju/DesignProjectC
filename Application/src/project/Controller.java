@@ -45,12 +45,15 @@ public class Controller {
     private HashSet<Author> selectedAuthorSet;
 
     private TextArea textArea;
+    private TextField textfield;
+
     private AnchorPane anchorPane;
     private ScrollPane scrollPane;
     private ScrollBar scrollBar;
     private List<CheckBox> checkBoxList;
 
     void initManager(Main main, Pane root, Stage stage) {
+        textfield = new TextField();
         textArea = new TextArea();
         anchorPane = new AnchorPane();
         scrollPane = new ScrollPane();
@@ -73,8 +76,6 @@ public class Controller {
                 else {
                     System.out.println("같다");
                 }
-
-
             }
         };
 
@@ -84,32 +85,22 @@ public class Controller {
 
         checkBoxList = new ArrayList<>();
 
-        int i=0;
-        for(Node author : db.getAuthorSet())
-        {
-            CheckBox checkBox = new CheckBox();
-            checkBox.setText(author.getName());
-            checkBox.setLayoutX(10);
-            checkBox.setLayoutY(10 + i * 20);
-            i++;
-            checkBoxList.add(checkBox);
-        }
-
-        //정렬 실패
-//        CharaterSort charaterSort = new CharaterSort();
-//        Collections.sort(checkBoxList,charaterSort);
-
-        anchorPane.getChildren().addAll(checkBoxList);
-
+        resetAuthorList();
 
         this.substage = stage;
         this.root = root;
 
         buttonOK.setLayoutX(350);
         buttonOK.setLayoutY(300);
+
         textArea.setLayoutX(360);
         textArea.setLayoutY(50);
         textArea.setMaxHeight(100);
+
+
+//        textfield.setText("Asdfasdfasdf");
+//        textfield.setLayoutX(14);
+//        textfield.setLayoutY(750);
 
         numOfK = 5;
 
@@ -123,18 +114,65 @@ public class Controller {
     }
 
     public void buttonclick1(ActionEvent actionEvent) {
+        resetAuthorList();
         transformToMainGraph();
     }
     public void buttonclick2(ActionEvent actionEvent) {
+        resetAuthorList();
         transformToRelationGraph();
     }
     public void buttonclick3(ActionEvent actionEvent) {
+        resetAuthorList();
         transformToTopKChart();
     }
     public void buttonclick4(ActionEvent actionEvent) {
+        resetAuthorList();
         transformToTopKFromAuthorChart();
     }
+    public void buttonclick5(ActionEvent actionEvent) {
+        resetAuthorList();
+        transformToReFreshDB();
+    }
 
+    private void transformToReFreshDB() {
+
+        if (buttonFlag.equals("Graph"))
+        {
+            transformToMainGraph();
+        }
+        else if(buttonFlag.equals("Relation Graph"))
+        {
+            transformToRelationGraph();
+        }
+        else if(buttonFlag.equals("Top K"))
+        {
+            transformToTopKChart();
+        }
+        else if(buttonFlag.equals("Top K For Author"))
+        {
+            transformToTopKFromAuthorChart();
+        }
+
+    }
+
+    public void resetAuthorList()
+    {
+
+        int i=0;
+        checkBoxList.clear();
+        for(Node author : db.getAuthorSet())
+        {
+            CheckBox checkBox = new CheckBox();
+            checkBox.setText(author.getName());
+            checkBox.setLayoutX(10);
+            checkBox.setLayoutY(10 + i * 20);
+            i++;
+            checkBoxList.add(checkBox);
+        }
+
+        anchorPane.getChildren().addAll(checkBoxList);
+
+    }
 
     private void resetCheckBox() {
 
@@ -148,6 +186,7 @@ public class Controller {
         double height = scene.getHeight();
 
         anchorPane.setMaxHeight(height);
+
         scrollPane.setMinHeight(height-100);
         scrollPane.setPrefHeight(height-100);
         scrollPane.setMaxHeight(height);
@@ -160,15 +199,30 @@ public class Controller {
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setContent(scrollBar);
         scrollPane.setContent(anchorPane);
+
         scrollPane.setLayoutX(14);
         scrollPane.setLayoutY(50);
+
+
+        System.out.println(checkBoxList.size());
+
+
+//        textfield.setText("Asdfasdfasdf");
+        textfield.setText("총 저자 : " + checkBoxList.size() + " 명");
+        textfield.setLayoutX(14);
+        textfield.setLayoutY(720);
+
+
+//        textfield.setText(""+checkBoxList.size());
+//        textfield.setLayoutX(14);
+//        textfield.setLayoutY(700);
 
         return scrollPane;
 
     }
 
 
-    void transformToMainGraph()
+    public String transformToMainGraph()
     {
         Pane root = (Pane)substage.getScene().getRoot();
         substage.getScene().setRoot(new Pane());
@@ -177,8 +231,10 @@ public class Controller {
         Scene scene = new Scene(root, 1024, 768);
         scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
-        if(!root.getChildren().contains(scrollPane))
+        if(!root.getChildren().contains(scrollPane)) {
             root.getChildren().addAll(getScrollPane(scene));
+            root.getChildren().add(textfield);
+        }
 
         resetCheckBox();
 
@@ -193,8 +249,10 @@ public class Controller {
         substage.show();
 
 
+        return buttonFlag;
     }
-    private void transformToRelationGraph()
+
+    private String transformToRelationGraph()
     {
         Pane root = (Pane)substage.getScene().getRoot();
         substage.getScene().setRoot(new Pane());
@@ -208,8 +266,10 @@ public class Controller {
 
         textArea.setText("두명의 저자를 선택해 주세요");
 
-        if(!root.getChildren().contains(scrollPane))
+        if(!root.getChildren().contains(scrollPane)) {
             root.getChildren().addAll(getScrollPane(scene));
+            root.getChildren().add(textfield);
+        }
 
         resetCheckBox();
 
@@ -219,8 +279,10 @@ public class Controller {
         substage.setScene(scene);
         substage.setTitle(buttonFlag = "Relation Graph");
         substage.show();
+
+        return buttonFlag;
     }
-    private void transformToTopKChart() {
+    private String transformToTopKChart() {
         Pane root = (Pane)substage.getScene().getRoot();
         substage.getScene().setRoot(new Pane());
         substage.setScene(null);
@@ -240,9 +302,11 @@ public class Controller {
         substage.setTitle(buttonFlag = "Top K");
         substage.show();
 
+
+        return buttonFlag;
     }
 
-    private void transformToTopKFromAuthorChart() {
+    private String transformToTopKFromAuthorChart() {
 
         Pane root = (Pane)substage.getScene().getRoot();
         substage.getScene().setRoot(new Pane());
@@ -251,8 +315,10 @@ public class Controller {
         Scene scene = new Scene(root, 1024, 768);
         scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
-        if(!root.getChildren().contains(scrollPane))
+        if(!root.getChildren().contains(scrollPane)) {
             root.getChildren().addAll(getScrollPane(scene));
+            root.getChildren().add(textfield);
+        }
 
         resetCheckBox();
 
@@ -264,6 +330,8 @@ public class Controller {
         substage.setScene(scene);
         substage.setTitle(buttonFlag = "Top K For Author");
         substage.show();
+
+        return buttonFlag;
 
     }
 
@@ -401,6 +469,7 @@ public class Controller {
                 selectedAuthorSet.add(new Author(checkBoxList.get(i).getText()));
 
 
+
         UndirectedGraph<Node, DefaultEdge> undirectedGraph = db.getRelationGraph(authors.get(0), authors.get(1));
 
         Model model = graph.getModel();
@@ -438,11 +507,9 @@ public class Controller {
 
         Author author = new Author();
         for(int i=0;i<checkBoxList.size();i++)
-        {
-            if(checkBoxList.get(i).isSelected()) {
+            if(checkBoxList.get(i).isSelected())
                 selectedAuthorSet.add(new Author(checkBoxList.get(i).getText()));
-            }
-        }
+
 
         SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(author,numOfK);
         Iterator it = sortedMap.entrySet().iterator();
@@ -455,13 +522,14 @@ public class Controller {
 
     public void buttonclick_OK(ActionEvent actionEvent) {
 
-        if(buttonFlag.equals("Graph"))
+        int count;
+        if (buttonFlag.equals("Graph"))
         {
-            MakeNewStageForGraph(buttonFlag);
+            MakeNewStageForGraph("Graph");
         }
         else if(buttonFlag.equals("Relation Graph"))
         {
-            int count = 0;
+            count = 0;
             for(int i=0;i<checkBoxList.size();i++)
             {
                 if(checkBoxList.get(i).isSelected())
@@ -469,15 +537,17 @@ public class Controller {
                 if(count>=3)
                     break;
             }
-            if(count<3)
-                MakeNewStageForGraph(buttonFlag);
-        }else if(buttonFlag.equals("Top K"))
+            if(count == 2)
+                MakeNewStageForGraph("Relation Graph");
+        }
+        else if(buttonFlag.equals("Top K"))
         {
             MakeNewStageForTopK("Top K");
+
         }
         else if(buttonFlag.equals("Top K For Author"))
         {
-            int count = 0;
+            count = 0;
             for(int i=0;i<checkBoxList.size();i++)
             {
                 if(checkBoxList.get(i).isSelected())
@@ -485,9 +555,10 @@ public class Controller {
                 if(count>=2)
                     break;
             }
-            if(count<2)
+            if(count == 1)
                 MakeNewStageForChart("Top K For Author");
         }
+
     }
 
     class CharaterSort implements Comparator<CheckBox>
