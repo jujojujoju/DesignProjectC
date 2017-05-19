@@ -405,27 +405,16 @@ public class Controller {
 
     }
 
-    private void MakeNewStageForChart(String string) {
+    private void MakeNewStageForTopKFromAuthor(String string) {
 
+        graph = new Graph();
         Stage stage = new Stage();
 
-        final CategoryAxis xAxis = new CategoryAxis();
-        final NumberAxis yAxis = new NumberAxis();
-        final BarChart<String,Number> bc = new BarChart<String,Number>(xAxis,yAxis);
-        bc.setTitle(string);
-        xAxis.setLabel("Authors");
-        yAxis.setLabel("Paper Number");
-        XYChart.Series series1 = new XYChart.Series();
-
-            addGraphComponentsTopKAroundAuthor(series1);
-
-        bc.getData().addAll(series1);
-
         BorderPane root = null;
-        try {
 
+        try {
             root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-            root.setCenter(bc);
+            root.setCenter(graph.getScrollPane());
 
             Scene scene = new Scene(root, 1024, 768);
             scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
@@ -437,6 +426,12 @@ public class Controller {
         }
         assert root != null;
         stage.show();
+
+        addGraphComponentsTopKAroundAuthor();
+
+        Layout layout = new RandomLayout(graph);
+        layout.execute();
+
 
     }
 
@@ -476,8 +471,7 @@ public class Controller {
         ArrayList<Author> authors = new ArrayList<Author>();
         for(int i=0;i<checkBoxList.size();i++)
             if(checkBoxList.get(i).isSelected())
-                selectedAuthorSet.add(new Author(checkBoxList.get(i).getText()));
-
+                authors.add(new Author(checkBoxList.get(i).getText()));
 
 
         UndirectedGraph<Node, DefaultEdge> undirectedGraph = db.getRelationGraph(authors.get(0), authors.get(1));
@@ -500,25 +494,29 @@ public class Controller {
         graph.endUpdate();
     }
     private void addGraphComponentsTopK() {
-    Model model = graph.getModel();
-        graph.beginUpdate();
+        Model model = graph.getModel();
+            graph.beginUpdate();
 
-    SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(numOfK);
-    Iterator it = sortedMap.entrySet().iterator();
+        SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(numOfK);
+        Iterator it = sortedMap.entrySet().iterator();
 
-        while(it.hasNext()){
-        Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
-        model.addTopKCell(entry.getKey().getName(),entry.getValue());
+            while(it.hasNext()){
+            Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
+            model.addTopKCell(entry.getKey().getName(),entry.getValue());
     }
 
         graph.endUpdate();
-}
-    private void addGraphComponentsTopKAroundAuthor(XYChart.Series series1) {
+    }
+    private void addGraphComponentsTopKAroundAuthor() {
+        Model model = graph.getModel();
+        graph.beginUpdate();
 
         Author author = new Author();
         for(int i=0;i<checkBoxList.size();i++)
-            if(checkBoxList.get(i).isSelected())
-                selectedAuthorSet.add(new Author(checkBoxList.get(i).getText()));
+            if(checkBoxList.get(i).isSelected()) {
+                author = (new Author(checkBoxList.get(i).getText()));
+                break;
+            }
 
 
         SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(author,numOfK);
@@ -526,8 +524,11 @@ public class Controller {
 
         while(it.hasNext()){
             Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
-            series1.getData().add(new XYChart.Data(entry.getKey().getName(),entry.getValue()));
+            model.addTopKCell(entry.getKey().getName(),entry.getValue());
         }
+
+        graph.endUpdate();
+
     }
 
     public void buttonclick_OK(ActionEvent actionEvent) {
@@ -566,7 +567,7 @@ public class Controller {
                     break;
             }
             if(count == 1)
-                MakeNewStageForChart("Top K For Author");
+                MakeNewStageForTopKFromAuthor("Top K For Author");
         }
 
     }

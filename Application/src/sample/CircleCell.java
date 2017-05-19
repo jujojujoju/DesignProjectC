@@ -15,7 +15,7 @@ public class CircleCell extends Cell {
         super(id);
 
         int red = (int) (radius*8);
-        Circle view = new Circle(radius,Color.rgb(red>255?255:red,10,10));
+        Circle view = new Circle(radius*10,Color.rgb(red>255?255:red,10,10));
         view.setStrokeWidth(3);
         Text text = new Text(id);
         StackPane stackPane = new StackPane();
