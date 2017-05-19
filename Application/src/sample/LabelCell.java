@@ -5,6 +5,7 @@ import javafx.scene.control.Label;
 /**
  * Created by joju on 2017. 4. 14..
  */
+
 public class LabelCell extends Cell {
 
     public LabelCell(String id) {

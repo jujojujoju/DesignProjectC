@@ -79,6 +79,10 @@ public class Model {
         return paperListForAuthor;
     }
 
+    public void addTopKCell(String id, double NumofPaper) {
+        CircleCell circleCell = new CircleCell(id,NumofPaper);
+        addCell(circleCell);
+    }
     public void addCell(String id, CellType type) {
 
         switch (type) {

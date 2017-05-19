@@ -13,22 +13,13 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import org.jgrapht.UndirectedGraph;
 import org.jgrapht.graph.*;
-import project.Author;
-import project.Database;
-import project.Node;
-
-import javafx.scene.layout.BorderPane;
-
-import org.jgrapht.WeightedGraph;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleWeightedGraph;
-import project.*;
 import sample.CellType;
 import sample.Graph;
 import sample.Layout;
 import sample.Model;
 import sample.RandomLayout;
-import sun.rmi.runtime.Log;
 
 import java.io.IOException;
 import java.util.*;
@@ -119,6 +110,14 @@ public class Controller {
         transformToTopKFromAuthorChart();
     }
 
+
+    private void resetCheckBox() {
+
+        for(int i=0;i<checkBoxList.size();i++)
+            checkBoxList.get(i).setSelected(false);
+    }
+
+
     private ScrollPane getScrollPane(Scene scene)
     {
         double height = scene.getHeight();
@@ -142,6 +141,8 @@ public class Controller {
         return scrollPane;
 
     }
+
+
     void transformToMainGraph()
     {
         Pane root = (Pane)substage.getScene().getRoot();
@@ -241,12 +242,6 @@ public class Controller {
 
     }
 
-    private void resetCheckBox() {
-
-        for(int i=0;i<checkBoxList.size();i++)
-            checkBoxList.get(i).setSelected(false);
-    }
-
     private void MakeNewStageForGraph(String string) {
 
         graph = new Graph();
@@ -278,76 +273,34 @@ public class Controller {
         layout.execute();
 
     }
-    ///
-    private void addGraphComponents() {
+    private void MakeNewStageForTopK(String string) {
 
-        selectedAuthorSet = new HashSet<Author>();
-        for(int i=0;i<checkBoxList.size();i++)
-        {
-            if(checkBoxList.get(i).isSelected()) {
-                selectedAuthorSet.add(new Author(checkBoxList.get(i).getText()));
-            }
+        graph = new Graph();
+        Stage stage = new Stage();
+
+        BorderPane root = null;
+
+        try {
+            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root.setCenter(graph.getScrollPane());
+
+            Scene scene = new Scene(root, 1024, 768);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            stage.setTitle(string);
+            stage.setScene(scene);
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        assert root != null;
+        stage.show();
 
+        addGraphComponentsTopK();
 
-        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(selectedAuthorSet);
+        Layout layout = new RandomLayout(graph);
+        layout.execute();
 
-        Model model = graph.getModel();
-        graph.beginUpdate();
-
-        for(Node author:weightedGraph.vertexSet())
-        {
-            model.addCell(author.getName(), CellType.LABEL);
-        }
-
-        Author source;
-        Author target;
-
-        for(DefaultWeightedEdge edge :weightedGraph.edgeSet()) {
-            if(weightedGraph.getEdgeWeight(edge)>=1)    //웨이트가 1이상이면 표시가 되어야 합니다.
-                model.addEdge((target = (Author) weightedGraph.getEdgeTarget(edge)).getName(),
-                        (source = (Author) weightedGraph.getEdgeSource(edge)).getName(),
-                        weightedGraph.getEdgeWeight(edge),
-                        db.getCoauthorSet(target,source));
-        }
-        graph.endUpdate();
     }
-
-    private void addGraphComponentsRelation()
-    {
-
-        ArrayList<Author> authors = new ArrayList<Author>();
-//
-        for(int i=0;i<checkBoxList.size();i++)
-        {
-        if(checkBoxList.get(i).isSelected()) {
-            selectedAuthorSet.add(new Author(checkBoxList.get(i).getText()));
-        }
-        }
-
-
-        UndirectedGraph<Node, DefaultEdge> undirectedGraph = db.getRelationGraph(authors.get(0), authors.get(1));
-
-        Model model = graph.getModel();
-        graph.beginUpdate();
-
-        for(Node author:undirectedGraph.vertexSet())
-        {
-            if(author.getClass().getName().equals("project.Paper"))
-                model.addCell(author.getName(), CellType.PAPERLABEL);
-            else
-                model.addCell(author.getName(), CellType.LABEL);
-        }
-
-        for(DefaultEdge edge :undirectedGraph.edgeSet()) {
-            model.addEdge(undirectedGraph.getEdgeTarget(edge).getName(), undirectedGraph.getEdgeSource(edge).getName());
-        }
-
-        graph.endUpdate();
-    }
-
-
-
 
     private void MakeNewStageForChart(String string) {
 
@@ -361,9 +314,6 @@ public class Controller {
         yAxis.setLabel("Paper Number");
         XYChart.Series series1 = new XYChart.Series();
 
-        if(string.equals("Top K"))
-            addGraphComponentsTopK(series1);
-        else
             addGraphComponentsTopKAroundAuthor(series1);
 
         bc.getData().addAll(series1);
@@ -387,18 +337,78 @@ public class Controller {
 
     }
 
-    private void addGraphComponentsTopK(XYChart.Series series1) {
 
-        SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(numOfK);
+    private void addGraphComponents() {
 
-        Iterator it = sortedMap.entrySet().iterator();
+        selectedAuthorSet = new HashSet<Author>();
+        for(int i=0;i<checkBoxList.size();i++)
+            if(checkBoxList.get(i).isSelected())
+                selectedAuthorSet.add(new Author(checkBoxList.get(i).getText()));
 
-        while(it.hasNext()){
-            Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
-            series1.getData().add(new XYChart.Data(entry.getKey().getName(),entry.getValue()));
+
+        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(selectedAuthorSet);
+
+        Model model = graph.getModel();
+        graph.beginUpdate();
+
+        for(Node author:weightedGraph.vertexSet())
+            model.addCell(author.getName(), CellType.LABEL);
+
+        Author source;
+        Author target;
+
+        for(DefaultWeightedEdge edge :weightedGraph.edgeSet()) {
+            if(weightedGraph.getEdgeWeight(edge)>=1)    //웨이트가 1이상이면 표시가 되어야 합니다.
+                model.addEdge((target = (Author) weightedGraph.getEdgeTarget(edge)).getName(),
+                        (source = (Author) weightedGraph.getEdgeSource(edge)).getName(),
+                        weightedGraph.getEdgeWeight(edge),
+                        db.getCoauthorSet(target,source));
         }
+        graph.endUpdate();
     }
 
+    private void addGraphComponentsRelation()
+    {
+
+        ArrayList<Author> authors = new ArrayList<Author>();
+        for(int i=0;i<checkBoxList.size();i++)
+            if(checkBoxList.get(i).isSelected())
+                selectedAuthorSet.add(new Author(checkBoxList.get(i).getText()));
+
+
+        UndirectedGraph<Node, DefaultEdge> undirectedGraph = db.getRelationGraph(authors.get(0), authors.get(1));
+
+        Model model = graph.getModel();
+        graph.beginUpdate();
+
+        for(Node author:undirectedGraph.vertexSet())
+        {
+            if(author.getClass().getName().equals("project.Paper"))
+                model.addCell(author.getName(), CellType.PAPERLABEL);
+            else
+                model.addCell(author.getName(), CellType.LABEL);
+        }
+
+        for(DefaultEdge edge :undirectedGraph.edgeSet()) {
+            model.addEdge(undirectedGraph.getEdgeTarget(edge).getName(), undirectedGraph.getEdgeSource(edge).getName());
+        }
+
+        graph.endUpdate();
+    }
+    private void addGraphComponentsTopK() {
+    Model model = graph.getModel();
+        graph.beginUpdate();
+
+    SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(numOfK);
+    Iterator it = sortedMap.entrySet().iterator();
+
+        while(it.hasNext()){
+        Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
+        model.addTopKCell(entry.getKey().getName(),entry.getValue());
+    }
+
+        graph.endUpdate();
+}
     private void addGraphComponentsTopKAroundAuthor(XYChart.Series series1) {
 
         Author author = new Author();
@@ -438,7 +448,7 @@ public class Controller {
                 MakeNewStageForGraph(buttonFlag);
         }else if(buttonFlag.equals("Top K"))
         {
-            MakeNewStageForChart("Top K");
+            MakeNewStageForTopK("Top K");
         }
         else if(buttonFlag.equals("Top K For Author"))
         {
