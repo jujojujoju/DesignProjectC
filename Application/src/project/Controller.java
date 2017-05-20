@@ -243,8 +243,11 @@ public class Controller {
 
         if(!root.getChildren().contains(scrollPane)) {
             root.getChildren().addAll(getScrollPane(scene));
-            root.getChildren().add(textfield);
         }
+
+        if(!root.getChildren().contains(textfield))
+            root.getChildren().add(textfield);
+
 
         resetCheckBox();
 
@@ -276,10 +279,12 @@ public class Controller {
 
         textArea.setText("두명의 저자를 선택해 주세요");
 
-        if(!root.getChildren().contains(scrollPane)) {
+        if(!root.getChildren().contains(scrollPane))
             root.getChildren().addAll(getScrollPane(scene));
+
+        if(!root.getChildren().contains(textfield))
             root.getChildren().add(textfield);
-        }
+
 
         resetCheckBox();
 
@@ -319,7 +324,9 @@ public class Controller {
     private String transformToTopKFromAuthorChart() {
 
         Pane root = (Pane)substage.getScene().getRoot();
+
         substage.getScene().setRoot(new Pane());
+
         substage.setScene(null);
 
         Scene scene = new Scene(root, 1024, 768);
@@ -327,8 +334,11 @@ public class Controller {
 
         if(!root.getChildren().contains(scrollPane)) {
             root.getChildren().addAll(getScrollPane(scene));
-            root.getChildren().add(textfield);
         }
+
+        if(!root.getChildren().contains(textfield))
+            root.getChildren().add(textfield);
+
 
         resetCheckBox();
 

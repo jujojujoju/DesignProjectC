@@ -20,7 +20,7 @@ public class Main extends Application {
 
 
 
-    FXMLLoader loader;
+    private FXMLLoader loader;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
