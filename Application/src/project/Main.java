@@ -16,10 +16,6 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private Database db = new Database();
-
-
-
     private FXMLLoader loader;
 
     @Override

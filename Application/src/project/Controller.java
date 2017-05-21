@@ -39,7 +39,6 @@ public class Controller {
     private Graph graph;
 
     private Connection connection;
-
     private Main main;
     private Stage substage;
     private Pane root;
@@ -55,13 +54,16 @@ public class Controller {
     private List<CheckBox> checkBoxList;
 
     void initManager(Main main, Pane root, Stage stage) {
+
+        this.main = main;
+
+
         textfield = new TextField();
         textArea = new TextArea();
         anchorPane = new AnchorPane();
         scrollPane = new ScrollPane();
         scrollBar = new ScrollBar();
-
-        this.main = main;
+        checkBoxList = new ArrayList<>();
 
         db = new Database("paperList4.txt");
         db.readFile();
@@ -85,24 +87,17 @@ public class Controller {
         service.scheduleWithFixedDelay(runnable,0, 10, TimeUnit.SECONDS);
 
 
-        checkBoxList = new ArrayList<>();
-
         resetAuthorList();
 
         this.substage = stage;
         this.root = root;
 
-        buttonOK.setLayoutX(350);
-        buttonOK.setLayoutY(300);
+        buttonOK.setLayoutX(360);
+        buttonOK.setLayoutY(170);
 
         textArea.setLayoutX(360);
         textArea.setLayoutY(50);
         textArea.setMaxHeight(100);
-
-
-//        textfield.setText("Asdfasdfasdf");
-//        textfield.setLayoutX(14);
-//        textfield.setLayoutY(750);
 
         numOfK = 5;
 
