@@ -16,11 +16,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private Database db = new Database();
-
-
-
-    FXMLLoader loader;
+    private FXMLLoader loader;
 
     @Override
     public void start(Stage primaryStage) throws Exception {

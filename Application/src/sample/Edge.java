@@ -43,7 +43,7 @@ public class Edge extends Group {
 
         this.source = source;
         this.target = target;
-        this.weight = weight;
+        this.weight = weight*3;
 
         source.addCellChild(target);
         target.addCellParent(source);
@@ -54,7 +54,7 @@ public class Edge extends Group {
         line.endXProperty().bind( target.layoutXProperty().add( target.getBoundsInParent().getWidth() / 2.0));
         line.endYProperty().bind( target.layoutYProperty().add( target.getBoundsInParent().getHeight() / 2.0));
 
-        line.setStrokeWidth(weight);
+        line.setStrokeWidth(this.weight);
 
         getChildren().add(line);
 
@@ -64,7 +64,7 @@ public class Edge extends Group {
 
         this.source = source;
         this.target = target;
-        this.weight = weight;
+        this.weight = weight*3;
         this.index = index;
 
         source.addCellChild(target);
@@ -76,7 +76,7 @@ public class Edge extends Group {
         line.endXProperty().bind( target.layoutXProperty().add( target.getBoundsInParent().getWidth() / 2.0));
         line.endYProperty().bind( target.layoutYProperty().add( target.getBoundsInParent().getHeight() / 2.0));
 
-        line.setStrokeWidth(weight);
+        line.setStrokeWidth(this.weight);
 
         getChildren().add(line);
 

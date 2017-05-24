@@ -39,7 +39,6 @@ public class Controller {
     private Graph graph;
 
     private Connection connection;
-
     private Main main;
     private Stage substage;
     private Pane root;
@@ -55,13 +54,16 @@ public class Controller {
     private List<CheckBox> checkBoxList;
 
     void initManager(Main main, Pane root, Stage stage) {
+
+        this.main = main;
+
+
         textfield = new TextField();
         textArea = new TextArea();
         anchorPane = new AnchorPane();
         scrollPane = new ScrollPane();
         scrollBar = new ScrollBar();
-
-        this.main = main;
+        checkBoxList = new ArrayList<>();
 
         db = new Database("paperList4.txt");
         db.readFile();
@@ -85,24 +87,17 @@ public class Controller {
         service.scheduleWithFixedDelay(runnable,0, 10, TimeUnit.SECONDS);
 
 
-        checkBoxList = new ArrayList<>();
-
         resetAuthorList();
 
         this.substage = stage;
         this.root = root;
 
-        buttonOK.setLayoutX(350);
-        buttonOK.setLayoutY(300);
+        buttonOK.setLayoutX(360);
+        buttonOK.setLayoutY(170);
 
         textArea.setLayoutX(360);
         textArea.setLayoutY(50);
         textArea.setMaxHeight(100);
-
-
-//        textfield.setText("Asdfasdfasdf");
-//        textfield.setLayoutX(14);
-//        textfield.setLayoutY(750);
 
         numOfK = 5;
 
@@ -243,8 +238,11 @@ public class Controller {
 
         if(!root.getChildren().contains(scrollPane)) {
             root.getChildren().addAll(getScrollPane(scene));
-            root.getChildren().add(textfield);
         }
+
+        if(!root.getChildren().contains(textfield))
+            root.getChildren().add(textfield);
+
 
         resetCheckBox();
 
@@ -276,10 +274,12 @@ public class Controller {
 
         textArea.setText("두명의 저자를 선택해 주세요");
 
-        if(!root.getChildren().contains(scrollPane)) {
+        if(!root.getChildren().contains(scrollPane))
             root.getChildren().addAll(getScrollPane(scene));
+
+        if(!root.getChildren().contains(textfield))
             root.getChildren().add(textfield);
-        }
+
 
         resetCheckBox();
 
@@ -319,7 +319,9 @@ public class Controller {
     private String transformToTopKFromAuthorChart() {
 
         Pane root = (Pane)substage.getScene().getRoot();
+
         substage.getScene().setRoot(new Pane());
+
         substage.setScene(null);
 
         Scene scene = new Scene(root, 1024, 768);
@@ -327,8 +329,11 @@ public class Controller {
 
         if(!root.getChildren().contains(scrollPane)) {
             root.getChildren().addAll(getScrollPane(scene));
-            root.getChildren().add(textfield);
         }
+
+        if(!root.getChildren().contains(textfield))
+            root.getChildren().add(textfield);
+
 
         resetCheckBox();
 
@@ -405,27 +410,16 @@ public class Controller {
 
     }
 
-    private void MakeNewStageForChart(String string) {
+    private void MakeNewStageForTopKFromAuthor(String string) {
 
+        graph = new Graph();
         Stage stage = new Stage();
 
-        final CategoryAxis xAxis = new CategoryAxis();
-        final NumberAxis yAxis = new NumberAxis();
-        final BarChart<String,Number> bc = new BarChart<String,Number>(xAxis,yAxis);
-        bc.setTitle(string);
-        xAxis.setLabel("Authors");
-        yAxis.setLabel("Paper Number");
-        XYChart.Series series1 = new XYChart.Series();
-
-            addGraphComponentsTopKAroundAuthor(series1);
-
-        bc.getData().addAll(series1);
-
         BorderPane root = null;
-        try {
 
+        try {
             root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-            root.setCenter(bc);
+            root.setCenter(graph.getScrollPane());
 
             Scene scene = new Scene(root, 1024, 768);
             scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
@@ -437,6 +431,12 @@ public class Controller {
         }
         assert root != null;
         stage.show();
+
+        addGraphComponentsTopKAroundAuthor();
+
+        Layout layout = new RandomLayout(graph);
+        layout.execute();
+
 
     }
 
@@ -477,7 +477,10 @@ public class Controller {
         for(int i=0;i<checkBoxList.size();i++)
             if(checkBoxList.get(i).isSelected())
                 authors.add(new Author(checkBoxList.get(i).getText()));
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9a2da5b1a829930e8368a1323fe4217b7407a1fb
 
 
         UndirectedGraph<Node, DefaultEdge> undirectedGraph = db.getRelationGraph(authors.get(0), authors.get(1));
@@ -500,25 +503,34 @@ public class Controller {
         graph.endUpdate();
     }
     private void addGraphComponentsTopK() {
-    Model model = graph.getModel();
-        graph.beginUpdate();
+        Model model = graph.getModel();
+            graph.beginUpdate();
 
-    SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(numOfK);
-    Iterator it = sortedMap.entrySet().iterator();
+        SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(numOfK);
+        Iterator it = sortedMap.entrySet().iterator();
 
-        while(it.hasNext()){
-        Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
-        model.addTopKCell(entry.getKey().getName(),entry.getValue());
+            while(it.hasNext()){
+            Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
+            model.addTopKCell(entry.getKey().getName(),entry.getValue());
     }
 
         graph.endUpdate();
-}
-    private void addGraphComponentsTopKAroundAuthor(XYChart.Series series1) {
+    }
+    private void addGraphComponentsTopKAroundAuthor() {
+        Model model = graph.getModel();
+        graph.beginUpdate();
 
         Author author = new Author();
         for(int i=0;i<checkBoxList.size();i++)
+<<<<<<< HEAD
             if(checkBoxList.get(i).isSelected())
                 author = new Author(checkBoxList.get(i).getText());
+=======
+            if(checkBoxList.get(i).isSelected()) {
+                author = (new Author(checkBoxList.get(i).getText()));
+                break;
+            }
+>>>>>>> 9a2da5b1a829930e8368a1323fe4217b7407a1fb
 
 
         SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(author,numOfK);
@@ -526,8 +538,11 @@ public class Controller {
 
         while(it.hasNext()){
             Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>)it.next();
-            series1.getData().add(new XYChart.Data(entry.getKey().getName(),entry.getValue()));
+            model.addTopKCell(entry.getKey().getName(),entry.getValue());
         }
+
+        graph.endUpdate();
+
     }
 
     public void buttonclick_OK(ActionEvent actionEvent) {
@@ -566,7 +581,7 @@ public class Controller {
                     break;
             }
             if(count == 1)
-                MakeNewStageForChart("Top K For Author");
+                MakeNewStageForTopKFromAuthor("Top K For Author");
         }
 
     }
