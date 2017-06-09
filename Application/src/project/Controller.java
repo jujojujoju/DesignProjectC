@@ -477,10 +477,6 @@ public class Controller {
         for(int i=0;i<checkBoxList.size();i++)
             if(checkBoxList.get(i).isSelected())
                 authors.add(new Author(checkBoxList.get(i).getText()));
-<<<<<<< HEAD
-
-=======
->>>>>>> 9a2da5b1a829930e8368a1323fe4217b7407a1fb
 
 
         UndirectedGraph<Node, DefaultEdge> undirectedGraph = db.getRelationGraph(authors.get(0), authors.get(1));
@@ -522,16 +518,11 @@ public class Controller {
 
         Author author = new Author();
         for(int i=0;i<checkBoxList.size();i++)
-<<<<<<< HEAD
-            if(checkBoxList.get(i).isSelected())
-                author = new Author(checkBoxList.get(i).getText());
-=======
+
             if(checkBoxList.get(i).isSelected()) {
                 author = (new Author(checkBoxList.get(i).getText()));
                 break;
             }
->>>>>>> 9a2da5b1a829930e8368a1323fe4217b7407a1fb
-
 
         SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(author,numOfK);
         Iterator it = sortedMap.entrySet().iterator();

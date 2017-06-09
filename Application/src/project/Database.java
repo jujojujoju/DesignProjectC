@@ -40,6 +40,7 @@ public class Database {
 
 	private int seq = 0;
 
+	//DB관련 생성자
 	public Database(){
 		mainGraph = new SimpleGraph<>(DefaultEdge.class);
 		authorGraph = new SimpleWeightedGraph<Author, DefaultWeightedEdge> (DefaultWeightedEdge.class);
