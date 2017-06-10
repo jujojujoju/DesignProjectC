@@ -24,9 +24,9 @@
 
         <Button fx:id="buttonOK" text="OK" onAction="#buttonclick_OK"/>
 
+        <Button fx:id="buttonAddSearched" text="Search" onAction="#buttonclick_Search"/>
 
-
-
+        <TextField fx:id="searchBox" />
     </children>
 
 </Pane>
