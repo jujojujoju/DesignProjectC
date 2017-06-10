@@ -32,6 +32,8 @@ public class Database {
 	private UndirectedGraph<Node, DefaultEdge> mainGraph;
 	private SimpleWeightedGraph<Author, DefaultWeightedEdge> authorGraph;
 
+	private Map<Author, List<Paper>> subscriptMap;
+
 	private Map<String, Author> authorMap;
 	private Map<String, Paper> paperMap;
 
@@ -40,6 +42,15 @@ public class Database {
 
 	private int seq = 0;
 
+	//todo xml에서 읽는 기능 추가
+	//todo 저자 센터에 놓기
+	//todo 구독기능 구현하기
+	//todo 논문수에 따른 top k 저널별 연도별 기능 추가
+	//todo 저자 이름 검색 및 이름 제안 기능 추가
+	//todo 검색횟수 목록 추가
+	//todo 논문 검색 경우 제목으로 검색 추가
+	//todo 공동저자가 제일 많은 저자와 가장 많은 논문을 작성한 저자 컬러링 기능도 구현
+
 	//DB관련 생성자
 	public Database(){
 		mainGraph = new SimpleGraph<>(DefaultEdge.class);
@@ -47,6 +58,8 @@ public class Database {
 
 		authorMap = new HashMap<String, Author>();
 		paperMap = new HashMap<String, Paper>();
+
+
 	}
 
 	public Database(String dbName){
@@ -56,6 +69,9 @@ public class Database {
 		authorMap = new HashMap<String, Author>();
 		paperMap = new HashMap<String, Paper>();
 		this.dbName = dbName;
+
+		subscriptMap = new HashMap<Author, List<Paper>>();
+		subscriptMap.put(new Author("Pyung Soo Kim"), new ArrayList<Paper>());
 	}
 
 	public UndirectedGraph<Node, DefaultEdge> getMainGraph(){
@@ -115,6 +131,9 @@ public class Database {
 				paperTemp.setName(paperStringList[2]);
 				paperTemp.setYear(Integer.parseInt(year));
 
+				if(checkSubscriptionList(paperTemp, authorStringList)) {
+					System.out.println("구독 테스트");
+				}
 				paperTemp = addPaper(paperTemp);
 
 				if(!authorkey.equals("")){
@@ -455,5 +474,21 @@ public class Database {
 
 
 		return resultPaperList;
+	}
+
+	boolean checkSubscriptionList(Paper paper, String[] authorStringList) {
+		for(String author: authorStringList) {
+			if(subscriptMap.containsKey(new Author(author))) {
+				if(subscriptMap.get(new Author(author)).contains(paper)) {
+					//해당 구독이 이미 체크가 된 경우
+					return false;
+				}
+				else {
+					subscriptMap.get(new Author(author)).add(paper);
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 }

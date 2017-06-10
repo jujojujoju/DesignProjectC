@@ -92,10 +92,10 @@ public class Controller {
         this.substage = stage;
         this.root = root;
 
-        buttonOK.setLayoutX(360);
+        buttonOK.setLayoutX(420);
         buttonOK.setLayoutY(170);
 
-        textArea.setLayoutX(360);
+        textArea.setLayoutX(420);
         textArea.setLayoutY(50);
         textArea.setMaxHeight(100);
 
