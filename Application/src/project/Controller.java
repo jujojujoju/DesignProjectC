@@ -76,6 +76,12 @@ public class Controller {
                 if(db.checkFile()) {
                     System.out.println("다르다");
                     db.readFile();
+                    //구독자 추가되었는지 큐나 스택으로 확인
+                    if(!db.getSubscriptStack().isEmpty()) {
+                        while(!db.getSubscriptStack().isEmpty()){
+                            System.out.println(db.getSubscriptStack().pop().toString() + "이 추가되었습니다.");
+                        }
+                    }
                 }
                 else {
                     System.out.println("같다");
@@ -92,10 +98,10 @@ public class Controller {
         this.substage = stage;
         this.root = root;
 
-        buttonOK.setLayoutX(360);
+        buttonOK.setLayoutX(420);
         buttonOK.setLayoutY(170);
 
-        textArea.setLayoutX(360);
+        textArea.setLayoutX(420);
         textArea.setLayoutY(50);
         textArea.setMaxHeight(100);
 
@@ -553,11 +559,11 @@ public class Controller {
 
         Author author = new Author();
         for(int i=0;i<checkBoxList.size();i++)
+
             if(checkBoxList.get(i).isSelected()) {
                 author = (new Author(checkBoxList.get(i).getText()));
                 break;
             }
-
 
         SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(author,numOfK);
         Iterator it = sortedMap.entrySet().iterator();
