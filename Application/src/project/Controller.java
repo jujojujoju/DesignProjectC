@@ -57,7 +57,6 @@ public class Controller {
 
         this.main = main;
 
-
         textfield = new TextField();
         textArea = new TextArea();
         anchorPane = new AnchorPane();
@@ -77,6 +76,7 @@ public class Controller {
                     System.out.println("다르다");
                     db.readFile();
                     //구독자 추가되었는지 큐나 스택으로 확인
+
                     if(!db.getSubscriptStack().isEmpty()) {
                         for (Map.Entry<Author, Paper> entry : db.getSubscriptStack().entrySet()) {
 
@@ -84,10 +84,7 @@ public class Controller {
 
                             Paper value = entry.getValue();
 
-                            System.out.println(key.toString() + ", " + value.toString());
-
-                        }
-                    }
+                            System.out.println(key.toString() + ", " + value.toString());                     
                 }
                 else {
                     System.out.println("같다");
@@ -148,6 +145,44 @@ public class Controller {
         resetAuthorList();
         transformToReFreshDB();
     }
+    public void buttonclick_subs(ActionEvent actionEvent) {
+
+        resetAuthorList();
+        transformToSubscribeList();
+    }
+
+    private String transformToSubscribeList() {
+
+        Pane root = (Pane)substage.getScene().getRoot();
+        substage.getScene().setRoot(new Pane());
+        substage.setScene(null);
+
+        Scene scene = new Scene(root, 1024, 768);
+        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+
+        if(!root.getChildren().contains(scrollPane)) {
+            root.getChildren().addAll(getScrollPane(scene));
+        }
+
+        if(!root.getChildren().contains(textfield))
+            root.getChildren().add(textfield);
+
+
+        resetCheckBox();
+
+
+        textArea.setText("구독기능");
+
+        if(!root.getChildren().contains(textArea))
+            root.getChildren().add(textArea);
+
+        substage.setScene(scene);
+        substage.setTitle(buttonFlag = "Subscribe");
+        substage.show();
+
+
+        return buttonFlag;
+    }
 
     private void transformToReFreshDB() {
 
@@ -185,18 +220,12 @@ public class Controller {
             checkBoxList.add(checkBox);
         }
 
-
-//        System.out.println(checkBoxList.size());
-
         textfield.setText("총 저자 : " + checkBoxList.size() + " 명");
         textfield.setLayoutX(14);
         textfield.setLayoutY(720);
 
 
         anchorPane.getChildren().addAll(checkBoxList);
-
-
-
     }
 
     private void resetCheckBox() {
@@ -227,12 +256,6 @@ public class Controller {
 
         scrollPane.setLayoutX(14);
         scrollPane.setLayoutY(50);
-
-
-
-//        textfield.setText(""+checkBoxList.size());
-//        textfield.setLayoutX(14);
-//        textfield.setLayoutY(700);
 
         return scrollPane;
 
@@ -363,6 +386,8 @@ public class Controller {
     }
 
     private void MakeNewStageForGraph(String string) {
+        Layout layout;
+        HashSet<Author> centerAuthorSet = new HashSet<>();
 
         graph = new Graph();
         Stage stage = new Stage();
@@ -385,11 +410,15 @@ public class Controller {
         stage.show();
 
         if(string.equals("Graph"))
-        addGraphComponents();
-        else
+        {
+            centerAuthorSet = addGraphComponents();
+            layout = new CenterLayout(graph, centerAuthorSet);
+        }
+        else {
             addGraphComponentsRelation();
+            layout = new RandomLayout(graph);
+        }
 
-        Layout layout = new RandomLayout(graph);
         layout.execute();
 
     }
@@ -453,7 +482,7 @@ public class Controller {
     }
 
 
-    private void addGraphComponents() {
+    private HashSet<Author> addGraphComponents() {
 
         selectedAuthorSet = new HashSet<Author>();
         for(int i=0;i<checkBoxList.size();i++)
@@ -480,6 +509,8 @@ public class Controller {
                         db.getCoauthorSet(target,source));
         }
         graph.endUpdate();
+
+        return selectedAuthorSet;
     }
 
     private void addGraphComponentsRelation()

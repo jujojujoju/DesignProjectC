@@ -20,13 +20,13 @@ public class RandomLayout extends Layout {
         List<Cell> cells = graph.getModel().getAllCells();
 
         for (Cell cell : cells) {
-
             double x = rnd.nextDouble() * 2000;
             double y = rnd.nextDouble() * 1000;
 
             cell.relocate(x, y);
 
         }
+
 
     }
 

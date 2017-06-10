@@ -67,9 +67,6 @@ public class Crawler extends TimerTask implements Runnable {
 					System.out.println(authorList[i]);
 				}
 
-
-
-
 			}
 			in.close();
 		} catch (IOException e) {
