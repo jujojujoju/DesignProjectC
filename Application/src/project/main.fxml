@@ -14,8 +14,8 @@
             <Button text="Relation Graph" onAction="#buttonclick2"/>
             <Button text="Top k" onAction="#buttonclick3"/>
             <Button text="Top K For Author" onAction="#buttonclick4"/>
-            <Button text="새로고침" onAction="#buttonclick5"/>
             <Button text="구독" onAction="#buttonclick_subs"/>
+            <Button text="새로고침" onAction="#buttonclick5"/>
 
         </items>
     </ToolBar>

@@ -31,7 +31,6 @@ public class CenterLayout extends Layout{
         double y = 0;
         List<Cell> cells = graph.getModel().getAllCells();
 
-        /////////////////////////
         for (Cell cell : cells) {
             x = rnd.nextDouble() * 2000;
             y = rnd.nextDouble() * 1000;
@@ -40,8 +39,9 @@ public class CenterLayout extends Layout{
 
                 if (author.getName().equals(cell.getCellId()))
                 {
-                    x = 500;
-                    y = 500;
+                    x = rnd.nextDouble() * 400+800;
+                    y = rnd.nextDouble() * 200+400;
+                    break;
                 }
             }
             cell.relocate(x, y);

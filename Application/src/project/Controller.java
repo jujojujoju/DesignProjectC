@@ -57,7 +57,6 @@ public class Controller {
 
         this.main = main;
 
-
         textfield = new TextField();
         textArea = new TextArea();
         anchorPane = new AnchorPane();
@@ -77,11 +76,9 @@ public class Controller {
                     System.out.println("다르다");
                     db.readFile();
                     //구독자 추가되었는지 큐나 스택으로 확인
-                    if(!db.getSubscriptStack().isEmpty()) {
                         while(!db.getSubscriptStack().isEmpty()){
                             System.out.println(db.getSubscriptStack().pop().toString() + "이 추가되었습니다.");
                         }
-                    }
                 }
                 else {
                     System.out.println("같다");
@@ -180,7 +177,6 @@ public class Controller {
 
         return buttonFlag;
     }
-
 
     private void transformToReFreshDB() {
 
