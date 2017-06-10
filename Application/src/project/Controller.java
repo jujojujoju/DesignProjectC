@@ -2,12 +2,9 @@ package project;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Orientation;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -25,7 +22,6 @@ import sample.Model;
 import sample.RandomLayout;
 
 import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
 import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -79,20 +75,8 @@ public class Controller {
                 if (db.checkFile()) {
                     System.out.println("다르다");
                     db.readFile();
-                    //구독자 추가되었는지 큐나 스택으로 확인
 
-
-                    if(!db.getSubscriptStack().isEmpty()) {
-                        for (Map.Entry<Author, Paper> entry : db.getSubscriptStack().entrySet()) {
-
-                            Author key = entry.getKey();
-
-                            Paper value = entry.getValue();
-
-                            System.out.println(key.toString() + ", " + value.toString());                     
-                         }
-                else {
-
+                } else {
                     System.out.println("같다");
                 }
             }
@@ -162,17 +146,15 @@ public class Controller {
         resetAuthorList();
         transformToReFreshDB();
     }
-
     public void buttonclick_subs(ActionEvent actionEvent) {
 
         resetAuthorList();
         transformToSubscribeList();
     }
-
-    public void buttonclick_Search(ActionEvent actionEvent) {
-        remakeAuthorList(searchBox.getText());
+    public void buttonclick_recommand(ActionEvent actionEvent) {
 
     }
+
 
     private void remakeAuthorList(String name) {
 
@@ -218,8 +200,11 @@ public class Controller {
             root.getChildren().add(textfield);
 
 
-        resetCheckBox();
+        searchBox.setVisible(true);
+        buttonAddSearched.setVisible(true);
 
+        resetCheckBox();
+        CheckSomeItem();
 
         textArea.setText("구독기능");
 
@@ -232,6 +217,21 @@ public class Controller {
 
 
         return buttonFlag;
+    }
+
+    private void CheckSomeItem() {
+
+        for (int i = 0; i < checkBoxList.size(); i++) {
+            for (Map.Entry<Author, Paper> entry : db.getSubscriptStack().entrySet()) {
+                Author key = entry.getKey();
+                Paper value = entry.getValue();
+                System.out.println(key.toString() + ", " + value.toString());
+
+                if(key.getName().equals(checkBoxList.get(i).getText()))
+                    checkBoxList.get(i).setSelected(true);
+            }
+        }
+
     }
 
     private void transformToReFreshDB() {
@@ -277,6 +277,7 @@ public class Controller {
     }
 
 
+
     private ScrollPane getScrollPane(Scene scene) {
         double height = scene.getHeight();
 
@@ -320,6 +321,8 @@ public class Controller {
 
         resetCheckBox();
 
+        searchBox.setVisible(true);
+        buttonAddSearched.setVisible(true);
 
         textArea.setText("여러명의 저자를 선택하면, 그들의 관계를 보여줍니다.");
 
@@ -346,6 +349,9 @@ public class Controller {
 
 
         textArea.setText("두명의 저자를 선택해 주세요");
+
+        searchBox.setVisible(true);
+        buttonAddSearched.setVisible(true);
 
         if (!root.getChildren().contains(scrollPane)) {
             root.getChildren().addAll(getScrollPane(scene));
@@ -376,6 +382,9 @@ public class Controller {
         Scene scene = new Scene(root, 1024, 768);
         scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
+        searchBox.setVisible(false);
+        buttonAddSearched.setVisible(false);
+
         if (root.getChildren().contains(scrollPane))
             root.getChildren().removeAll(scrollPane);
 
@@ -400,6 +409,11 @@ public class Controller {
 
         Scene scene = new Scene(root, 1024, 768);
         scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+
+
+        searchBox.setVisible(true);
+        buttonAddSearched.setVisible(true);
+
 
         if (!root.getChildren().contains(scrollPane)) {
             root.getChildren().addAll(getScrollPane(scene));
@@ -646,6 +660,9 @@ public class Controller {
                 MakeNewStageForTopKFromAuthor("Top K For Author");
         }
 
+    }
+    public void buttonclick_Search(ActionEvent actionEvent) {
+        remakeAuthorList(searchBox.getText());
     }
 
     class CharaterSort implements Comparator<CheckBox> {
