@@ -78,8 +78,14 @@ public class Controller {
                     db.readFile();
                     //구독자 추가되었는지 큐나 스택으로 확인
                     if(!db.getSubscriptStack().isEmpty()) {
-                        while(!db.getSubscriptStack().isEmpty()){
-                            System.out.println(db.getSubscriptStack().pop().toString() + "이 추가되었습니다.");
+                        for (Map.Entry<Author, Paper> entry : db.getSubscriptStack().entrySet()) {
+
+                            Author key = entry.getKey();
+
+                            Paper value = entry.getValue();
+
+                            System.out.println(key.toString() + ", " + value.toString());
+
                         }
                     }
                 }

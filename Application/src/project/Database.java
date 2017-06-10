@@ -33,7 +33,7 @@ public class Database {
 	private SimpleWeightedGraph<Author, DefaultWeightedEdge> authorGraph;
 
 	private Map<Author, List<Paper>> subscriptMap;
-	private Stack<Paper> subscriptStack;
+	private Map<Author, Paper> subscriptStack;
 
 	private Map<String, Author> authorMap;
 	private Map<String, Paper> paperMap;
@@ -45,7 +45,7 @@ public class Database {
 
 	//todo xml에서 읽는 기능 추가
 	//todo 저자 센터에 놓기
-	//todo 구독기능 구현하기
+	//todo 구독기능 구현하기 - 80%
 	//todo 논문수에 따른 top k 저널별 연도별 기능 추가
 	//todo 저자 이름 검색 및 이름 제안 기능 추가
 	//todo 검색횟수 목록 추가
@@ -72,7 +72,7 @@ public class Database {
 		this.dbName = dbName;
 
 		subscriptMap = new HashMap<Author, List<Paper>>();
-		subscriptStack = new Stack<Paper>();
+		subscriptStack = new HashMap<Author, Paper>();
 		subscriptMap.put(new Author("Pyung Soo Kim"), new ArrayList<Paper>());
 	}
 
@@ -88,11 +88,11 @@ public class Database {
 		this.subscriptMap = subscriptMap;
 	}
 
-	public Stack<Paper> getSubscriptStack() {
+	public Map<Author, Paper> getSubscriptStack() {
 		return subscriptStack;
 	}
 
-	public void setSubscriptStack(Stack<Paper> subscriptStack) {
+	public void setSubscriptStack(Map<Author, Paper> subscriptStack) {
 		this.subscriptStack = subscriptStack;
 	}
 
@@ -503,7 +503,7 @@ public class Database {
 				}
 				else {
 					subscriptMap.get(new Author(author)).add(paper);
-					subscriptStack.push(paper);
+					subscriptStack.put(new Author(author), paper);
 					return true;
 				}
 			}
