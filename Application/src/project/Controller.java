@@ -80,10 +80,19 @@ public class Controller {
                     System.out.println("다르다");
                     db.readFile();
                     //구독자 추가되었는지 큐나 스택으로 확인
-                    while (!db.getSubscriptStack().isEmpty()) {
-                        System.out.println(db.getSubscriptStack().pop().toString() + "이 추가되었습니다.");
-                    }
-                } else {
+
+
+                    if(!db.getSubscriptStack().isEmpty()) {
+                        for (Map.Entry<Author, Paper> entry : db.getSubscriptStack().entrySet()) {
+
+                            Author key = entry.getKey();
+
+                            Paper value = entry.getValue();
+
+                            System.out.println(key.toString() + ", " + value.toString());                     
+                         }
+                else {
+
                     System.out.println("같다");
                 }
             }
