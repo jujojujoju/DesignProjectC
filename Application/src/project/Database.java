@@ -33,6 +33,7 @@ public class Database {
 	private SimpleWeightedGraph<Author, DefaultWeightedEdge> authorGraph;
 
 	private Map<Author, List<Paper>> subscriptMap;
+	private Stack<Paper> subscriptStack;
 
 	private Map<String, Author> authorMap;
 	private Map<String, Paper> paperMap;
@@ -71,11 +72,28 @@ public class Database {
 		this.dbName = dbName;
 
 		subscriptMap = new HashMap<Author, List<Paper>>();
+		subscriptStack = new Stack<Paper>();
 		subscriptMap.put(new Author("Pyung Soo Kim"), new ArrayList<Paper>());
 	}
 
 	public UndirectedGraph<Node, DefaultEdge> getMainGraph(){
 		return mainGraph;
+	}
+
+	public Map<Author, List<Paper>> getSubscriptMap() {
+		return subscriptMap;
+	}
+
+	public void setSubscriptMap(Map<Author, List<Paper>> subscriptMap) {
+		this.subscriptMap = subscriptMap;
+	}
+
+	public Stack<Paper> getSubscriptStack() {
+		return subscriptStack;
+	}
+
+	public void setSubscriptStack(Stack<Paper> subscriptStack) {
+		this.subscriptStack = subscriptStack;
 	}
 
 	public SimpleWeightedGraph<Author, DefaultWeightedEdge> getAuthorGraph() { return authorGraph; }
@@ -485,6 +503,7 @@ public class Database {
 				}
 				else {
 					subscriptMap.get(new Author(author)).add(paper);
+					subscriptStack.push(paper);
 					return true;
 				}
 			}
