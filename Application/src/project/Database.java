@@ -47,9 +47,9 @@ public class Database {
 	//todo 저자 센터에 놓기
 	//todo 구독기능 구현하기 - 80%
 	//todo 논문수에 따른 top k 저널별 연도별 기능 추가
-	//todo 저자 이름 검색 및 이름 제안 기능 추가
-	//todo 검색횟수 목록 추가
-	//todo 논문 검색 경우 제목으로 검색 추가
+	//todo 저자 이름 검색 및 이름 제안 기능 추가 - 100%
+	//todo 검색횟수 목록 추가 - 50%
+
 	//todo 공동저자가 제일 많은 저자와 가장 많은 논문을 작성한 저자 컬러링 기능도 구현
 
 	//DB관련 생성자
@@ -84,7 +84,9 @@ public class Database {
 		return subscriptMap;
 	}
 
-	public void setSubscriptMap(Map<Author, List<Paper>> subscriptMap) {
+	public void setSubscriptMap(Map<Author
+
+			, List<Paper>> subscriptMap) {
 		this.subscriptMap = subscriptMap;
 	}
 
@@ -201,6 +203,14 @@ public class Database {
 
 			getRecommandPaperMap(new Author("Shuichi Itoh"));
 			//getRecommandPaperMap(new Author("AAA"));
+
+			//연도별 테스트 중
+			Params params = new Params();
+			params.year = 2008;
+
+			for(Map.Entry<Author, Integer> entry: getAuthorMapByCont(params).entrySet()) {
+				System.out.println(entry.toString());
+			}
 
 
 			return true;
@@ -428,6 +438,27 @@ public class Database {
 		return sortMap(contributeList, count);
 	}
 
+	public Map<Author, Integer> getAuthorMapByCont(Params params) {
+		//todo 논문 검색 경우 제목으로 검색 추가
+		Map<Author, Integer> result = new HashMap<> ();
+
+		if(params.year != -1) {
+			for(Author author:authorGraph.vertexSet()) {
+				int contributeNum = 0;
+				for(DefaultEdge edge: mainGraph.edgesOf(author)) {
+					Paper paper = (Paper) mainGraph.getEdgeSource(edge);
+					if(paper.getYear() == params.year)
+						contributeNum++;
+
+				}
+				result.put(author, contributeNum);
+			}
+		}
+
+
+		return sortMap(result, 10);
+	}
+
 
 	public Map<Node, Double> getRecommandPaperMap(Author sourceAuthor) {
 		Map<Node, Double> resultPaperList = new HashMap<Node, Double>();
@@ -519,6 +550,17 @@ public class Database {
 		for(Author author: getAuthorSet()) {
 			if(author.getName().contains(keyword)) {
 				authorArrayList.add(author.getName());
+			}
+		}
+		return authorArrayList;
+	}
+
+	public List<Author> getSearchAuthorObjList(String keyword){
+		List<Author> authorArrayList = new ArrayList<>();
+
+		for(Author author: getAuthorSet()) {
+			if(author.getName().contains(keyword)) {
+				authorArrayList.add(author);
 			}
 		}
 		return authorArrayList;
