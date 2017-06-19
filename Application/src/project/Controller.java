@@ -32,6 +32,7 @@ public class Controller {
 
     public Button buttonAddSearched;
     public TextField searchBox;
+    public TextArea searchTopKArea;
     private int numOfK;
     private String buttonFlag = "";
     public Button buttonOK;
@@ -113,6 +114,10 @@ public class Controller {
         searchBox.setLayoutY(180);
         buttonAddSearched.setLayoutX(600);
         buttonAddSearched.setLayoutY(180);
+
+        searchTopKArea.setLayoutX(400);
+        searchTopKArea.setLayoutY(400);
+
 
         textArea.setLayoutX(420);
         textArea.setLayoutY(50);
@@ -221,6 +226,8 @@ public class Controller {
 
         searchBox.setVisible(true);
         buttonAddSearched.setVisible(true);
+        searchTopKArea.setVisible(true);
+
 
         resetCheckBox();
         CheckSomeItem();
@@ -296,7 +303,6 @@ public class Controller {
     }
 
 
-
     private ScrollPane getScrollPane(Scene scene) {
         double height = scene.getHeight();
 
@@ -342,6 +348,7 @@ public class Controller {
 
         searchBox.setVisible(true);
         buttonAddSearched.setVisible(true);
+        searchTopKArea.setVisible(true);
 
         textArea.setText("여러명의 저자를 선택하면, 그들의 관계를 보여줍니다.");
 
@@ -371,6 +378,7 @@ public class Controller {
 
         searchBox.setVisible(true);
         buttonAddSearched.setVisible(true);
+        searchTopKArea.setVisible(true);
 
         if (!root.getChildren().contains(scrollPane)) {
             root.getChildren().addAll(getScrollPane(scene));
@@ -403,6 +411,7 @@ public class Controller {
 
         searchBox.setVisible(false);
         buttonAddSearched.setVisible(false);
+        searchTopKArea.setVisible(false);
 
         if (root.getChildren().contains(scrollPane))
             root.getChildren().removeAll(scrollPane);
@@ -432,6 +441,7 @@ public class Controller {
 
         searchBox.setVisible(true);
         buttonAddSearched.setVisible(true);
+        searchTopKArea.setVisible(true);
 
 
         if (!root.getChildren().contains(scrollPane)) {
@@ -681,7 +691,26 @@ public class Controller {
 
     }
     public void buttonclick_Search(ActionEvent actionEvent) {
+
         remakeAuthorList(searchBox.getText());
+
+        if(db.getSearchAuthorObjList(searchBox.getText()).size() == 1) {
+            db.getSearchAuthorObjList(searchBox.getText()).get(0).addNumOfSearch();
+        }
+
+        String text = "";
+        searchTopKArea.setText("");
+
+        int i = 1;
+        for(Map.Entry<Author, Integer> entry: db.getSearchAuthorTopkList(10).entrySet())
+        {
+            String record =i + "위 : " + entry.getKey().getName() + " ( " + entry.getValue() + "번 )";
+            System.out.println(record);
+            text = text + record + "\n";
+            i++;
+        }
+
+        searchTopKArea.setText(text);
     }
 
     class CharaterSort implements Comparator<CheckBox> {
