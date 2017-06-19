@@ -56,7 +56,17 @@ public class Controller {
     private ScrollBar scrollBar;
     private List<CheckBox> checkBoxList;
 
+    Alert alert;
+
+
     void initManager(Main main, Pane root, Stage stage) {
+
+        numOfK = 5;
+
+        //popup set
+        alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("알림");
+        alert.setHeaderText(null);
 
         this.main = main;
 
@@ -70,27 +80,27 @@ public class Controller {
         db = new Database("paperList4.txt");
         db.readFile();
         Runnable runnable = new Runnable() {
-            String digest;
 
             @Override
             public void run() {
                 System.out.println("시작");
 
+                //구독자 추가되었는지 큐나 스택으로 확인
+                if(!db.getSubscriptStack().isEmpty()) {
+                    for (Map.Entry<Author, Paper> entry : db.getSubscriptStack().entrySet()) {
+
+                        Author key = entry.getKey();
+                        Paper value = entry.getValue();
+
+                        alert.setContentText(key.toString() + ", " + value.toString());
+                        alert.showAndWait();
+
+                    }
+                }
+
                 if(db.checkFile()) {
                     System.out.println("다르다");
                     db.readFile();
-                    //구독자 추가되었는지 큐나 스택으로 확인
-                    if(!db.getSubscriptStack().isEmpty()) {
-                        for (Map.Entry<Author, Paper> entry : db.getSubscriptStack().entrySet()) {
-
-                            Author key = entry.getKey();
-
-                            Paper value = entry.getValue();
-
-                            System.out.println(key.toString() + ", " + value.toString());
-
-                        }
-                    }
                 }
                 else {
                     System.out.println("같다");
@@ -107,30 +117,15 @@ public class Controller {
         this.substage = stage;
         this.root = root;
 
-//        buttonOK.setLayoutX(420);
-//        buttonOK.setLayoutY(230);
-//        searchBox.setLayoutX(420);
-//        searchBox.setLayoutY(180);
-//        buttonAddSearched.setLayoutX(600);
-//        buttonAddSearched.setLayoutY(180);
         setLayoutXY(buttonOK,420,230);
         setLayoutXY(searchBox,420,180);
         setLayoutXY(buttonAddSearched,600,180);
-
-
-//        searchTopKArea.setLayoutX(400);
-//        searchTopKArea.setLayoutY(400);
         setLayoutXY(searchTopKArea,400,400);
-
-
-//        textArea.setLayoutX(420);
-//        textArea.setLayoutY(50);
         setLayoutXY(textArea,420,50);
 
 
         textArea.setMaxHeight(100);
 
-        numOfK = 5;
 
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent we) {
@@ -246,8 +241,6 @@ public class Controller {
         for (int i = 0; i < checkBoxList.size(); i++)
             checkBoxList.get(i).setSelected(false);
     }
-
-
 
     private String transformToSubscribeList() {
 
@@ -692,16 +685,6 @@ public class Controller {
     }
     public void buttonclick_Search(ActionEvent actionEvent) throws IOException {
 
-//        Popup popup = new Popup();
-//        popup.getContent().add(FXMLLoader.load(getClass().getResource("popup.fxml")));
-//        popup.setAutoHide(true);
-//        popup.show(substage);
-
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information Dialog");
-        alert.setHeaderText(null);
-        alert.setContentText("I have a great message for you!");
-        alert.showAndWait();
 
         remakeAuthorListAfterSearch(searchBox.getText());
 
