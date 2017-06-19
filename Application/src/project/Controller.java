@@ -694,26 +694,22 @@ public class Controller {
 
         remakeAuthorList(searchBox.getText());
 
-//        AnchorPane anchorPane;
-//        anchorPane.getChildren().removeAll(checkBoxList);
-//        anchorPane.getChildren().addAll(checkBoxList);
-        if(db.) {
-
+        if(db.getSearchAuthorObjList(searchBox.getText()).size() == 1) {
+            db.getSearchAuthorObjList(searchBox.getText()).get(0).addNumOfSearch();
         }
-
-
-        System.out.println("asdfasefasefasef");
 
         String text = "";
         searchTopKArea.setText("");
 
-//        for(int i=0;i<db.getSearchAuthorTopkList(10).size();i++)
+        int i = 1;
         for(Map.Entry<Author, Integer> entry: db.getSearchAuthorTopkList(10).entrySet())
         {
-            String record = entry.getValue() + " : " + entry.getKey().getName();
+            String record =i + "위 : " + entry.getKey().getName() + " ( " + entry.getValue() + "번 )";
             System.out.println(record);
             text = text + record + "\n";
+            i++;
         }
+
         searchTopKArea.setText(text);
     }
 
