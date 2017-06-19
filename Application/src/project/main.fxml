@@ -4,6 +4,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <Pane fx:controller="project.Controller" maxHeight="800" maxWidth="1024" minHeight="800" minWidth="1024" prefHeight="800.0"
       prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
 
@@ -28,6 +29,8 @@
         <Button fx:id="buttonAddSearched" text="Search" onAction="#buttonclick_Search"/>
 
         <TextField fx:id="searchBox" />
+
+        <TextArea fx:id="searchTopKArea"/>
     </children>
 
 </Pane>
