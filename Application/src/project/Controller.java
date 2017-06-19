@@ -1,5 +1,6 @@
 package project;
 
+import javafx.beans.DefaultProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import org.controlsfx.control.textfield.TextFields;
@@ -105,22 +107,27 @@ public class Controller {
         this.substage = stage;
         this.root = root;
 
-
-        buttonOK.setLayoutX(420);
-        buttonOK.setLayoutY(230);
-
-
-        searchBox.setLayoutX(420);
-        searchBox.setLayoutY(180);
-        buttonAddSearched.setLayoutX(600);
-        buttonAddSearched.setLayoutY(180);
-
-        searchTopKArea.setLayoutX(400);
-        searchTopKArea.setLayoutY(400);
+//        buttonOK.setLayoutX(420);
+//        buttonOK.setLayoutY(230);
+//        searchBox.setLayoutX(420);
+//        searchBox.setLayoutY(180);
+//        buttonAddSearched.setLayoutX(600);
+//        buttonAddSearched.setLayoutY(180);
+        setLayoutXY(buttonOK,420,230);
+        setLayoutXY(searchBox,420,180);
+        setLayoutXY(buttonAddSearched,600,180);
 
 
-        textArea.setLayoutX(420);
-        textArea.setLayoutY(50);
+//        searchTopKArea.setLayoutX(400);
+//        searchTopKArea.setLayoutY(400);
+        setLayoutXY(searchTopKArea,400,400);
+
+
+//        textArea.setLayoutX(420);
+//        textArea.setLayoutY(50);
+        setLayoutXY(textArea,420,50);
+
+
         textArea.setMaxHeight(100);
 
         numOfK = 5;
@@ -137,6 +144,12 @@ public class Controller {
             return db.getSearchAuthorList(t.getUserText());
 
         });
+    }
+
+    public void setLayoutXY(Region item, double x, double y)
+    {
+        item.setLayoutX(x);
+        item.setLayoutY(y);
     }
 
     public void Authorityscreen(ActionEvent actionEvent) {
@@ -180,7 +193,7 @@ public class Controller {
     }
 
 
-    private void remakeAuthorList(String name) {
+    private void remakeAuthorListAfterSearch(String name) {
 
         anchorPane.getChildren().removeAll(checkBoxList);
 
@@ -206,6 +219,35 @@ public class Controller {
 
     }
 
+    public void resetAuthorList() {
+        anchorPane.getChildren().removeAll(checkBoxList);
+
+        int i = 0;
+        checkBoxList.clear();
+
+        for (Node author : db.getAuthorSet()) {
+            CheckBox checkBox = new CheckBox();
+            checkBox.setText(author.getName());
+            checkBox.setLayoutX(10);
+            checkBox.setLayoutY(10 + i * 20);
+            i++;
+            checkBoxList.add(checkBox);
+        }
+
+        textfield.setText("총 저자 : " + checkBoxList.size() + " 명");
+        textfield.setLayoutX(14);
+        textfield.setLayoutY(720);
+
+
+        anchorPane.getChildren().addAll(checkBoxList);
+    }
+
+    private void resetCheckBox() {
+        for (int i = 0; i < checkBoxList.size(); i++)
+            checkBoxList.get(i).setSelected(false);
+    }
+
+
 
     private String transformToSubscribeList() {
 
@@ -213,8 +255,7 @@ public class Controller {
         substage.getScene().setRoot(new Pane());
         substage.setScene(null);
 
-        Scene scene = new Scene(root, 1024, 768);
-        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+        Scene scene = getCurrentScene(root);
 
         if (!root.getChildren().contains(scrollPane)) {
             root.getChildren().addAll(getScrollPane(scene));
@@ -260,6 +301,7 @@ public class Controller {
 
     }
 
+
     private void transformToReFreshDB() {
 
         if (buttonFlag.equals("Graph")) {
@@ -272,34 +314,6 @@ public class Controller {
             transformToTopKFromAuthorChart();
         }
 
-    }
-
-    public void resetAuthorList() {
-        anchorPane.getChildren().removeAll(checkBoxList);
-
-        int i = 0;
-        checkBoxList.clear();
-
-        for (Node author : db.getAuthorSet()) {
-            CheckBox checkBox = new CheckBox();
-            checkBox.setText(author.getName());
-            checkBox.setLayoutX(10);
-            checkBox.setLayoutY(10 + i * 20);
-            i++;
-            checkBoxList.add(checkBox);
-        }
-
-        textfield.setText("총 저자 : " + checkBoxList.size() + " 명");
-        textfield.setLayoutX(14);
-        textfield.setLayoutY(720);
-
-
-        anchorPane.getChildren().addAll(checkBoxList);
-    }
-
-    private void resetCheckBox() {
-        for (int i = 0; i < checkBoxList.size(); i++)
-            checkBoxList.get(i).setSelected(false);
     }
 
 
@@ -328,13 +342,18 @@ public class Controller {
 
     }
 
+    private Scene getCurrentScene(Pane root) {
+        Scene scene = new Scene(root, 1024, 768);
+        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+        return scene;
+    }
+
     public String transformToMainGraph() {
         Pane root = (Pane) substage.getScene().getRoot();
         substage.getScene().setRoot(new Pane());
         substage.setScene(null);
 
-        Scene scene = new Scene(root, 1024, 768);
-        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+        Scene scene = getCurrentScene(root);
 
         if (!root.getChildren().contains(scrollPane)) {
             root.getChildren().addAll(getScrollPane(scene));
@@ -370,8 +389,7 @@ public class Controller {
 
         root.getChildren().removeAll();
 
-        Scene scene = new Scene(root, 1024, 768);
-        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+        Scene scene = getCurrentScene(root);
 
 
         textArea.setText("두명의 저자를 선택해 주세요");
@@ -406,8 +424,7 @@ public class Controller {
         substage.getScene().setRoot(new Pane());
         substage.setScene(null);
 
-        Scene scene = new Scene(root, 1024, 768);
-        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+        Scene scene = getCurrentScene(root);
 
         searchBox.setVisible(false);
         buttonAddSearched.setVisible(false);
@@ -435,8 +452,7 @@ public class Controller {
         substage.getScene().setRoot(new Pane());
         substage.setScene(null);
 
-        Scene scene = new Scene(root, 1024, 768);
-        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+        Scene scene = getCurrentScene(root);
 
 
         searchBox.setVisible(true);
@@ -466,6 +482,23 @@ public class Controller {
 
     }
 
+
+    private BorderPane getBorderPane(String string, Stage stage, BorderPane root) {
+        try {
+            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root.setCenter(graph.getScrollPane());
+
+            Scene scene = getCurrentScene(root);
+            stage.setTitle(string);
+            stage.setScene(scene);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return root;
+    }
+
+
     private void MakeNewStageForGraph(String string) {
         Layout layout;
         HashSet<Author> centerAuthorSet = new HashSet<>();
@@ -475,18 +508,8 @@ public class Controller {
 
         BorderPane root = null;
 
-        try {
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-            root.setCenter(graph.getScrollPane());
+        root = getBorderPane(string, stage, root);
 
-            Scene scene = new Scene(root, 1024, 768);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            stage.setTitle(string);
-            stage.setScene(scene);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         assert root != null;
         stage.show();
 
@@ -509,18 +532,8 @@ public class Controller {
 
         BorderPane root = null;
 
-        try {
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-            root.setCenter(graph.getScrollPane());
+        root = getBorderPane(string, stage, root);
 
-            Scene scene = new Scene(root, 1024, 768);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            stage.setTitle(string);
-            stage.setScene(scene);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         assert root != null;
         stage.show();
 
@@ -537,19 +550,8 @@ public class Controller {
         Stage stage = new Stage();
 
         BorderPane root = null;
+        root = getBorderPane(string, stage, root);
 
-        try {
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-            root.setCenter(graph.getScrollPane());
-
-            Scene scene = new Scene(root, 1024, 768);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            stage.setTitle(string);
-            stage.setScene(scene);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         assert root != null;
         stage.show();
 
@@ -557,8 +559,6 @@ public class Controller {
 
         Layout layout = new RandomLayout(graph);
         layout.execute();
-
-
     }
 
 
@@ -690,9 +690,20 @@ public class Controller {
         }
 
     }
-    public void buttonclick_Search(ActionEvent actionEvent) {
+    public void buttonclick_Search(ActionEvent actionEvent) throws IOException {
 
-        remakeAuthorList(searchBox.getText());
+//        Popup popup = new Popup();
+//        popup.getContent().add(FXMLLoader.load(getClass().getResource("popup.fxml")));
+//        popup.setAutoHide(true);
+//        popup.show(substage);
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("I have a great message for you!");
+        alert.showAndWait();
+
+        remakeAuthorListAfterSearch(searchBox.getText());
 
         if(db.getSearchAuthorObjList(searchBox.getText()).size() == 1) {
             db.getSearchAuthorObjList(searchBox.getText()).get(0).addNumOfSearch();

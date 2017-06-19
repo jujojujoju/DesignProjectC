@@ -567,22 +567,12 @@ public class Database {
 	}
 
 	public Map<Author, Integer> getSearchAuthorTopkList(int count){
-		Map<Author, Integer> authorIntegerTreeMap = new TreeMap<>();
-
-		//ValueComparator는 value기준 내림차순 정렬해주는 인터페이스
-		ValueComparator<Author> bvc =  new ValueComparator<>(authorIntegerTreeMap);
-
-		for(Author author:authorGraph.vertexSet()){
-			authorIntegerTreeMap.put(author, author.getNumOfSearch());
+		HashMap<Author, Integer> hashMap = new HashMap<>();
+		for(Author author: authorGraph.vertexSet()) {
+			if (author.getNumOfSearch() > 0)
+				hashMap.put(author, author.getNumOfSearch());
 		}
 
-		Map<Author, Integer> sortedMap = new TreeMap<>(bvc);
-
-		for(Author author: sortMap(authorIntegerTreeMap, count).keySet()) {
-			if(author.numOfSearch>0)
-				sortedMap.put(author, author.getNumOfSearch());
-		}
-		return sortedMap;
+		return sortMap(hashMap, count);
 	}
-
 }
