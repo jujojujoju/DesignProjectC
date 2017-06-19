@@ -475,6 +475,8 @@ public class Database {
 		DijkstraShortestPath<Node, DefaultEdge> shortestPathAlg = new DijkstraShortestPath(mainGraph);
 		ShortestPathAlgorithm.SingleSourcePaths<Node, DefaultEdge> paths =  shortestPathAlg.getPaths(sourceAuthor);
 		//경로가 긴 순서대로 나열한다.
+		//fixme  안 이어진 부분은 어떻게 처리해야 될까??
+
 		for(Node node: mainGraph.vertexSet()) {
 			if(Double.isFinite(paths.getWeight(node)))
 				aroundNodeMap.put(node, paths.getWeight(node));
@@ -494,7 +496,7 @@ public class Database {
 		return resultPaperList;
 	}
 
-	boolean checkSubscriptionList(Paper paper, String[] authorStringList) {
+	public boolean checkSubscriptionList(Paper paper, String[] authorStringList) {
 		for(String author: authorStringList) {
 			if(subscriptMap.containsKey(new Author(author))) {
 				if(subscriptMap.get(new Author(author)).contains(paper)) {
@@ -509,5 +511,32 @@ public class Database {
 			}
 		}
 		return false;
+	}
+
+	public List<String> getSearchAuthorList(String keyword){
+		List<String> authorArrayList = new ArrayList<>();
+
+		for(Author author: getAuthorSet()) {
+			if(author.getName().contains(keyword)) {
+				authorArrayList.add(author.getName());
+			}
+		}
+		return authorArrayList;
+	}
+
+	public Map<Author, Integer> getSearchAuthorTopkList(int count){
+		Map<Author, Integer> authorIntegerHashMap = new HashMap<>();
+
+		for(Author author:authorGraph.vertexSet()){
+			authorIntegerHashMap.put(author, author.getNumOfSearch());
+		}
+
+		Map<Author, Integer> sortedMap = new HashMap<>();
+		sortMap(authorIntegerHashMap, count);
+		for(Author author: sortMap(authorIntegerHashMap, count).keySet()) {
+			if(author.numOfSearch>0)
+				sortedMap.put(author, author.getNumOfSearch());
+		}
+		return sortedMap;
 	}
 }

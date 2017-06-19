@@ -11,6 +11,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import org.controlsfx.control.textfield.TextFields;
 import org.jgrapht.UndirectedGraph;
 import org.jgrapht.graph.*;
 import org.jgrapht.graph.DefaultWeightedEdge;
@@ -72,11 +73,23 @@ public class Controller {
             public void run() {
                 System.out.println("시작");
 
-                if (db.checkFile()) {
+                if(db.checkFile()) {
                     System.out.println("다르다");
                     db.readFile();
+                    //구독자 추가되었는지 큐나 스택으로 확인
+                    if(!db.getSubscriptStack().isEmpty()) {
+                        for (Map.Entry<Author, Paper> entry : db.getSubscriptStack().entrySet()) {
 
-                } else {
+                            Author key = entry.getKey();
+
+                            Paper value = entry.getValue();
+
+                            System.out.println(key.toString() + ", " + value.toString());
+
+                        }
+                    }
+                }
+                else {
                     System.out.println("같다");
                 }
             }
@@ -112,6 +125,12 @@ public class Controller {
                 System.out.println("Stage is closing");
                 service.shutdown();
             }
+        });
+
+        TextFields.bindAutoCompletion(searchBox, t-> {
+
+            return db.getSearchAuthorList(t.getUserText());
+
         });
     }
 
