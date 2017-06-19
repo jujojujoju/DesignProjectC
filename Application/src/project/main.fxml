@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
@@ -31,3 +32,41 @@
     </children>
 
 </Pane>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<Pane fx:controller="project.Controller" maxHeight="800" maxWidth="1024" minHeight="800" minWidth="1024" prefHeight="800.0"
+      prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+
+
+    <ToolBar prefWidth="1024">
+        <items>
+            <Button text="검색" onAction="#buttonclick1"/>
+            <Button text="Relation Graph" onAction="#buttonclick2"/>
+            <Button text="Top k" onAction="#buttonclick3"/>
+            <Button text="Top K For Author" onAction="#buttonclick4"/>
+            <Button text="구독" onAction="#buttonclick_subs"/>
+            <Button text="논문추천" onAction="#buttonclick_recommand"/>
+            <Button text="새로고침" onAction="#buttonclick5"/>
+
+        </items>
+    </ToolBar>
+
+    <children>
+
+        <Button fx:id="buttonOK" text="OK" onAction="#buttonclick_OK"/>
+
+        <Button fx:id="buttonAddSearched" text="Search" onAction="#buttonclick_Search"/>
+
+        <TextField fx:id="searchBox" />
+
+        <TextArea fx:id="searchTopKArea"/>
+    </children>
+
+</Pane>
+
