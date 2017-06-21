@@ -31,6 +31,10 @@
         <TextField fx:id="searchBox" />
 
         <TextArea fx:id="searchTopKArea"/>
+
+        <TextField fx:id="yearBox" />
+
+
     </children>
 
 </Pane>

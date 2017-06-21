@@ -35,6 +35,7 @@ public class Controller {
     public Button buttonAddSearched;
     public TextField searchBox;
     public TextArea searchTopKArea;
+    public TextField yearBox;
     private int numOfK;
     private String buttonFlag = "";
     public Button buttonOK;
@@ -122,6 +123,9 @@ public class Controller {
         setLayoutXY(buttonAddSearched,600,180);
         setLayoutXY(searchTopKArea,400,400);
         setLayoutXY(textArea,420,50);
+        setLayoutXY(yearBox,700,180);
+        yearBox.setVisible(false);
+
 
 
         textArea.setMaxHeight(100);
@@ -262,6 +266,8 @@ public class Controller {
         buttonAddSearched.setVisible(true);
         searchTopKArea.setVisible(true);
 
+        yearBox.setVisible(false);
+
 
         resetCheckBox();
         CheckSomeItem();
@@ -362,6 +368,8 @@ public class Controller {
         buttonAddSearched.setVisible(true);
         searchTopKArea.setVisible(true);
 
+        yearBox.setVisible(false);
+
         textArea.setText("여러명의 저자를 선택하면, 그들의 관계를 보여줍니다.");
 
         if (!root.getChildren().contains(textArea))
@@ -390,10 +398,11 @@ public class Controller {
         searchBox.setVisible(true);
         buttonAddSearched.setVisible(true);
         searchTopKArea.setVisible(true);
+        yearBox.setVisible(false);
+
 
         if (!root.getChildren().contains(scrollPane)) {
             root.getChildren().addAll(getScrollPane(scene));
-            System.out.println("Asdfsdfsadf");
         }
 
         if (!root.getChildren().contains(textfield))
@@ -422,6 +431,9 @@ public class Controller {
         searchBox.setVisible(false);
         buttonAddSearched.setVisible(false);
         searchTopKArea.setVisible(false);
+        yearBox.setVisible(false);
+
+
 
         if (root.getChildren().contains(scrollPane))
             root.getChildren().removeAll(scrollPane);
@@ -451,6 +463,9 @@ public class Controller {
         searchBox.setVisible(true);
         buttonAddSearched.setVisible(true);
         searchTopKArea.setVisible(true);
+
+        yearBox.setVisible(true);
+
 
 
         if (!root.getChildren().contains(scrollPane)) {
@@ -684,8 +699,6 @@ public class Controller {
 
     }
     public void buttonclick_Search(ActionEvent actionEvent) throws IOException {
-
-
         remakeAuthorListAfterSearch(searchBox.getText());
 
         if(db.getSearchAuthorObjList(searchBox.getText()).size() == 1) {
