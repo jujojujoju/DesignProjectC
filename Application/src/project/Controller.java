@@ -68,7 +68,7 @@ public class Controller {
         checkBoxList = new ArrayList<>();
         subscription = new Subscription();
 
-        db = new Database("paperList4.txt");
+        db = new Database("mainPaperList.txt");
 
         MainGraphListener graphListener = new MainGraphListener();
         graphListener.setMainScene(this);
@@ -248,46 +248,7 @@ public class Controller {
             checkBoxList.get(i).setSelected(false);
     }
 
-    private String transformToSubscribeList() {
 
-        Pane root = (Pane) substage.getScene().getRoot();
-        substage.getScene().setRoot(new Pane());
-        substage.setScene(null);
-
-        Scene scene = getCurrentScene(root);
-
-        if (!root.getChildren().contains(scrollPane)) {
-            root.getChildren().addAll(getScrollPane(scene));
-        }
-
-        if (!root.getChildren().contains(textfield))
-            root.getChildren().add(textfield);
-
-
-        searchBox.setVisible(true);
-        buttonAddSearched.setVisible(true);
-        searchTopKArea.setVisible(true);
-
-        yearBox.setVisible(false);
-        yearAlertText.setVisible(false);
-
-
-
-        resetCheckBox();
-        CheckSomeItem();
-
-        textArea.setText("구독기능");
-
-        if (!root.getChildren().contains(textArea))
-            root.getChildren().add(textArea);
-
-        substage.setScene(scene);
-        substage.setTitle(buttonFlag = "Subscribe");
-        substage.show();
-
-
-        return buttonFlag;
-    }
 
     private void CheckSomeItem() {
 
@@ -314,6 +275,11 @@ public class Controller {
             transformToTopKChart();
         } else if (buttonFlag.equals("Top K For Author")) {
             transformToTopKFromAuthorChart();
+        }
+        else if (buttonFlag.equals("Recommand")) {
+            transformToRecommandList();
+        } else if (buttonFlag.equals("Subscribe")) {
+            transformToSubscribeList();
         }
 
     }
@@ -496,6 +462,46 @@ public class Controller {
 
     }
 
+    private String transformToSubscribeList() {
+
+        Pane root = (Pane) substage.getScene().getRoot();
+        substage.getScene().setRoot(new Pane());
+        substage.setScene(null);
+
+        Scene scene = getCurrentScene(root);
+
+        if (!root.getChildren().contains(scrollPane)) {
+            root.getChildren().addAll(getScrollPane(scene));
+        }
+
+        if (!root.getChildren().contains(textfield))
+            root.getChildren().add(textfield);
+
+
+        searchBox.setVisible(true);
+        buttonAddSearched.setVisible(true);
+        searchTopKArea.setVisible(true);
+
+        yearBox.setVisible(false);
+        yearAlertText.setVisible(false);
+
+
+
+        resetCheckBox();
+        CheckSomeItem();
+
+        textArea.setText("구독기능");
+
+        if (!root.getChildren().contains(textArea))
+            root.getChildren().add(textArea);
+
+        substage.setScene(scene);
+        substage.setTitle(buttonFlag = "Subscribe");
+        substage.show();
+
+
+        return buttonFlag;
+    }
 
     private String transformToRecommandList() {
         Pane root = (Pane) substage.getScene().getRoot();
