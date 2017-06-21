@@ -2,6 +2,7 @@ dblp-coauthor.txt
 dblp-paper.txt
 .idea/workspace.xml
 Application/out/
+Application/out
 Application/.idea/workspace.xml
 
 # Created by https://www.gitignore.io/api/jetbrains
