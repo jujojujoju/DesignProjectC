@@ -8,25 +8,15 @@ import javafx.geometry.Orientation;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import org.controlsfx.control.textfield.TextFields;
-import org.jgrapht.UndirectedGraph;
 import org.jgrapht.event.GraphChangeEvent;
 import org.jgrapht.event.GraphEdgeChangeEvent;
-import org.jgrapht.graph.*;
-import org.jgrapht.graph.DefaultWeightedEdge;
-import org.jgrapht.graph.SimpleWeightedGraph;
-import sample.CellType;
 import sample.Graph;
-import sample.Layout;
-import sample.Model;
-import sample.RandomLayout;
-
 import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.Executors;
@@ -44,14 +34,12 @@ public class Controller {
     public Text yearAlertText;
     public Button buttonOK;
 
-    private int numOfK;
     private String buttonFlag = "";
     private Database db;
     private Graph graph;
 
     private Stage substage;
 
-    private HashSet<Author> selectedAuthorSet;
 
     private TextArea textArea;
     private TextField textfield;
@@ -67,7 +55,6 @@ public class Controller {
 
     void initManager(Stage stage) {
 
-        numOfK = 5;
         isFirst = true;
 
         textfield = new TextField();
