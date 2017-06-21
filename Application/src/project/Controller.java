@@ -39,6 +39,7 @@ public class Controller {
     public TextField searchBox;
     public TextArea searchTopKArea;
     public TextField yearBox;
+    public Text yearAlertText;
     private int numOfK;
     private String buttonFlag = "";
     public Button buttonOK;
@@ -124,9 +125,13 @@ public class Controller {
         setLayoutXY(buttonAddSearched,600,180);
         setLayoutXY(searchTopKArea,400,400);
         setLayoutXY(textArea,420,50);
-        setLayoutXY(yearBox,700,180);
+        setLayoutXY(yearBox,780,180);
         yearBox.setVisible(false);
 
+        yearAlertText.setText("연도입력");
+        yearAlertText.setLayoutX(700);
+        yearAlertText.setLayoutY(200);
+        yearAlertText.setVisible(false);
 
 
         textArea.setMaxHeight(100);
@@ -277,6 +282,8 @@ public class Controller {
         searchTopKArea.setVisible(true);
 
         yearBox.setVisible(false);
+        yearAlertText.setVisible(false);
+
 
 
         resetCheckBox();
@@ -379,6 +386,8 @@ public class Controller {
         searchTopKArea.setVisible(true);
 
         yearBox.setVisible(false);
+        yearAlertText.setVisible(false);
+
 
         textArea.setText("여러명의 저자를 선택하면, 그들의 관계를 보여줍니다.");
 
@@ -409,6 +418,8 @@ public class Controller {
         buttonAddSearched.setVisible(true);
         searchTopKArea.setVisible(true);
         yearBox.setVisible(false);
+        yearAlertText.setVisible(false);
+
 
 
         if (!root.getChildren().contains(scrollPane)) {
@@ -442,6 +453,7 @@ public class Controller {
         buttonAddSearched.setVisible(false);
         searchTopKArea.setVisible(false);
         yearBox.setVisible(false);
+        yearAlertText.setVisible(false);
 
 
 
@@ -475,7 +487,7 @@ public class Controller {
         searchTopKArea.setVisible(true);
 
         yearBox.setVisible(true);
-
+        yearAlertText.setVisible(true);
 
 
         if (!root.getChildren().contains(scrollPane)) {
@@ -512,6 +524,9 @@ public class Controller {
         searchBox.setVisible(true);
         buttonAddSearched.setVisible(true);
         searchTopKArea.setVisible(true);
+        yearBox.setVisible(false);
+        yearAlertText.setVisible(false);
+
 
 
         if (!root.getChildren().contains(scrollPane)) {
@@ -710,17 +725,30 @@ public class Controller {
         Model model = graph.getModel();
         graph.beginUpdate();
 
+        SortedMap sortedMap;
+
         Author author = new Author();
         for (int i = 0; i < checkBoxList.size(); i++)
-
             if (checkBoxList.get(i).isSelected()) {
                 author = (new Author(checkBoxList.get(i).getText()));
                 break;
             }
 
-        SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(author, numOfK);
-        Iterator it = sortedMap.entrySet().iterator();
+        if(!yearBox.getText().equals("")) {
+            Params params = new Params();
+            params.count = numOfK;
+            params.name = author.getName();
+            params.year = Integer.parseInt(yearBox.getText());
 
+            sortedMap = (SortedMap) db.getAuthorMapByCont(params);
+        }
+        else {
+            sortedMap = (SortedMap) db.getAuthorMapByCont(author, numOfK);
+        }
+
+        System.out.println(sortedMap.toString());
+
+        Iterator it = sortedMap.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>) it.next();
             model.addTopKCell(entry.getKey().getName(), entry.getValue());
@@ -760,41 +788,42 @@ public class Controller {
         if (buttonFlag.equals("Graph")) {
             MakeNewStageForGraph("Graph");
         } else if (buttonFlag.equals("Relation Graph")) {
-            count = 0;
-            for (int i = 0; i < checkBoxList.size(); i++) {
-                if (checkBoxList.get(i).isSelected())
-                    count++;
-                if (count >= 3)
-                    break;
-            }
+
+            count = getCount(3);
+
             if (count == 2)
                 MakeNewStageForGraph("Relation Graph");
         } else if (buttonFlag.equals("Top K")) {
             MakeNewStageForTopK("Top K");
 
         } else if (buttonFlag.equals("Top K For Author")) {
-            count = 0;
-            for (int i = 0; i < checkBoxList.size(); i++) {
-                if (checkBoxList.get(i).isSelected())
-                    count++;
-                if (count >= 2)
-                    break;
-            }
+
+            count = getCount(2);
+
             if (count == 1)
                 MakeNewStageForTopKFromAuthor("Top K For Author");
         } else if (buttonFlag.equals("Recommand")) {
-            count = 0;
-            for (int i = 0; i < checkBoxList.size(); i++) {
-                if (checkBoxList.get(i).isSelected())
-                    count++;
-                if (count >= 2)
-                    break;
-            }
+
+            count = getCount(2);
+
             if (count == 1)
                 MakeNewStageForRecommand("Recommend");
         }
 
     }
+
+    private int getCount(int num) {
+        int count;
+        count = 0;
+        for (int i = 0; i < checkBoxList.size(); i++) {
+            if (checkBoxList.get(i).isSelected())
+                count++;
+            if (count >= 3)
+                break;
+        }
+        return count;
+    }
+
     public void buttonclick_Search(ActionEvent actionEvent) throws IOException {
         remakeAuthorListAfterSearch(searchBox.getText());
 

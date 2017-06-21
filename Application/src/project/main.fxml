@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
 <Pane fx:controller="project.Controller" maxHeight="800" maxWidth="1024" minHeight="800" minWidth="1024" prefHeight="800.0"
       prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
 
@@ -28,8 +29,6 @@
 
         <Button fx:id="buttonOK" text="OK" onAction="#buttonclick_OK"/>
 
-        <Text fx:id="authorSearchText">저자 검색</Text>
-
         <Button fx:id="buttonAddSearched" text="Search" onAction="#buttonclick_Search"/>
 
         <TextField fx:id="searchBox" />
@@ -37,6 +36,9 @@
         <TextArea fx:id="searchTopKArea"/>
 
         <TextField fx:id="yearBox" />
+
+        <Text fx:id="yearAlertText"/>
+
 
 
     </children>
