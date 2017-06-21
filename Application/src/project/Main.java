@@ -30,7 +30,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
 
         Controller controller = loader.<Controller>getController();
-        controller.initManager(this,root,primaryStage);
+        controller.initManager(primaryStage);
 
         controller.transformToMainGraph();
     }
