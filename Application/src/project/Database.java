@@ -21,19 +21,13 @@ import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.alg.shortestpath.FloydWarshallShortestPaths;
 import org.jgrapht.event.GraphVertexChangeEvent;
 import org.jgrapht.event.VertexSetListener;
-import org.jgrapht.graph.DefaultEdge;
-import org.jgrapht.graph.DefaultWeightedEdge;
-import org.jgrapht.graph.SimpleGraph;
-import org.jgrapht.graph.SimpleWeightedGraph;
+import org.jgrapht.graph.*;
 import org.jgrapht.traverse.BreadthFirstIterator;
 import org.jgrapht.traverse.GraphIterator;
 
 public class Database {
-	private UndirectedGraph<Node, DefaultEdge> mainGraph;
+	private ListenableUndirectedGraph<Node, DefaultEdge> mainGraph;
 	private SimpleWeightedGraph<Author, DefaultWeightedEdge> authorGraph;
-
-	private Map<Author, List<Paper>> subscriptMap;
-	private Map<Author, Paper> subscriptStack;
 
 	private Map<String, Author> authorMap;
 	private Map<String, Paper> paperMap;
@@ -45,16 +39,16 @@ public class Database {
 
 	//todo xml에서 읽는 기능 추가
 	//todo 저자 센터에 놓기
-	//todo 구독기능 구현하기 - 80%
-	//todo 논문수에 따른 top k 저널별 연도별 기능 추가
+	//todo 구독기능 구현하기 - 100%
+	//todo 논문수에 따른 top k 저널별 연도별 기능 추가 -
 	//todo 저자 이름 검색 및 이름 제안 기능 추가 - 100%
-	//todo 검색횟수 목록 추가 - 50%
+	//todo 검색횟수 목록 추가 - 100%
 
 	//todo 공동저자가 제일 많은 저자와 가장 많은 논문을 작성한 저자 컬러링 기능도 구현
 
 	//DB관련 생성자
 	public Database(){
-		mainGraph = new SimpleGraph<>(DefaultEdge.class);
+		mainGraph = new ListenableUndirectedGraph<>(DefaultEdge.class);
 		authorGraph = new SimpleWeightedGraph<Author, DefaultWeightedEdge> (DefaultWeightedEdge.class);
 
 		authorMap = new HashMap<String, Author>();
@@ -64,38 +58,17 @@ public class Database {
 	}
 
 	public Database(String dbName){
-		mainGraph = new SimpleGraph<>(DefaultEdge.class);
+		mainGraph = new ListenableUndirectedGraph<>(DefaultEdge.class);
 		authorGraph = new SimpleWeightedGraph<Author, DefaultWeightedEdge> (DefaultWeightedEdge.class);
 
 		authorMap = new HashMap<String, Author>();
 		paperMap = new HashMap<String, Paper>();
 		this.dbName = dbName;
 
-		subscriptMap = new HashMap<Author, List<Paper>>();
-		subscriptStack = new HashMap<Author, Paper>();
-		subscriptMap.put(new Author("Pyung Soo Kim"), new ArrayList<Paper>());
 	}
 
-	public UndirectedGraph<Node, DefaultEdge> getMainGraph(){
+	public ListenableUndirectedGraph<Node, DefaultEdge> getMainGraph(){
 		return mainGraph;
-	}
-
-	public Map<Author, List<Paper>> getSubscriptMap() {
-		return subscriptMap;
-	}
-
-	public void setSubscriptMap(Map<Author
-
-			, List<Paper>> subscriptMap) {
-		this.subscriptMap = subscriptMap;
-	}
-
-	public Map<Author, Paper> getSubscriptStack() {
-		return subscriptStack;
-	}
-
-	public void setSubscriptStack(Map<Author, Paper> subscriptStack) {
-		this.subscriptStack = subscriptStack;
 	}
 
 	public SimpleWeightedGraph<Author, DefaultWeightedEdge> getAuthorGraph() { return authorGraph; }
@@ -151,9 +124,6 @@ public class Database {
 				paperTemp.setName(paperStringList[2]);
 				paperTemp.setYear(Integer.parseInt(year));
 
-				if(checkSubscriptionList(paperTemp, authorStringList)) {
-					System.out.println("구독 테스트");
-				}
 				paperTemp = addPaper(paperTemp);
 
 				if(!authorkey.equals("")){
@@ -201,17 +171,15 @@ public class Database {
 
 			//테스팅 부분임
 
-			getRecommandPaperMap(new Author("Shuichi Itoh"));
+			//getRecommandPaperMap(new Author("Shuichi Itoh"));
 			//getRecommandPaperMap(new Author("AAA"));
 
-			//연도별 테스트 중
-			Params params = new Params();
-			params.year = 2008;
 
-			for(Map.Entry<Author, Integer> entry: getAuthorMapByCont(params).entrySet()) {
-				System.out.println(entry.toString());
-			}
-
+			//테스팀
+			Params params1 = new Params();
+			//params1.name = "Shuichi Itoh";
+			//params1.year = 2006;
+			System.out.println(getAuthorMapByCont(params1).toString());
 
 			return true;
 		} catch (IOException e) {
@@ -441,22 +409,45 @@ public class Database {
 	public Map<Author, Integer> getAuthorMapByCont(Params params) {
 		//todo 논문 검색 경우 제목으로 검색 추가
 		Map<Author, Integer> result = new HashMap<> ();
+		int contributeNum = 0;
+
+		if(params.year == -1 && params.name == null) {
+			return getAuthorMapByCont(params.count);
+		}
 
 		if(params.year != -1) {
-			for(Author author:authorGraph.vertexSet()) {
-				int contributeNum = 0;
-				for(DefaultEdge edge: mainGraph.edgesOf(author)) {
-					Paper paper = (Paper) mainGraph.getEdgeSource(edge);
-					if(paper.getYear() == params.year)
-						contributeNum++;
-
+			if(params.name != null) {
+				for(Author author:authorGraph.vertexSet()){
+					if(getCoauthorSet(new Author(params.name),author).size() > 0) {
+						for(DefaultEdge edge: mainGraph.edgesOf(author)) {
+							Paper paper = (Paper) mainGraph.getEdgeSource(edge);
+							if(paper.getYear() == params.year)
+								contributeNum++;
+						}
+						result.put(author, contributeNum);
+					}
 				}
-				result.put(author, contributeNum);
 			}
+			else {
+				for(Author author:authorGraph.vertexSet()) {
+					contributeNum = 0;
+
+					for(DefaultEdge edge: mainGraph.edgesOf(author)) {
+						Paper paper = (Paper) mainGraph.getEdgeSource(edge);
+						if(paper.getYear() == params.year)
+							contributeNum++;
+
+					}
+					result.put(author, contributeNum);
+				}
+			}
+		}
+		else {
+			return getAuthorMapByCont(new Author(params.name), params.count);
 		}
 
 
-		return sortMap(result, 10);
+		return sortMap(result, params.count);
 	}
 
 
@@ -522,26 +513,7 @@ public class Database {
 
 		System.out.println(sorted_map3);
 
-
-
-		return resultPaperList;
-	}
-
-	public boolean checkSubscriptionList(Paper paper, String[] authorStringList) {
-		for(String author: authorStringList) {
-			if(subscriptMap.containsKey(new Author(author))) {
-				if(subscriptMap.get(new Author(author)).contains(paper)) {
-					//해당 구독이 이미 체크가 된 경우
-					return false;
-				}
-				else {
-					subscriptMap.get(new Author(author)).add(paper);
-					subscriptStack.put(new Author(author), paper);
-					return true;
-				}
-			}
-		}
-		return false;
+		return sorted_map3;
 	}
 
 	public List<String> getSearchAuthorList(String keyword){
