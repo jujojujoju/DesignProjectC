@@ -32,9 +32,6 @@ public class Controller {
     public TextArea searchTopKArea;
     public TextField yearBox;
 
-    private SerializeUtil sutil;
-    private String buttonFlag = "";
-
     public Text yearAlertText;
 
     public Button buttonOK;
@@ -62,11 +59,6 @@ public class Controller {
 
         isFirst = true;
 
-
-        sutil = new SerializeUtil();
-
-
-      
         textfield = new TextField();
         textArea = new TextArea();
         authorSearchText = new Text();
@@ -115,10 +107,7 @@ public class Controller {
 
         this.substage = stage;
 
-
         makeNewStage = new MakeNewStage(graph, checkBoxList, db);
-
-
 
 
         //기본 배치 뷰 좌표설정
@@ -544,6 +533,7 @@ public class Controller {
 
         return buttonFlag;
     }
+
     public void buttonclick_OK(ActionEvent actionEvent) {
 
         int count;
@@ -565,7 +555,26 @@ public class Controller {
             if (count == 1)
 //                MakeNewStageForTopKFromAuthor("Top K For Author");
                 makeNewStage.MakeNewStageForTopKFromAuthor("Top K For Author",yearBox);
-        } else if (buttonFlag.equals("Recommand")) {
+        }else if (buttonFlag.equals("Subscribe")) {
+            for(CheckBox checkBox: checkBoxList) {
+                if(checkBox.isSelected() && !subscription.getSubscriptMap().containsKey(new Author(checkBox.getText()))) {
+                    //체크박스 클릭된 상태에서 구독 리스트에 없으면
+                    subscription.addSubscription(new Author(checkBox.getText()));
+                    System.out.println(checkBox.getText() + "구독");
+                }
+                else if(!checkBox.isSelected() && subscription.getSubscriptMap().containsKey(new Author(checkBox.getText()))) {
+                    //체크 해제 상태에서 구독 리스트에 있으면
+                    subscription.deleteSubscription(new Author(checkBox.getText()));
+                    System.out.println(checkBox.getText() + "삭제");
+                }
+            }
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("구독");
+            alert.setHeaderText("구독자 변경");
+            alert.setContentText("구독자 리스트가 변경되었습니다.");
+            alert.showAndWait();
+
+        }  else if (buttonFlag.equals("Recommand")) {
 
             count = getCount(2);
 
@@ -586,69 +595,6 @@ public class Controller {
         }
         return count;
     }
-
-
-    public void buttonclick_OK(ActionEvent actionEvent) {
-
-        int count;
-        if (buttonFlag.equals("Graph")) {
-            MakeNewStageForGraph("Graph");
-        } else if (buttonFlag.equals("Relation Graph")) {
-            count = 0;
-            for (int i = 0; i < checkBoxList.size(); i++) {
-                if (checkBoxList.get(i).isSelected())
-                    count++;
-                if (count >= 3)
-                    break;
-            }
-            if (count == 2)
-                MakeNewStageForGraph("Relation Graph");
-        } else if (buttonFlag.equals("Top K")) {
-            MakeNewStageForTopK("Top K");
-
-        } else if (buttonFlag.equals("Top K For Author")) {
-            count = 0;
-            for (int i = 0; i < checkBoxList.size(); i++) {
-                if (checkBoxList.get(i).isSelected())
-                    count++;
-                if (count >= 2)
-                    break;
-            }
-            if (count == 1)
-                MakeNewStageForTopKFromAuthor("Top K For Author");
-        } else if (buttonFlag.equals("Subscribe")) {
-            for(CheckBox checkBox: checkBoxList) {
-                if(checkBox.isSelected() && !subscription.getSubscriptMap().containsKey(new Author(checkBox.getText()))) {
-                    //체크박스 클릭된 상태에서 구독 리스트에 없으면
-                    subscription.addSubscription(new Author(checkBox.getText()));
-                    System.out.println(checkBox.getText() + "구독");
-                }
-                else if(!checkBox.isSelected() && subscription.getSubscriptMap().containsKey(new Author(checkBox.getText()))) {
-                    //체크 해제 상태에서 구독 리스트에 있으면
-                    subscription.deleteSubscription(new Author(checkBox.getText()));
-                    System.out.println(checkBox.getText() + "삭제");
-                }
-            }
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("구독");
-            alert.setHeaderText("구독자 변경");
-            alert.setContentText("구독자 리스트가 변경되었습니다.");
-            alert.showAndWait();
-
-        } else if (buttonFlag.equals("Recommand")) {
-            count = 0;
-            for (int i = 0; i < checkBoxList.size(); i++) {
-                if (checkBoxList.get(i).isSelected())
-                    count++;
-                if (count >= 2)
-                    break;
-            }
-            if (count == 1)
-                MakeNewStageForRecommand("Recommend");
-        }
-
-    }
-
 
     public void buttonclick_Search(ActionEvent actionEvent) throws IOException {
         remakeAuthorListAfterSearch(searchBox.getText());
