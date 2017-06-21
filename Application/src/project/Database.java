@@ -176,10 +176,10 @@ public class Database {
 
 
 			//테스팀
-			Params params1 = new Params();
-			//params1.name = "Shuichi Itoh";
-			//params1.year = 2006;
-			System.out.println(getAuthorMapByCont(params1).toString());
+//			Params params1 = new Params();
+//			params1.name = "Shuichi Itoh";
+//			params1.year = 2006;
+//			System.out.println(getAuthorMapByCont(params1).toString());
 
 			return true;
 		} catch (IOException e) {
