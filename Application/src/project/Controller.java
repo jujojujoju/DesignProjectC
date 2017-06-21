@@ -8,25 +8,15 @@ import javafx.geometry.Orientation;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import org.controlsfx.control.textfield.TextFields;
-import org.jgrapht.UndirectedGraph;
 import org.jgrapht.event.GraphChangeEvent;
 import org.jgrapht.event.GraphEdgeChangeEvent;
-import org.jgrapht.graph.*;
-import org.jgrapht.graph.DefaultWeightedEdge;
-import org.jgrapht.graph.SimpleWeightedGraph;
-import sample.CellType;
 import sample.Graph;
-import sample.Layout;
-import sample.Model;
-import sample.RandomLayout;
-
 import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.Executors;
@@ -35,23 +25,26 @@ import java.util.concurrent.TimeUnit;
 
 public class Controller {
 
+    MakeNewStage makeNewStage;
+
     public Button buttonAddSearched;
     public TextField searchBox;
     public TextArea searchTopKArea;
     public TextField yearBox;
-    private int numOfK;
+
     private SerializeUtil sutil;
     private String buttonFlag = "";
+
+    public Text yearAlertText;
+
     public Button buttonOK;
+
+    private String buttonFlag = "";
     private Database db;
     private Graph graph;
 
-    private Connection connection;
-    private Main main;
     private Stage substage;
-    private Pane root;
 
-    private HashSet<Author> selectedAuthorSet;
 
     private TextArea textArea;
     private TextField textfield;
@@ -65,15 +58,15 @@ public class Controller {
     private boolean isFirst;
 
 
-    void initManager(Main main, Pane root, Stage stage) {
+    void initManager(Stage stage) {
 
-        numOfK = 5;
         isFirst = true;
+
 
         sutil = new SerializeUtil();
 
-        this.main = main;
 
+      
         textfield = new TextField();
         textArea = new TextArea();
         authorSearchText = new Text();
@@ -121,17 +114,26 @@ public class Controller {
         resetAuthorList();
 
         this.substage = stage;
-        this.root = root;
 
 
+        makeNewStage = new MakeNewStage(graph, checkBoxList, db);
+
+
+
+
+        //기본 배치 뷰 좌표설정
         setLayoutXY(buttonOK,420,230);
         setLayoutXY(searchBox,420,180);
         setLayoutXY(buttonAddSearched,600,180);
         setLayoutXY(searchTopKArea,400,400);
         setLayoutXY(textArea,420,50);
-        setLayoutXY(yearBox,700,180);
+        setLayoutXY(yearBox,780,180);
         yearBox.setVisible(false);
 
+        yearAlertText.setText("연도입력");
+        yearAlertText.setLayoutX(700);
+        yearAlertText.setLayoutY(200);
+        yearAlertText.setVisible(false);
 
 
         textArea.setMaxHeight(100);
@@ -157,7 +159,6 @@ public class Controller {
         item.setLayoutY(y);
     }
 
-
     public void showAlert(GraphChangeEvent e) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         if(e instanceof GraphEdgeChangeEvent && !isFirst) {
@@ -167,10 +168,6 @@ public class Controller {
             System.out.println("aaa");
             alert.showAndWait();
         }
-    }
-
-    public void sendConnection(Connection connection) {
-        this.connection = connection;
     }
 
     public void buttonclick1(ActionEvent actionEvent) {
@@ -207,6 +204,17 @@ public class Controller {
         transformToRecommandList();
     }
 
+    private int getCheckItemNum(int i, Node author) {
+        CheckBox checkBox = new CheckBox();
+        checkBox.setText(author.getName());
+        checkBox.setLayoutX(10);
+        checkBox.setLayoutY(10 + i * 20);
+        i++;
+        checkBoxList.add(checkBox);
+        return i;
+    }
+
+
     private void remakeAuthorListAfterSearch(String name) {
 
         anchorPane.getChildren().removeAll(checkBoxList);
@@ -215,12 +223,7 @@ public class Controller {
         checkBoxList.clear();
         for (Node author : db.getAuthorSet()) {
             if (author.getName().contains(name)) {
-                CheckBox checkBox = new CheckBox();
-                checkBox.setText(author.getName());
-                checkBox.setLayoutX(10);
-                checkBox.setLayoutY(10 + i * 20);
-                i++;
-                checkBoxList.add(checkBox);
+                i = getCheckItemNum(i, author);
             }
         }
 
@@ -240,12 +243,7 @@ public class Controller {
         checkBoxList.clear();
 
         for (Node author : db.getAuthorSet()) {
-            CheckBox checkBox = new CheckBox();
-            checkBox.setText(author.getName());
-            checkBox.setLayoutX(10);
-            checkBox.setLayoutY(10 + i * 20);
-            i++;
-            checkBoxList.add(checkBox);
+            i = getCheckItemNum(i, author);
         }
 
         textfield.setText("총 저자 : " + checkBoxList.size() + " 명");
@@ -282,6 +280,8 @@ public class Controller {
         searchTopKArea.setVisible(true);
 
         yearBox.setVisible(false);
+        yearAlertText.setVisible(false);
+
 
 
         resetCheckBox();
@@ -375,7 +375,6 @@ public class Controller {
         if (!root.getChildren().contains(textfield))
             root.getChildren().add(textfield);
 
-
         resetCheckBox();
 
         searchBox.setVisible(true);
@@ -383,6 +382,8 @@ public class Controller {
         searchTopKArea.setVisible(true);
 
         yearBox.setVisible(false);
+        yearAlertText.setVisible(false);
+
 
         textArea.setText("여러명의 저자를 선택하면, 그들의 관계를 보여줍니다.");
 
@@ -413,6 +414,7 @@ public class Controller {
         buttonAddSearched.setVisible(true);
         searchTopKArea.setVisible(true);
         yearBox.setVisible(false);
+        yearAlertText.setVisible(false);
 
 
         if (!root.getChildren().contains(scrollPane)) {
@@ -446,6 +448,7 @@ public class Controller {
         buttonAddSearched.setVisible(false);
         searchTopKArea.setVisible(false);
         yearBox.setVisible(false);
+        yearAlertText.setVisible(false);
 
 
 
@@ -479,7 +482,7 @@ public class Controller {
         searchTopKArea.setVisible(true);
 
         yearBox.setVisible(true);
-
+        yearAlertText.setVisible(true);
 
 
         if (!root.getChildren().contains(scrollPane)) {
@@ -516,6 +519,9 @@ public class Controller {
         searchBox.setVisible(true);
         buttonAddSearched.setVisible(true);
         searchTopKArea.setVisible(true);
+        yearBox.setVisible(false);
+        yearAlertText.setVisible(false);
+
 
 
         if (!root.getChildren().contains(scrollPane)) {
@@ -538,225 +544,49 @@ public class Controller {
 
         return buttonFlag;
     }
+    public void buttonclick_OK(ActionEvent actionEvent) {
 
+        int count;
+        if (buttonFlag.equals("Graph")) {
+            makeNewStage.MakeNewStageForGraph("Graph");
+        } else if (buttonFlag.equals("Relation Graph")) {
 
-    private BorderPane getBorderPane(String string, Stage stage, BorderPane root) {
-        try {
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-            root.setCenter(graph.getScrollPane());
+            count = getCount(3);
 
-            Scene scene = getCurrentScene(root);
-            stage.setTitle(string);
-            stage.setScene(scene);
+            if (count == 2)
+                makeNewStage.MakeNewStageForGraph("Relation Graph");
+        } else if (buttonFlag.equals("Top K")) {
+            makeNewStage.MakeNewStageForTopK("Top K");
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return root;
-    }
+        } else if (buttonFlag.equals("Top K For Author")) {
 
+            count = getCount(2);
 
-    private void MakeNewStageForGraph(String string) {
-        Layout layout;
-        HashSet<Author> centerAuthorSet = new HashSet<>();
+            if (count == 1)
+//                MakeNewStageForTopKFromAuthor("Top K For Author");
+                makeNewStage.MakeNewStageForTopKFromAuthor("Top K For Author",yearBox);
+        } else if (buttonFlag.equals("Recommand")) {
 
-        graph = new Graph();
-        Stage stage = new Stage();
+            count = getCount(2);
 
-        BorderPane root = null;
-
-        root = getBorderPane(string, stage, root);
-
-        assert root != null;
-        stage.show();
-
-        if (string.equals("Graph")) {
-            centerAuthorSet = addGraphComponents();
-            layout = new CenterLayout(graph, centerAuthorSet);
-        } else {
-            addGraphComponentsRelation();
-            layout = new RandomLayout(graph);
+            if (count == 1)
+                makeNewStage.MakeNewStageForRecommand("Recommend");
         }
 
-        layout.execute();
-
     }
 
-    private void MakeNewStageForTopK(String string) {
-
-        graph = new Graph();
-        Stage stage = new Stage();
-
-        BorderPane root = null;
-
-        root = getBorderPane(string, stage, root);
-
-        assert root != null;
-        stage.show();
-
-        addGraphComponentsTopK();
-
-        Layout layout = new RandomLayout(graph);
-        layout.execute();
-
-    }
-
-    private void MakeNewStageForTopKFromAuthor(String string) {
-
-        graph = new Graph();
-        Stage stage = new Stage();
-
-        BorderPane root = null;
-        root = getBorderPane(string, stage, root);
-
-        assert root != null;
-        stage.show();
-
-        addGraphComponentsTopKAroundAuthor();
-
-        Layout layout = new RandomLayout(graph);
-        layout.execute();
-    }
-
-    private void MakeNewStageForRecommand(String string){
-        graph = new Graph();
-        Stage stage = new Stage();
-
-        BorderPane root = null;
-        root = getBorderPane(string, stage, root);
-
-        assert root != null;
-        stage.show();
-
-        addGraphComponentsRecommend();
-
-        Layout layout = new RandomLayout(graph);
-        layout.execute();
-    }
-
-
-
-
-    private HashSet<Author> addGraphComponents() {
-
-        selectedAuthorSet = new HashSet<Author>();
-        for (int i = 0; i < checkBoxList.size(); i++)
+    private int getCount(int num) {
+        int count;
+        count = 0;
+        for (int i = 0; i < checkBoxList.size(); i++) {
             if (checkBoxList.get(i).isSelected())
-                selectedAuthorSet.add(new Author(checkBoxList.get(i).getText()));
-
-
-        SimpleWeightedGraph<Node, DefaultWeightedEdge> weightedGraph = db.getCoauthorWeightedGraph(selectedAuthorSet);
-
-        Model model = graph.getModel();
-        graph.beginUpdate();
-
-        for (Node author : weightedGraph.vertexSet())
-            model.addCell(author.getName(), CellType.LABEL);
-
-        Author source;
-        Author target;
-
-        for (DefaultWeightedEdge edge : weightedGraph.edgeSet()) {
-            if (weightedGraph.getEdgeWeight(edge) >= 1)    //웨이트가 1이상이면 표시가 되어야 합니다.
-                model.addEdge((target = (Author) weightedGraph.getEdgeTarget(edge)).getName(),
-                        (source = (Author) weightedGraph.getEdgeSource(edge)).getName(),
-                        weightedGraph.getEdgeWeight(edge),
-                        db.getCoauthorSet(target, source));
-        }
-        graph.endUpdate();
-
-        return selectedAuthorSet;
-    }
-
-    private void addGraphComponentsRelation() {
-
-        ArrayList<Author> authors = new ArrayList<Author>();
-        for (int i = 0; i < checkBoxList.size(); i++)
-            if (checkBoxList.get(i).isSelected())
-                authors.add(new Author(checkBoxList.get(i).getText()));
-
-
-        UndirectedGraph<Node, DefaultEdge> undirectedGraph = db.getRelationGraph(authors.get(0), authors.get(1));
-
-        Model model = graph.getModel();
-        graph.beginUpdate();
-
-        for (Node author : undirectedGraph.vertexSet()) {
-            if (author.getClass().getName().equals("project.Paper"))
-                model.addCell(author.getName(), CellType.PAPERLABEL);
-            else
-                model.addCell(author.getName(), CellType.LABEL);
-        }
-
-        for (DefaultEdge edge : undirectedGraph.edgeSet()) {
-            model.addEdge(undirectedGraph.getEdgeTarget(edge).getName(), undirectedGraph.getEdgeSource(edge).getName());
-        }
-
-        graph.endUpdate();
-    }
-
-    private void addGraphComponentsTopK() {
-        Model model = graph.getModel();
-        graph.beginUpdate();
-
-        SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(numOfK);
-        Iterator it = sortedMap.entrySet().iterator();
-
-        while (it.hasNext()) {
-            Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>) it.next();
-            model.addTopKCell(entry.getKey().getName(), entry.getValue());
-        }
-
-        graph.endUpdate();
-    }
-
-    private void addGraphComponentsTopKAroundAuthor() {
-        Model model = graph.getModel();
-        graph.beginUpdate();
-
-        Author author = new Author();
-        for (int i = 0; i < checkBoxList.size(); i++)
-
-            if (checkBoxList.get(i).isSelected()) {
-                author = (new Author(checkBoxList.get(i).getText()));
+                count++;
+            if (count >= num)
                 break;
-            }
-
-        SortedMap sortedMap = (SortedMap) db.getAuthorMapByCont(author, numOfK);
-        Iterator it = sortedMap.entrySet().iterator();
-
-        while (it.hasNext()) {
-            Map.Entry<Author, Integer> entry = (Map.Entry<Author, Integer>) it.next();
-            model.addTopKCell(entry.getKey().getName(), entry.getValue());
         }
-
-        graph.endUpdate();
-
+        return count;
     }
 
-    private void addGraphComponentsRecommend() {
-        Model model = graph.getModel();
-        graph.beginUpdate();
-
-        Author author = new Author();
-        for (int i = 0; i < checkBoxList.size(); i++)
-
-            if (checkBoxList.get(i).isSelected()) {
-                author = (new Author(checkBoxList.get(i).getText()));
-                break;
-            }
-
-        //fixme
-        Map<Node, Double> sortedMap =  db.getRecommandPaperMap(author);
-        Iterator it = sortedMap.entrySet().iterator();
-
-        while (it.hasNext()) {
-            Map.Entry<Node, Double> entry = (Map.Entry<Node, Double>) it.next();
-            model.addTopKCell(entry.getKey().getName(), entry.getValue());
-        }
-
-        graph.endUpdate();
-    }
 
     public void buttonclick_OK(ActionEvent actionEvent) {
 
@@ -818,6 +648,8 @@ public class Controller {
         }
 
     }
+
+
     public void buttonclick_Search(ActionEvent actionEvent) throws IOException {
         remakeAuthorListAfterSearch(searchBox.getText());
 
@@ -840,11 +672,5 @@ public class Controller {
         searchTopKArea.setText(text);
     }
 
-    class CharaterSort implements Comparator<CheckBox> {
-        @Override
-        public int compare(CheckBox o1, CheckBox o2) {
-            return o1.getText().compareTo(o2.getText());
-        }
-    }
 
 }
