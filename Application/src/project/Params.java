@@ -11,7 +11,7 @@ public class Params {
 
     public Params() {
         year = -1;
-        count = -1;
+        count = 10;
         name = null;
         journal = null;
     }

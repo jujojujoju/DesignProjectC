@@ -1,6 +1,6 @@
 package project;
 
-import javafx.beans.DefaultProperty;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -11,10 +11,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import org.controlsfx.control.textfield.TextFields;
 import org.jgrapht.UndirectedGraph;
+import org.jgrapht.event.GraphChangeEvent;
+import org.jgrapht.event.GraphEdgeChangeEvent;
 import org.jgrapht.graph.*;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleWeightedGraph;
@@ -50,60 +53,57 @@ public class Controller {
 
     private TextArea textArea;
     private TextField textfield;
+    private Text authorSearchText;
 
     private AnchorPane anchorPane;
     private ScrollPane scrollPane;
     private ScrollBar scrollBar;
     private List<CheckBox> checkBoxList;
-
-    Alert alert;
+    private Subscription subscription;
+    private boolean isFirst;
 
 
     void initManager(Main main, Pane root, Stage stage) {
 
         numOfK = 5;
-
-        //popup set
-        alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("알림");
-        alert.setHeaderText(null);
+        isFirst = true;
 
         this.main = main;
 
         textfield = new TextField();
         textArea = new TextArea();
+        authorSearchText = new Text();
         anchorPane = new AnchorPane();
         scrollPane = new ScrollPane();
         scrollBar = new ScrollBar();
         checkBoxList = new ArrayList<>();
+        subscription = new Subscription();
 
         db = new Database("paperList4.txt");
-        db.readFile();
-        Runnable runnable = new Runnable() {
 
+        MainGraphListener graphListener = new MainGraphListener();
+        graphListener.setMainScene(this);
+        graphListener.setSubscription(subscription);
+        db.getMainGraph().addGraphListener(graphListener);
+
+        db.readFile();
+        isFirst = false;
+
+        Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                System.out.println("시작");
-
-                //구독자 추가되었는지 큐나 스택으로 확인
-                if(!db.getSubscriptStack().isEmpty()) {
-                    for (Map.Entry<Author, Paper> entry : db.getSubscriptStack().entrySet()) {
-
-                        Author key = entry.getKey();
-                        Paper value = entry.getValue();
-
-                        alert.setContentText(key.toString() + ", " + value.toString());
-                        alert.showAndWait();
-
-                    }
-                }
-
+                System.out.println("DB Check");
                 if(db.checkFile()) {
-                    System.out.println("다르다");
-                    db.readFile();
+                    System.out.println("DB업로드시작");
+
+                    Platform.runLater(new Runnable() {
+                        @Override public void run() {
+                            db.readFile();
+                        }
+                    });
                 }
                 else {
-                    System.out.println("같다");
+                    System.out.println("No Change");
                 }
             }
         };
@@ -116,6 +116,7 @@ public class Controller {
 
         this.substage = stage;
         this.root = root;
+
 
         setLayoutXY(buttonOK,420,230);
         setLayoutXY(searchBox,420,180);
@@ -147,7 +148,16 @@ public class Controller {
         item.setLayoutY(y);
     }
 
-    public void Authorityscreen(ActionEvent actionEvent) {
+
+    public void showAlert(GraphChangeEvent e) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        if(e instanceof GraphEdgeChangeEvent && !isFirst) {
+            alert.setTitle("Information Dialog");
+            alert.setHeaderText(((GraphEdgeChangeEvent) e).getEdgeTarget().toString());
+            alert.setContentText(((GraphEdgeChangeEvent) e).getEdgeSource().toString());
+            System.out.println("aaa");
+            alert.showAndWait();
+        }
     }
 
     public void sendConnection(Connection connection) {
@@ -184,9 +194,9 @@ public class Controller {
         transformToSubscribeList();
     }
     public void buttonclick_recommand(ActionEvent actionEvent) {
-
+        resetAuthorList();
+        transformToRecommandList();
     }
-
 
     private void remakeAuthorListAfterSearch(String name) {
 
@@ -282,9 +292,9 @@ public class Controller {
     private void CheckSomeItem() {
 
         for (int i = 0; i < checkBoxList.size(); i++) {
-            for (Map.Entry<Author, Paper> entry : db.getSubscriptStack().entrySet()) {
+            for (Map.Entry<Author, List<Paper>> entry : subscription.getSubscriptMap().entrySet()) {
                 Author key = entry.getKey();
-                Paper value = entry.getValue();
+                List<Paper> value = entry.getValue();
                 System.out.println(key.toString() + ", " + value.toString());
 
                 if(key.getName().equals(checkBoxList.get(i).getText()))
@@ -447,7 +457,7 @@ public class Controller {
 
         Scene scene = getCurrentScene(root);
 
-
+        authorSearchText.setVisible(true);
         searchBox.setVisible(true);
         buttonAddSearched.setVisible(true);
         searchTopKArea.setVisible(true);
@@ -473,6 +483,41 @@ public class Controller {
 
         return buttonFlag;
 
+    }
+
+
+    private String transformToRecommandList() {
+        Pane root = (Pane) substage.getScene().getRoot();
+        substage.getScene().setRoot(new Pane());
+        substage.setScene(null);
+
+        Scene scene = getCurrentScene(root);
+
+
+        searchBox.setVisible(true);
+        buttonAddSearched.setVisible(true);
+        searchTopKArea.setVisible(true);
+
+
+        if (!root.getChildren().contains(scrollPane)) {
+            root.getChildren().addAll(getScrollPane(scene));
+        }
+
+        if (!root.getChildren().contains(textfield))
+            root.getChildren().add(textfield);
+
+        resetCheckBox();
+
+        textArea.setText("선택된 저자를 기반으로 못봤을 만한 논문을 추천해준다.");
+
+        if (!root.getChildren().contains(textArea))
+            root.getChildren().add(textArea);
+
+        substage.setScene(scene);
+        substage.setTitle(buttonFlag = "Recommand");
+        substage.show();
+
+        return buttonFlag;
     }
 
 
@@ -553,6 +598,24 @@ public class Controller {
         Layout layout = new RandomLayout(graph);
         layout.execute();
     }
+
+    private void MakeNewStageForRecommand(String string){
+        graph = new Graph();
+        Stage stage = new Stage();
+
+        BorderPane root = null;
+        root = getBorderPane(string, stage, root);
+
+        assert root != null;
+        stage.show();
+
+        addGraphComponentsRecommend();
+
+        Layout layout = new RandomLayout(graph);
+        layout.execute();
+    }
+
+
 
 
     private HashSet<Author> addGraphComponents() {
@@ -652,6 +715,30 @@ public class Controller {
 
     }
 
+    private void addGraphComponentsRecommend() {
+        Model model = graph.getModel();
+        graph.beginUpdate();
+
+        Author author = new Author();
+        for (int i = 0; i < checkBoxList.size(); i++)
+
+            if (checkBoxList.get(i).isSelected()) {
+                author = (new Author(checkBoxList.get(i).getText()));
+                break;
+            }
+
+        //fixme
+        Map<Node, Double> sortedMap =  db.getRecommandPaperMap(author);
+        Iterator it = sortedMap.entrySet().iterator();
+
+        while (it.hasNext()) {
+            Map.Entry<Node, Double> entry = (Map.Entry<Node, Double>) it.next();
+            model.addTopKCell(entry.getKey().getName(), entry.getValue());
+        }
+
+        graph.endUpdate();
+    }
+
     public void buttonclick_OK(ActionEvent actionEvent) {
 
         int count;
@@ -680,6 +767,16 @@ public class Controller {
             }
             if (count == 1)
                 MakeNewStageForTopKFromAuthor("Top K For Author");
+        } else if (buttonFlag.equals("Recommand")) {
+            count = 0;
+            for (int i = 0; i < checkBoxList.size(); i++) {
+                if (checkBoxList.get(i).isSelected())
+                    count++;
+                if (count >= 2)
+                    break;
+            }
+            if (count == 1)
+                MakeNewStageForRecommand("Recommend");
         }
 
     }
